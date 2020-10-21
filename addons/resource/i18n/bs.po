@@ -202,12 +202,12 @@ msgstr "Detalji o odsustvu"
 #. module: resource
 #: model:ir.ui.view,arch_db:resource.view_resource_calendar_leaves_search
 msgid "Leave Month"
-msgstr "Mjesec odsutnosti"
+msgstr "Mjesec odsustva"
 
 #. module: resource
 #: model:ir.model.fields,field_description:resource.field_resource_calendar_leave_ids
 msgid "Leaves"
-msgstr "Odsutnosti"
+msgstr "Odsustva"
 
 #. module: resource
 #: selection:resource.resource,resource_type:0
@@ -336,7 +336,7 @@ msgstr "Datum početka"
 #. module: resource
 #: model:ir.ui.view,arch_db:resource.view_resource_calendar_leaves_search
 msgid "Starting Date of Leave by Month"
-msgstr "Početni datum odsutnosti po mjesecima"
+msgstr "Početni datum odsustva za mjesec"
 
 #. module: resource
 #: selection:resource.calendar.attendance,dayofweek:0

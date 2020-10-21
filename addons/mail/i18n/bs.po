@@ -940,7 +940,7 @@ msgstr "Mod sastavljanja"
 #: code:addons/mail/static/src/xml/thread.xml:24
 #, python-format
 msgid "Congratulations, your inbox is empty"
-msgstr "Čestitamo, vaš 'inbox' je prazan"
+msgstr "Čestitamo, vaš <strong>inbox</strong> je prazan"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.email_template_form
@@ -2039,7 +2039,7 @@ msgstr "Neaktivni nadimci"
 #: code:addons/mail/static/src/xml/systray.xml:6
 #, python-format
 msgid "Inbox"
-msgstr "Prijemno sanduče"
+msgstr "Inbox"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_mail_compose_message_parent_id
