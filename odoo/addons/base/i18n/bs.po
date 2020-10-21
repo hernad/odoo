@@ -8819,18 +8819,18 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_contract
 msgid "Employee Contracts"
-msgstr "Ugovori zaposlinih"
+msgstr "Ugovori radnika"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr
 msgid "Employee Directory"
-msgstr "Popis zaposlenih"
+msgstr "Popis radnika"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_partner_employee_form
 #: model:ir.module.category,name:base.module_category_human_resources
 msgid "Employees"
-msgstr "Zaposleni"
+msgstr "Radnici"
 
 #. module: base
 #: code:addons/base/ir/ir_model.py:331

@@ -3450,7 +3450,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:website.field_slide_slide_website_published
 #: model:ir.model.fields,field_description:website.field_website_published_mixin_website_published
 msgid "Visible in Website"
-msgstr "Vidljivo na website-u"
+msgstr "Vidljivo na web stranici"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -3466,7 +3466,7 @@ msgstr ""
 #: code:addons/website/static/src/xml/website.backend.xml:18
 #, python-format
 msgid "Visits"
-msgstr ""
+msgstr "Pregledi"
 
 #. module: website
 #. openerp-web

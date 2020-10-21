@@ -1,0 +1,3 @@
+[submodule "custom/contract"]
+	path = custom/contract
+	url = git@github.com:hernad/odoo_oca_contract.git
