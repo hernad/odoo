@@ -829,7 +829,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "A good pipeline should have between 5 and 7 stages"
-msgstr "Dobar prodajni ljevak bi trebao imati između 5 i 7 faza"
+msgstr "Dobar prodajna strategija bi trebala imati između 5 i 7 faza"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1243,8 +1243,8 @@ msgid ""
 "Click here to <b>create your first opportunity</b> and add it to your "
 "pipeline."
 msgstr ""
-"Kliknite ovdje da <b>kreirate vašu prvu priliku</b> i dodate je u vaš "
-"prodajni ljevak."
+"Kliknite ovdje da <b>kreirate vašu prvu priliku</b> i dodate je u vašu "
+"prodajnu strategiju."
 
 #. module: crm
 #. openerp-web
@@ -1282,7 +1282,7 @@ msgstr "Kliknite da definišete novu oznaku prodaje."
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_stage_action
 msgid "Click to set a new stage in your opportunity pipeline."
-msgstr "Kliknite da postavite novu fazu u vaš prodajni ljevak prilika"
+msgstr "Kliknite da postavite novu fazu u vašu strategiju prodajnih prilika"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
@@ -2904,7 +2904,7 @@ msgstr "Moje prilike"
 #: model:ir.actions.server,name:crm.action_your_pipeline
 #: model:ir.ui.menu,name:crm.menu_crm_opportunities
 msgid "My Pipeline"
-msgstr "Moj prodajni ljevak"
+msgstr "Moja prodajna strategija"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_group_by_name
@@ -3193,7 +3193,7 @@ msgstr "Dobivenih prilika po timu"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Opportunities pipeline"
-msgstr "Prodajni ljevak prilika"
+msgstr "Strategija prilika za prodaju"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
@@ -3398,7 +3398,7 @@ msgstr "Telefonske skripte"
 #: model:ir.ui.view,arch_db:crm.crm_planner
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 msgid "Pipeline"
-msgstr "Prodajni ljevak"
+msgstr "Prodajna strategija"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.action_report_crm_opportunity_salesteam
@@ -3408,7 +3408,7 @@ msgstr "Prodajni ljevak"
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_pivot
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 msgid "Pipeline Analysis"
-msgstr "Analiza prodajnog ljevka"
+msgstr "Analize prodajne strategije"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_opportunity_report_action
@@ -4413,7 +4413,7 @@ msgid ""
 "Use opportunities to keep track of your sales pipeline, follow\n"
 "                up potential sales and better forecast your future revenues."
 msgstr ""
-"Koristite prilike da pratite vaš prodajni ljevak, pratite\n"
+"Koristite prilike da pratite vašu prodajnu strategiju, pratite\n"
 "potencijalne prodaje i bolje predvidite buduće prihode."
 
 #. module: crm
@@ -4713,7 +4713,7 @@ msgstr "Vaša Odoo CRM aplikacija se izvršava glatko."
 #. module: crm
 #: model:ir.actions.act_window,name:crm.crm_lead_opportunities_tree_view
 msgid "Your Pipeline"
-msgstr "Vaš prodajni ljevak"
+msgstr "Vaša prodajna strategija"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner

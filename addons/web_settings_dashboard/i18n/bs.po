@@ -28,27 +28,29 @@ msgid ""
 "%\n"
 "                Implementation"
 msgstr ""
+"%\n"
+"                Implementacija"
 
 #. module: web_settings_dashboard
 #. openerp-web
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:149
 #, python-format
 msgid "(Community Edition)"
-msgstr "(Verzija Zajednice)"
+msgstr "(OSS verzija)"
 
 #. module: web_settings_dashboard
 #. openerp-web
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:165
 #, python-format
 msgid "Activate the developer mode"
-msgstr "Aktiviraj razvojni mod"
+msgstr "Aktiviraj developerski mod"
 
 #. module: web_settings_dashboard
 #. openerp-web
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:167
 #, python-format
 msgid "Activate the developer mode (with assets)"
-msgstr "Aktiviraj razvojni mod (sa imovinom)"
+msgstr "Aktiviraj razvojni mod (sa resursima)"
 
 #. module: web_settings_dashboard
 #. openerp-web
@@ -83,14 +85,14 @@ msgstr "Istraži aplikacije"
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:102
 #, python-format
 msgid "Browse the documentation."
-msgstr ""
+msgstr "Pregled dokumentacije."
 
 #. module: web_settings_dashboard
 #. openerp-web
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:156
 #, python-format
 msgid "Copyright © 2004-2016"
-msgstr ""
+msgstr "Copyright © 2004-2020"
 
 #. module: web_settings_dashboard
 #: model:ir.actions.client,name:web_settings_dashboard.web_settings_dashboard_action
@@ -103,14 +105,14 @@ msgstr "Kontrolna ploča"
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:169
 #, python-format
 msgid "Deactivate the developer mode"
-msgstr "Deaktiviraj razvojni mod"
+msgstr "Deaktiviraj developerski mod"
 
 #. module: web_settings_dashboard
 #. openerp-web
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:66
 #, python-format
 msgid "Enter e-mail addresses (one per line)"
-msgstr ""
+msgstr "Unesi e-mail adrese (jednu po liniji)"
 
 #. module: web_settings_dashboard
 #. openerp-web
@@ -124,7 +126,7 @@ msgstr ""
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:156
 #, python-format
 msgid "GNU LGPL Licenced"
-msgstr ""
+msgstr "GNU LGPL licenca"
 
 #. module: web_settings_dashboard
 #. openerp-web
@@ -138,7 +140,7 @@ msgstr "Možete dobiti više funkcionalnosti sa Enterprise verzijom!"
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:133
 #, python-format
 msgid "Help us spread the word: Share Odoo's awesomeness with your friends!"
-msgstr "Pomozite da raširimo riječ: Podjelite Odoo sa vašim prijatelima!"
+msgstr "Pomozite popularnosti: Podjelite Odoo sa vašim prijatelima!"
 
 #. module: web_settings_dashboard
 #. openerp-web
@@ -229,7 +231,7 @@ msgstr ""
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:131
 #, python-format
 msgid "Share the Love"
-msgstr "Podjelite ljubav"
+msgstr "Podjelite sa drugima"
 
 #. module: web_settings_dashboard
 #. openerp-web

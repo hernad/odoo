@@ -595,7 +595,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "<strong>Discuss live</strong>"
-msgstr "<strong>Rasprava uživo</strong>"
+msgstr "<strong>Diskusija uživo</strong>"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -757,7 +757,7 @@ msgstr "@odoo"
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_text_block
 msgid "A Great Headline"
-msgstr ""
+msgstr "Veličansten naslov"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_big_picture
@@ -782,7 +782,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_text_block
 msgid "A good subtitle"
-msgstr ""
+msgstr "Dobar podnaslov"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_text_block
@@ -843,7 +843,7 @@ msgstr "Dodaj"
 #: model:ir.ui.view,arch_db:website.s_image_gallery
 #, python-format
 msgid "Add Images from the 'Customize' menu"
-msgstr ""
+msgstr "Dodaj slike iz menija 'Prilagodi'"
 
 #. module: website
 #. openerp-web
@@ -869,7 +869,7 @@ msgstr "Dodaj slike"
 #: code:addons/website/static/src/xml/website.seo.xml:20
 #, python-format
 msgid "Add keyword:"
-msgstr ""
+msgstr "Dodaj ključnu riječ:"
 
 #. module: website
 #. openerp-web
@@ -881,7 +881,7 @@ msgstr "Dodaj stranicu u meni"
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Adding relevant and popular keywords"
-msgstr ""
+msgstr "Dodaj važne i popularne ključne riječi"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.view_website_config_settings

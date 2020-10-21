@@ -346,7 +346,7 @@ msgstr "Više informacija"
 #: code:addons/sales_team/static/src/xml/sales_team_dashboard.xml:216
 #, python-format
 msgid "My Pipeline"
-msgstr "Moj prodajni ljevak"
+msgstr "Moja prodajna strategija"
 
 #. module: sales_team
 #: model:ir.ui.view,arch_db:sales_team.crm_team_salesteams_search
@@ -372,7 +372,7 @@ msgstr "Sljedeća akcija"
 #: code:addons/sales_team/static/src/js/sales_team_dashboard.js:83
 #, python-format
 msgid "Only Integer Value should be valid."
-msgstr "Samo cijeli broj bi trebao biti valjan."
+msgstr "Potrebno unijeti cjelobrojnu vrijednost."
 
 #. module: sales_team
 #: model:ir.model,name:sales_team.model_res_partner

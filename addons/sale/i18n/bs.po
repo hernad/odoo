@@ -1790,7 +1790,7 @@ msgstr "Prodaja završena"
 #. module: sale
 #: model:ir.filters,name:sale.filter_sale_report_sales_funnel
 msgid "Sales Funnel"
-msgstr "Prodajni ljevak"
+msgstr "Prodajna strategija"
 
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.view_order_form

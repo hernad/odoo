@@ -830,17 +830,17 @@ msgstr "Kanali/Partner"
 #: model:ir.actions.client,name:mail.mail_channel_action_client_chat
 #, python-format
 msgid "Chat"
-msgstr "Razgovor"
+msgstr "'Chat'"
 
 #. module: mail
 #: selection:mail.channel,channel_type:0
 msgid "Chat Discussion"
-msgstr "Rasprava razgovora"
+msgstr "'Chat' diskusija"
 
 #. module: mail
 #: model:ir.actions.act_window,name:mail.mail_shortcode_action
 msgid "Chat Shortcode"
-msgstr "Kratki kod razgovora"
+msgstr "'Chat' kratki kod"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message_child_ids
@@ -901,19 +901,19 @@ msgstr "Zarezom odvojeni id-ovi partnera primaoca"
 msgid ""
 "Comma-separated ids of recipient partners (placeholders may be used here)"
 msgstr ""
-"IDovi zarezom odvojeni partnera primatelja(mogu se koristiti držači mjesta)"
+"Zarezom odvojeni id-ovi partnera primatelja(mogu se koristiti markeri mjesta)"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.email_template_form
 msgid "Comma-separated recipient addresses"
-msgstr "Zarezom odvojenie adrese primaoca"
+msgstr "Zarezom odvojene (CSV) adrese primaoca"
 
 #. module: mail
 #: model:ir.model.fields,help:mail.field_email_template_preview_email_to
 #: model:ir.model.fields,help:mail.field_ir_act_server_email_to
 #: model:ir.model.fields,help:mail.field_mail_template_email_to
 msgid "Comma-separated recipient addresses (placeholders may be used here)"
-msgstr "Adrese primatelja odvojene zarezom"
+msgstr "Zarezom odvojene (CSV) adrese primatelja (mogu se koristiti markeri mjesta)"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.view_mail_search
@@ -940,7 +940,7 @@ msgstr "Mod sastavljanja"
 #: code:addons/mail/static/src/xml/thread.xml:24
 #, python-format
 msgid "Congratulations, your inbox is empty"
-msgstr "Čestitamo, vaše poštansko sanduče je prazno."
+msgstr "Čestitamo, vaš 'inbox' je prazan"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.email_template_form
@@ -1215,17 +1215,17 @@ msgstr "Direktne poruke"
 #. module: mail
 #: model:ir.ui.menu,name:mail.mail_channel_menu_root_chat
 msgid "Discuss"
-msgstr "Rasprava"
+msgstr "Diskusije"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_channel
 msgid "Discussion channel"
-msgstr "Kanal rasprave"
+msgstr "Diskusioni kanal"
 
 #. module: mail
 #: model:mail.message.subtype,name:mail.mt_comment
 msgid "Discussions"
-msgstr "Rasprave"
+msgstr "Diskusije"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_display_name
@@ -3255,7 +3255,7 @@ msgstr "Otvori postavke kanala"
 #: code:addons/mail/static/src/xml/client_action.xml:48
 #, python-format
 msgid "Open chat"
-msgstr "Otvore razgovor"
+msgstr "Započni razgovoro"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_partner_opt_out
