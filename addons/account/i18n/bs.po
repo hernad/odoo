@@ -3231,7 +3231,7 @@ msgstr "Nivo povjerenja koji imate prema ovom kupcu"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_deprecated
 msgid "Deprecated"
-msgstr "Zastarjelo"
+msgstr "Ne koristiti više"
 
 #. module: account
 #: model:account.account.type,name:account.data_account_type_depreciation model:ir.ui.view,arch_db:account.view_account_form
@@ -3744,12 +3744,12 @@ msgstr "Stil financijskog izvještaja"
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_financial_report_tree model:ir.actions.act_window,name:account.action_account_report model:ir.ui.menu,name:account.menu_account_reports
 msgid "Financial Reports"
-msgstr "Financijski izvještaji"
+msgstr "Finansijski izvještaji"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_report_tree_hierarchy
 msgid "Financial Reports Hierarchy"
-msgstr "Hijerarhija financijskog izvještaja"
+msgstr "Hijerarhija finansijskog izvještaja"
 
 #. module: account
 #: model:ir.actions.report.xml,name:account.action_report_financial
@@ -4081,7 +4081,7 @@ msgstr "Sakrij metode plaćanja"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_form
 msgid "How account type affects your reports?"
-msgstr ""
+msgstr "Kako tip konta utiče na vaše izvještaje?"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_abstract_payment_id model:ir.model.fields,field_description:account.field_account_account_id
