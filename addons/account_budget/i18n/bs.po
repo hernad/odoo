@@ -304,4 +304,4 @@ msgstr "Budžet za odobravanje"
 #. module: account_budget
 #: selection:crossovered.budget,state:0
 msgid "Validated"
-msgstr "Odobreno"
+msgstr "Potvrđeno"

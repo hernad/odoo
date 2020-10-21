@@ -8537,22 +8537,22 @@ msgstr "PDV obavezan"
 #: model:ir.ui.view,arch_db:account.view_account_payment_from_invoices model:ir.ui.view,arch_db:account.view_account_payment_invoice_form model:ir.ui.view,arch_db:account.view_bank_statement_form
 #, python-format
 msgid "Validate"
-msgstr "Odobri"
+msgstr "Potvrdi"
 
 #. module: account
 #: model:ir.model,name:account.model_validate_account_move
 msgid "Validate Account Move"
-msgstr "Odobri knjiženje"
+msgstr "Potvrdi pomjeranje konta"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Validate purchase orders and control vendor bills by departments."
-msgstr "Odobri nabavne naloge i kontroliši račune po odjelima"
+msgstr "Potvrdi nabavne naloge i kontroliši račune po odjelima"
 
 #. module: account
 #: selection:account.bank.statement,state:0 model:mail.message.subtype,name:account.mt_invoice_validated
 msgid "Validated"
-msgstr "Odobreno"
+msgstr "Potvrđeno"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_payment_term_line_value_amount

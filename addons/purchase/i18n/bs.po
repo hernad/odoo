@@ -564,7 +564,7 @@ msgstr "Dana do isporuke"
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_report_delay
 msgid "Days to Validate"
-msgstr "Dana do validacije"
+msgstr "Dana do potvrde"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_picking_type_id

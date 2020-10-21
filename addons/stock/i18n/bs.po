@@ -212,8 +212,8 @@ msgid ""
 "<span class=\"label label-default text-center odoo_purple\">Validate the "
 "Receipt Order</span>"
 msgstr ""
-"<span class=\"label label-default text-center odoo_purple\">Potvrdi prijemnu"
-" narudžbu</span>"
+"<span class=\"label label-default text-center odoo_purple\">Potvrdi prijem"
+" narudžbe</span>"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.product_form_view_procurement_button
@@ -6827,17 +6827,17 @@ msgstr "PDV:"
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_picking_form
 msgid "Validate"
-msgstr "Odobri"
+msgstr "Potvrdi"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_inventory_form
 msgid "Validate Inventory"
-msgstr "Vrednuj inventuru"
+msgstr "Potvrdi zalihu"
 
 #. module: stock
 #: selection:stock.inventory,state:0
 msgid "Validated"
-msgstr "Odobreno"
+msgstr "Potvrđeno"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_change_product_qty_product_variant_count
@@ -7586,7 +7586,7 @@ msgstr ""
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
 msgid "with the <i>Validate</i> button"
-msgstr ""
+msgstr "sa dugmetom <i>Potvrdi</i>"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_picking_form

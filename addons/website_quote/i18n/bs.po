@@ -1748,7 +1748,7 @@ msgstr ""
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.so_quotation
 msgid "Validate Order"
-msgstr ""
+msgstr "Potvrdi narudžbu"
 
 #. module: website_quote
 #: model:product.product,quote_description:website_quote.product_product_quote_2

@@ -3574,12 +3574,12 @@ msgstr "PDV:"
 #: code:addons/point_of_sale/static/src/xml/pos.xml:609
 #, python-format
 msgid "Validate"
-msgstr "Odobri"
+msgstr "Potvrdi"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
 msgid "Validate Closing & Post Entries"
-msgstr "Ovjeri zatvaranje i proknjiži stavke"
+msgstr "Potvrdi zatvaranje i proknjiži stavke"
 
 #. module: point_of_sale
 #: model:product.product,name:point_of_sale.partner_product_6
