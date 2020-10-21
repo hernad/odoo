@@ -2744,7 +2744,7 @@ msgstr "Kontrola pristupa"
 #. module: account
 #: model:account.account.type,name:account.data_account_type_direct_costs
 msgid "Cost of Revenue"
-msgstr "Trošak prihoda"
+msgstr "Troškovi prodaje"
 
 #. module: account
 #: code:addons/account/models/account_payment.py:393 model:ir.model.fields,field_description:account.field_account_move_line_counterpart
@@ -5258,7 +5258,7 @@ msgstr "Poruka za Fakturu"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_form
 msgid "Minus Cost of Revenue"
-msgstr ""
+msgstr "Minus troškovi prodaje"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_form
