@@ -512,7 +512,7 @@ msgstr "Statistika podrške razgovora u živo"
 #. module: im_livechat
 #: model:res.groups,name:im_livechat.im_livechat_group_manager
 msgid "Manager"
-msgstr "Upravitelj"
+msgstr "Menadžer"
 
 #. module: im_livechat
 #: model:ir.model.fields,field_description:im_livechat.field_im_livechat_channel_rule_sequence

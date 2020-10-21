@@ -1363,12 +1363,12 @@ msgstr "Napredne opcije"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_journal_form
 msgid "Advanced Settings"
-msgstr "Napredna podešavanja"
+msgstr "Napredna podešenja"
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_entries model:res.groups,name:account.group_account_manager
 msgid "Adviser"
-msgstr "Finansijski savjetnik"
+msgstr "Glavni knjigovođa"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_tax_include_base_amount
@@ -1384,7 +1384,7 @@ msgstr "Utiče na podporeze"
 #: model:ir.actions.act_window,name:account.action_account_aged_balance_view model:ir.actions.report.xml,name:account.action_report_aged_partner_balance model:ir.ui.menu,name:account.menu_aged_trial_balance
 #: model:ir.ui.view,arch_db:account.account_aged_balance_view model:ir.ui.view,arch_db:account.report_agedpartnerbalance
 msgid "Aged Partner Balance"
-msgstr "Zreli saldo partnera"
+msgstr "Saldo partnera po dospijeću"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_aged_balance_view
@@ -1437,7 +1437,7 @@ msgstr "Sve fakture i plaćanja su bila usklađena, salda vaših konta su čista
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_all_lines_reconciled
 msgid "All lines reconciled"
-msgstr "Sve stavke zatvorene"
+msgstr "Sve stavke poravnate (zatvorene)"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_state
@@ -1462,7 +1462,7 @@ msgstr "Svi knjigovodsveni zapisi moraju biti obrađeni da bi ste zatvorili nalo
 #. module: account
 #: selection:account.config.settings,group_warning_account:0
 msgid "All the partners can be used in invoices"
-msgstr ""
+msgstr "Svi partneri mogu biti korišteni u fakturama"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_update_posted
@@ -1477,12 +1477,12 @@ msgstr "Sva plaćanja i fakture su usklađena"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_reconcile
 msgid "Allow Reconciliation"
-msgstr "Dozvoli usklađivanje"
+msgstr "Dozvoli poravnavanje (zatvaranje)"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_module_account_tax_cash_basis
 msgid "Allow Tax Cash Basis"
-msgstr ""
+msgstr "Dozvoli poreznu osnovu"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_module_l10n_us_check_printing
@@ -1492,7 +1492,7 @@ msgstr "Dozvoli štampanje čekova i depozite"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_group_multi_currency
 msgid "Allow multi currencies"
-msgstr "Dozvoli mult-valutni sistem"
+msgstr "Dozvoli multivalutni sistem"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_group_proforma_invoices
@@ -1502,7 +1502,7 @@ msgstr "Odobri ProForma fakture"
 #. module: account
 #: model:ir.model.fields,help:account.field_account_config_settings_group_multi_currency
 msgid "Allows to work in a multi currency environment"
-msgstr ""
+msgstr "Dozvoli rad u multivalutnom sistemu"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_config_settings_group_proforma_invoices
@@ -1543,12 +1543,12 @@ msgstr "Iznos van valute"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_residual_company_signed
 msgid "Amount Due in Company Currency"
-msgstr ""
+msgstr "Iznos duguje u domaćoj valuti"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_residual_signed
 msgid "Amount Due in Invoice Currency"
-msgstr ""
+msgstr "Iznos duguje u valuti fakture"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_line_price_subtotal_signed
@@ -1599,6 +1599,11 @@ msgid ""
 "                account). The annual accounts of a company are required by law\n"
 "                to disclose a certain amount of information."
 msgstr ""
+"Konto je dio glavne knjige koji omogućava\n"
+"                evidenciju svih vrsta transakcija u vašem preduzeću.\n"
+"                Preduzeća prikazuju godišnje izvještaje, i to: Bilans stanja\n"
+"                i bilans uspjeha\n"
+"                Godišnji izvještaje je obavezno podnijeti u skladu sa zakonskom legislativom."
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_account_type_form
@@ -3018,7 +3023,7 @@ msgstr "Faktura kupca"
 #: model:ir.ui.view,arch_db:account.account_planner
 #, python-format
 msgid "Customer Invoices"
-msgstr "Fakture kupca"
+msgstr "Fakture kupaca"
 
 #. module: account
 #: code:addons/account/models/account_payment.py:508
@@ -5134,12 +5139,12 @@ msgstr "Glavna valuta preduzeća."
 #. module: account
 #: model:ir.actions.act_window,name:account.tax_adjustments_form model:ir.ui.menu,name:account.menu_action_tax_adjustment
 msgid "Make Manual Tax Adjustments"
-msgstr ""
+msgstr "Ručna podešenja poreza"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Manage time &amp; material contracts or fixed-price recurring subscriptions."
-msgstr ""
+msgstr "Upravljanje vremenom i ugovorima ili fiksnim cijenama periodičnih pretplata"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -5175,7 +5180,7 @@ msgstr "Ručni porezi fakture"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_action_manual_reconciliation
 msgid "Manual Payments & Invoices Matching"
-msgstr ""
+msgstr "Ručne nabavke i usaglašavanje faktura"
 
 #. module: account
 #: model:ir.actions.client,name:account.action_manual_reconciliation
@@ -6898,12 +6903,12 @@ msgstr "Prodaja"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_wizard_multi_chart
 msgid "Sale Tax"
-msgstr "Porez prodaje"
+msgstr "Porez na prodaju"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_print_journal_menu model:ir.actions.report.xml,name:account.action_report_journal model:ir.ui.menu,name:account.menu_print_journal
 msgid "Sale/Purchase Journal"
-msgstr "Dnevnik Prodaje/Nabavke"
+msgstr "Dnevnik prodaje/nabavke"
 
 #. module: account
 #: selection:account.tax,type_tax_use:0 selection:account.tax.template,type_tax_use:0 model:ir.ui.menu,name:account.menu_finance_receivables model:ir.ui.view,arch_db:account.view_account_move_filter

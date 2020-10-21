@@ -2157,7 +2157,7 @@ msgstr "Prodaja"
 #: code:addons/website_sale/static/src/xml/website_sale_dashboard.xml:9
 #, python-format
 msgid "Sales /"
-msgstr "Prodaje /"
+msgstr "Prodaja /"
 
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_sale_order

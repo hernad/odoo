@@ -2271,7 +2271,7 @@ msgstr "Nizak"
 #: model:ir.ui.view,arch_db:project.view_project_project_filter
 #: model:res.groups,name:project.group_project_manager
 msgid "Manager"
-msgstr "Upravitelj"
+msgstr "Menadžer"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner

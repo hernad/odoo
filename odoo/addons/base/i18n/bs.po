@@ -6111,7 +6111,7 @@ msgstr "Prisutnost"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_attendance
 msgid "Attendances"
-msgstr "Prisutnosti"
+msgstr "Radno vrijeme"
 
 #. module: base
 #: model:res.country,name:base.au
@@ -12084,7 +12084,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_attendance
 msgid "Manage employee attendances"
-msgstr ""
+msgstr "Evidencija radnog vremena"
 
 #. module: base
 #: model:ir.actions.act_window,help:base.action_partner_category_form
@@ -13443,7 +13443,7 @@ msgstr "POEdit"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pad_project
 msgid "Pad on tasks"
-msgstr "Blok (pad)  na zadatcima"
+msgstr "Blok (pad)  na zadacima"
 
 #. module: base
 #: model:res.country,name:base.pk
@@ -14102,7 +14102,7 @@ msgstr "Rejting projekata"
 #. module: base
 #: model:ir.module.module,summary:base.module_project
 msgid "Projects, Tasks"
-msgstr "Projekti, Zadatci"
+msgstr "Projekti, Zadaci"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_model_fields_form

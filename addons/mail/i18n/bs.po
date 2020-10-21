@@ -4869,7 +4869,7 @@ msgstr "ponovno postavljanje thread_id"
 #. module: mail
 #: model:mail.channel,name:mail.channel_1
 msgid "sales"
-msgstr "prodaje"
+msgstr "prodaja"
 
 #. module: mail
 #: code:addons/mail/models/mail_thread.py:917

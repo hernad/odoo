@@ -817,7 +817,7 @@ msgstr ""
 #. module: purchase
 #: model:res.groups,name:purchase.group_purchase_manager
 msgid "Manager"
-msgstr "Upravitelj"
+msgstr "Menadžer"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.purchase_order_line_form2
@@ -1104,7 +1104,7 @@ msgstr ""
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_product_normal_action_puchased
 msgid "Purchasable Products"
-msgstr "Proizvodi koji se kupuju"
+msgstr "Proizvodi koji se nabavljaju"
 
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_procurement_management

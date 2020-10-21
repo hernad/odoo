@@ -604,7 +604,7 @@ msgstr "Ljudski resursi"
 #. module: hr
 #: model:hr.job,name:hr.job_hrm
 msgid "Human Resources Manager"
-msgstr "Upravitelj ljudskim resursima"
+msgstr "Menadžer ljudskim resursima"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_id
@@ -773,7 +773,7 @@ msgstr "Muški"
 #: model:ir.ui.view,arch_db:hr.view_employee_filter
 #: model:res.groups,name:hr.group_hr_manager
 msgid "Manager"
-msgstr "Upravitelj"
+msgstr "Menadžer"
 
 #. module: hr
 #: model:res.groups,name:hr.group_hr_attendance
@@ -788,7 +788,7 @@ msgstr "Bračni status"
 #. module: hr
 #: model:hr.job,name:hr.job_marketing
 msgid "Marketing and Community Manager"
-msgstr "Upravitelj marketinga i odnosa sa javnošću"
+msgstr "Menadžer marketinga i odnosa sa javnošću"
 
 #. module: hr
 #: selection:hr.employee,marital:0
@@ -1578,7 +1578,7 @@ msgstr "npr.: Pola radnog vremena"
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_hr_job_form
 msgid "e.g. Sales Manager"
-msgstr "npr.: Upravitelj prodajom"
+msgstr "npr.: Menadžer prodajom"
 
 #. module: hr
 #: code:addons/hr/models/mail_thread.py:41

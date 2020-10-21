@@ -3640,7 +3640,7 @@ msgstr "Upravljaj sa više skladišta"
 #. module: stock
 #: model:res.groups,name:stock.group_stock_manager
 msgid "Manager"
-msgstr "Upravitelj"
+msgstr "Menadžer"
 
 #. module: stock
 #: selection:stock.location.path,auto:0
@@ -4469,7 +4469,7 @@ msgstr ""
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
 msgid "Periodical Tasks"
-msgstr "Periodični zadatci"
+msgstr "Periodični zadaci"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_inventory_filter

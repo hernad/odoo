@@ -558,7 +558,7 @@ msgid ""
 "                                    <span>(Sales Manager)</span>"
 msgstr ""
 "<span class=\"panel-title\"><span data-icon=\"&#57463;\"/><strong> Vježba 2</strong></span>\n"
-"                                    <span>(Upravitelj prodajom)</span>"
+"                                    <span>(Menadžer prodajom)</span>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2468,18 +2468,18 @@ msgstr "Masovna pošta potencijala/prilika"
 #: model:ir.ui.view,arch_db:crm.crm_team_salesteams_view_kanban
 #: model:ir.ui.view,arch_db:crm.sales_team_form_view_in_crm
 msgid "Leads"
-msgstr "Potencijali"
+msgstr "Tragovi (naznake)"
 
 #. module: crm
 #: model:ir.ui.menu,name:crm.menu_crm_config_lead
 msgid "Leads & Opportunities"
-msgstr "Potencijali i Prilike"
+msgstr "Tragovi i Prilike"
 
 #. module: crm
 #: code:addons/crm/models/crm_lead.py:59
 #, python-format
 msgid "Leads / Opportunities"
-msgstr "Potencijali / Prilike"
+msgstr "Tragovi / Prilike"
 
 #. module: crm
 #: model:ir.actions.act_window,name:crm.action_report_crm_lead_salesteam
@@ -2488,7 +2488,7 @@ msgstr "Potencijali / Prilike"
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_pivot_lead
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Leads Analysis"
-msgstr "Analiza CRM potencijala"
+msgstr "Analiza CRM tragovi"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.action_report_crm_lead_salesteam
@@ -2505,7 +2505,7 @@ msgstr ""
 #. module: crm
 #: model:ir.filters,name:crm.filter_opportunity_salesperson
 msgid "Leads By Salespersons"
-msgstr "Potencijali po prodavaču"
+msgstr "Tragovi po prodavaču"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_sale_config_settings
@@ -2525,7 +2525,7 @@ msgstr "Generiranje potencijalnih kontakata"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Leads by Source"
-msgstr "Potencijali po izvoru"
+msgstr "Tragovi po izvoru"
 
 #. module: crm
 #: model:ir.filters,name:crm.filter_usa_lead
@@ -2535,13 +2535,13 @@ msgstr "Potencijalni kontakti iz SAD"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 msgid "Leads that are assigned to me"
-msgstr "Potencijali dodijeljeni meni"
+msgstr "Tragovi dodijeljeni meni"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_case_leads_filter
 msgid "Leads that did not ask not to be included in mass mailing campaigns"
 msgstr ""
-"Potencijali koji nisu tražili da ne budu uključeni u kampanju masovnog "
+"Tragovi koji nisu tražili da ne budu uključeni u kampanju masovnog "
 "slanja e-pošte."
 
 #. module: crm
@@ -2554,19 +2554,19 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_crm_lead2opportunity_partner_mass
 msgid "Leads with existing duplicates (for information)"
-msgstr ""
+msgstr "Tragovi sa postojećim duplikatima (za informaciju)"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_merge_opportunity_opportunity_ids
 msgid "Leads/Opportunities"
-msgstr "Potencijali/Prilike"
+msgstr "Tragovi/Prilike"
 
 #. module: crm
 #. openerp-web
 #: code:addons/crm/static/src/js/tour.js:18
 #, python-format
 msgid "Let's have a look at your opportunities pipeline."
-msgstr ""
+msgstr "Strategija prilika za prodaju"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2576,7 +2576,7 @@ msgstr "Licence"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_line_ids
 msgid "Lines"
-msgstr "Retci"
+msgstr "Linije"
 
 #. module: crm
 #: selection:crm.lead2opportunity.partner,action:0
@@ -2959,7 +2959,7 @@ msgstr "Sljedeća akcija"
 #: model:ir.actions.act_window,name:crm.crm_lead_action_activities
 #: model:ir.ui.menu,name:crm.crm_lead_menu_activities
 msgid "Next Activities"
-msgstr "Sljdedeće aktivnosti"
+msgstr "Sljedeće aktivnosti"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_next_activity_id
@@ -3077,7 +3077,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm.field_sale_config_settings_module_website_sign
 #: model:ir.ui.view,arch_db:crm.view_sale_config_settings
 msgid "Odoo Sign"
-msgstr ""
+msgstr "Odoo prijava"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.crm_case_form_view_salesteams_opportunity
@@ -3164,7 +3164,7 @@ msgstr "Prilike"
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Opportunities Analysis"
-msgstr "Analiza prilika"
+msgstr "Analiza prilika za prodaju"
 
 #. module: crm
 #: model:ir.actions.act_window,help:crm.action_report_crm_opportunity_salesteam
