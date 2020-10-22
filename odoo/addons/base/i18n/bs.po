@@ -5286,22 +5286,22 @@ msgstr "Broj računa mora biti jedinstven"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_tax_cash_basis
 msgid "Account Tax Cash Basis"
-msgstr ""
+msgstr "Konto osnovice za PDV"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_taxcloud
 msgid "Account TaxCloud"
-msgstr ""
+msgstr "Account TaxCloud"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_account_taxcloud
 msgid "Account TaxCloud - Ecommerce"
-msgstr ""
+msgstr "Account TaxCloud - Ecommerce"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_account_taxcloud
 msgid "Account TaxCloud - Sale"
-msgstr ""
+msgstr "Account TaxCloud - Sale"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting
@@ -5311,17 +5311,17 @@ msgstr "Računovodstvo"
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_and_finance
 msgid "Accounting & Finance"
-msgstr "Računovodstvo i financije"
+msgstr "Računovodstvo i finansije"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_andamp;_finance
 msgid "Accounting &amp; Finance"
-msgstr "Računovodstvo i Finansije"
+msgstr "Računovodstvo i finansije"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_account
 msgid "Accounting - MRP"
-msgstr ""
+msgstr "Računovodstvo - proizvodnja"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_test
@@ -5537,17 +5537,17 @@ msgstr "Dodaj RML zaglavlje"
 #. module: base
 #: model:ir.module.module,summary:base.module_account_cash_basis_base_account
 msgid "Add a custom account to handle base amount lines"
-msgstr ""
+msgstr "Dodajte prilagođeni konto za rukovanje linijama osnovnog iznosa"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_stock_barcode
 msgid "Add barcode scanning facilities to Warehouse Management."
-msgstr ""
+msgstr "Dodajte opcije skeniranje barkoda u skladišnom poslovanju."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_barcode
 msgid "Add barcode scanning facilities to manufacturing"
-msgstr ""
+msgstr "Dodajte opcije skeniranje barkoda u proizvodnji."
 
 #. module: base
 #: model:ir.module.module,summary:base.module_event_barcode
@@ -5599,7 +5599,7 @@ msgstr "Tip adrese"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country_address_format
 msgid "Address format"
-msgstr ""
+msgstr "Format adrese"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_country_form
