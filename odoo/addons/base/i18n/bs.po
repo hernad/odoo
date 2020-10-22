@@ -8865,7 +8865,7 @@ msgstr "Ekvatorijska Gvineja"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_maintenance
 msgid "Equipments"
-msgstr "Opreme"
+msgstr "Stalna sredstva"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_maintenance
