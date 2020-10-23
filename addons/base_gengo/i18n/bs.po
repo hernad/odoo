@@ -87,7 +87,7 @@ msgstr "Komentari i Aktivnosti povezani na Gengo"
 #. module: base_gengo
 #: model:ir.model,name:base_gengo.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: base_gengo
 #: model:ir.model.fields,field_description:base_gengo.field_base_gengo_translations_create_uid
@@ -159,7 +159,7 @@ msgid ""
 "authentication parameters under `Settings > Companies > Gengo Parameters`."
 msgstr ""
 "Gengo `Javni ključ` ili `Privatni ključ` nedostaje. Podesite svoju Gengo "
-"prijavu pod `Postavke > Kompanije > Gengo parametri`."
+"prijavu pod `Postavke > Preduzeća > Gengo parametri`."
 
 #. module: base_gengo
 #: code:addons/base_gengo/wizard/base_gengo_translations.py:95

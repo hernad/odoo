@@ -423,7 +423,7 @@ msgid ""
 "<span>(*) This configuration is related to the company you're logged "
 "into.</span>"
 msgstr ""
-"<span>(*) Ova konfiguracija se odnosi na kompaniju u koju ste trenutno "
+"<span>(*) Ova konfiguracija se odnosi na preduzeće u koju ste trenutno "
 "prijavljeni.</span>"
 
 #. module: project
@@ -1244,7 +1244,7 @@ msgstr ""
 #. module: project
 #: model:ir.model,name:project.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_config_settings_company_id
@@ -1254,7 +1254,7 @@ msgstr "Kompanije"
 #: model:ir.ui.view,arch_db:project.view_task_project_user_search
 #: model:ir.ui.view,arch_db:project.view_task_search_form
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_account_analytic_account_company_uom_id

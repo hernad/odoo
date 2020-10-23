@@ -32,7 +32,7 @@ msgstr "Analitička stavka"
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: sale_timesheet
 #: model:ir.model.fields,help:sale_timesheet.field_product_product_project_id

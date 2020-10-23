@@ -246,7 +246,7 @@ msgstr "Klinknite da kreirate sticaoca plaćanja"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.acquirer_form

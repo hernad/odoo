@@ -466,7 +466,7 @@ msgstr "<span> Na </span>"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_config_settings
 msgid "<span>(*) This configuration is related to the company you're logged into.</span>"
-msgstr "<span>(*) Ova konfiguracija se odnosi na kompaniju u koju ste trenutno prijavljeni.</span>"
+msgstr "<span>(*) Ova konfiguracija se odnosi na preduzeće u koju ste trenutno prijavljeni.</span>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_invoice_report_duplicate
@@ -578,7 +578,7 @@ msgstr "<strong>Komentar:</strong>"
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_journal model:ir.ui.view,arch_db:account.report_partnerledger
 msgid "<strong>Company:</strong>"
-msgstr "<strong>Kompanija:</strong>"
+msgstr "<strong>Preduzeće:</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -2184,7 +2184,7 @@ msgstr "Otkazana faktura"
 #: code:addons/account/models/account_move.py:173
 #, python-format
 msgid "Cannot create moves for different companies."
-msgstr "Nije moguće kreirati knjiženja za različite kompanije."
+msgstr "Nije moguće kreirati knjiženja za različite preduzeća."
 
 #. module: account
 #: code:addons/account/models/account_move.py:205
@@ -2199,7 +2199,7 @@ msgid ""
 "Cannot find a chart of accounts for this company, You should configure it. \n"
 "Please go to Account Configuration."
 msgstr ""
-"Nije bilo moguće pronaći kontni plan za ovu kompaniju. Trebate je konfigurisati.\n"
+"Nije bilo moguće pronaći kontni plan za ovu preduzeće. Trebate je konfigurisati.\n"
 "Molimo da odete na konfiguraciju računovodstva."
 
 #. module: account
@@ -2371,7 +2371,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_config_settings_expects_chart_of_accounts
 msgid "Check this box if this company is a legal entity."
-msgstr "Označite ovdje ako je ova kompanija zasebna pravna osoba"
+msgstr "Označite ovdje ako je ova preduzeće zasebna pravna osoba"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal_refund_sequence
@@ -2549,7 +2549,7 @@ msgstr "Komunikacija"
 #. module: account
 #: model:ir.model,name:account.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_partner_ref_company_ids model:ir.model.fields,field_description:account.field_res_users_ref_company_ids
@@ -2576,7 +2576,7 @@ msgstr "Firme koje se vežu sa partnerom"
 #: model:ir.ui.view,arch_db:account.view_account_config_settings model:ir.ui.view,arch_db:account.view_account_invoice_report_search model:ir.ui.view,arch_db:account.view_account_payment_search
 #: model:ir.ui.view,arch_db:account.view_account_tax_search
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_company_currency_id model:ir.model.fields,field_description:account.field_account_invoice_line_company_currency_id
@@ -2587,12 +2587,12 @@ msgstr "Valuta preduzeća"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_tax_adjustments_wizard_company_currency_id
 msgid "Company currency id"
-msgstr "Valuta kompanije"
+msgstr "Valuta preduzeća"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_has_chart_of_accounts
 msgid "Company has a chart of accounts"
-msgstr "Kompanija ima kontni plan"
+msgstr "Preduzeće ima kontni plan"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_abstract_payment_company_id model:ir.model.fields,help:account.field_account_bank_statement_company_id
@@ -2600,7 +2600,7 @@ msgstr "Kompanija ima kontni plan"
 #: model:ir.model.fields,help:account.field_account_move_company_id model:ir.model.fields,help:account.field_account_payment_company_id
 #: model:ir.model.fields,help:account.field_account_register_payments_company_id
 msgid "Company related to this journal"
-msgstr "Kompanija za koju se vodi ovaj dnevnik"
+msgstr "Preduzeće za koju se vodi ovaj dnevnik"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.accounting_report_view
@@ -2686,7 +2686,7 @@ msgstr "Postavke računovodstva"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_config_settings
 msgid "Configure your company data"
-msgstr "Upišite podatke o Vašoj kompaniji"
+msgstr "Upišite podatke o vašem preduzeću"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_bnk_stmt_cashbox model:ir.ui.view,arch_db:account.view_account_bnk_stmt_check model:ir.ui.view,arch_db:account.view_account_payment_form
@@ -2775,7 +2775,7 @@ msgstr "Grupa zemalja"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_report_country_id
 msgid "Country of the Partner Company"
-msgstr "Država kompanije partnera"
+msgstr "Država preduzeća partnera"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -2978,7 +2978,7 @@ msgstr "Kursna lista"
 #. module: account
 #: model:ir.model.fields,help:account.field_wizard_multi_charts_accounts_currency_id
 msgid "Currency as per company's country."
-msgstr "Valuta prema državi kompanije."
+msgstr "Valuta prema državi preduzeća."
 
 #. module: account
 #: code:addons/account/models/account_move.py:1329 code:addons/account/models/account_move.py:1339
@@ -3201,7 +3201,7 @@ msgstr "Zadani porezi"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_currency_id
 msgid "Default company currency"
-msgstr "Zadana valuta kompanije"
+msgstr "Zadana valuta preduzeća"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_purchase_tax_id
@@ -4060,7 +4060,7 @@ msgstr "Grupa poreza"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_has_default_company
 msgid "Has default company"
-msgstr "Ima zadanu kompaniju"
+msgstr "Ima tekuće preduzeće"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_payment_has_invoices
@@ -4641,7 +4641,7 @@ msgstr "Uobičajeni konto za dugovni iznos"
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_partner_ledger_amount_currency
 msgid "It adds the currency column on report if the currency differs from the company currency."
-msgstr "Dodaje kolonu valute na izvještaj ukoliko se valuta razlikuje od glavne valute kompanije."
+msgstr "Dodaje kolonu valute na izvještaj ukoliko se valuta razlikuje od glavne valute preduzeća."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_invoice_reconciled
@@ -5938,7 +5938,7 @@ msgstr "Partner"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_report_commercial_partner_id
 msgid "Partner Company"
-msgstr "Kompanija partnera"
+msgstr "Preduzeće partnera"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_partner_ledger_menu model:ir.actions.report.xml,name:account.action_report_partnerledger model:ir.ui.menu,name:account.menu_partner_ledger
@@ -6375,7 +6375,7 @@ msgstr "Ispis fakture"
 #. module: account
 #: model:ir.model.fields,help:account.field_account_common_journal_report_amount_currency model:ir.model.fields,help:account.field_account_print_journal_amount_currency
 msgid "Print Report with the currency column if the currency differs from the company currency."
-msgstr "Ispiši izvještaj sa kolonom valute, ako je valuta različita od valute kompanije."
+msgstr "Ispiši izvještaj sa kolonom valute, ako je valuta različita od valute preduzeća."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.invoice_form
@@ -6759,7 +6759,7 @@ msgstr "Regularni"
 #. module: account
 #: model:ir.model.fields,help:account.field_account_invoice_residual_company_signed
 msgid "Remaining amount due in the currency of the company."
-msgstr "Preostali iznos duga u valuti kompanije."
+msgstr "Preostali iznos duga u valuti preduzeća."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_invoice_residual_signed
@@ -7658,7 +7658,7 @@ msgstr "Iznos izražen u opcionalnoj drugoj valuti ako je viševalutni unos."
 #. module: account
 #: model:ir.model.fields,help:account.field_account_analytic_line_amount_currency model:ir.model.fields,help:account.field_account_analytic_line_analytic_amount_currency
 msgid "The amount expressed in the related account currency if not equal to the company one."
-msgstr "Iznos iskazan u valuti konta ako nije isti valuti kompanije."
+msgstr "Iznos iskazan u valuti konta ako nije isti valuti preduzeća."
 
 #. module: account
 #: code:addons/account/models/account_move.py:436
@@ -7676,7 +7676,7 @@ msgstr "Opseg primjene poreza u grupi mora biti isti kao i grupa ili \"Ništa\""
 #: code:addons/account/models/account.py:310
 #, python-format
 msgid "The bank account of a bank journal must belong to the same company (%s)."
-msgstr "Bankovni račun dnevnika banke mora pripadati istoj kompaniji (%s)."
+msgstr "Bankovni račun dnevnika banke mora pripadati istoj preduzeću (%s)."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line_statement_id
@@ -7686,7 +7686,7 @@ msgstr "Bankovni izvod korišten za bankovno poravnanje"
 #. module: account
 #: model:ir.model.fields,help:account.field_res_company_chart_template_id
 msgid "The chart template for the company (if any)"
-msgstr "Predložak grafikona za kompaniju (ako postoji)"
+msgstr "Predložak grafikona za preduzeće (ako postoji)"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_bnk_stmt_check
@@ -8179,7 +8179,7 @@ msgstr "Za platiti"
 #: code:addons/account/models/account_move.py:847
 #, python-format
 msgid "To reconcile the entries company should be the same for all entries!"
-msgstr "Kompanija bi trebala biti ista na svim zapisima kako bi ste ih mogli zatvoriti!"
+msgstr "Preduzeće bi trebala biti ista na svim zapisima kako bi ste ih mogli zatvoriti!"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -8257,7 +8257,7 @@ msgstr "Ukupni iznos za plaćanje dobavljaču."
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_amount_total_company_signed
 msgid "Total in Company Currency"
-msgstr "Ukupno u valuti kompanije"
+msgstr "Ukupno u valuti preduzeća"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_amount_total_signed
@@ -8300,7 +8300,7 @@ msgstr "Prenesi novčana sredstva na"
 #: code:addons/account/models/account_payment.py:221
 #, python-format
 msgid "Transfer account not defined on the company."
-msgstr "Konta prenosa sredstava nisu definisana na kompaniji."
+msgstr "Konta prenosa sredstava nisu definisana na preduzeću."
 
 #. module: account
 #: code:addons/account/models/account_payment.py:428
@@ -8433,7 +8433,7 @@ msgstr "Neoporezivi iznos"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_amount_untaxed_signed
 msgid "Untaxed Amount in Company Currency"
-msgstr "Neoporezovani iznos u valuti kompanije"
+msgstr "Neoporezovani iznos u valuti preduzeća"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -8854,7 +8854,7 @@ msgstr ""
 #: code:addons/account/models/account.py:180
 #, python-format
 msgid "You cannot change the owner company of an account that already contains journal items."
-msgstr "Ne možete mijenjati kompaniju vlasnika na kontu koji već sadrži dnevničke zapise."
+msgstr "Ne možete mijenjati preduzeće vlasnika na kontu koji već sadrži dnevničke zapise."
 
 #. module: account
 #: code:addons/account/models/account.py:187
@@ -9054,7 +9054,7 @@ msgstr "Vaši bankovni računi"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Your Company"
-msgstr "Vaša kompanija"
+msgstr "Vaša preduzeće"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -9278,7 +9278,7 @@ msgstr "pošaljite nam email"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "set company logo"
-msgstr "postavi logo kompanije"
+msgstr "postavi logo preduzeća"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -9293,7 +9293,7 @@ msgstr "lista kupaca"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_partner_property_form
 msgid "the parent company"
-msgstr "nadređena kompanija"
+msgstr "nadređena preduzeće"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner

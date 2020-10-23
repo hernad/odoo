@@ -659,7 +659,7 @@ msgstr ""
 #. module: product
 #: model:ir.model,name:product.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_price_history_company_id
@@ -669,7 +669,7 @@ msgstr "Kompanije"
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_company_id
 #: model:ir.model.fields,field_description:product.field_product_template_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_pricelist_item_form_view
@@ -2260,7 +2260,7 @@ msgstr ""
 #. module: product
 #: model:ir.model.fields,field_description:product.field_base_config_settings_company_share_product
 msgid "Share product to all companies"
-msgstr "Dijeli proizvode sa svim kompanijama"
+msgstr "Dijeli proizvode sa svim preduzećema"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_base_config_settings_company_share_product
@@ -3250,7 +3250,7 @@ msgstr ""
 #. module: product
 #: model:ir.ui.view,arch_db:product.view_partner_property_form
 msgid "the parent company"
-msgstr "nadređena kompanija"
+msgstr "nadređena preduzeće"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_variant_easy_edit_view

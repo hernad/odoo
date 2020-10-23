@@ -287,7 +287,7 @@ msgstr "Šifra"
 #. module: hr_payroll
 #: model:ir.ui.view,arch_db:hr_payroll.view_hr_payslip_filter
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: hr_payroll
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_contribution_register_company_id
@@ -297,7 +297,7 @@ msgstr "Kompanije"
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_salary_rule_category_company_id
 #: model:ir.model.fields,field_description:hr_payroll.field_hr_salary_rule_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: hr_payroll
 #: model:ir.ui.view,arch_db:hr_payroll.hr_salary_rule_form

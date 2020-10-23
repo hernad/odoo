@@ -126,7 +126,7 @@ msgstr "<span>Pogled</span>"
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
 msgid "<strong>Company</strong>:<br/>"
-msgstr "<strong>Kompanija</strong>:<br/>"
+msgstr "<strong>Preduzeće</strong>:<br/>"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.report_statement
@@ -751,7 +751,7 @@ msgstr "Datum zaključenja"
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_line_company_id
 #: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: point_of_sale
 #: model:product.product,name:point_of_sale.poire_conference
@@ -3119,7 +3119,7 @@ msgstr ""
 #, python-format
 msgid ""
 "The invoice journal and the point of sale must belong to the same company"
-msgstr "Dnevnik fakture i POS moraju pripadati istoj kompaniji"
+msgstr "Dnevnik fakture i POS moraju pripadati istoj preduzeću"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/models/pos_session.py:93

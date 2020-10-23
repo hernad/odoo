@@ -666,7 +666,7 @@ msgstr "Boja"
 #. module: mrp
 #: model:ir.model,name:mrp.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: mrp
 #: model:ir.model.fields,field_description:mrp.field_mrp_bom_company_id
@@ -677,7 +677,7 @@ msgstr "Kompanije"
 #: model:ir.model.fields,field_description:mrp.field_mrp_workcenter_company_id
 #: model:ir.ui.view,arch_db:mrp.view_mrp_workcenter_search
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: mrp
 #: model:ir.ui.view,arch_db:mrp.mrp_bom_component_tree_view
@@ -2336,7 +2336,7 @@ msgstr "Referenca"
 #. module: mrp
 #: sql_constraint:mrp.production:0
 msgid "Reference must be unique per Company!"
-msgstr "Referenca mora biti jedinstvena unuar kompanije!"
+msgstr "Referenca mora biti jedinstvena unuar preduzeća!"
 
 #. module: mrp
 #: model:ir.model.fields,help:mrp.field_mrp_production_origin

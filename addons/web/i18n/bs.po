@@ -201,7 +201,7 @@ msgstr "...Učitavanje u toku..."
 #. module: web
 #: model:ir.ui.view,arch_db:web.menu_secondary
 msgid "<span class=\"oe_logo_edit\">Edit Company data</span>"
-msgstr "<span class=\"oe_logo_edit\">Uredi podatke kompanije</span>"
+msgstr "<span class=\"oe_logo_edit\">Uredi podatke preduzeća</span>"
 
 #. module: web
 #: model:ir.ui.view,arch_db:web.menu_secondary

@@ -2901,7 +2901,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Your Company"
-msgstr "Vaša kompanija"
+msgstr "Vaša preduzeće"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.address
@@ -3024,7 +3024,7 @@ msgstr "product.style"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "set company logo"
-msgstr "postavi logo kompanije"
+msgstr "postavi logo preduzeća"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.payment_sale_note

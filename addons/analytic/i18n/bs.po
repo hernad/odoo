@@ -138,7 +138,7 @@ msgstr "Indeks boje"
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_account_company_id
 #: model:ir.model.fields,field_description:analytic.field_account_analytic_line_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: analytic
 #: model:ir.ui.view,arch_db:analytic.view_account_analytic_account_form
@@ -314,7 +314,7 @@ msgstr "Mjesec zadataka"
 #. module: analytic
 #: model:ir.model.fields,help:analytic.field_account_analytic_line_currency_id
 msgid "The related account currency if not equal to the company one."
-msgstr "Povezani konto valute ako nije jednak onom od kompanije."
+msgstr "Povezani konto valute ako nije jednak onom od preduzeća."
 
 #. module: analytic
 #: model:ir.ui.view,arch_db:analytic.view_account_analytic_line_tree

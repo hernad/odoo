@@ -153,7 +153,7 @@ msgid ""
 "Amount of the order to benefit from a free shipping, expressed in the "
 "company currency"
 msgstr ""
-"Iznos narudžbe da bi dostava bila besplatna, izražena u valuti kompanije"
+"Iznos narudžbe da bi dostava bila besplatna, izražena u valuti preduzeća"
 
 #. module: delivery
 #: model:ir.ui.view,arch_db:delivery.view_delivery_carrier_search
@@ -319,7 +319,7 @@ msgstr "Indeks boje"
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: delivery
 #: model:ir.ui.view,arch_db:delivery.view_delivery_price_rule_form

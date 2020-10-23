@@ -170,7 +170,7 @@ msgstr ""
 #. module: report
 #: model:ir.model,name:report.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: report
 #: model:ir.model.fields,field_description:report.field_report_create_uid
@@ -229,17 +229,17 @@ msgstr "Uredi"
 #. module: report
 #: model:ir.ui.view,arch_db:report.base_config_settings_inherited
 msgid "Edit external footer"
-msgstr ""
+msgstr "Uredi eksterno podnožje"
 
 #. module: report
 #: model:ir.ui.view,arch_db:report.base_config_settings_inherited
 msgid "Edit external header"
-msgstr ""
+msgstr "Uredi eksterno zaglavlje"
 
 #. module: report
 #: model:ir.ui.view,arch_db:report.base_config_settings_inherited
 msgid "Edit internal header"
-msgstr ""
+msgstr "Uredi interno zaglavlje"
 
 #. module: report
 #: model:ir.ui.view,arch_db:report.external_layout_footer
@@ -333,7 +333,7 @@ msgstr "Legal    3   8.5 x 14 inča, 215.9 x 355.6 mm"
 #. module: report
 #: selection:report.paperformat,format:0
 msgid "Letter 2 8.5 x 11 inches, 215.9 x 279.4 mm"
-msgstr ""
+msgstr "Letter 2 8.5 x 11 inches, 215.9 x 279.4 mm"
 
 #. module: report
 #: model:ir.model.fields,field_description:report.field_report_paperformat_name
@@ -363,7 +363,7 @@ msgstr "Širina stranice (mm)"
 #. module: report
 #: model:ir.ui.view,arch_db:report.external_layout_footer
 msgid "Page:"
-msgstr ""
+msgstr "Stranica:"
 
 #. module: report
 #: model:ir.ui.menu,name:report.paper_format_menuitem
@@ -384,7 +384,7 @@ msgstr "Format papira"
 #. module: report
 #: model:ir.model.fields,field_description:report.field_base_config_settings_paperformat_id
 msgid "Paper format *"
-msgstr ""
+msgstr "Format papira *"
 
 #. module: report
 #: model:ir.ui.view,arch_db:report.paperformat_view_form
@@ -461,7 +461,7 @@ msgstr "Desna margina (mm)"
 #: code:addons/report/static/src/xml/report.xml:11
 #, python-format
 msgid "Save"
-msgstr "Sačuvaj"
+msgstr "Snimi"
 
 #. module: report
 #: model:ir.model.fields,help:report.field_report_paperformat_format
@@ -552,6 +552,8 @@ msgid ""
 "You need to start OpenERP with at least two \n"
 "workers to print a pdf version of the reports."
 msgstr ""
+"Trebate pokrenuti Odoo sa najmanje dva \n"
+"korisnika koja printaju pdf varijantu izvještaja."
 
 #. module: report
 #. openerp-web

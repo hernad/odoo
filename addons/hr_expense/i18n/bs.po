@@ -279,12 +279,12 @@ msgstr ""
 #: model:ir.ui.view,arch_db:hr_expense.view_hr_expense_filter
 #: model:ir.ui.view,arch_db:hr_expense.view_hr_expense_sheet_filter
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_hr_expense_register_payment_wizard_company_id
 msgid "Company related to this journal"
-msgstr "Kompanija za koju se vodi ovaj dnevnik"
+msgstr "Preduzeće za koju se vodi ovaj dnevnik"
 
 #. module: hr_expense
 #: model:ir.ui.menu,name:hr_expense.menu_hr_expense_configuration
@@ -594,7 +594,7 @@ msgstr ""
 #, python-format
 msgid "Expenses must have been paid by the same entity (Company or employee)"
 msgstr ""
-"Troškovi mora da su plaćeni od strane istog entiteta (kompanije ili "
+"Troškovi mora da su plaćeni od strane istog entiteta (preduzeća ili "
 "zaposlenog)"
 
 #. module: hr_expense

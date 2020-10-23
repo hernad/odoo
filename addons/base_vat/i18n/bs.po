@@ -22,7 +22,7 @@ msgstr ""
 #. module: base_vat
 #: model:ir.model,name:base_vat.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: base_vat
 #: model:ir.model.fields,help:base_vat.field_res_company_vat_check_vies

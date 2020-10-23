@@ -1190,17 +1190,17 @@ msgstr ""
 #. module: website
 #: model:ir.model,name:website.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.layout_footer_copyright
 msgid "Company name"
-msgstr "Naziv kompanije"
+msgstr "Naziv preduzeća"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_comparisons

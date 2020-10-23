@@ -48,7 +48,7 @@ msgstr "Otkaži"
 #. module: l10n_eu_service
 #: model:ir.model.fields,field_description:l10n_eu_service.field_l10n_eu_service_wizard_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: l10n_eu_service
 #: model:ir.model.fields,field_description:l10n_eu_service.field_l10n_eu_service_service_tax_rate_country_id

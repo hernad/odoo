@@ -238,7 +238,7 @@ msgid ""
 "<span>(*) This configuration is related to the company you're logged "
 "into.</span>"
 msgstr ""
-"<span>(*) Ova konfiguracija se odnosi na kompaniju u kojoj ste trenutno "
+"<span>(*) Ova konfiguracija se odnosi na preduzeće u kojoj ste trenutno "
 "prijavljeni.</span>"
 
 #. module: sale
@@ -503,7 +503,7 @@ msgstr "Komercijalni entitet"
 #. module: sale
 #: model:ir.model,name:sale.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_config_settings_company_id
@@ -512,7 +512,7 @@ msgstr "Kompanije"
 #: model:ir.model.fields,field_description:sale.field_sale_report_company_id
 #: model:ir.ui.view,arch_db:sale.view_order_product_search
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: sale
 #. openerp-web
@@ -1068,7 +1068,7 @@ msgid ""
 "Invoicing and shipping addresses are always the same (Example: services "
 "companies)"
 msgstr ""
-"Adresa fakture i isporuke su uvijek iste (Na primjer: servisne kompanije)"
+"Adresa fakture i isporuke su uvijek iste (Na primjer: servisne preduzeća)"
 
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.crm_team_salesteams_view_form

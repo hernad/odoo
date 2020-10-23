@@ -141,7 +141,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_company_id
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_lines_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: account_budget
 #: model:ir.ui.view,arch_db:account_budget.crossovered_budget_view_form

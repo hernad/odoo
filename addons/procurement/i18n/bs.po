@@ -110,7 +110,7 @@ msgstr "Kliknite da kreirate narudžbu naručivanja."
 #: model:ir.model.fields,field_description:procurement.field_procurement_order_company_id
 #: model:ir.model.fields,field_description:procurement.field_procurement_rule_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: procurement
 #: model:ir.ui.view,arch_db:procurement.view_compute_schedulers_wizard

@@ -51,7 +51,7 @@ msgstr "Prisutnosti"
 #. module: hr_timesheet_attendance
 #: model:ir.model,name:hr_timesheet_attendance.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: hr_timesheet_attendance
 #: model:ir.model.fields,field_description:hr_timesheet_attendance.field_hr_timesheet_attendance_report_date

@@ -1296,7 +1296,7 @@ msgstr "Boja"
 #. module: stock
 #: model:ir.model,name:stock.model_res_company
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_config_settings_company_id
@@ -1314,7 +1314,7 @@ msgstr "Kompanije"
 #: model:ir.ui.view,arch_db:stock.quant_package_search_view
 #: model:ir.ui.view,arch_db:stock.quant_search_view
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_picking_date_done
@@ -3298,7 +3298,7 @@ msgstr "Tip vođenja"
 #: model:ir.model.fields,help:stock.field_stock_location_route_company_id
 msgid "Leave this field empty if this route is shared between all companies"
 msgstr ""
-"Ostavite ovo polje prazno ako je ova ruta dijeljena između svih kompanija"
+"Ostavite ovo polje prazno ako je ova ruta dijeljena između svih preduzeće"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_location_parent_left
@@ -3310,7 +3310,7 @@ msgstr "Lijevi nadređeni"
 #: model:ir.model.fields,help:stock.field_stock_location_company_id
 msgid "Let this field empty if this location is shared between companies"
 msgstr ""
-"Ostavite ovo polje prazno ako je ova lokacija dijeljena između kompanija"
+"Ostavite ovo polje prazno ako je ova lokacija dijeljena između preduzeće"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
@@ -5208,7 +5208,7 @@ msgstr "Referentna sekvenca"
 #. module: stock
 #: sql_constraint:stock.picking:0
 msgid "Reference must be unique per company!"
-msgstr "Referenca mora biti jedinstvena na nivou kompanije!"
+msgstr "Referenca mora biti jedinstvena na nivou preduzeća!"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_picking_origin

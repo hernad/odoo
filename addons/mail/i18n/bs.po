@@ -4595,7 +4595,7 @@ msgid ""
 "You cannot delete those groups, as the Whole Company group is required by "
 "other modules."
 msgstr ""
-"Ne možete da obrišete ove grupe, jer je grupa Cijela Kompanija potrebna "
+"Ne možete da obrišete ove grupe, jer je grupa Cijela Preduzeće potrebna "
 "drugim modulima."
 
 #. module: mail

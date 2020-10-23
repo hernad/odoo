@@ -1333,7 +1333,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm.crm_opportunity_report_view_search
 #: model:ir.ui.view,arch_db:crm.view_crm_case_opportunities_filter
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_leads
@@ -2096,7 +2096,7 @@ msgid ""
 msgstr ""
 "Dobar posao! Završili ste obilazak CRM-a. Možete nastaviti sa "
 "<b>implementacijskim vodičem</b> da Vam pomogne da postavi CRM u vašoj "
-"kompaniji."
+"preduzeću."
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -2324,7 +2324,7 @@ msgstr "Analiza faktura"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_group_by_is_company
 msgid "Is Company"
-msgstr "Je kompanija"
+msgstr "Je preduzeće"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_function
@@ -3321,7 +3321,7 @@ msgstr "Naslijeđeni"
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_group_by_parent_id
 msgid "Parent Company"
-msgstr "Nadređena kompanija"
+msgstr "Nadređena preduzeće"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_team_alias_parent_model_id

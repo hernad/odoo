@@ -49,7 +49,7 @@ msgstr "Kliknite ovdje da kreirate novi ugovor."
 #. module: hr_contract
 #: model:ir.model.fields,field_description:hr_contract.field_hr_employee_vehicle
 msgid "Company Vehicle"
-msgstr "Vozilo kompanije"
+msgstr "Vozilo preduzeća"
 
 #. module: hr_contract
 #: model:ir.model.fields,field_description:hr_contract.field_hr_contract_name

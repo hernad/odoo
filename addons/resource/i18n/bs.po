@@ -48,7 +48,7 @@ msgstr "Šifra"
 #: model:ir.ui.view,arch_db:resource.view_resource_calendar_leaves_search
 #: model:ir.ui.view,arch_db:resource.view_resource_resource_search
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: resource
 #: model:ir.model.fields,field_description:resource.field_resource_calendar_attendance_create_uid
@@ -151,7 +151,7 @@ msgid ""
 "If empty, this is a generic holiday for the company. If a resource is set, "
 "the holiday/leave is only for this resource"
 msgstr ""
-"Ako je prazno, ovo je generički praznik za kompaniju. Ako je resurs "
+"Ako je prazno, ovo je generički praznik za preduzeće. Ako je resurs "
 "postavljen, praznik/odsustvo je samo za taj resurs."
 
 #. module: resource

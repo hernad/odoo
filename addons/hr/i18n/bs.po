@@ -253,7 +253,7 @@ msgstr "Indeks boje"
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_department_tree
 msgid "Companies"
-msgstr "Kompanije"
+msgstr "Preduzeća"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department_company_id
@@ -262,7 +262,7 @@ msgstr "Kompanije"
 #: model:ir.ui.view,arch_db:hr.view_employee_filter
 #: model:ir.ui.view,arch_db:hr.view_job_filter
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: hr
 #: model:ir.ui.menu,name:hr.menu_human_resources_configuration
@@ -1171,7 +1171,7 @@ msgstr "Testiraj mail model"
 #: sql_constraint:hr.job:0
 msgid "The name of the job position must be unique per department in company!"
 msgstr ""
-"Naziv radnog mjesta mora biti jedinstveno po odjeljenju unutar kompanije!"
+"Naziv radnog mjesta mora biti jedinstveno po odjeljenju unutar preduzeća!"
 
 #. module: hr
 #: model:res.groups,comment:hr.group_hr_attendance
