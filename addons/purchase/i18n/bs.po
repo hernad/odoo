@@ -1726,7 +1726,7 @@ msgstr "Nepročitane poruke"
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.purchase_order_tree
 msgid "Untaxed"
-msgstr "Ne oporezovano"
+msgstr "Neoporezivo"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_amount_untaxed
@@ -1790,12 +1790,12 @@ msgstr "Dobavljač"
 #: model:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model:ir.ui.view,arch_db:purchase.res_partner_view_purchase_account_buttons
 msgid "Vendor Bills"
-msgstr "Računi dobavljača"
+msgstr "Ulazne fakture"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.res_partner_view_purchase_account_buttons
 msgid "Vendor Bills."
-msgstr "Računi dobavljača."
+msgstr "Ulazne fakture."
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_config_settings_group_manage_vendor_price

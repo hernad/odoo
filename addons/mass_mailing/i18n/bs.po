@@ -979,7 +979,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mass_mailing_graph
 #: model:ir.ui.view,arch_db:mass_mailing.view_mass_mailing_configuration
 msgid "Mass Mailing"
-msgstr "Masovno slanje pošte"
+msgstr "email kampanje"
 
 #. module: mass_mailing
 #: model:ir.actions.act_window,name:mass_mailing.action_mail_statistics_report

@@ -654,7 +654,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "<strong>Mass mailing</strong>"
-msgstr "<strong>Masovno slanje pošte</strong>"
+msgstr "<strong>email kampanje</strong>"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner

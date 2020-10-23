@@ -3023,7 +3023,7 @@ msgstr "Faktura kupca"
 #: model:ir.ui.view,arch_db:account.account_planner
 #, python-format
 msgid "Customer Invoices"
-msgstr "Fakture kupaca"
+msgstr "Izlazne fakture"
 
 #. module: account
 #: code:addons/account/models/account_payment.py:508
@@ -8582,7 +8582,7 @@ msgstr "Račun dobavljača"
 #: model:ir.ui.view,arch_db:account.account_planner
 #, python-format
 msgid "Vendor Bills"
-msgstr "Računi dobavljača"
+msgstr "Ulazne fakture"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
