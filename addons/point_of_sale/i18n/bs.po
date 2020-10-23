@@ -173,7 +173,7 @@ msgstr "= Teoretski saldo zatvaranja"
 #: code:addons/point_of_sale/static/src/js/screens.js:1909
 #, python-format
 msgid "? Clicking \"Confirm\" will validate the payment."
-msgstr "? Klikom na \"Potvrdi\" verifikovati će te plaćanje."
+msgstr "? Klikom na \"Potvrdi\" verifikovati ćete plaćanje."
 
 #. module: point_of_sale
 #. openerp-web
@@ -3418,7 +3418,7 @@ msgid ""
 "To return product(s), you need to open a session that will be used to "
 "register the refund."
 msgstr ""
-"Da bi ste vratili proizvod(e), prvo morate otvoriti sesiju koju će te "
+"Da bi ste vratili proizvod(e), prvo morate otvoriti sesiju koju ćete "
 "koristiti za povrat."
 
 #. module: point_of_sale

@@ -174,7 +174,7 @@ msgstr "30% avansa do kraja sljedećeg mjeseca"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "5) For setup, you will need the following information:"
-msgstr "5) Za postavljanje, trebaće te sljedeće informacije:"
+msgstr "5) Za postavljanje, trebaćete sljedeće informacije:"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_generalledger
