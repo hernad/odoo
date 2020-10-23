@@ -528,7 +528,7 @@ msgstr "Potvrdi nabavnu narudžbu u jednom koraku"
 #. module: purchase
 #: selection:res.company,po_lock:0
 msgid "Confirmed purchase orders are not editable"
-msgstr "Potvrđene nabavne narudžbe se ne mogu uređivati"
+msgstr "Potvrđene narudžbe dobavljačima se ne mogu uređivati"
 
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_purchase_control
@@ -864,7 +864,7 @@ msgstr "Poruka za narudžbu nabave"
 #: model:ir.model.fields,field_description:purchase.field_product_product_purchase_line_warn_msg
 #: model:ir.model.fields,field_description:purchase.field_product_template_purchase_line_warn_msg
 msgid "Message for Purchase Order Line"
-msgstr "Poruka za stavku nabavne narudžbe"
+msgstr "Poruka za stavku narudžbe dobavljaču"
 
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_purchase_config_settings_po_double_validation_amount
@@ -1170,17 +1170,17 @@ msgstr "Vrijeme vođenja kupovine *"
 #: selection:purchase.order,state:0 selection:purchase.report,state:0
 #: model:res.request.link,name:purchase.req_link_purchase_order
 msgid "Purchase Order"
-msgstr "Nabavna narudžba"
+msgstr "Nabavna dobavljača"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "Purchase Order Confirmation #"
-msgstr "Potvrda nabavne narudžbe #"
+msgstr "Potvrda narudžbe doboavljaču #"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.view_purchase_order_search
 msgid "Purchase Order Fiscal Position"
-msgstr "Fiskalna pozicija nabavne narudžbe"
+msgstr "Fiskalna pozicija narudžbe dobavljaču"
 
 #. module: purchase
 #: model:ir.model,name:purchase.model_purchase_order_line
@@ -1192,23 +1192,23 @@ msgstr "Fiskalna pozicija nabavne narudžbe"
 #: model:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model:ir.ui.view,arch_db:purchase.purchase_order_line_form2
 msgid "Purchase Order Line"
-msgstr "Stavka nabavne narudžbe"
+msgstr "Stavka narudžbe dobavljaču"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.purchase_order_form
 #: model:ir.ui.view,arch_db:purchase.purchase_order_line_tree
 msgid "Purchase Order Lines"
-msgstr "Stavke nabavne narudžbe"
+msgstr "Stavke narudžbe dobavljaču"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_res_company_po_lock
 msgid "Purchase Order Modification"
-msgstr "Ispravljanje nabavne narudžbe"
+msgstr "Ispravljanje narudžbe dobavljaču"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_config_settings_po_lock
 msgid "Purchase Order Modification *"
-msgstr "Ispravljanje nabavne narudžbe *"
+msgstr "Ispravljanje narudžbe dobavljaču *"
 
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_purchase_config_settings_po_lock
@@ -1226,29 +1226,29 @@ msgstr ""
 #: model:ir.ui.view,arch_db:purchase.view_purchase_order_filter
 #: model:ir.ui.view,arch_db:purchase.view_purchase_order_search
 msgid "Purchase Orders"
-msgstr "Nabavne narudžbe"
+msgstr "Narudžbe dobavljačima"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.view_purchase_order_graph
 #: model:ir.ui.view,arch_db:purchase.view_purchase_order_pivot
 msgid "Purchase Orders Statistics"
-msgstr "Statistika nabavne narudžbe"
+msgstr "Statistika narudžbi dobavljača"
 
 #. module: purchase
 #: code:addons/purchase/models/purchase.py:664
 #, python-format
 msgid "Purchase order line deleted."
-msgstr "Stavka nabavne narudžbe obrisana."
+msgstr "Stavka narudžbe dobavljaču obrisana."
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.view_purchase_order_filter
 msgid "Purchase orders that have been invoiced."
-msgstr "Nabavne narudžbe koje su fakturisane."
+msgstr "Narudžbe dobavljača koje su fakturisane."
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.view_purchase_order_filter
 msgid "Purchase orders that include lines not invoiced."
-msgstr "Nabavne narudžbe koje uključuju ne fakturisane stavke"
+msgstr "Nabavne dobavljača koje uključuju nefakturisane stavke"
 
 #. module: purchase
 #: selection:purchase.config.settings,module_purchase_requisition:0
@@ -1278,7 +1278,7 @@ msgstr "Nabavke"
 #. module: purchase
 #: model:ir.model,name:purchase.model_purchase_report
 msgid "Purchases Orders"
-msgstr "Nabavne narudžbe"
+msgstr "Narudžbe dobavljačima"
 
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_purchase_order_dest_address_id

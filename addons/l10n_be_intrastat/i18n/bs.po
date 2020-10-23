@@ -390,12 +390,12 @@ msgstr "Kategorija proizvoda"
 #. module: l10n_be_intrastat
 #: model:ir.model,name:l10n_be_intrastat.model_purchase_order
 msgid "Purchase Order"
-msgstr "Nabavna narudžba"
+msgstr "Narudžba dobavljaču"
 
 #. module: l10n_be_intrastat
 #: model:ir.model,name:l10n_be_intrastat.model_sale_order
 msgid "Sales Order"
-msgstr "Prodajna narudžba"
+msgstr "Narudžba za kupca"
 
 #. module: l10n_be_intrastat
 #: code:addons/l10n_be_intrastat/wizard/xml_decl.py:131

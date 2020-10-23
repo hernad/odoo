@@ -870,7 +870,7 @@ msgid ""
 "Default Unit of Measure used for purchase orders. It must be in the same "
 "category than the default unit of measure."
 msgstr ""
-"Zadana jedinica mjere korištena za nabavne narudžbe. Mora biti u istoj "
+"Zadana jedinica mjere korištena za narudžbu dobavljaču. Mora biti u istoj "
 "kategoriji kao i zadana jedinica mjere."
 
 #. module: product

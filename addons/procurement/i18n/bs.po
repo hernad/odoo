@@ -526,7 +526,7 @@ msgid ""
 "                order proposition, manufacturing order, etc."
 msgstr ""
 "Kada je naručivanje potvrđeno, automatski kreira neophodne\n"
-"operacije da bi ispunio potrebe: prijedlog nabavne narudžbe,\n"
+"operacije da bi ispunio potrebe: prijedlog narudžbe dobavljaču,\n"
 "nalog proizvodnje, itd."
 
 #. module: procurement

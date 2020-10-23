@@ -444,7 +444,7 @@ msgid ""
 "Default Unit of Measure used for purchase orders. It must be in the same "
 "category than the default unit of measure."
 msgstr ""
-"Zadana jedinica mjere korištena za nabavne narudžbe. Mora biti u istoj "
+"Zadana jedinica mjere korištena za narudžbu dobavljaču. Mora biti u istoj "
 "kategoriji kao i zadana jedinica mjere."
 
 #. module: delivery
@@ -983,12 +983,12 @@ msgstr "Početni datum članarine"
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier_purchase_line_warn_msg
 msgid "Message for Purchase Order Line"
-msgstr "Poruka za stavku nabavne narudžbe"
+msgstr "Poruka za stavku narudžbe dobavljaču"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier_sale_line_warn_msg
 msgid "Message for Sales Order Line"
-msgstr "Upozorenje za stavku prodajne narudžbe"
+msgstr "Upozorenje za stavku narudžbe kupca"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier_message_ids
@@ -1262,7 +1262,7 @@ msgstr "Razmak u kupovini"
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier_purchase_line_warn
 msgid "Purchase Order Line"
-msgstr "Stavka nabavne narudžbe"
+msgstr "Stavka narudžbe dobavljaču"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier_uom_po_id
