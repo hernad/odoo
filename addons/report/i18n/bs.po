@@ -486,7 +486,7 @@ msgstr "Ovo je primjerak eksternog izvještaja."
 #. module: report
 #: model:ir.ui.view,arch_db:report.preview_internalreport
 msgid "This is a sample of an internal report."
-msgstr "Ovo je primjerak internog izvještaja"
+msgstr "Ovo je uzorak internog izvještaja preduzeća."
 
 #. module: report
 #: model:ir.model.fields,help:report.field_ir_act_report_xml_print_report_name

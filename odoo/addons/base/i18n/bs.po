@@ -15112,7 +15112,7 @@ msgid ""
 "If it is a relationship field you will be able to select a target field at the destination of the relationship."
 msgstr ""
 "Odaberite ciljno polje iz povezanog modela dokumenta.\n"
-"Ako je ovo relaciono polje moći će te odabrati ciljano polje na odredištu relacije."
+"Ako je ovo relaciono polje moći ćete odabrati ciljano polje na odredištu relacije."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_act_server_action_id

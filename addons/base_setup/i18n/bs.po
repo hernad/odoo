@@ -57,12 +57,12 @@ msgstr ""
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_base_import
 msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
-msgstr ""
+msgstr "Dozvoliti korisnicima da importuju podatke iz CSV/XLS/XLSX/ODS fajlova"
 
 #. module: base_setup
 #: model:ir.model.fields,help:base_setup.field_base_config_settings_group_multi_currency
 msgid "Allows to work in a multi currency environment"
-msgstr ""
+msgstr "Dozvola za rad u multvalutnom okruženju"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
@@ -72,7 +72,7 @@ msgstr "Primjeni"
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_google_drive
 msgid "Attach Google documents to any record"
-msgstr ""
+msgstr "Dodati 'Google documents' bilo kojem zapisu"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
@@ -90,11 +90,12 @@ msgid ""
 "Check this to define the report footer manually. Otherwise it will be filled"
 " in automatically."
 msgstr ""
+"Označite ovo da biste ručno definirali podnožje izvještaja. U suprotnom će biti automatski popunjeno."
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_company_id
 msgid "Company"
-msgstr "Kompanija"
+msgstr "Preduzeće"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
@@ -104,7 +105,7 @@ msgstr "Podesi odlazne email servere"
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Configure your company data"
-msgstr "Upišite podatke o Vašoj kompaniji"
+msgstr "Upišite podatke o vašem preduzeću"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_create_uid
@@ -119,12 +120,12 @@ msgstr "Kreirano"
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_footer
 msgid "Custom Report Footer *"
-msgstr ""
+msgstr "Podnožje prilagođenog izvještaja *"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_custom_footer
 msgid "Custom footer *"
-msgstr ""
+msgstr "Podnožje izvještaja *"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_display_name
@@ -134,7 +135,7 @@ msgstr "Prikaži naziv"
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Edit default access rights for new users"
-msgstr ""
+msgstr "Uredite tekuća prava pristupa za nove korisnike"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
@@ -144,7 +145,7 @@ msgstr "E-Mail"
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_font
 msgid "Font *"
-msgstr ""
+msgstr "Font *"
 
 #. module: base_setup
 #: model:ir.model.fields,help:base_setup.field_base_config_settings_rml_footer
@@ -172,12 +173,12 @@ msgstr "Google kalendar"
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Google Drive"
-msgstr ""
+msgstr "Google disk"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Google Integration"
-msgstr ""
+msgstr "Google integracija"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_id
@@ -222,17 +223,17 @@ msgstr "Upravljajte sa više kompanija"
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Multi Company"
-msgstr "Višekompanijska"
+msgstr "Upravljanje sa više preduzeća"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Multi Currencies"
-msgstr "Više valuta"
+msgstr "Viševalutni sistem"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "New users access rights"
-msgstr ""
+msgstr "Pristupna prava za nove korisnike"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
@@ -244,7 +245,7 @@ msgstr ""
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_paper_format
 msgid "Paper Format *"
-msgstr ""
+msgstr "Format papira *"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
@@ -254,17 +255,17 @@ msgstr "Pristup portalu"
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Preview RML Report"
-msgstr ""
+msgstr "Pregled RML izvještaja"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_header
 msgid "RML Header *"
-msgstr ""
+msgstr "RML zaglavlje *"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_header2
 msgid "RML Internal Header *"
-msgstr ""
+msgstr "RML zaglavlje internih dokumenata *"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_rml_header3
@@ -274,7 +275,7 @@ msgstr ""
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "RML Report Configuration"
-msgstr ""
+msgstr "RML konfiguracija izvještaja"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
