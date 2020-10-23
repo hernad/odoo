@@ -481,7 +481,7 @@ msgstr "Tabloid 29 279.4 x 431.8 mm"
 #. module: report
 #: model:ir.ui.view,arch_db:report.preview_externalreport
 msgid "This is a sample of an external report."
-msgstr "Ovo je primjerak eksternog izvještaja."
+msgstr "Ovo je uzorak eksternog izvještaja. Eksterni izvještaji su oni koji se šalju klijentima."
 
 #. module: report
 #: model:ir.ui.view,arch_db:report.preview_internalreport
