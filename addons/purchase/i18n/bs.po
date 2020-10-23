@@ -1170,12 +1170,12 @@ msgstr "Vrijeme vođenja kupovine *"
 #: selection:purchase.order,state:0 selection:purchase.report,state:0
 #: model:res.request.link,name:purchase.req_link_purchase_order
 msgid "Purchase Order"
-msgstr "Nabavna dobavljača"
+msgstr "Narudžba dobavljača"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "Purchase Order Confirmation #"
-msgstr "Potvrda narudžbe doboavljaču #"
+msgstr "Potvrda narudžbe dobavljaču #"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.view_purchase_order_search
