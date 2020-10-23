@@ -31,7 +31,7 @@ msgstr ""
 #: code:addons/document/static/src/js/document.js:14
 #, python-format
 msgid "Attachment(s)"
-msgstr "Zakačke"
+msgstr "Prilog/Prilozi"
 
 #. module: document
 #: model:ir.model,name:document.model_ir_attachment

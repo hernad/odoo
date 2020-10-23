@@ -59,12 +59,6 @@
                 <div class="page">
                     <p>This is a sample of an internal report.</p>
                     <p>Line 2.</p>
-                    <ul>
-                        <li>one</li>
-                        <li>two</li>
-                        <li>three</li>
-                    </ul>
-
                 </div>
             </t>
         </t>

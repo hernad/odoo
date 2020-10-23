@@ -1300,7 +1300,7 @@ msgstr "Pogledaj zakačene dokumente"
 #. module: hr_expense
 #: model:ir.ui.view,arch_db:hr_expense.view_hr_expense_sheet_form
 msgid "View Attachments"
-msgstr "Pogledaj zakačke"
+msgstr "Pogledaj priloge"
 
 #. module: hr_expense
 #: model:ir.ui.view,arch_db:hr_expense.hr_expense_form_view

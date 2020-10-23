@@ -624,7 +624,7 @@ msgid ""
 "Attachments are linked to a document through model / res_id and to the "
 "message through this field."
 msgstr ""
-"Zakačke su povezane sa dokumentom preko model / res_id i sa porukom putem "
+"Prilozi su povezani sa dokumentom preko model / res_id i sa porukom putem "
 "ovog polja."
 
 #. module: mail

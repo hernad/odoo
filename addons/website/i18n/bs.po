@@ -963,7 +963,7 @@ msgstr ""
 #. module: website
 #: model:ir.model.fields,field_description:website.field_ir_attachment_website_url
 msgid "Attachment URL"
-msgstr "URL Zakačke"
+msgstr "URL priloga"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
