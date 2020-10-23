@@ -411,20 +411,20 @@ msgstr "Uspravno"
 #: model:ir.actions.report.xml,name:report.action_report_externalpreview
 #: model:ir.ui.view,arch_db:report.base_config_settings_inherited
 msgid "Preview External Report"
-msgstr "Pogledaj eksterni izvještaj"
+msgstr "Pogledaj uzorak eksternog izvještaja"
 
 #. module: report
 #: model:ir.actions.report.xml,name:report.action_report_internalpreview
 #: model:ir.ui.view,arch_db:report.base_config_settings_inherited
 msgid "Preview Internal Report"
-msgstr "Pogledaj interni izvještaj"
+msgstr "Pogledaj uzorak internog izvještaja"
 
 #. module: report
 #. openerp-web
 #: code:addons/report/static/src/xml/report.xml:5
 #, python-format
 msgid "Print"
-msgstr "Ispis"
+msgstr "Štampa"
 
 #. module: report
 #: model:ir.model.fields,field_description:report.field_ir_act_report_xml_print_report_name

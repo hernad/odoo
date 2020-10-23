@@ -2949,7 +2949,7 @@ msgstr "Podjeli iskustvo na sličnim projektima"
 #. module: website
 #: model:ir.model.fields,field_description:website.field_ir_ui_view_customize_show
 msgid "Show As Optional Inherit"
-msgstr "Prikaži kao opcionalno nasljeđeno"
+msgstr "Prikaži kao opcionalno naslijeđeno"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner

@@ -1014,7 +1014,7 @@ msgstr "Primjeni deduplikaciju"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Apply multi-currencies"
-msgstr "Primjeni multi-valute"
+msgstr "Primjeni viševalutno"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_kanban_view_leads
@@ -3316,7 +3316,7 @@ msgstr ""
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_activity_parent_id
 msgid "Parent"
-msgstr "Nasljeđeni"
+msgstr "Naslijeđeni"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_base_partner_merge_automatic_wizard_group_by_parent_id

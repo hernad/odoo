@@ -6580,7 +6580,7 @@ msgstr "Meerdere valuta's"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_config_multi_currency
 msgid "Multi-Currencies"
-msgstr "Multi-valuta"
+msgstr "Viševalutni sistem"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_invoice_filter

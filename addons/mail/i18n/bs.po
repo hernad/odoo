@@ -3347,7 +3347,7 @@ msgstr "Vlasnik"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_message_subtype_parent_id
 msgid "Parent"
-msgstr "Nasljeđeni"
+msgstr "Naslijeđeni"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message_parent_id

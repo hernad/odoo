@@ -271,7 +271,7 @@ msgstr "<strong>bez PDV-a: </strong>"
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.report_saleorder_document
 msgid "<strong>Total Without Taxes</strong>"
-msgstr "<strong>Ukupno bez poreza</strong>"
+msgstr "<strong>Ukupno bez PDV</strong>"
 
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.report_saleorder_document

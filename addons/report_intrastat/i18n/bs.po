@@ -58,7 +58,7 @@ msgstr "<strong>Uslovi plaćanja:</strong>"
 #. module: report_intrastat
 #: model:ir.ui.view,arch_db:report_intrastat.report_intrastatinvoice_document
 msgid "<strong>Total Without Taxes</strong>"
-msgstr "<strong>Ukupno bez poreza</strong>"
+msgstr "<strong>Ukupno bez PDV</strong>"
 
 #. module: report_intrastat
 #: model:ir.ui.view,arch_db:report_intrastat.report_intrastatinvoice_document

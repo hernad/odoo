@@ -1342,7 +1342,7 @@ msgstr "Zamjena senzora kiseonika"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services_parent_id
 #: model:ir.ui.view,arch_db:fleet.fleet_vehicle_costs_view_search
 msgid "Parent"
-msgstr "Nasljeđeni"
+msgstr "Naslijeđeni"
 
 #. module: fleet
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost_parent_id

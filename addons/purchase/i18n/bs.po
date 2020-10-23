@@ -201,7 +201,7 @@ msgstr "<strong>Porezi</strong>"
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "<strong>Total Without Taxes</strong>"
-msgstr "<strong>Ukupno bez poreza</strong>"
+msgstr "<strong>Ukupno bez PDV</strong>"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.report_purchaseorder_document

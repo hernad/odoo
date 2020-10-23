@@ -47,7 +47,7 @@ msgstr "Dozvoli dijeljenje dokumenata"
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_group_multi_currency
 msgid "Allow multi currencies"
-msgstr "Dozvoli mult-valutni sistem"
+msgstr "Dozvoli viševalutni sistem"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings_module_google_calendar

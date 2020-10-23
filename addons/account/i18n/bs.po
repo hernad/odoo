@@ -1492,7 +1492,7 @@ msgstr "Dozvoli štampanje čekova i depozite"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_group_multi_currency
 msgid "Allow multi currencies"
-msgstr "Dozvoli multivalutni sistem"
+msgstr "Dozvoli vipšvalutni sistem"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_group_proforma_invoices
@@ -1502,7 +1502,7 @@ msgstr "Odobri ProForma fakture"
 #. module: account
 #: model:ir.model.fields,help:account.field_account_config_settings_group_multi_currency
 msgid "Allows to work in a multi currency environment"
-msgstr "Dozvoli rad u multivalutnom sistemu"
+msgstr "Dozvoli rad u viševalutnom sistemu"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_config_settings_group_proforma_invoices
@@ -5903,12 +5903,12 @@ msgstr "Plaćeno/Zatvoreno"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_financial_report_parent_id
 msgid "Parent"
-msgstr "Nasljeđeni"
+msgstr "Naslijeđeni"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_chart_template_parent_id
 msgid "Parent Chart Template"
-msgstr "Nasljeđeni kontni plan"
+msgstr "Naslijeđeni kontni plan"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_financial_report_search
@@ -8184,7 +8184,7 @@ msgstr "Kompanija bi trebala biti ista na svim zapisima kako bi ste ih mogli zat
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "To use the <strong>multi-currency option:</strong>"
-msgstr "Za koršćenje <strong>multi-valutne opcije:</strong>"
+msgstr "Za koršćenje <strong>viševalutne opcije:</strong>"
 
 #. module: account
 #. openerp-web

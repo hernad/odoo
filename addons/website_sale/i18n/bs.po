@@ -876,7 +876,7 @@ msgstr "Primjeni"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Apply multi-currencies"
-msgstr "Primjeni multi-valute"
+msgstr "Primjeni viševalutno"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_delivery_carrier_availability

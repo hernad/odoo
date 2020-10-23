@@ -10857,22 +10857,22 @@ msgstr "Informacije"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_view_search
 msgid "Inherit"
-msgstr "Nasljedi"
+msgstr "Naslijedi"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_groups_form
 msgid "Inherited"
-msgstr "Nasljeđeno"
+msgstr "Naslijeđeno"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view_inherit_id
 msgid "Inherited View"
-msgstr "Nasljeđeni pogled"
+msgstr "Naslijeđeni pogled"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_view_form
 msgid "Inherited Views"
-msgstr "Nasljeđeni pogledi"
+msgstr "Naslijeđeni pogledi"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_inherited_model_ids
@@ -12710,12 +12710,12 @@ msgstr "Gđa."
 #: model:ir.ui.view,arch_db:base.view_users_form
 #: model:res.groups,name:base.group_multi_company
 msgid "Multi Companies"
-msgstr "Višekompnijske kompanije"
+msgstr "Upravljanje više preduzeća"
 
 #. module: base
 #: model:res.groups,name:base.group_multi_currency
 msgid "Multi Currencies"
-msgstr "Više valuta"
+msgstr "Viševalutni sistem"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_multilang
@@ -17002,7 +17002,7 @@ msgstr "Prijelazi"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_groups_trans_implied_ids
 msgid "Transitively inherits"
-msgstr "Prelazno nasljeđuje"
+msgstr "Tranzitivno nasljeđuje"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields_translate
