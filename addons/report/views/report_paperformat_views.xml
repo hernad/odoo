@@ -59,6 +59,7 @@
                 <div class="page">
                     <p>This is a sample of an internal report.</p>
                     <p>Line 2.</p>
+                    <p>Line 3.</p>
                 </div>
             </t>
         </t>
@@ -69,6 +70,7 @@
             <t t-call="report.external_layout">
                 <div class="page">
                     <p>This is a sample of an external report.</p>
+                    <p>Line 2.</p>
                 </div>
             </t>
         </t>

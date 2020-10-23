@@ -5,6 +5,7 @@
     'name': 'Report',
     'category': 'Base',
     'summary': 'Hidden',
+    'version': '10.0.2',
     'description': """
 Report
         """,

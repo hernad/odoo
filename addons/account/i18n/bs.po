@@ -852,7 +852,7 @@ msgstr "Uslovi plaćanja bi trebala imati makar jednu stavku tipa Saldo."
 #: code:addons/account/models/account_invoice.py:1402
 #, python-format
 msgid "A Payment Term should have only one line of type Balance."
-msgstr "Uslovi plaćanja bi trabali imati samo jednu stavku tipa Saldo."
+msgstr "Uslovi plaćanja bi trebali imati samo jednu stavku tipa Saldo."
 
 #. module: account
 #: code:addons/account/models/account.py:535
