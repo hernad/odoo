@@ -1601,7 +1601,7 @@ msgstr "Krakteristike na stavkama"
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.view_order_line_tree
 msgid "Qty"
-msgstr "Količina"
+msgstr "Kol"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_report_qty_delivered

@@ -1467,7 +1467,7 @@ msgstr "Kreiraj predračun"
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
 msgid "Create a RFQ"
-msgstr "Kreiraj ZZP"
+msgstr "Kreiraj RFQ"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_backorder_confirmation
@@ -7148,11 +7148,17 @@ msgid ""
 " generate a procurement request to increase the stock up to the maximum "
 "quantity."
 msgstr ""
+"Možete definirati svoja minimalna pravila za dionice, tako da će Odoo automatski"
+"kreirajte nacrte proizvodnih naloga ili zahtjeva za ponude prema"
+"razina zaliha. Jednom kada je virtualna zaliha proizvoda (= zaliha na raspolaganju minus sve"
+"potvrđene narudžbe i rezervacije) je ispod minimalne količine, Odoo će"
+"generiranje zahtjeva za nabavu za povećanje zaliha do maksimuma"
+"količina"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_inventory_form
 msgid "You can delete lines to ignore some products."
-msgstr ""
+msgstr "Možete izbrisati stavke da biste ignorisali neke proizvode."
 
 #. module: stock
 #: model:ir.actions.act_window,help:stock.action_picking_form
@@ -7183,13 +7189,13 @@ msgstr ""
 #: code:addons/stock/models/stock_pack_operation.py:160
 #, python-format
 msgid "You can not delete pack operations of a done picking"
-msgstr ""
+msgstr "Ne možete izbrisati operacije pakiranja već izvršenog preuzimanja"
 
 #. module: stock
 #: code:addons/stock/models/stock_quant.py:143
 #, python-format
 msgid "You can not reserve a negative quantity or a negative quant."
-msgstr ""
+msgstr "Ne možete rezervirati negativnu količinu ili negativni iznos"
 
 #. module: stock
 #: code:addons/stock/models/stock_move.py:901
@@ -7200,7 +7206,7 @@ msgstr "Možete izbrisati samo kretanja zalihe u pripremi."
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
 msgid "You can review and edit the predefined units via the"
-msgstr ""
+msgstr "Možete pregledati i urediti unaprijed definirane jedinice putem"
 
 #. module: stock
 #: code:addons/stock/models/stock_move.py:652
@@ -7234,7 +7240,7 @@ msgstr ""
 #: code:addons/stock/models/stock_quant.py:176
 #, python-format
 msgid "You cannot move to a location of type view %s."
-msgstr ""
+msgstr "Ne možete se premjestiti na lokaciju prikaza tipa %s."
 
 #. module: stock
 #: code:addons/stock/models/stock_scrap.py:85

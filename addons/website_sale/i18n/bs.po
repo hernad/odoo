@@ -2078,7 +2078,7 @@ msgstr "Prodana kol."
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.cart_popover
 msgid "Qty:"
-msgstr "Kol.:"
+msgstr "Kol:"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.cart_lines
