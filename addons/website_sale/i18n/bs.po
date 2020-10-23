@@ -2519,12 +2519,12 @@ msgstr "Stilovi"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.confirmation
 msgid "Subtotal"
-msgstr "Podukupno"
+msgstr "Sveukupno"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.confirmation
 msgid "Subtotal:"
-msgstr "Međuzbroj:"
+msgstr "Sveukupno:"
 
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_delivery_carrier_alternative_product_ids

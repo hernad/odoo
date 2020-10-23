@@ -472,7 +472,7 @@ msgstr "Kvadrat"
 #: code:addons/pos_restaurant/static/src/xml/printbill.xml:118
 #, python-format
 msgid "Subtotal"
-msgstr "Podukupno"
+msgstr "Sveukupno"
 
 #. module: pos_restaurant
 #. openerp-web

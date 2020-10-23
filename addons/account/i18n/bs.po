@@ -799,7 +799,7 @@ msgstr "<strong>bez PDV-a :</strong>"
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "<strong>Subtotal</strong>"
-msgstr "<strong>Podukupno</strong>"
+msgstr "<strong>Sveukupno</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_agedpartnerbalance model:ir.ui.view,arch_db:account.report_financial model:ir.ui.view,arch_db:account.report_generalledger
@@ -7288,7 +7288,7 @@ msgstr "Status"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_cashbox_line_subtotal
 msgid "Subtotal"
-msgstr "Podukupno"
+msgstr "Sveukupno"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document

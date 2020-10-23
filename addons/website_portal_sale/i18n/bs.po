@@ -130,7 +130,7 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
 msgid "<strong>Subtotal</strong>"
-msgstr "<strong>Podukupno</strong>"
+msgstr "<strong>Sveukupno</strong>"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
