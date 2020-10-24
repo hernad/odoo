@@ -30,7 +30,7 @@ msgid ""
 "If checked, Partners VAT numbers will be fully validated against EU's VIES "
 "service rather than via a simple format validation (checksum)."
 msgstr ""
-"Ako je označeno, partnerov PDV broj će biti u potpunosti provjeren sa EU "
+"Ako je označeno, partnerov PDV broj će biti u potpunosti provjeren sa EU-ovim "
 "VIES servisom umjesto jednostavnom provjerom formata (checksum)."
 
 #. module: base_vat
@@ -45,6 +45,8 @@ msgid ""
 "The VAT number [%s] for partner [%s] does not seem to be valid. \n"
 "Note: the expected format is %s"
 msgstr ""
+"Čini se da PDV broj [%s] za partnera [%s] nije ispravan. \n"
+"Napomena: očekivani format je %s"
 
 #. module: base_vat
 #: code:addons/base_vat/models/res_partner.py:130
@@ -53,6 +55,8 @@ msgid ""
 "The VAT number [%s] for partner [%s] either failed the VIES VAT validation "
 "check or did not respect the expected format %s."
 msgstr ""
+"PDV broj [%s] za partnera [%s] nije uspio u VIES validaciji PDV-a"
+"provjeri ili ne poštuje očekivani format% s."
 
 #. module: base_vat
 #: model:ir.model.fields,field_description:base_vat.field_res_company_vat_check_vies

@@ -8283,12 +8283,12 @@ msgstr "Zadana tema web stranice za prikazivanje mogućnosti prilagođavanja."
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_contract_asset
 msgid "Deferred revenue management for contracts"
-msgstr ""
+msgstr "Odgođeno upravljanje prihodima za ugovore"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_tax_python
 msgid "Define Taxes as Python Code"
-msgstr "Definiši poreze kao Python kod"
+msgstr "Definiši PDV kao Python kod"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.module_form
@@ -8308,7 +8308,7 @@ msgstr "Brisanje"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_rule_search
 msgid "Delete Access Right"
-msgstr "Brisanje"
+msgstr "Brisanje pristupnih prava"
 
 #. module: base
 #: code:addons/base/ir/ir_actions.py:216 code:addons/base/ir/ir_actions.py:781
@@ -8358,7 +8358,7 @@ msgstr "Ovisnost"
 #. module: base
 #: model:ir.module.module,description:base.module_test_pylint
 msgid "Deprecated empty module in favor of test-lint."
-msgstr ""
+msgstr "Zastarjeli prazni modul u korist test-lint."
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment_description

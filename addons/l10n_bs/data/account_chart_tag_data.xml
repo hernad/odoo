@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <!-- Account Chart Template -->
+        <record id="l10n_bs_chart_template_fbih" model="account.chart.template">
+            <field name="bank_account_code_prefix">200</field>
+            <field name="cash_account_code_prefix">205</field>
+            <field name="property_account_receivable_id"    ref="kp_fbih2110"/>
+            <field name="property_account_payable_id"       ref="kp_fbih4320"/>
+            <field name="property_account_expense_categ_id" ref="kp_fbih5010"/>
+            <field name="property_account_income_categ_id"  ref="kp_fbih6010"/>
+            <field name="income_currency_exchange_account_id" ref="kp_fbih6620"/>
+            <field name="expense_currency_exchange_account_id" ref="kp_fbih5620"/>
+        </record>
+
+        <!-- Account Tags -->
+        <record id="tag_bs_01" model="account.account.tag">
+            <field name="name">PDV Prijava</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_02" model="account.account.tag">
+            <field name="name">Isporuke i nabavke (svi iznosi iskazani bez PDV-a</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_03" model="account.account.tag">
+            <field name="name">IZLAZI</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_04" model="account.account.tag">
+            <field name="name">11. Isporuke (uključujući i one u vansposlovne svrhe) osim u poljima 12 i 13</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_05" model="account.account.tag">
+            <field name="name">12. Vrijednost izvoza</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_06" model="account.account.tag">
+            <field name="name">13. Isporuke oslobođene plaćanja PDV-a</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_07" model="account.account.tag">
+            <field name="name">ULAZI</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_08" model="account.account.tag">
+            <field name="name">21. SVE nabavke osim onih u 22 i 23.</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_09" model="account.account.tag">
+            <field name="name">22. Vrijednost uvoza</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_10" model="account.account.tag">
+            <field name="name">23. Vrijednost nabavke od poljoprivrednika</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_11" model="account.account.tag">
+            <field name="name">II. Izlazni PDV</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_12" model="account.account.tag">
+            <field name="name">Ulazni PDV</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_13" model="account.account.tag">
+            <field name="name">PDV obračunat na ulaze (dobra i usluge)</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_14" model="account.account.tag">
+            <field name="name">41. Od registrovanih obveznika PDV-a osim iznosa u poljima 42 i 43</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_15" model="account.account.tag">
+            <field name="name">42. PDV na uvoz</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_16" model="account.account.tag">
+            <field name="name">43. Paušalna naknada za poljoprivrednike</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_17" model="account.account.tag">
+            <field name="name">51. PDV obračunat na izlaze (dobra i usluge)</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_18" model="account.account.tag">
+            <field name="name">61. Ulazni PDV (ukupno)</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_19" model="account.account.tag">
+            <field name="name">71. Iznos PDV-a za uplatu/povrat (51-61)</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_20" model="account.account.tag">
+            <field name="name">80. Zahtjev za povrat (DA/NE)</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_21" model="account.account.tag">
+            <field name="name">III. Podaci o krajnjoj potrošnji</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_22" model="account.account.tag">
+            <field name="name">PDV na isporuke licima koja nisu registrovani PDV  obveznici u:</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_23" model="account.account.tag">
+            <field name="name">32. Federaciji BiH</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_24" model="account.account.tag">
+            <field name="name">33. Republici Srpskoj</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+        <record id="tag_bs_25" model="account.account.tag">
+            <field name="name">34. Brčko Distriktu</field>
+            <field name="applicability">taxes</field>
+        </record>
+
+</odoo>
