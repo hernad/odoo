@@ -124,7 +124,7 @@ msgstr "Konto"
 #. module: hr_expense
 #: model:ir.ui.menu,name:hr_expense.menu_hr_expense_accountant
 msgid "Accountant"
-msgstr "Računovođa"
+msgstr "Knjigovođa"
 
 #. module: hr_expense
 #: model:ir.ui.view,arch_db:hr_expense.product_product_expense_form_view
@@ -630,7 +630,7 @@ msgid ""
 "From here the accountant will be able to approve as well as refuse the "
 "expenses which are verified by the HR Manager."
 msgstr ""
-"Odavde računovođa će biti u mogućnosti da odobri kao i odbije troškove koji "
+"Odavde knjigovođa će biti u mogućnosti da odobri kao i odbije troškove koji "
 "su verifikovani od strane upravnika zaposlenih."
 
 #. module: hr_expense

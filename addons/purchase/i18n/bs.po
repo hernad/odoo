@@ -360,12 +360,12 @@ msgstr "Fakturisana Kol."
 #: code:addons/purchase/models/purchase.py:581
 #, python-format
 msgid "Billed Quantity"
-msgstr ""
+msgstr "Fakturisana količina"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_invoice_status
 msgid "Billing Status"
-msgstr "Status fakturisanja"
+msgstr "Status naplate"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_invoice_ids
@@ -376,7 +376,7 @@ msgstr "Računi"
 #: model:ir.ui.view,arch_db:purchase.view_purchase_order_filter
 #: selection:purchase.order,invoice_status:0
 msgid "Bills Received"
-msgstr "Računi primljeni"
+msgstr "Primljeni ulazni računi"
 
 #. module: purchase
 #: selection:product.template,purchase_line_warn:0

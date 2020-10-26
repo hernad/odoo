@@ -10152,7 +10152,7 @@ msgid ""
 "Helps you handle your accounting needs, if you are not an accountant, we "
 "suggest you to install only the Invoicing."
 msgstr ""
-"Pomaže Vam da upravljate potrebama računovodstva. Ako niste računovođa, "
+"Pomaže Vam da upravljate potrebama računovodstva. Ako niste knjigovođa, "
 "predlažemo Vam da instalirate samo fakturisanje."
 
 #. module: base

@@ -352,7 +352,7 @@ msgid ""
 "                                    </span>"
 msgstr ""
 "<span class=\"panel-title\">\n"
-"                                        <strong>Računovođa</strong> (Napredni pristup)\n"
+"                                        <strong>Knjigovođa</strong> (Napredni pristup)\n"
 "                                    </span>"
 
 #. module: account
@@ -363,7 +363,7 @@ msgid ""
 "                                    </span>"
 msgstr ""
 "<span class=\"panel-title\">\n"
-"                                        <strong>Računovodstveni savjetnik</strong> (Puni pristup)\n"
+"                                        <strong>Glavni knjigovođa</strong> (Puni pristup)\n"
 "                                    </span>"
 
 #. module: account
@@ -374,7 +374,7 @@ msgid ""
 "                                    </span>"
 msgstr ""
 "<span class=\"panel-title\">\n"
-"                                        <strong>Računi</strong> (ograničeni pristup)\n"
+"                                        <strong>Naplata</strong> (ograničeni pristup)\n"
 "                                    </span>"
 
 #. module: account
@@ -1220,7 +1220,7 @@ msgstr "Tip konta"
 #. module: account
 #: model:res.groups,name:account.group_account_user
 msgid "Accountant"
-msgstr "Računovođa"
+msgstr "Knjigovođa"
 
 #. module: account
 #: model:ir.ui.menu,name:account.account_account_menu model:ir.ui.menu,name:account.menu_finance model:ir.ui.view,arch_db:account.view_partner_property_form
@@ -2039,12 +2039,12 @@ msgstr "Stavke Računa"
 #. module: account
 #: model:res.groups,name:account.group_account_invoice
 msgid "Billing"
-msgstr "Računi"
+msgstr "Naplata"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
 msgid "Bills"
-msgstr "Računi"
+msgstr "Računi (Ulazni/Izlazni)"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view

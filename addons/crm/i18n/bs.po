@@ -4380,7 +4380,7 @@ msgstr "Naknadno prodajte više postojećim kupcima"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Use"
-msgstr "Koristi"
+msgstr "Korištenje"
 
 #. module: crm
 #: selection:crm.lead2opportunity.partner.mass,action:0
