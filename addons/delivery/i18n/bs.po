@@ -1153,17 +1153,17 @@ msgstr "Cijenovna pravila"
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier_pricelist_id
 msgid "Pricelist"
-msgstr "Cijenovnik"
+msgstr "Cjenovnik"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier_item_ids
 msgid "Pricelist Items"
-msgstr "Stavke cijenovnika"
+msgstr "Stavke cjenovnika"
 
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier_pricelist_item_ids
 msgid "Pricelist item ids"
-msgstr "Stavke cijenovnika"
+msgstr "Stavke cjenovnika"
 
 #. module: delivery
 #: model:ir.ui.view,arch_db:delivery.view_delivery_carrier_form
@@ -1542,7 +1542,7 @@ msgstr "Suma količine na računima dobavljača"
 msgid ""
 "Technical field. Used for searching on pricelists, not stored in database."
 msgstr ""
-"Tehničko polje. Koristi se u pretragama cijenovnika, nije pohranjen u bazi "
+"Tehničko polje. Koristi se u pretragama cjenovnika, nije pohranjen u bazi "
 "podataka."
 
 #. module: delivery

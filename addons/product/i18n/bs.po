@@ -149,7 +149,7 @@ msgid ""
 msgstr ""
 "<span attrs=\"{'invisible':[('base', '!=', 'list_price')]}\">Javna cijena  -  </span>\n"
 "                            <span attrs=\"{'invisible':[('base', '!=', 'standard_price')]}\">Nabavna cijena  -  </span>\n"
-"                            <span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Drugi cijenovnik -  </span>"
+"                            <span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Drugi cjenovnik -  </span>"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.product_category_form_view
@@ -174,7 +174,7 @@ msgstr "<strong>Opis</strong>"
 #. module: product
 #: model:ir.ui.view,arch_db:product.report_pricelist
 msgid "<strong>Price List Name</strong>:<br/>"
-msgstr "<strong>Naziv cijenovnika</strong>:<br/>"
+msgstr "<strong>Naziv cjenovnika</strong>:<br/>"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.report_pricelist
@@ -615,7 +615,7 @@ msgstr "Kliknite da dodate novu jedinicu mjere."
 #. module: product
 #: model:ir.actions.act_window,help:product.product_pricelist_action2
 msgid "Click to create a pricelist."
-msgstr "Kliknite da kreirate cijenovnik."
+msgstr "Kliknite da kreirate cjenovnik."
 
 #. module: product
 #: model:ir.actions.act_window,help:product.product_normal_action
@@ -1169,9 +1169,9 @@ msgid ""
 " gives highest priority to lowest sequence and stops as soon as a matching "
 "item is found."
 msgstr ""
-"Daje redoslijed kojim će se provjeriti stavke cijenovnika. Najviši prioritet"
+"Daje redoslijed kojim će se provjeriti stavke cjenovnika. Najviši prioritet"
 " ima najmanja sekvenca te provjera staje čim je prvo pravilo/stavka "
-"cijenovnika zadovoljena."
+"cjenovnika zadovoljena."
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_sequence
@@ -1518,7 +1518,7 @@ msgstr "Upravljanje sa više jedinica mjere"
 #. module: product
 #: model:res.groups,name:product.group_pricelist_item
 msgid "Manage Pricelist Items"
-msgstr "Upravljaj stavkama cijenovnika"
+msgstr "Upravljaj stavkama cjenovnika"
 
 #. module: product
 #: model:res.groups,name:product.group_stock_packaging
@@ -1817,12 +1817,12 @@ msgstr "Cjenovnik"
 #: model:ir.model.fields,field_description:product.field_product_template_pricelist_id
 #: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "Pricelist"
-msgstr "Cijenovnik"
+msgstr "Cjenovnik"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_item_applied_on
 msgid "Pricelist Item applicable on selected option"
-msgstr "Stavke cijenovnika primjenjive na odabrane opcije"
+msgstr "Stavke cjenovnika primjenjive na odabrane opcije"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item_ids
@@ -1834,7 +1834,7 @@ msgstr "Stavke cijenovnika primjenjive na odabrane opcije"
 #: model:ir.ui.view,arch_db:product.product_pricelist_view
 #: model:ir.ui.view,arch_db:product.product_template_form_view
 msgid "Pricelist Items"
-msgstr "Stavke cijenovnika"
+msgstr "Stavke cjenovnika"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_pricelist_name
@@ -1849,7 +1849,7 @@ msgstr "Stavka cjenovnika"
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_pricelist_item_ids
 msgid "Pricelist item ids"
-msgstr "Stavke cijenovnika"
+msgstr "Stavke cjenovnika"
 
 #. module: product
 #: model:ir.actions.act_window,name:product.product_pricelist_action2
@@ -1860,7 +1860,7 @@ msgstr "Cjenovnik"
 #. module: product
 #: model:res.groups,name:product.group_product_pricelist
 msgid "Pricelists On Product"
-msgstr "Cijenovnik proizvoda"
+msgstr "Cjenovnik proizvoda"
 
 #. module: product
 #: model:ir.ui.view,arch_db:product.view_partner_property_form
@@ -2384,7 +2384,7 @@ msgstr "Početni datum za cijenu ovog dobavljača"
 #. module: product
 #: model:ir.model.fields,help:product.field_product_pricelist_item_date_start
 msgid "Starting date for the pricelist item validation"
-msgstr "Početni datum za validaciju stavke cijenovnika"
+msgstr "Početni datum za validaciju stavke cjenovnika"
 
 #. module: product
 #: selection:product.template,type:0
@@ -2429,7 +2429,7 @@ msgstr ""
 msgid ""
 "Technical field. Used for searching on pricelists, not stored in database."
 msgstr ""
-"Tehničko polje. Koristi se u pretragama cijenovnika, nije pohranjen u bazi "
+"Tehničko polje. Koristi se u pretragama cjenovnika, nije pohranjen u bazi "
 "podataka."
 
 #. module: product
@@ -2884,7 +2884,7 @@ msgstr "Informacije dobavljača"
 #. module: product
 #: model:ir.actions.act_window,name:product.product_supplierinfo_type_action
 msgid "Vendor Pricelists"
-msgstr "Cijenovnik dobavljača"
+msgstr "Cjenovnik dobavljača"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_product_code

@@ -91,7 +91,7 @@ msgstr "Zadnje ažurirano"
 #: code:addons/web_planner/static/src/xml/web_planner.xml:31
 #, python-format
 msgid "Mark As Done"
-msgstr ""
+msgstr "Označi završenim"
 
 #. module: web_planner
 #: model:ir.model.fields,field_description:web_planner.field_web_planner_menu_id

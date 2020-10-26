@@ -1496,7 +1496,7 @@ msgstr "Umanjena cijana s PDV"
 #: model:ir.model.fields,field_description:sale.field_sale_order_pricelist_id
 #: model:ir.model.fields,field_description:sale.field_sale_report_pricelist_id
 msgid "Pricelist"
-msgstr "Cijenovnik"
+msgstr "Cjenovnik"
 
 #. module: sale
 #: model:ir.model.fields,help:sale.field_sale_order_pricelist_id
@@ -1753,7 +1753,7 @@ msgstr "Prodajna cijena"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_config_settings_sale_pricelist_setting
 msgid "Sale pricelist setting"
-msgstr "Postavke prodajnog cijenovnika"
+msgstr "Postavke prodajnog cjenovnika"
 
 #. module: sale
 #: model:ir.ui.menu,name:sale.menu_report_product_all
@@ -2002,12 +2002,12 @@ msgstr "Prikaži cijene bez uključenog PDV-a  (B2B)"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_config_settings_group_product_pricelist
 msgid "Show pricelists On Products"
-msgstr "Prikaži cijenovnike na proizvodima"
+msgstr "Prikaži cjenovnike na proizvodima"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_config_settings_group_pricelist_item
 msgid "Show pricelists to customers"
-msgstr "Prikaži cijenovnike kupcima"
+msgstr "Prikaži cjenovnike kupcima"
 
 #. module: sale
 #: selection:product.pricelist,discount_policy:0

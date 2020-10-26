@@ -2430,7 +2430,7 @@ msgstr "Proizvod sa cijenom"
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_pricelist_id
 #: model:ir.model.fields,field_description:point_of_sale.field_report_pos_order_pricelist_id
 msgid "Pricelist"
-msgstr "Cijenovnik"
+msgstr "Cjenovnik"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_details_wizard
@@ -3722,7 +3722,7 @@ msgstr "Morate otvoriti barem jednu kasu"
 #: code:addons/point_of_sale/models/pos_order.py:763
 #, python-format
 msgid "You have to select a pricelist in the sale form !"
-msgstr "Morate da odaberete cijenovnik u formi prodaje!"
+msgstr "Morate da odaberete cjenovnik u formi prodaje!"
 
 #. module: point_of_sale
 #: code:addons/point_of_sale/models/pos_order.py:751

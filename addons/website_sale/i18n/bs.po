@@ -835,7 +835,7 @@ msgstr "Svi proizvodi"
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_product_pricelist_selectable
 msgid "Allow the end user to choose this price list"
-msgstr "Dozvoli krajnjem korisniku izbor cijenovnika"
+msgstr "Dozvoli krajnjem korisniku izbor cjenovnika"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_sale_pricelist_form_view
@@ -1077,7 +1077,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Configure your pricelists"
-msgstr "Konfigurišite cijenovnike"
+msgstr "Konfigurišite cjenovnike"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.payment_token_form_confirm
@@ -1672,6 +1672,8 @@ msgid ""
 "Multi-buy offers (2 products sold together for less than their individual "
 "price)"
 msgstr ""
+"Ponude za kupovinu više stavki (2 proizvoda koja se prodaju zajedno za manje od njihovih pojedinačnih "
+"cijena)"
 
 #. module: website_sale
 #. openerp-web
@@ -1932,7 +1934,7 @@ msgstr "Cijenovnici dostupni za ovu webstranicu"
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_pricelist
 msgid "Pricelist"
-msgstr "Cijenovnik"
+msgstr "Cjenovnik"
 
 #. module: website_sale
 #: model:ir.actions.act_window,name:website_sale.website_product_pricelist3
@@ -2269,12 +2271,12 @@ msgstr "Može se izabrati"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Sell"
-msgstr "Prodaj"
+msgstr "Prodaja"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Sell More"
-msgstr "Prodaj više"
+msgstr "Prodaja, ostalo"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_public_category_sequence
@@ -2394,12 +2396,12 @@ msgstr "Prikaži više slika na eProdaji"
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_config_settings_group_product_pricelist
 msgid "Show pricelists On Products"
-msgstr "Prikaži cijenovnike na proizvodima"
+msgstr "Prikaži cjenovnike na proizvodima"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_config_settings_group_pricelist_item
 msgid "Show pricelists to customers"
-msgstr "Prikaži cijenovnike kupcima"
+msgstr "Prikaži cjenovnike kupcima"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.address
@@ -2901,7 +2903,7 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Your Company"
-msgstr "Vaša preduzeće"
+msgstr "Vaše preduzeće"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.address

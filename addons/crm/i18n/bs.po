@@ -1360,7 +1360,7 @@ msgstr "Konfigurišite faze vašeg prodajnog ljevka"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Configure your pricelists"
-msgstr "Konfigurišite cijenovnike"
+msgstr "Konfigurišite cjenovnike"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -3779,7 +3779,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Select your pricing preference and allow discounts"
-msgstr ""
+msgstr "Odaberite preferirane cijene i dopustite popuste"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.base_partner_merge_automatic_wizard_form
@@ -3789,6 +3789,10 @@ msgid ""
 "                                will be redirected to the destination contact.\n"
 "                                You can remove contacts from this list to avoid merging them."
 msgstr ""
+"Odabrani kontakti će se spojiti zajedno. \n"
+"                                Svi dokumenti povezani s jednim od ovih kontakata \n"
+"                                bit će preusmjereni na odredišni kontakt.\n"
+"                                Možete ukloniti kontakte s ovog popisa da bi izbjegli spajanje."
 
 #. module: crm
 #: selection:base.partner.merge.automatic.wizard,state:0
@@ -4791,7 +4795,7 @@ msgstr "npr.: Raspravi prijedlog"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_case_form_view_oppor
 msgid "e.g. Product Pricing"
-msgstr "npr.: Cijenovnik proizvoda"
+msgstr "npr.: Cjenovnik proizvoda"
 
 #. module: crm
 #: code:addons/crm/models/crm_lead.py:871

@@ -568,7 +568,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "<strong>Clean customer invoices:</strong> easy to create, beautiful and full featured invoices."
-msgstr ""
+msgstr "<strong>Fakture kupaca:</strong> jednostavne za izradu, lijepe i sadržajno potpune fakture."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document
@@ -689,7 +689,7 @@ msgstr "<strong>Sljedeća akcija:</strong><br/>"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "<strong>On-the-fly payment reconciliation:</strong> automatic suggestions of outstanding payments when creating invoices."
-msgstr ""
+msgstr "<strong>Automatsko poravnanje (zatvaranje otvorenih stavke) plaćanja:</strong> automatski prijedlozi otvorenih plaćanja pri kreiranju faktura."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -697,6 +697,8 @@ msgid ""
 "<strong>Or generate payment orders</strong><br/>\n"
 "                                        Create a Payment Order and select the bills you'd like to pay as Entry lines (only the validated bills will appear)."
 msgstr ""
+"<strong>ili generišite naloge za plaćanje</strong><br/> \n"
+"                                        Kreirajte nalog za plaćanje i odaberite račune koje želite platiti kao ulazne stavke (pojavit će se samo validni računi)."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_agedpartnerbalance
@@ -759,12 +761,12 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "<strong>Reduced data entry:</strong> no need to manually create invoices, register bank statements, and send payment follow-ups."
-msgstr ""
+msgstr "<strong>Smanjenje ručnog unosa podataka:</strong> nema potrebe za ručnim kreiranjem računa, registracijom bankovnih izvoda i slanjem naknadnih podataka o plaćanju."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "<strong>Reference:</strong>"
-msgstr "<strong>Referanca:</strong>"
+msgstr "<strong>Referenca:</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -6057,7 +6059,7 @@ msgstr "Metoda plaćanja:"
 #. module: account
 #: model:ir.model,name:account.model_account_payment_method model:ir.model.fields,field_description:account.field_account_journal_outbound_payment_method_ids
 msgid "Payment Methods"
-msgstr "Metoda plaćanja"
+msgstr "Metode plaćanja"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_payment_move_line_ids
@@ -8035,6 +8037,8 @@ msgid ""
 "This guide will help you get started with Odoo Accounting.\n"
 "                        Once you're done, you'll benefit from:"
 msgstr ""
+"Ovaj vodič će vam pomoći da započnete s Odoo računovodstvom.\n"
+"Kad završite, dobit ćete:"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.open_account_journal_dashboard_kanban
@@ -9054,7 +9058,7 @@ msgstr "Vaši bankovni računi"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Your Company"
-msgstr "Vaša preduzeće"
+msgstr "Vaše preduzeće"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -9079,7 +9083,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Your outstanding invoices, payments, and undeposited funds."
-msgstr "Vaše zakašnjele fakture, plaćanja i nedepozitovana sredstva."
+msgstr "Vaše zakašnjele fakture, plaćanja i tekuća sredstva."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_position_form

@@ -192,8 +192,8 @@ msgid ""
 "Couldn't find a pricelist line matching this product and quantity.\n"
 "You have to change either the product, the quantity or the pricelist."
 msgstr ""
-"Nije bilo moguće pronaći stavku cijenovnika koja odgovara ovom proizvodu i količini.\n"
-"Morate da promjeniti proizvod, količinu ili cijenovnik."
+"Nije bilo moguće pronaći stavku cjenovnika koja odgovara ovom proizvodu i količini.\n"
+"Morate da promjeniti proizvod, količinu ili cjenovnik."
 
 #. module: mrp_repair
 #: model:ir.actions.act_window,name:mrp_repair.act_mrp_repair_invoice
@@ -458,7 +458,7 @@ msgstr "Nema fakture"
 #: code:addons/mrp_repair/models/mrp_repair.py:561
 #, python-format
 msgid "No Pricelist!"
-msgstr "Nema cijenovnika!"
+msgstr "Nema cjenovnika!"
 
 #. module: mrp_repair
 #: code:addons/mrp_repair/models/mrp_repair.py:260
@@ -484,7 +484,7 @@ msgstr "Nema proizvoda definisanih na naknadama!"
 #: code:addons/mrp_repair/models/mrp_repair.py:568
 #, python-format
 msgid "No valid pricelist line found !"
-msgstr "Nije pronađena validna stavka cijenovnika!"
+msgstr "Nije pronađena validna stavka cjenovnika!"
 
 #. module: mrp_repair
 #: model:ir.ui.view,arch_db:mrp_repair.view_repair_order_form
@@ -515,7 +515,7 @@ msgstr "Cijena"
 #. module: mrp_repair
 #: model:ir.model.fields,field_description:mrp_repair.field_mrp_repair_pricelist_id
 msgid "Pricelist"
-msgstr "Cijenovnik"
+msgstr "Cjenovnik"
 
 #. module: mrp_repair
 #: model:ir.model.fields,help:mrp_repair.field_mrp_repair_pricelist_id
@@ -896,5 +896,5 @@ msgid ""
 "You have to select a pricelist in the Repair form !\n"
 " Please set one before choosing a product."
 msgstr ""
-"Morate da odaberete cijenovnik na formi Popravke!\n"
+"Morate da odaberete cjenovnik na formi popravke!\n"
 "Molimo odaberite jedan prije odabira proizvoda."
