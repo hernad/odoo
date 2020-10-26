@@ -1,3 +1,3 @@
-id,description,chart_template_id/id,name,amount,amount_type,type_tax_use,sequence,account_id/id,refund_account_id/id,tag_ids/id,"children_tax_ids/id"
-fbih_pdv_17,PDV 17%,l10n_bs_chart_template_fbih,17% PDV,17,percent,sale,10,kp_fbih4700,kp_fbih4700,"tag_bs_38,tag_bs_18",
-fbih_updv_17,Ulazni PDV 17%,l10n_bs_chart_template_fbih,17% ulazni PDV,17,percent,purchase,10,kp_fbih2700,kp_fbih2700,tag_bs_43,
+id,description,chart_template_id/id,name,amount,amount_type,type_tax_use,sequence,account_id/id,refund_account_id/id,tag_ids/id,children_tax_ids/id
+fbih_pdv_17,PDV 17%,l10n_bs_chart_template_fbih,17% PDV,17,percent,sale,10,kto_fbih4700,kto_fbih4700,tag_bs_pdv_17,
+fbih_updv_17,Ulazni PDV 17%,l10n_bs_chart_template_fbih,17% ulazni PDV,17,percent,purchase,10,kto_fbih2700,kto_fbih2700,tag_bs_pdv_18,

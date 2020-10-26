@@ -4,7 +4,7 @@
 # Author: Ernad Husremovic
 # mail:   hernad(AT)bring.out.ba
 {
-    "name": "Bosnia - Accounting (FBiH 2020)",
+    "name": "Bosna i Hercegovina - Accounting (FBiH 2020)",
     "description": """
 Bosnian localisation.
 ======================

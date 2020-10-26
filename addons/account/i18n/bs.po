@@ -3625,7 +3625,7 @@ msgstr "Excel uzorak"
 #: code:addons/account/models/chart_template.py:185
 #, python-format
 msgid "Exchange Difference"
-msgstr "Kursna razlika"
+msgstr "Kursne razlike"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_company_currency_exchange_journal_id
@@ -5506,7 +5506,7 @@ msgstr "Broj cifri za korištenje u kontima"
 #. module: account
 #: model:account.account.type,name:account.data_account_type_non_current_assets
 msgid "Non-current Assets"
-msgstr " Stalna sredstva iz ranijih godina"
+msgstr "Stalna sredstva iz ranijih godina"
 
 #. module: account
 #: model:account.account.type,name:account.data_account_type_non_current_liabilities
