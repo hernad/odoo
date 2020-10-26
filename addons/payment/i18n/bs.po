@@ -241,7 +241,7 @@ msgstr "Grad"
 #. module: payment
 #: model:ir.actions.act_window,help:payment.action_payment_acquirer
 msgid "Click to create a payment acquirer."
-msgstr "Klinknite da kreirate sticaoca plaćanja"
+msgstr "Klinknite da kreirate agenta za elektronska plaćanja"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_company_id
@@ -261,7 +261,7 @@ msgstr "Konfiguriši"
 #. module: payment
 #: model:ir.ui.view,arch_db:payment.payment_acquirer_installation
 msgid "Configure payment acquiring methods"
-msgstr "Konfiguriši metode plaćanja sticaoca"
+msgstr "Konfiguriši metode plaćanja agenta"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_module_id
@@ -373,7 +373,7 @@ msgstr "E-mail"
 #. module: payment
 #: model:account.payment.method,name:payment.account_payment_method_electronic_in
 msgid "Electronic"
-msgstr ""
+msgstr "Elektronski"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_partner_email
@@ -399,7 +399,7 @@ msgstr "Poruka za grešku"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_transaction_fees
 msgid "Fees"
-msgstr "Nadoknada"
+msgstr "Nadoknade"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_fees_implemented
@@ -410,7 +410,7 @@ msgstr "Izračun provizija podržan"
 #: model:ir.model.fields,help:payment.field_payment_transaction_fees
 msgid "Fees amount; set by the system because depends on the acquirer"
 msgstr ""
-"Iznos provizije; postavljen od strane sistema pošto zavisi od sticaoca"
+"Iznos provizije; postavljen od strane sistema pošto zavisi od agenta"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_transaction_state_message
@@ -519,7 +519,7 @@ msgstr "Dozvoli da kupac odluči"
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_acquirer_website_published
 msgid "Make this payment acquirer available (Customer invoices, etc.)"
-msgstr "Učini ovog sticaoca plaćanja dostupnim (Fakture kupca, itd.)"
+msgstr "Učini ovog agenta za elektronsko plaćanje dostupnim (Fakture kupca, itd.)"
 
 #. module: payment
 #: selection:payment.acquirer,provider:0
@@ -658,14 +658,14 @@ msgstr ""
 #: model:ir.model,name:payment.model_payment_acquirer
 #: model:ir.ui.view,arch_db:payment.acquirer_form
 msgid "Payment Acquirer"
-msgstr "Sticaoc plaćanja"
+msgstr "Agent elektronskog plaćanja"
 
 #. module: payment
 #: model:ir.actions.act_window,name:payment.action_payment_acquirer
 #: model:ir.ui.menu,name:payment.payment_acquirer_menu
 #: model:ir.ui.view,arch_db:payment.acquirer_list
 msgid "Payment Acquirers"
-msgstr "Sticaoci plaćanja"
+msgstr "Agenti elektronskog plaćanja"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_journal_id

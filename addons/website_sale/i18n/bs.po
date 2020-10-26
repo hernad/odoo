@@ -1831,12 +1831,12 @@ msgstr "Plaćanje"
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_sale_order_payment_acquirer_id
 msgid "Payment Acquirer"
-msgstr "Sticaoc plaćanja"
+msgstr "Agenti za elektronska plaćanja"
 
 #. module: website_sale
 #: model:ir.ui.menu,name:website_sale.menu_ecommerce_payment_acquirers
 msgid "Payment Acquirers"
-msgstr "Sticaoc plaćanja"
+msgstr "Agenti za elektronska plaćanja"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.report_shop_saleorder_document

@@ -7284,7 +7284,7 @@ msgstr "Tip preduzeća"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company_company_registry
 msgid "Company registry"
-msgstr "Kompanijski registar"
+msgstr "Registar preduzeća"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_contact_address
@@ -7300,7 +7300,7 @@ msgstr "Puni ID"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields_complete_name
 msgid "Complete name"
-msgstr ""
+msgstr "Kompletno ime"
 
 #. module: base
 #: model:res.partner.category,name:base.res_partner_category_9
@@ -7379,7 +7379,7 @@ msgstr "Konfiguracijski čarobnjaci"
 #. module: base
 #: model:ir.module.module,summary:base.module_timesheet_grid_sale
 msgid "Configure timesheet invoicing"
-msgstr ""
+msgstr "Konfigurišite fakturisanje po šihtama"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_base_module_upgrade
@@ -7389,7 +7389,7 @@ msgstr "Portvrdi"
 #. module: base
 #: model:res.country,name:base.cg
 msgid "Congo"
-msgstr ""
+msgstr "Kongo"
 
 #. module: base
 #: model:res.country,name:base.cd
@@ -7442,7 +7442,7 @@ msgstr "Tip ograničenja"
 #: code:addons/model.py:158
 #, python-format
 msgid "Constraint:"
-msgstr ""
+msgstr "Ograničenje:"
 
 #. module: base
 #: sql_constraint:ir.model.constraint:0
@@ -7473,7 +7473,7 @@ msgstr "Kreiranje kontakta"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_crm
 msgid "Contact Form"
-msgstr "Kontakt forma"
+msgstr "Forma za kontakt"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_partner_form
@@ -7561,7 +7561,7 @@ msgstr "Kopirano"
 #. module: base
 #: selection:ir.actions.server,use_create:0
 msgid "Copy the current record"
-msgstr ""
+msgstr "Kopiraj tekuću stavku"
 
 #. module: base
 #: model:res.country,name:base.cr
@@ -7658,7 +7658,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_crm_project_issue
 msgid "Create Issues from Leads"
-msgstr ""
+msgstr "Kreiraj aktivnost na osnovu tragova"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_crm
@@ -7669,7 +7669,7 @@ msgstr "Kreiraj prilike sa kontakt forme"
 #: model:ir.actions.act_window,name:base.act_menu_create
 #: model:ir.ui.view,arch_db:base.view_model_menu_create
 msgid "Create Menu"
-msgstr "Kreiraj izbornik"
+msgstr "Kreiraj meni"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_model_menu_create
@@ -7684,12 +7684,12 @@ msgstr "Kreiraj meni"
 #. module: base
 #: selection:ir.actions.server,use_create:0
 msgid "Create a new record in another model"
-msgstr ""
+msgstr "Kreiraj novi zapis u drugom modelu"
 
 #. module: base
 #: selection:ir.actions.server,use_create:0
 msgid "Create a new record in the Base Model"
-msgstr ""
+msgstr "Kreiaj novi zapis u baznom modelu"
 
 #. module: base
 #: model:ir.actions.act_window,help:base.action_res_company_form
@@ -7721,7 +7721,7 @@ msgstr "Kreiraj preduzeće"
 #: model:ir.model.fields,field_description:base.field_ir_logging_create_date
 #: model:ir.model.fields,field_description:base.field_ir_ui_view_create_date
 msgid "Create date"
-msgstr ""
+msgstr "Kreiraj datum"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_survey
@@ -8010,49 +8010,49 @@ msgstr "Trenutna godina sa 4 znaka: %(year)s"
 #. module: base
 #: model:ir.ui.view,arch_db:base.sequence_view
 msgid "Current Year without Century: %(y)s"
-msgstr "Trenutna godina dvoznamenkasto: %(y)s"
+msgstr "Trenutna godina dvocifreno: %(y)s"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_model_fields_search
 #: model:ir.ui.view,arch_db:base.view_model_search
 msgid "Custom"
-msgstr "Prilagođeno"
+msgstr "Proizvoljno"
 
 #. module: base
 #: selection:ir.model.fields,state:0
 msgid "Custom Field"
-msgstr "Prilagođeno polje"
+msgstr "Proizvoljno polje"
 
 #. module: base
 #: selection:ir.model,state:0
 msgid "Custom Object"
-msgstr "Prilagođeni objekt"
+msgstr "Proizvoljan objekt"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_act_report_xml_auto
 msgid "Custom Python Parser"
-msgstr "Prilagođen Python Parser"
+msgstr "Proizvoljan Python Parser"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company_rml_footer
 msgid "Custom Report Footer"
-msgstr ""
+msgstr "Proizvoljno podnožje izvještaja"
 
 #. module: base
 #: model:ir.ui.menu,name:base.menu_administration_shortcut
 msgid "Custom Shortcuts"
-msgstr "Prilagođene prečice"
+msgstr "Proizvoljne kartice"
 
 #. module: base
 #: code:addons/base/ir/ir_model.py:484
 #, python-format
 msgid "Custom fields must have a name that starts with 'x_' !"
-msgstr "Prilagođena polja moraju imati ime koje počinje sa 'x_' !"
+msgstr "Proizvoljna polja moraju imati ime koje počinje sa 'x_' !"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company_custom_footer
 msgid "Custom footer"
-msgstr ""
+msgstr "Proizvoljno zaglavlje"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_rating
@@ -8083,7 +8083,7 @@ msgstr "Kupci, Dobavljači, Partneri, ..."
 #: model:ir.ui.view,arch_db:base.view_view_custom_search
 #: model:ir.ui.view,arch_db:base.view_view_custom_tree
 msgid "Customized Views"
-msgstr "Prilagođeni Pogledi"
+msgstr "Proizvoljni pogledi"
 
 #. module: base
 #: model:ir.actions.act_window,help:base.action_ui_view_custom
@@ -8097,17 +8097,17 @@ msgstr ""
 #. module: base
 #: model:res.country,name:base.cy
 msgid "Cyprus"
-msgstr ""
+msgstr "Kipar"
 
 #. module: base
 #: model:res.country,name:base.cz
 msgid "Czech Republic"
-msgstr ""
+msgstr "Češka republika"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_dhl
 msgid "DHL Shipping"
-msgstr ""
+msgstr "DHL isporuka"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_board
@@ -8134,7 +8134,7 @@ msgstr "Prikrivanje podataka u bazi"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_attachment_db_datas
 msgid "Database Data"
-msgstr "Podatci baze"
+msgstr "Podaci baze"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_act_window_res_id
@@ -12209,17 +12209,17 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_mass_mailing
 msgid "Mass Mailing"
-msgstr "email kampanja"
+msgstr "Email kampanja"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing
 msgid "Mass Mailing Campaigns"
-msgstr "email kampanje"
+msgstr "Email kampanje"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mass_mailing_themes
 msgid "Mass Mailing Themes"
-msgstr ""
+msgstr "Teme za email kampanje"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_mps
@@ -18640,7 +18640,7 @@ msgstr "_nepoznat"
 #. module: base
 #: model:ir.ui.view,arch_db:base.action_view_company_form_link_2_currencies
 msgid "a new currency before creating a new company."
-msgstr ""
+msgstr "novu valutu prije stvaranja novog preduzeća."
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_online_sync
@@ -18690,7 +18690,7 @@ msgstr "uslov: Tačno"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_server_action_form
 msgid "condition: record.list_price &gt; 5000"
-msgstr ""
+msgstr "uslov: record.list_price &gt; 5000"
 
 #. module: base
 #: code:addons/base/ir/ir_fields.py:314
@@ -18717,12 +18717,12 @@ msgstr "npr. Engleski"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_company_form
 msgid "e.g. Global Business Solutions"
-msgstr "npr. ComTECH s.t.r."
+msgstr "npr. bring.out doo"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_partner_form
 msgid "e.g. Mr."
-msgstr "npr. Mr."
+msgstr "npr. Gdin"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_partner_form
@@ -18745,7 +18745,7 @@ msgstr "npr.: bs_BA"
 #: model:ir.ui.view,arch_db:base.view_partner_address_form
 #: model:ir.ui.view,arch_db:base.view_partner_form
 msgid "e.g. www.odoo.com"
-msgstr "npr. www.odoo.com"
+msgstr "npr. www.github.com/hernad/odoo"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale
@@ -18755,12 +18755,12 @@ msgstr "eProdaja"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_delivery
 msgid "eCommerce Delivery"
-msgstr ""
+msgstr "eProdaja isporuka"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_options
 msgid "eCommerce Optional Products"
-msgstr ""
+msgstr "eProdaja alternativni proizvodi"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_users_simple_form
