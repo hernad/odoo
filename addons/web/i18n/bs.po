@@ -903,7 +903,7 @@ msgstr "Formati izvoza:"
 #: code:addons/web/static/src/js/widgets/data_export.js:202
 #, python-format
 msgid "Export To File"
-msgstr "Eksportuj do fajla"
+msgstr "Eksportuj u fajl"
 
 #. module: web
 #. openerp-web
@@ -1668,7 +1668,7 @@ msgstr ""
 #: code:addons/web/static/src/js/widgets/data_export.js:429
 #, python-format
 msgid "Please select fields to export..."
-msgstr "Molimo odaberite mjesto za eksportovanje.."
+msgstr "Molimo odaberite polja za eksport..."
 
 #. module: web
 #. openerp-web

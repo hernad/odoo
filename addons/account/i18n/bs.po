@@ -6466,7 +6466,7 @@ msgstr "Svojstva"
 #: selection:account.journal,type:0 model:ir.ui.view,arch_db:account.view_account_config_settings model:ir.ui.view,arch_db:account.view_account_journal_search
 #: model:ir.ui.view,arch_db:account.view_account_tax_search model:ir.ui.view,arch_db:account.view_account_tax_template_search model:ir.ui.view,arch_db:account.view_partner_property_form
 msgid "Purchase"
-msgstr "Nabava"
+msgstr "Nabavke"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_wizard_multi_chart

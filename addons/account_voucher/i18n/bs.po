@@ -345,23 +345,23 @@ msgstr "Proizvod"
 #. module: account_voucher
 #: selection:account.voucher,voucher_type:0
 msgid "Purchase"
-msgstr "Nabava"
+msgstr "Nabavke"
 
 #. module: account_voucher
 #: model:ir.ui.view,arch_db:account_voucher.view_purchase_receipt_form
 msgid "Purchase Receipt"
-msgstr "Računi nabavke"
+msgstr "Ulazni račun"
 
 #. module: account_voucher
 #: model:ir.actions.act_window,name:account_voucher.action_purchase_receipt
 #: model:ir.ui.menu,name:account_voucher.menu_action_purchase_receipt
 msgid "Purchase Receipts"
-msgstr "Nabavni računi"
+msgstr "Ulazni računi"
 
 #. module: account_voucher
 #: model:ir.ui.view,arch_db:account_voucher.view_purchase_receipt_form
 msgid "Purchase Voucher"
-msgstr "Račun nabavke"
+msgstr "Ulazni vaučer"
 
 #. module: account_voucher
 #: model:ir.model.fields,field_description:account_voucher.field_account_voucher_line_quantity
@@ -387,7 +387,7 @@ msgstr "Račun prodaje"
 #: model:ir.actions.act_window,name:account_voucher.action_sale_receipt
 #: model:ir.ui.menu,name:account_voucher.menu_action_sale_receipt
 msgid "Sales Receipts"
-msgstr "Prodajni računi"
+msgstr "Izlazni računi"
 
 #. module: account_voucher
 #: model:ir.ui.view,arch_db:account_voucher.view_voucher_filter
@@ -405,7 +405,7 @@ msgstr "Sekvenca"
 #: model:ir.ui.view,arch_db:account_voucher.view_purchase_receipt_form
 #: model:ir.ui.view,arch_db:account_voucher.view_sale_receipt_form
 msgid "Set to Draft"
-msgstr "Postavi u pripremu"
+msgstr "Stavi u pripremu"
 
 #. module: account_voucher
 #: model:ir.model.fields,field_description:account_voucher.field_account_voucher_state
@@ -428,17 +428,17 @@ msgstr "Promijenjen status"
 #. module: account_voucher
 #: model:ir.model.fields,field_description:account_voucher.field_account_voucher_line_tax_ids
 msgid "Tax"
-msgstr "Porez"
+msgstr "PDV"
 
 #. module: account_voucher
 #: model:ir.model.fields,field_description:account_voucher.field_account_voucher_tax_amount
 msgid "Tax amount"
-msgstr ""
+msgstr "Iznos PDV"
 
 #. module: account_voucher
 #: model:ir.model.fields,field_description:account_voucher.field_account_voucher_tax_correction
 msgid "Tax correction"
-msgstr ""
+msgstr "Ispravka PDV-a"
 
 #. module: account_voucher
 #: model:ir.model.fields,help:account_voucher.field_account_voucher_paid
