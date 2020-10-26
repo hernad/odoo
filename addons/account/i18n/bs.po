@@ -7779,11 +7779,14 @@ msgid ""
 "                        in difference currencies, set up foreign bank accounts \n"
 "                        and run reports on your foreign financial activities."
 msgstr ""
+"Viševalutna opcija omogućava vam slanje ili primanje računa \n"
+"                        u različitim valutama, podešenje stranih bankonvnih računa \n"
+"                        i pravljenje izvještaja o vašim finansijskim aktivnostima u stranim valutama."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_invoice_name
 msgid "The name that will be used on account move lines"
-msgstr ""
+msgstr "Ime koje će se koristiti na linijama za prenos konta"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_bank_statement_line_currency_id model:ir.model.fields,help:account.field_account_move_line_currency_id
@@ -7809,24 +7812,24 @@ msgstr ""
 #: code:addons/account/models/account_move.py:891
 #, python-format
 msgid "The partner has to be the same on all lines for receivable and payable accounts!"
-msgstr ""
+msgstr "Partner mora biti isti na svim stavkama za račune potraživanja i obaveza!"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_invoice_reference
 msgid "The partner reference of this invoice."
-msgstr "Veza partnera ove fakture."
+msgstr "Referenca na partnera za ovu fakturu."
 
 #. module: account
 #: code:addons/account/models/account_payment.py:55
 #, python-format
 msgid "The payment amount must be strictly positive."
-msgstr ""
+msgstr "Iznos uplate mora biti strogo pozitivan."
 
 #. module: account
 #: code:addons/account/models/account_payment.py:342
 #, python-format
 msgid "The payment cannot be processed because the invoice is not open!"
-msgstr ""
+msgstr "Uplata se ne može obraditi jer račun nije otvoren!"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line_amount_residual_currency
@@ -7836,13 +7839,13 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line_amount_residual
 msgid "The residual amount on a journal item expressed in the company currency."
-msgstr ""
+msgstr "Preostali iznos na stavci dnevnika izražen u njenoj valuti (možda ne u valuti preduzeća)."
 
 #. module: account
 #: code:addons/account/models/account_move.py:411
 #, python-format
 msgid "The selected account of your Journal Entry forces to provide a secondary currency. You should remove the secondary currency on the account."
-msgstr ""
+msgstr "Odabrani konto vašeg dnevnika zahtjeva da se osigura sekundarna valuta. Trebali biste ukloniti sekundarnu valutu na kontu."
 
 #. module: account
 #: code:addons/account/models/account_invoice.py:1325
