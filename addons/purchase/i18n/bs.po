@@ -297,7 +297,7 @@ msgstr "Analitički konto"
 #. module: purchase
 #: model:res.groups,name:purchase.group_analytic_accounting
 msgid "Analytic Accounting for Purchases"
-msgstr "Analitički konto za nabavku"
+msgstr "Analitički konta za nabavke"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line_analytic_tag_ids
@@ -307,7 +307,7 @@ msgstr "Analitičke oznake"
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_account_config_settings_group_analytic_account_for_purchases
 msgid "Analytic accounting for purchases"
-msgstr "Analitički konto za nabavke"
+msgstr "Analitički konta za nabavke"
 
 #. module: purchase
 #: model:ir.ui.view,arch_db:purchase.view_purchase_configuration
@@ -1520,7 +1520,7 @@ msgstr "Kretanje zaliha"
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line_price_subtotal
 msgid "Subtotal"
-msgstr "Sveukupno"
+msgstr "Ukupno"
 
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_res_partner_property_purchase_currency_id

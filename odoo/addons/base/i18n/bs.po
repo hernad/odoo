@@ -17779,7 +17779,7 @@ msgstr "Naziv pogleda"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_currency_form
 msgid "View Rates"
-msgstr ""
+msgstr "Pregled valutnih omjera"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_act_window_view_id
@@ -17822,7 +17822,7 @@ msgstr ""
 #: code:addons/base/ir/ir_model.py:488
 #, python-format
 msgid "View:"
-msgstr ""
+msgstr "Pogled:"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_ui_view

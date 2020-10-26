@@ -2057,7 +2057,7 @@ msgstr "Pretplate"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_line_price_subtotal
 msgid "Subtotal"
-msgstr "Sveukupno"
+msgstr "Ukupno"
 
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.report_invoice_document_inherit_sale

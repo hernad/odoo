@@ -1145,7 +1145,7 @@ msgstr "Podneseno"
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense_untaxed_amount
 msgid "Subtotal"
-msgstr "Sveukupno"
+msgstr "Ukupno"
 
 #. module: hr_expense
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense_tax_ids

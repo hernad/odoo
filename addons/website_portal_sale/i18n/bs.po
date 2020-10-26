@@ -130,7 +130,7 @@ msgstr ""
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
 msgid "<strong>Subtotal</strong>"
-msgstr "<strong>Sveukupno</strong>"
+msgstr "<strong>Ukupno</strong>"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
@@ -154,6 +154,8 @@ msgid ""
 "Changing VAT number is not allowed once invoices have been issued for your "
 "account. Please contact us directly for this operation."
 msgstr ""
+"Promjena PDV broja nije dozvoljena nakon izdavanja faktura za vaš konto."
+"Molimo kontaktirajte nas za ovu operaciju."
 
 #. module: website_portal_sale
 #: code:addons/website_portal_sale/controllers/main.py:184

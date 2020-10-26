@@ -1117,7 +1117,7 @@ msgstr ""
 #. module: gamification
 #: selection:gamification.challenge,period:0
 msgid "Non recurring"
-msgstr ""
+msgstr "Jednokratni"
 
 #. module: gamification
 #: model:ir.model.fields,field_description:gamification.field_gamification_challenge_remind_update_delay
@@ -1132,7 +1132,7 @@ msgstr ""
 #. module: gamification
 #: model:ir.model.fields,field_description:gamification.field_gamification_badge_stat_count_distinct
 msgid "Number of users"
-msgstr ""
+msgstr "Broj korisnika"
 
 #. module: gamification
 #: selection:gamification.challenge,report_message_frequency:0
