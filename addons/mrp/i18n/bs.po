@@ -1021,7 +1021,7 @@ msgstr "Očekivano trajanje (u minutama)"
 #. module: mrp
 #: model:ir.ui.view,arch_db:mrp.view_mrp_config
 msgid "Extra Features"
-msgstr "Ekstra mogućnosti"
+msgstr "Dodatne opcije"
 
 #. module: mrp
 #: model:ir.ui.view,arch_db:mrp.mrp_unbuild_search_view

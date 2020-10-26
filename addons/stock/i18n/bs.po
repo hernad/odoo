@@ -2219,7 +2219,7 @@ msgstr "Eksterna bilješka ..."
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.view_stock_config_settings
 msgid "Extra Features"
-msgstr "Ekstra mogućnosti"
+msgstr "Dodatne opcije"
 
 #. module: stock
 #: code:addons/stock/models/stock_picking.py:949
