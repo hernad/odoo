@@ -2005,7 +2005,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.show_website_info
 msgid "Information about the"
-msgstr ""
+msgstr "Informacije o"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.user_navbar
@@ -2015,7 +2015,7 @@ msgstr "Instaliraj Aplikacije"
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Install Features"
-msgstr ""
+msgstr "Instaliraj dodatne opcije"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -2030,12 +2030,12 @@ msgstr "Instalacija jezika"
 #. module: website
 #: model:ir.ui.view,arch_db:website.view_website_config_settings
 msgid "Install a language"
-msgstr ""
+msgstr "Instaliraj jezik"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Install new languages"
-msgstr ""
+msgstr "Instaliraj nove jezike"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.show_website_info
@@ -2142,12 +2142,12 @@ msgstr "Zadnje ažurirano"
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Launch"
-msgstr "Lansiraj"
+msgstr "Pokreni"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Learn what question your customers have, what problems they encounter"
-msgstr ""
+msgstr "Saznajte koje pitanje imaju vaši kupci, na koje probleme nailaze"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.snippet_options
@@ -2182,7 +2182,7 @@ msgstr "LinkedIn nalog"
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_feature_grid
 msgid "List of Features"
-msgstr "Lista mogićnosti"
+msgstr "Lista opcija"
 
 #. module: website
 #. openerp-web
@@ -2214,7 +2214,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.403 model:ir.ui.view,arch_db:website.404
 msgid "Maybe you were looking for one of these popular pages ?"
-msgstr ""
+msgstr "Možda ste tražili neku od ovih popularnih stranica?"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.snippet_options
@@ -2258,7 +2258,7 @@ msgstr "Više informacija"
 #: code:addons/website/static/src/xml/website.seo.xml:41
 #, python-format
 msgid "Most searched topics related to your keywords, ordered by importance:"
-msgstr ""
+msgstr "Najtraženije teme povezane s vašim ključnim riječima, poredane po važnosti:"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.snippet_options
@@ -2293,7 +2293,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.view_website_config_settings
 msgid "New Language"
-msgstr ""
+msgstr "Novi jezik"
 
 #. module: website
 #. openerp-web
@@ -2374,12 +2374,12 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_big_picture
 msgid "Odoo CMS - a big picture"
-msgstr ""
+msgstr "Odo CMS - ključna ideja"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_image_floating
 msgid "Odoo CMS- Sample image floating"
-msgstr ""
+msgstr "Odoo CMS - Uzorak pokretne slike"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.show_website_info
@@ -2397,6 +2397,8 @@ msgid ""
 "Odoo provides essential platform for our project management.\n"
 "                                                Things are better organized and more visible with it."
 msgstr ""
+"Odoo pruža ključnu platformu za vaše upravljanje projektima. \n"
+"                                                Stvari su bolje organizirane i vidljivije s njim."
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_text_image
@@ -2409,6 +2411,8 @@ msgid ""
 "Odoo's POS is a web application that can run on any device that\n"
 "                                can display websites with little to no setup required."
 msgstr ""
+"Odoo POS je web aplikacija koja se može pokrenuti na bilo kojem uređaju koji \n"
+"može prikazati web stranice s malo ili nimalo podešenja."
 
 #. module: website
 #. openerp-web
@@ -2620,7 +2624,7 @@ msgstr "Planer"
 #. module: website
 #: model:ir.ui.view,arch_db:website.theme_customize
 msgid "Please install a theme in order to customize your website."
-msgstr ""
+msgstr "Molimo instalirajte željenu temu kako biste prilagodili svojoj web sajt."
 
 #. module: website
 #. openerp-web
@@ -2714,7 +2718,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Publish multimedias to document your products/services"
-msgstr ""
+msgstr "Objavite multimedijalne sadržaje kako biste dokumentovali svoje proizvode/usluge"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -2722,13 +2726,15 @@ msgid ""
 "Publish the link of your website through your social media channels "
 "(Twitter, Facebook, LinkedIn)."
 msgstr ""
+"Objavite linkove na vaš web sajt preko društvenih mreža "
+"(Twitter, Facebook, LinkedIn)."
 
 #. module: website
 #. openerp-web
 #: code:addons/website/static/src/js/website.tour.banner.js:41
 #, python-format
 msgid "Publish your page by clicking on the <b>Save</b> button."
-msgstr ""
+msgstr "Objavite svoju stranicu klikom na dugme <b>Snimi</b>."
 
 #. module: website
 #. openerp-web
@@ -2758,7 +2764,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Ready For Launch!"
-msgstr "Spremno za lansiranje!"
+msgstr "Spremno za pokretanje!"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.template_partner_comment

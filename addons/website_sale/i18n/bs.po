@@ -1929,7 +1929,7 @@ msgstr "Cijena"
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_pricelist_ids
 msgid "Price list available for this Ecommerce/Website"
-msgstr "Cijenovnici dostupni za ovu webstranicu"
+msgstr "Cjenovnici dostupni za ovu webstranicu"
 
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_pricelist
@@ -1945,7 +1945,7 @@ msgstr "Cjenovnik"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Pricing &amp; Discounts"
-msgstr "Cijenovnici i Popusti"
+msgstr "Cjenovnici i popusti"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_config_settings_sale_pricelist_setting_split_1

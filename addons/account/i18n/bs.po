@@ -2612,12 +2612,12 @@ msgstr "Poređenje"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_chart_template_complete_tax_set model:ir.model.fields,field_description:account.field_wizard_multi_charts_accounts_complete_tax_set
 msgid "Complete Set of Taxes"
-msgstr "Kompletan popis poreza"
+msgstr "Kompletna lista poreza"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_complete_tax_set
 msgid "Complete set of taxes"
-msgstr "Potpuni popis poreza"
+msgstr "Kompletna lista poreza"
 
 #. module: account
 #: code:addons/account/models/account_invoice.py:414
@@ -2628,7 +2628,7 @@ msgstr "Sastavi e-poštu"
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line_counterpart
 msgid "Compute the counter part accounts of this journal item for this journal entry. This can be needed in reports."
-msgstr ""
+msgstr "Izračunajte protukonto ovog konta iz ove stavke dnevnika. To može biti potrebno u izvještajima."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_balance_end
@@ -2653,6 +2653,8 @@ msgid ""
 "Configuration error!\n"
 "Could not find any account to create the invoice, are you sure you have a chart of account installed?"
 msgstr ""
+"Greška u konfiguraciji! \n"
+"Ne mogu pronaći nijedan račun za kreiranje fakture. Jeste li sigurni da imate instaliran kontni plan?"
 
 #. module: account
 #: code:addons/account/models/account.py:301
@@ -2669,6 +2671,8 @@ msgid ""
 "Configuration error!\n"
 "The currency of the journal should be the same than the default debit account."
 msgstr ""
+"Greška u konfiguraciji! \n"
+"Valuta dnevnika trebala bi biti ista kao zadani dugovni konto."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -2718,24 +2722,24 @@ msgstr "Potvrđeno"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_bnk_stmt_check
 msgid "Confirming this will create automatically a journal entry with the difference in the profit/loss account set on the cash journal."
-msgstr ""
+msgstr "Ako to potvrdite, automatski će se stvoriti zapis dnevnika s razlikom u kontu dobiti/gubitka postavljenom u blagajničkom žurnalu."
 
 #. module: account
 #. openerp-web
 #: code:addons/account/static/src/js/account_reconciliation_widgets.js:1525
 #, python-format
 msgid "Congrats, you're all done !"
-msgstr "Zahvaljujeme, završili ste!"
+msgstr "Čestitamo, završili ste sve!"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Congratulations, you're done!"
-msgstr "Čestitamo, završili ste!"
+msgstr "Čestitamo, završili ste sve!"
 
 #. module: account
 #: model:ir.model,name:account.model_account_abstract_payment
 msgid "Contains the logic shared between models which allows to register payments"
-msgstr ""
+msgstr "Sadrži logiku koja se dijeli između modela koja omogućava registraciju plaćanja"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_partner_contract_ids model:ir.model.fields,field_description:account.field_res_partner_contracts_count
@@ -8175,7 +8179,7 @@ msgstr "Za platiti"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "To manage the tax applied when invoicing a Company, Odoo uses the concept of Fiscal Position: they serve to automatically set the right tax and/or account according to the customer country and state."
-msgstr ""
+msgstr "Za upravljanje porezom koji se primjenjuje prilikom fakturisanja preduzeća, Odoo koristi koncept fiskalne pozicije: one služe za automatsko postavljanje pravog poreza i/ili konta prema državi kupca."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.invoice_supplier_tree
@@ -8191,7 +8195,7 @@ msgstr "Preduzeće bi trebala biti ista na svim zapisima kako bi ste ih mogli za
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "To use the <strong>multi-currency option:</strong>"
-msgstr "Za koršćenje <strong>viševalutne opcije:</strong>"
+msgstr "Za korištenje <strong>viševalutne opcije:</strong>"
 
 #. module: account
 #. openerp-web

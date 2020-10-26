@@ -3471,7 +3471,7 @@ msgstr "Prethodna aktivnost"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Pricing &amp; Discounts"
-msgstr "Cijenovnici i Popusti"
+msgstr "Cjenovnici i popusti"
 
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_opportunity_report_priority
@@ -4563,7 +4563,7 @@ msgstr ""
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Weekly Meetings"
-msgstr "Sedminčni sastanci"
+msgstr "Sedmični sastanci"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
