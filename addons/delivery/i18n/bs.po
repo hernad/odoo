@@ -267,7 +267,7 @@ msgid ""
 "Can be changed during the 'put in pack' to adjust the weight of the "
 "shipping."
 msgstr ""
-"Može se promjeniti u toku 'Stavi u paket' da se prilagodi težina isporuke."
+"Može se promijeniti u toku 'Stavi u paket' da se prilagodi težina isporuke."
 
 #. module: delivery
 #: model:ir.ui.view,arch_db:delivery.view_picking_withcarrier_out_form

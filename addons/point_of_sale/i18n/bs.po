@@ -593,7 +593,7 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/xml/pos.xml:511
 #, python-format
 msgid "Change"
-msgstr "Promjeni"
+msgstr "Promijeni"
 
 #. module: point_of_sale
 #. openerp-web

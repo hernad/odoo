@@ -358,7 +358,7 @@ msgid ""
 "be transformed into \"Good Morning\"."
 msgstr ""
 "Kratki kod je prečica tastature. Na primjer, ukoliko unesete #gm, to će se "
-"promjeniti u \"Good Morning\"."
+"promijeniti u \"Good Morning\"."
 
 #. module: mail
 #: model:ir.model,name:mail.model_res_groups
@@ -776,7 +776,7 @@ msgstr "Cc"
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.view_mail_tracking_value_form
 msgid "Change"
-msgstr "Promjeni"
+msgstr "Promijeni"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_tracking_value_field
@@ -2890,7 +2890,7 @@ msgstr "Nije pronađeno odgovarajuće"
 #, python-format
 msgid "No message matches your search. Try to change your search filters."
 msgstr ""
-"Nijedna poruka ne odgovara vašoj pretrazi. Pokušajte da promjenite filter "
+"Nijedna poruka ne odgovara vašoj pretrazi. Pokušajte da promijenite filter "
 "pretrage."
 
 #. module: mail

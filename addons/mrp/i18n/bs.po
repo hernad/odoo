@@ -579,12 +579,12 @@ msgstr "Kapacitet"
 #. module: mrp
 #: model:ir.ui.view,arch_db:mrp.view_change_production_qty_wizard
 msgid "Change Product Qty"
-msgstr "Promjeni kol. proizvoda"
+msgstr "Promijeni kol. proizvoda"
 
 #. module: mrp
 #: model:ir.actions.act_window,name:mrp.action_change_production_qty
 msgid "Change Quantity To Produce"
-msgstr "Promjeni količinu za proizvodnju"
+msgstr "Promijeni količinu za proizvodnju"
 
 #. module: mrp
 #: model:ir.model,name:mrp.model_change_production_qty

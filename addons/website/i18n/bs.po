@@ -1097,12 +1097,12 @@ msgstr "Otkaži"
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_feature_grid
 msgid "Change Background"
-msgstr "Promjeni pozadinu"
+msgstr "Promijeni pozadinu"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_feature_grid
 msgid "Change Icons"
-msgstr "Promjeni ikone"
+msgstr "Promijeni ikone"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner

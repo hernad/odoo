@@ -70,14 +70,14 @@ msgstr "Tabla"
 #: code:addons/board/static/src/xml/board.xml:7
 #, python-format
 msgid "Change Layout"
-msgstr "Promjeni raspored"
+msgstr "Promijeni raspored"
 
 #. module: board
 #. openerp-web
 #: code:addons/board/static/src/xml/board.xml:5
 #, python-format
 msgid "Change Layout.."
-msgstr "Promjeni raspored..."
+msgstr "Promijeni raspored..."
 
 #. module: board
 #. openerp-web

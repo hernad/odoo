@@ -1158,7 +1158,7 @@ msgstr "Postoji povezano kretanje"
 #. module: stock
 #: model:ir.model,name:stock.model_stock_change_product_qty
 msgid "Change Product Quantity"
-msgstr "Promjeni količinu proizvoda"
+msgstr "Promijeni količinu proizvoda"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_picking_quant_reserved_exist

@@ -193,7 +193,7 @@ msgid ""
 "You have to change either the product, the quantity or the pricelist."
 msgstr ""
 "Nije bilo moguće pronaći stavku cjenovnika koja odgovara ovom proizvodu i količini.\n"
-"Morate da promjeniti proizvod, količinu ili cjenovnik."
+"Morate da promijeniti proizvod, količinu ili cjenovnik."
 
 #. module: mrp_repair
 #: model:ir.actions.act_window,name:mrp_repair.act_mrp_repair_invoice

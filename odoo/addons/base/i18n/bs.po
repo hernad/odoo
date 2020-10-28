@@ -6790,14 +6790,14 @@ msgstr "Čad"
 #. module: base
 #: model:ir.actions.act_window,name:base.action_res_users_my
 msgid "Change My Preferences"
-msgstr "Promjeni Moje postavke"
+msgstr "Promijeni Moje postavke"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.change_password_wizard_action
 #: model:ir.ui.view,arch_db:base.change_password_wizard_view
 #: model:ir.ui.view,arch_db:base.view_users_form
 msgid "Change Password"
-msgstr "Promjeni šifru"
+msgstr "Promijeni šifru"
 
 #. module: base
 #: model:ir.model,name:base.model_change_password_wizard
@@ -6817,7 +6817,7 @@ msgstr "Promijeni šifru"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_users_form
 msgid "Change the user password."
-msgstr "Promjeni šifru korisnika."
+msgstr "Promijeni šifru korisnika."
 
 #. module: base
 #: code:addons/base/res/res_partner.py:338
@@ -10593,7 +10593,7 @@ msgid ""
 msgstr ""
 "Ako je postavljeno, ovo polje će biti snimljeno u proređenu strukturu "
 "serijalizacijskog polja, umjesto da  ima sopstvenu kolonu u bazi podataka. "
-"Ovo ne može da se promjeni nakon kreiranja."
+"Ovo ne može da se promijeni nakon kreiranja."
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_server_action_form
@@ -11430,7 +11430,7 @@ msgstr "Jezični paket"
 #: code:addons/base/res/res_lang.py:217
 #, python-format
 msgid "Language code cannot be modified."
-msgstr "Jezička šifra se ne može promjeniti."
+msgstr "Jezička šifra se ne može promijeniti."
 
 #. module: base
 #: sql_constraint:ir.translation:0
@@ -16615,7 +16615,7 @@ msgid ""
 "The selected language has been successfully installed. You must change the "
 "preferences of the user and open a new menu to view the changes."
 msgstr ""
-"Odabrani jezik je uspješno instaliran. Morate promjeniti postavke korisnika "
+"Odabrani jezik je uspješno instaliran. Morate promijeniti postavke korisnika "
 "i otvoriti novi meni da vidite promjene."
 
 #. module: base

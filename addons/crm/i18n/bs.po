@@ -165,7 +165,7 @@ msgstr "(ako je potencijal aktiviran)"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "(you can change it here)"
-msgstr "(ovdje možete da promjenite)"
+msgstr "(ovdje možete da promijenite)"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
@@ -1201,7 +1201,7 @@ msgstr "Automatski promijeni vjerovatnoću"
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
 msgid "Change the layout of a quotation"
-msgstr "Promjeni raspored predračuna"
+msgstr "Promijeni raspored predračuna"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_lost_reason_view_form

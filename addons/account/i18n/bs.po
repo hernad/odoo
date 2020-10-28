@@ -2305,7 +2305,7 @@ msgstr "Kategorija konta dobiti"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Change"
-msgstr "Promjeni"
+msgstr "Promijeni"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_template_chart_template_id model:ir.model.fields,field_description:account.field_account_fiscal_position_template_chart_template_id
