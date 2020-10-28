@@ -21,3 +21,8 @@ msgstr ""
 #: model:account.account.type,name:l10n_bs.account_type_other
 msgid "Ostalo"
 msgstr "Ostalo"
+
+#. module: l10n_bs
+#: model:ir.ui.menu,name:l10n_bs.account_reports_bs_statements_menu
+msgid "Bosnian Statements"
+msgstr "Bosanski izvještaji"

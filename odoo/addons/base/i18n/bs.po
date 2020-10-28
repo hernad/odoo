@@ -15260,7 +15260,7 @@ msgstr "Veličina sekvence"
 #: model:ir.ui.view,arch_db:base.sequence_view_tree
 #: model:ir.ui.view,arch_db:base.view_sequence_search
 msgid "Sequences"
-msgstr "Redoslijedi"
+msgstr "Sekvence"
 
 #. module: base
 #: model:ir.ui.menu,name:base.next_id_5
@@ -17352,7 +17352,7 @@ msgstr "Nepoznat identifikator baze podataka '%s'"
 #: code:addons/models.py:898
 #, python-format
 msgid "Unknown error during import:"
-msgstr "Nepoznata greška tokom uvoza:"
+msgstr "Nepoznata greska tokom uvoza:"
 
 #. module: base
 #: code:addons/base/ir/ir_model.py:364

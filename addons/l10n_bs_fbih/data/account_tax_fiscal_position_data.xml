@@ -1,12 +1,12 @@
 <?xml version="1.0"  encoding="utf-8"?>
 <odoo>
 		<record id="account_fiscal_position_fbih_1" model="account.fiscal.position.template">
-			<field name="chart_template_id" ref="l10n_bs_chart_template_fbih"/>
+			<field name="chart_template_id" ref="l10n_bs_fbih_chart_template"/>
 			<field name="name">Domaći partneri</field>
 		</record>
 
 		<record id="account_fiscal_position_fbih_2" model="account.fiscal.position.template">
-			<field name="chart_template_id" ref="l10n_bs_chart_template_fbih"/>
+			<field name="chart_template_id" ref="l10n_bs_fbih_chart_template"/>
 			<field name="name">Inostrani partneri</field>
 		</record>
 
@@ -19,8 +19,8 @@
 		</record>
 		<record id="account_fiscal_position_account_fbih_1" model="account.fiscal.position.account.template">
 			<field name="position_id" ref="account_fiscal_position_fbih_1"/>
-			<field name="account_src_id" ref="kto_bs_2700fbih"/>
-			<field name="account_dest_id" ref="kto_bs_4700fbih"/>
+			<field name="account_src_id" ref="kto_bs_fbih_2700"/>
+			<field name="account_dest_id" ref="kto_bs_fbih_4700"/>
 		</record>
 	
        <!-- INO Partneri -->
@@ -31,8 +31,8 @@
 	    </record>
 		<record id="account_fiscal_position_account_fbih_2" model="account.fiscal.position.account.template">
 			<field name="position_id" ref="account_fiscal_position_fbih_2"/>
-			<field name="account_src_id" ref="kto_bs_2700fbih"/>
-			<field name="account_dest_id" ref="kto_bs_4700fbih"/>
+			<field name="account_src_id" ref="kto_bs_fbih_2700"/>
+			<field name="account_dest_id" ref="kto_bs_fbih_4700"/>
 		</record>
 		
 

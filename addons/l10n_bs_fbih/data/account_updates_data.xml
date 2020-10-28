@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <function name="write" model="account.account">
+        <function name="search" model="account.account">
+            <value eval="['|', ('code', '=like', '_'), '|', ('code', '=like', '___'), ('code', '=like', '__') ]" />
+        </function>
+        <value eval="{'deprecated': True}" />
+    </function>
+
+</odoo>

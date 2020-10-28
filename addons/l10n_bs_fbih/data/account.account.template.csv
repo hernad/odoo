@@ -107,7 +107,7 @@
 "150","l10n_bs_fbih_chart_template","kto_bs_fbih_150","l10n_bs.account_type_other","Dati avansi za zalihe i usluge povezanim pravnim licima",,
 "151","l10n_bs_fbih_chart_template","kto_bs_fbih_151","l10n_bs.account_type_other","Dati avansi za zalihe i usluge ostalim pravnim licima",,
 "159","l10n_bs_fbih_chart_template","kto_bs_fbih_159","l10n_bs.account_type_other","Ispravka vrijednosti datih avansa",,
-"Klasa 2","l10n_bs_fbih_chart_template","Klasa kto_bs_fbih_2","l10n_bs.account_type_other","GOTOVINA, KRATKOROČNA POTRAŽIVANJA I KRATKOROČNI PLASMANI",,
+"2","l10n_bs_fbih_chart_template","kto_bs_fbih_2","l10n_bs.account_type_other","GOTOVINA, KRATKOROČNA POTRAŽIVANJA I KRATKOROČNI PLASMANI",,
 "20","l10n_bs_fbih_chart_template","kto_bs_fbih_20","l10n_bs.account_type_other","Gotovina i gotovinski ekvivalenti",,
 "200","l10n_bs_fbih_chart_template","kto_bs_fbih_200","l10n_bs.account_type_other","Transakcijski računi, domaća valuta",,
 "201","l10n_bs_fbih_chart_template","kto_bs_fbih_201","l10n_bs.account_type_other","Transakcijski računi, strana valuta",,
@@ -241,6 +241,7 @@
 "430","l10n_bs_fbih_chart_template","kto_bs_fbih_430","l10n_bs.account_type_other","Primljeni avansi, depoziti i kaucije",,
 "431","l10n_bs_fbih_chart_template","kto_bs_fbih_431","account.data_account_type_payable","Dobavljači - povezana pravna lica",,"True"
 "432","l10n_bs_fbih_chart_template","kto_bs_fbih_432","account.data_account_type_payable","Dobavljači u zemlji",,"True"
+"4320","l10n_bs_fbih_chart_template","kto_bs_fbih_4320","account.data_account_type_payable","Dobavljači u zemlji",,"True"
 "433","l10n_bs_fbih_chart_template","kto_bs_fbih_433","account.data_account_type_payable","Dobavljači u inostranstvu",,"True"
 "439","l10n_bs_fbih_chart_template","kto_bs_fbih_439","l10n_bs.account_type_other","Ostale obaveze iz poslovanja",,
 "44","l10n_bs_fbih_chart_template","kto_bs_fbih_44","l10n_bs.account_type_other","Obaveze iz specifičnih poslova",,
@@ -299,6 +300,7 @@
 "50","l10n_bs_fbih_chart_template","kto_bs_fbih_50","account.data_account_type_expenses","Nabavna vrijednost prodate robe",,
 "500","l10n_bs_fbih_chart_template","kto_bs_fbih_500","account.data_account_type_expenses","Nabavka robe",,
 "501","l10n_bs_fbih_chart_template","kto_bs_fbih_501","account.data_account_type_expenses","Nabavna vrijednost prodate robe",,
+"5010","l10n_bs_fbih_chart_template","kto_bs_fbih_5010","account.data_account_type_expenses","Nabavna vrijednost prodate robe",,
 "502","l10n_bs_fbih_chart_template","kto_bs_fbih_502","account.data_account_type_expenses","Nabavna vrijednost prodatih nekretnina pribavljenih radi prodaje",,
 "51","l10n_bs_fbih_chart_template","kto_bs_fbih_51","account.data_account_type_expenses","Materijalni troškovi",,
 "510","l10n_bs_fbih_chart_template","kto_bs_fbih_510","account.data_account_type_expenses","Nabavka sirovina, materijala, rezervnih dijelova i inventara",,
