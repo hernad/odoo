@@ -5,65 +5,11 @@
     <data noupdate="1">
 
 
-        <record id="account_bs_0100" model="account.account.template">
-            <field name="name">Kapitalizirana ulaganja u razvoj</field>
-            <field name="code">0100</field>
-            <field name="reconcile" eval="False"/>
-            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
-        </record>
-
-
         <record id="l10n_bs_chart_template_fbih" model="account.chart.template">
             <field name="name">Knjigovodstveni plan za preduzeća (FBiH)</field>
             <field name="currency_id" ref="base.BAM"/>
             <field name="code_digits">0</field>
-            <field name="transfer_account_id" ref="account_bs_0100"/>
-        </record>
-
-        <record id="account_bs_0" model="account.account.template">
-            <field name="chart_template_id" ref="l10n_bs_chart_template_fbih"/>
-        </record>
-
-        <record id="account_bs_0110" model="account.account.template">
-            <field name="name">Koncesije, patenti, licence, zaštitni znakovi i druga prava</field>
-            <field name="code">0110</field>
-            <field name="reconcile" eval="False"/>
-            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
-        </record>
-
-        <record id="account_bs_0120" model="account.account.template">
-            <field name="name">Goodwill</field>
-            <field name="code">0120</field>
-            <field name="reconcile" eval="False"/>
-            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
-        </record>
-
-        <record id="account_bs_0130" model="account.account.template">
-            <field name="name">Ulaganja na tuđim materijalnim sredstvima</field>
-            <field name="code">0130</field>
-            <field name="reconcile" eval="False"/>
-            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
-        </record>
-
-        <record id="account_bs_0114" model="account.account.template">
-            <field name="name">Ostala nematerijalna sredstva</field>
-            <field name="code">0114</field>
-            <field name="reconcile" eval="False"/>
-            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
-        </record>
-
-        <record id="account_bs_0150" model="account.account.template">
-            <field name="name">Nematerijalna sredstva u pripremi</field>
-            <field name="code">0150</field>
-            <field name="reconcile" eval="False"/>
-            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
-        </record>
-
-        <record id="account_bs_0170" model="account.account.template">
-            <field name="name">Avansi za nematerijalna sredstva</field>
-            <field name="code">0170</field>
-            <field name="reconcile" eval="False"/>
-            <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+            <field name="transfer_account_id" ref="kto_bs_0fbih"/>
         </record>
 
     </data>

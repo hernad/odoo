@@ -1595,7 +1595,7 @@ msgstr ""
 #. module: website
 #: model:res.groups,name:website.group_website_designer
 msgid "Editor and Designer"
-msgstr ""
+msgstr "Urednik i dizajner"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_comparisons
@@ -1610,7 +1610,7 @@ msgstr "Kraj"
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_comparisons
 msgid "Enterprise package"
-msgstr ""
+msgstr "Komercijalni paket"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.http_error_debug
@@ -1625,7 +1625,7 @@ msgstr "Primjeri"
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_comparisons
 msgid "Expert"
-msgstr ""
+msgstr "Stručnjak"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_well
@@ -1658,22 +1658,22 @@ msgstr "Favicon"
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_three_columns
 msgid "Feature One"
-msgstr ""
+msgstr "Opcija jedan"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_three_columns
 msgid "Feature Three"
-msgstr ""
+msgstr "Opcija tri"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_panel
 msgid "Feature Title"
-msgstr ""
+msgstr "Naslov opcije"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_three_columns
 msgid "Feature Two"
-msgstr ""
+msgstr "Opcija dva"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -1685,12 +1685,12 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Find Inspiration"
-msgstr ""
+msgstr "Nađi inspiraciju"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_features
 msgid "First Feature"
-msgstr ""
+msgstr "Prva opcija"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.snippet_options
@@ -1768,12 +1768,12 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_comparisons
 msgid "Get access to all modules"
-msgstr ""
+msgstr "Odobri pristup svim modulima"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.s_comparisons
 msgid "Get access to all modules and features"
-msgstr ""
+msgstr "Odobri pristup svim modulima i opcijama"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner

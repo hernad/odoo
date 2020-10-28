@@ -4,12 +4,12 @@
         <record id="l10n_bs_chart_template_fbih" model="account.chart.template">
             <field name="bank_account_code_prefix">200</field>
             <field name="cash_account_code_prefix">205</field>
-            <field name="property_account_receivable_id"    ref="kto_fbih2110"/>
-            <field name="property_account_payable_id"       ref="kto_fbih4320"/>
-            <field name="property_account_expense_categ_id" ref="kto_fbih5010"/>
-            <field name="property_account_income_categ_id"  ref="kto_fbih6010"/>
-            <field name="income_currency_exchange_account_id" ref="kto_fbih6620"/>
-            <field name="expense_currency_exchange_account_id" ref="kto_fbih5620"/>
+            <field name="property_account_receivable_id"    ref="kto_bs_2110fbih"/>
+            <field name="property_account_payable_id"       ref="kto_bs_4320fbih"/>
+            <field name="property_account_expense_categ_id" ref="kto_bs_5010fbih"/>
+            <field name="property_account_income_categ_id"  ref="kto_bs_6010fbih"/>
+            <field name="income_currency_exchange_account_id" ref="kto_bs_6620fbih"/>
+            <field name="expense_currency_exchange_account_id" ref="kto_bs_5620fbih"/>
         </record>
 
         <!-- Account Tags -->

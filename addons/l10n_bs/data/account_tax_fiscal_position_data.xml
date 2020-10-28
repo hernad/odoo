@@ -7,25 +7,32 @@
 
 		<record id="account_fiscal_position_fbih_2" model="account.fiscal.position.template">
 			<field name="chart_template_id" ref="l10n_bs_chart_template_fbih"/>
-			<field name="name">Inostrani</field>
+			<field name="name">Inostrani partneri</field>
 		</record>
 
 
        <!-- Domaći Partneri -->
-		
-		<record id="account_fiscal_position_tax_template_fbih_1" model="account.fiscal.position.tax.template">
+		<record id="account_fiscal_position_tax_fbih_1" model="account.fiscal.position.tax.template">
 			<field name="position_id" ref="account_fiscal_position_fbih_1"/>
-			<field name="tax_src_id" ref="fbih_updv_17"/>
-			<field name="tax_dest_id" ref="rrif_updvr2_17"/>
+			<field name="tax_src_id" ref="bih_updv_17"/>
+			<field name="tax_dest_id" ref="bih_pdv_17"/>
 		</record>
-
+		<record id="account_fiscal_position_account_fbih_1" model="account.fiscal.position.account.template">
+			<field name="position_id" ref="account_fiscal_position_fbih_1"/>
+			<field name="account_src_id" ref="kto_bs_2700fbih"/>
+			<field name="account_dest_id" ref="kto_bs_4700fbih"/>
+		</record>
 	
        <!-- INO Partneri -->
-
-		<record id="account_fiscal_position_account_template_fbih_2" model="account.fiscal.position.account.template">
+	   <record id="account_fiscal_position_tax_fbih_2" model="account.fiscal.position.tax.template">
+		  <field name="position_id" ref="account_fiscal_position_fbih_1"/>
+		  <field name="tax_src_id" ref="bih_updv_17"/>
+		  <field name="tax_dest_id" ref="bih_pdv_0_izvoz"/>
+	    </record>
+		<record id="account_fiscal_position_account_fbih_2" model="account.fiscal.position.account.template">
 			<field name="position_id" ref="account_fiscal_position_fbih_2"/>
-			<field name="account_dest_id" ref="kp_fbih1210"/>
-			<field name="account_src_id" ref="kp_fbih1200"/>
+			<field name="account_src_id" ref="kto_bs_2700fbih"/>
+			<field name="account_dest_id" ref="kto_bs_4700fbih"/>
 		</record>
 		
 
