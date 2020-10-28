@@ -17,7 +17,7 @@ Bosnian accounting
 
 
 """,
-    "version": "10.0",
+    "version": "10.0.2",
     "author": "bring.out",
     'category': 'Localization',
     "website": "https://github.com/hernad/odoo",
@@ -28,6 +28,7 @@ Bosnian accounting
     'data': [
         'data/account_account_tags_data.xml',
         'data/account_account_types_data.xml',
+        'data/bs_menu_data.xml',
     ],
     "active": False,
 }

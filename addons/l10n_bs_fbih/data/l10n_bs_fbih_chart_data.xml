@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="account_reports_bs_statements_menu" name="Bosnian Statements" parent="account.menu_finance_reports" sequence="3" groups="account.group_account_user"/>
 
     <data noupdate="1">
-        <record id="kto_bs_0fbih" model="account.account.template">
+        <record id="kto_bs_fbih_0" model="account.account.template">
             <field name="name">STALNA SREDSTVA I DUGOROČNI PLASMANI</field>
             <field name="code">0</field>
             <field name="reconcile" eval="False"/>
@@ -14,7 +13,7 @@
             <field name="name">Knjigovodstveni plan za preduzeća (FBiH)</field>
             <field name="currency_id" ref="base.BAM"/>
             <field name="code_digits">0</field>
-            <field name="transfer_account_id" ref="kto_bs_0fbih"/>
+            <field name="transfer_account_id" ref="kto_bs_fbih_0"/>
         </record>
 
     </data>

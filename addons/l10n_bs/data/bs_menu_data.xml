@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="account_reports_bs_statements_menu" name="Bosnian Statements" parent="account.menu_finance_reports" sequence="3" groups="account.group_account_user"/>
+
+<!-- 
+    <menuitem id="menu_reports_bs_1"
+        name="Bosnian report 1"
+        action="action_account_reports_bs_report_1_view"
+        parent="l10n_bs.account_reports_bs_statements_menu"/> -->
+
+
+</odoo>

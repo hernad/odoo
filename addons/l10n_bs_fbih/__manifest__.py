@@ -24,7 +24,7 @@ Bosnian Chart of Accounts (FBiH ver.2020)
         'account',
     ],
     'data': [
-        'data/l10n_bs_chart_data.xml',
+        'data/l10n_bs_fbih_chart_data.xml',
         'data/account.account.template.csv',
         'data/account_chart_tag_data.xml',
         'data/account_tax_fiscal_position_data.xml',

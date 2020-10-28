@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="account_type_other" model="account.account.type">
+            <field name="name">Ostalo</field>
+            <field name="type">other</field>
+            <field name="include_initial_balance">False</field>
+        </record>
+    </data>
+</odoo>
