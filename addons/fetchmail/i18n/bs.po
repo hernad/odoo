@@ -54,7 +54,7 @@ msgstr "Konfiguracija"
 #. module: fetchmail
 #: model:ir.ui.view,arch_db:fetchmail.inherit_view_general_configuration
 msgid "Configure the incoming email gateway"
-msgstr ""
+msgstr "Konfigurišite ulazi email gateway"
 
 #. module: fetchmail
 #: selection:fetchmail.server,state:0
@@ -77,7 +77,7 @@ msgstr ""
 #. module: fetchmail
 #: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server_object_id
 msgid "Create a New Record"
-msgstr ""
+msgstr "Kreirajte novi zapis"
 
 #. module: fetchmail
 #: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server_create_uid
@@ -92,7 +92,7 @@ msgstr "Kreirano"
 #. module: fetchmail
 #: model:ir.model.fields,help:fetchmail.field_fetchmail_server_priority
 msgid "Defines the order of processing, lower values mean higher priority"
-msgstr ""
+msgstr "Definiše redoslijed obrade, niže vrijednosti znače veći prioritet"
 
 #. module: fetchmail
 #: model:ir.model.fields,field_description:fetchmail.field_fetchmail_server_display_name

@@ -1853,7 +1853,7 @@ msgstr "Metoda plaćanja:"
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Payment Methods"
-msgstr "Metoda plaćanja"
+msgstr "Metode plaćanja"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
