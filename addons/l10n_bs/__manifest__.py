@@ -27,6 +27,7 @@ Bosnian accounting
     ],
     'data': [
         'data/account_account_tags_data.xml',
+        'data/account_account_types_data.xml',
     ],
     "active": False,
 }

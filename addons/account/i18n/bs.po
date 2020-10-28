@@ -4269,7 +4269,7 @@ msgstr ""
 #. module: account
 #: model:account.payment.term,name:account.account_payment_term_immediate
 msgid "Immediate Payment"
-msgstr "Neposredno plaćanje"
+msgstr "Plaćanje odmah"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_module_account_bank_statement_import_qif
@@ -6139,7 +6139,7 @@ msgstr "Uslovi plaćanja: Kraj tekućeg mjeseca"
 #. module: account
 #: model:account.payment.term,note:account.account_payment_term_immediate
 msgid "Payment term: Immediate Payment"
-msgstr "Uslovi plaćanja: Neposredno plaćanje"
+msgstr "Uslovi plaćanja: Plaćanje odmah"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line_payment_id
