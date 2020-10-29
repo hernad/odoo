@@ -2626,7 +2626,7 @@ msgstr "Kompletna lista poreza"
 #: code:addons/account/models/account_invoice.py:414
 #, python-format
 msgid "Compose Email"
-msgstr "Sastavi e-poštu"
+msgstr "Sastavi email"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line_counterpart
@@ -2666,6 +2666,8 @@ msgid ""
 "Configuration error!\n"
 "The currency of the journal should be the same than the default credit account."
 msgstr ""
+"Greška u konfiguraciji! \n"
+"Valuta dnevnika trebala bi biti ista kao zadani potražni konto."
 
 #. module: account
 #: code:addons/account/models/account.py:303
