@@ -4878,7 +4878,7 @@ msgstr "Aruba"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_asset
 msgid "Assets Management"
-msgstr "Upravljanje Sredstvima"
+msgstr "Upravljanje stalnim sredstvima"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_association

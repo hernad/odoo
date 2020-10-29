@@ -5274,7 +5274,7 @@ msgstr "Nosioc računa"
 #. module: base
 #: model:ir.module.module,summary:base.module_website_portal
 msgid "Account Management Frontend for your Customers"
-msgstr ""
+msgstr "Frontend za upravljanje računima za vaše kupce"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company_account_no
@@ -6056,7 +6056,7 @@ msgstr "Aruba"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_asset
 msgid "Assets Management"
-msgstr "Upravljanje Sredstvima"
+msgstr "Upravljanje stalnim sredstvima"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_association
@@ -11319,7 +11319,7 @@ msgstr "Jordan"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_procurement_jit
 msgid "Just In Time Scheduling"
-msgstr "Baš na vrijeme Planiranje"
+msgstr "Planiranje u realnom vremenu"
 
 #. module: base
 #: selection:ir.actions.act_window.view,view_mode:0
@@ -14102,7 +14102,7 @@ msgstr "Projekat"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_project_forecast
 msgid "Project Forecast"
-msgstr ""
+msgstr "Predviđanja za projekt"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_rating_project
@@ -14112,7 +14112,7 @@ msgstr "Rejting projekata"
 #. module: base
 #: model:ir.module.module,summary:base.module_project
 msgid "Projects, Tasks"
-msgstr "Projekti, Zadaci"
+msgstr "Projekti, zadaci"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_model_fields_form
@@ -14183,7 +14183,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_customer
 msgid "Publish Your Customer References"
-msgstr ""
+msgstr "Objavite reference kupaca"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module_published_version
@@ -19299,3 +19299,27 @@ msgstr "da"
 #: model:res.country,name:base.ax
 msgid "Åland Islands"
 msgstr "Alandska ostrva"
+
+
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_product_contract
+msgid "Product Contract"
+msgstr "Ugovor za proizvod"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_contract
+msgid "Contracts Management - Recurring"
+msgstr "Upravljanje periodičnim ugovorima"
+
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_contract_sale_generation
+msgid "Contracts Management - Recurring Sales"
+msgstr "Upravljanje periodičnim prodajnim ugovorima"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_contract_sale
+msgid "Contract from Sale"
+msgstr "Prodajni ugovori"
+

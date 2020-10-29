@@ -5439,17 +5439,17 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_calendar
 #: selection:ir.ui.view,type:0
 msgid "Calendar"
-msgstr "Kalender"
+msgstr "Kalendar"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_stock_calendar
 msgid "Calendars "
-msgstr ""
+msgstr "Kalendari "
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_calendar
 msgid "Calendars on Orderpoints"
-msgstr ""
+msgstr "Kalendari na narudžbenicama"
 
 #. module: base
 #: model:res.country,name:base.kh
@@ -5478,7 +5478,7 @@ msgstr ""
 #: code:addons/base/ir/ir_model.py:547
 #, python-format
 msgid "Can only rename one field at a time!"
-msgstr ""
+msgstr "Može istovremeno preimenovati samo jedno polje!"
 
 #. module: base
 #: model:res.country,name:base.ca
@@ -5508,22 +5508,22 @@ msgstr "Gekanselleer"
 #. module: base
 #: model:ir.ui.view,arch_db:base.module_form
 msgid "Cancel Install"
-msgstr ""
+msgstr "Otkaži instalaciju"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_cancel
 msgid "Cancel Journal Entries"
-msgstr ""
+msgstr "Otkaži stavke dnevnika"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.module_form
 msgid "Cancel Uninstall"
-msgstr ""
+msgstr "Otkaži deinstalaciju"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.module_form
 msgid "Cancel Upgrade"
-msgstr ""
+msgstr "Otkaži nadogradnju"
 
 #. module: base
 #: code:addons/base/res/res_config.py:399
