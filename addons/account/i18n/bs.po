@@ -2000,7 +2000,7 @@ msgstr "Izvodi iz banke su u potpunosti zatvoreni."
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_tax_base model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "Base"
-msgstr "Osnova"
+msgstr "Bazne funkcije"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_journal
@@ -2010,12 +2010,12 @@ msgstr "Osnovica"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Before continuing, you must install the Chart of Account related to your country (or the generic one if your country is not listed)."
-msgstr ""
+msgstr "Prije nastavka morate instalirati kontni plan koji se odnosi na vašu zemlju (ili generički ako vaša država nije na spisku)."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_belongs_to_company
 msgid "Belong to the user's current company"
-msgstr ""
+msgstr "Pripada korisnikovom trenutnom preduzeću"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view model:ir.ui.view,arch_db:account.invoice_supplier_form
@@ -2209,7 +2209,7 @@ msgstr ""
 #: code:addons/account/models/account.py:425
 #, python-format
 msgid "Cannot generate an unused account code."
-msgstr ""
+msgstr "Nedozvoljeno generisati nekorišteni konto"
 
 #. module: account
 #: code:addons/account/models/account.py:455
@@ -2345,6 +2345,8 @@ msgid ""
 "Chart of Accounts has been\n"
 "                            installed. You should review it and create any additional accounts."
 msgstr ""
+"Kontni plan je \n"
+"                            instaliran. Trebali biste ga pregledati i po potrebi kreirati dodatna konta."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_list
@@ -2364,12 +2366,12 @@ msgstr "Provjeri Saldo prilikom zatvaranja"
 #. module: account
 #: model:ir.model.fields,help:account.field_account_bank_statement_is_difference_zero
 msgid "Check if difference is zero."
-msgstr ""
+msgstr "Provjerite je li razlika nula."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_account_reconcile
 msgid "Check this box if this account allows invoices & payments matching of journal items."
-msgstr ""
+msgstr "Označite ako ovaj konto omogućava usaglašavanje faktura i plaćanja za stavke dnevnika."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_config_settings_expects_chart_of_accounts
@@ -2379,7 +2381,7 @@ msgstr "Označite ovdje ako je ova preduzeće zasebna pravna osoba"
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal_refund_sequence
 msgid "Check this box if you don't want to share the same sequence for invoices and refunds made from this journal"
-msgstr ""
+msgstr "Označite ako ne želite dijeliti istu sekvencu za fakture i povrate (reklamirane fakture) iz ovog dnevnika"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_journal_update_posted
@@ -2406,7 +2408,7 @@ msgstr "Podporezi"
 #: code:addons/account/models/chart_template.py:146 model:ir.actions.act_window,name:account.action_wizard_multi_chart
 #, python-format
 msgid "Choose Accounting Template"
-msgstr "Izaberi prijedlog kontnog plana"
+msgstr "Izaberi prijedlog uzorka kontnog plana"
 
 #. module: account
 #. openerp-web
@@ -2448,7 +2450,7 @@ msgstr "Klikni za kreiranje fakture kupcu."
 #. module: account
 #: model:ir.actions.act_window,help:account.action_move_journal_line
 msgid "Click to create a journal entry."
-msgstr "Klikni za kreiranje dnevničkog zapisa."
+msgstr "Klikni za kreiranje stavke dnevnika."
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_view_bank_statement_tree
@@ -2499,7 +2501,7 @@ msgstr "Zatvori nalog"
 #: code:addons/account/static/src/xml/account_reconciliation.xml:228
 #, python-format
 msgid "Close the statements"
-msgstr ""
+msgstr "Zatvorite naloge"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_date_done

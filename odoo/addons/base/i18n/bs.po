@@ -5588,6 +5588,8 @@ msgid ""
 "Add your sales document in the frontend portal (sales order, quotations, "
 "invoices)"
 msgstr ""
+"Dodajte svoj prodajni dokument u frontend portal (prodajni nalog , RFQ,"
+"fakture)"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.res_partner_view_form_private
@@ -5706,7 +5708,7 @@ msgstr "Potreban je administrativni pristup da se deinstalira modul"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_track
 msgid "Advanced Events"
-msgstr ""
+msgstr "Napredni događaji"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.act_report_xml_view
@@ -5763,12 +5765,12 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_reprint
 msgid "Allow cashier to reprint receipts"
-msgstr "Dozvoli kaseru da ponovno odštampa račun"
+msgstr "Dozvoli blagajniku da ponovno odštampa račun"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account_tax_cash_basis
 msgid "Allow to have cash basis on tax"
-msgstr ""
+msgstr "Dopustite da imate gotovinsku osnovu poreza"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_version
@@ -5780,7 +5782,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_helpdesk_form
 msgid "Allow website visitors to submit tickets through a form"
-msgstr ""
+msgstr "Dopustite posjetiteljima web stranice da podnesu tikete putem forme"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_users_form
@@ -6355,17 +6357,17 @@ msgstr "Osnovna svojstva"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_import
 msgid "Base import"
-msgstr "Osnovni uvoz"
+msgstr "Bazni fajl import"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_import_module
 msgid "Base import module"
-msgstr "Osnovni modul uvoza"
+msgstr "Bazni fajl import modul"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_act_server_model_id
 msgid "Base model on which the server action runs."
-msgstr ""
+msgstr "Bazni model na kome se izvršavaju serverske akcije"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_partner
@@ -14047,7 +14049,7 @@ msgstr "Privatna metoda (kao što je %s) nemože biti pozvana na daljinu."
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_procurement
 msgid "Procurements"
-msgstr "Naručivanja"
+msgstr "Proces nabavki"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_product_email_template
@@ -14196,17 +14198,17 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_partner_form
 msgid "Purchase"
-msgstr "Nabava"
+msgstr "Nabavke"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase
 msgid "Purchase Management"
-msgstr "Upravljanje nabavkom"
+msgstr "Upravljanje nabavkama"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_purchase
 msgid "Purchase Orders, Receipts, Vendor Bills"
-msgstr ""
+msgstr "Narudžbenice, primke, ulazni računi"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase_requisition
@@ -14216,7 +14218,7 @@ msgstr "Nabavni zahtjevi"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase_mrp
 msgid "Purchase and MRP Management"
-msgstr ""
+msgstr "Nabavke i upravljanje proizvodnjom"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_purchase_management
@@ -14227,7 +14229,7 @@ msgstr "Nabavke"
 #. module: base
 #: model:ir.module.module,summary:base.module_mail_push
 msgid "Push notification for mobile app"
-msgstr ""
+msgstr "Push obavijest za mobilnu aplikaciju"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_wkf_activity_action
@@ -14273,7 +14275,7 @@ msgstr "Kontrola kvalitete"
 #. module: base
 #: model:ir.module.module,summary:base.module_quality_mrp
 msgid "Quality Management with MRP"
-msgstr ""
+msgstr "Upravljanje kvalitetom u proizvodnji"
 
 #. module: base
 #: model:ir.module.module,description:base.module_website_event_questions
@@ -15172,17 +15174,17 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale
 msgid "Sell Your Products Online"
-msgstr ""
+msgstr "Prodaja proizvoda online"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_timesheet
 msgid "Sell based on timesheets"
-msgstr ""
+msgstr "Prodaja bazirana na šihtaricama"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_account
 msgid "Send Invoices and Track Payments"
-msgstr "Slanje faktura i Praćenje plaćanja"
+msgstr "Slanje faktura i praćenje plaćanja"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sign

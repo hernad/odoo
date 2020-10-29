@@ -6712,7 +6712,7 @@ msgstr "Austrija - Računovodstvo"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_auth_ldap
 msgid "Authentication via LDAP"
-msgstr "LDAP Autentikacija"
+msgstr "LDAP Autentifikacija"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_module_module_author

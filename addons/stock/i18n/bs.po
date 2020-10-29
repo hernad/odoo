@@ -4685,6 +4685,8 @@ msgid ""
 "Priority for this picking. Setting manually a value here would set it as "
 "priority for all the moves"
 msgstr ""
+"Prioritet za ovo preuzimanje. Ručno postavljanje vrijednosti ovdje postavilo bi ga kao "
+"prioritet za sva pomjeranja"
 
 #. module: stock
 #: model:ir.model,name:stock.model_procurement_order
@@ -4697,7 +4699,7 @@ msgstr "Naručivanje"
 #: model:ir.ui.menu,name:stock.menu_stock_procurement_action
 #: model:ir.ui.view,arch_db:stock.inventory_planner
 msgid "Procurement Exceptions"
-msgstr "Izuzetak u naručivanju"
+msgstr "Izuzetak u procesu nabavki"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move_group_id
@@ -4713,7 +4715,7 @@ msgstr "Grupa naručivanja"
 #: model:ir.model.fields,field_description:stock.field_product_product_property_stock_procurement
 #: model:ir.model.fields,field_description:stock.field_product_template_property_stock_procurement
 msgid "Procurement Location"
-msgstr "Lokacija nabavke"
+msgstr "Lokacija za naručivanje"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.act_make_procurement
@@ -4727,20 +4729,20 @@ msgstr "Zahtjev za naručivanje"
 #. module: stock
 #: model:ir.model,name:stock.model_procurement_group
 msgid "Procurement Requisition"
-msgstr "Rekvizicija naručivanja"
+msgstr "Zahtjev za naručivanje"
 
 #. module: stock
 #: model:ir.model,name:stock.model_procurement_rule
 #: model:ir.model.fields,field_description:stock.field_stock_move_rule_id
 msgid "Procurement Rule"
-msgstr "Pravilo naručivanja"
+msgstr "Pravilo procesa nabavke - naručivanja"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.procrules
 #: model:ir.model.fields,field_description:stock.field_stock_location_route_pull_ids
 #: model:ir.ui.view,arch_db:stock.stock_location_route_form_view
 msgid "Procurement Rules"
-msgstr "Pravila naručivanja"
+msgstr "Pravila procesa nabavki - naručivanja"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.do_view_procurement_op
@@ -4748,7 +4750,7 @@ msgstr "Pravila naručivanja"
 #: model:ir.ui.view,arch_db:stock.view_warehouse_orderpoint_form
 #: model:stock.location,name:stock.location_procurement
 msgid "Procurements"
-msgstr "Naručivanja"
+msgstr "Proces nabavki"
 
 #. module: stock
 #: code:addons/stock/models/product.py:363

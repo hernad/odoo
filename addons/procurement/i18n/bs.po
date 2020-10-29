@@ -210,7 +210,7 @@ msgstr "Grupiši po"
 #: model:ir.actions.act_window,name:procurement.do_view_procurements
 #: model:ir.ui.view,arch_db:procurement.procurement_form_view
 msgid "Group's Procurements"
-msgstr "Naručivanja grupa"
+msgstr "Grupa procesa nabavki"
 
 #. module: procurement
 #: model:ir.model.fields,field_description:procurement.field_procurement_group_id
@@ -370,13 +370,47 @@ msgstr "Grupa naručivanja"
 msgid "Procurement started late"
 msgstr "Naručivanje je zakasnilo"
 
+
+# https://kissflow.com/procurement/procurement-vs-purchasing/
+#
+# What is Procurement?
+#Procurement refers to the process of identifying, shortlisting, selecting, and acquiring suitable goods or services or works from a third party vendor through a direct purchase, competitive bidding, or tendering process while ensuring timely delivery in the right quality and quantity.
+#
+#An end-to-end procurement process consists of the steps listed below:
+#
+#Surveying the market
+#Spotting potential suppliers
+#Creating an approved list of vendors
+#Spotting internal needs
+#Creating a purchase order online
+#Requesting proposals and evaluating quotations
+#Selecting the right supplier and negotiating effectively
+#Receiving goods and performing quality checks
+#Developing and managing contracts
+#Obtaining invoice approvals and fulfilling payment terms
+#Establishing a good supplier relationship
+#☛ Free Guide: The Ultimate Guide to Managing Remote Procurement Teams.
+#What is purchasing?
+#Purchasing is the set of functions associated with acquiring the goods and services that an organization requires. Purchasing is a small subset of the broader procurement function. This process includes activities like ordering, expediting, receiving, and fulfilling payment.
+#
+#Listed below are the steps in the purchasing process:
+#
+#Obtaining a purchase requisition
+#Requesting proposals and evaluating quotations
+#Dispatching official purchase orders
+#Receiving products and services
+#Checking the quality of delivered items
+#Effecting payment to vendors
+#
+
+
 #. module: procurement
 #: model:ir.model.fields,field_description:procurement.field_procurement_group_procurement_ids
 #: model:ir.ui.view,arch_db:procurement.procurement_group_form_view
 #: model:ir.ui.view,arch_db:procurement.product_product_view_form_procurement_button
 #: model:ir.ui.view,arch_db:procurement.product_template_view_form_procurement_button
 msgid "Procurements"
-msgstr "Naručivanja"
+msgstr "Proces nabavki"
 
 #. module: procurement
 #: model:ir.model.fields,field_description:procurement.field_procurement_order_product_id
