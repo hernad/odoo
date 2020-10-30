@@ -5463,7 +5463,7 @@ msgstr "Novi"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
 msgid "New Statement"
-msgstr "Novi izvod iz banke"
+msgstr "Novi bankovni izvod"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
