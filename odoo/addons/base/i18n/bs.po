@@ -14188,7 +14188,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_website_crm_partner_assign
 msgid "Publish Your Channel of Resellers"
-msgstr ""
+msgstr "Objavi kanale ili preprodavce"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_customer

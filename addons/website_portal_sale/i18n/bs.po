@@ -238,7 +238,7 @@ msgstr "Predračun #"
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_home_menu_sale
 msgid "Quotes"
-msgstr ""
+msgstr "RFQ (upit za ponudu)"
 
 #. module: website_portal_sale
 #: model:ir.model.fields,field_description:website_portal_sale.field_payment_transaction_sale_order_id
@@ -248,7 +248,7 @@ msgstr "Prodajni nalog"
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_orders
 msgid "Sale Order #"
-msgstr ""
+msgstr "Prodajni nalog #"
 
 #. module: website_portal_sale
 #: model:ir.model,name:website_portal_sale.model_sale_order
@@ -258,36 +258,36 @@ msgstr "Prodajna narudžba"
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
 msgid "Taxes:"
-msgstr "Porezi:"
+msgstr "PDV:"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_invoices
 msgid "There are currently no invoices for your account."
-msgstr ""
+msgstr "Trenutno nema faktura za vaš račun."
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_orders
 msgid "There are currently no orders for your account."
-msgstr ""
+msgstr "Trenutno nema narudžbi za vaš račun."
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_quotations
 msgid "There are currently no quotes for your account."
-msgstr ""
+msgstr "Trenutno nema RFQ (upiti za ponude) za vaš račun."
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_orders
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_quotations
 msgid "Total"
-msgstr "Ukupno"
+msgstr "Sveukupno"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.orders_followup
 msgid "Untaxed Amount:"
-msgstr ""
+msgstr "Osnova bez PDV:"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_quotations
@@ -298,16 +298,16 @@ msgstr "Važi do"
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_invoices
 msgid "Your Invoices and Payments"
-msgstr ""
+msgstr "Vaše fakture i plaćanja"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_orders
 msgid "Your Orders"
-msgstr ""
+msgstr "Vaše narudžbe"
 
 #. module: website_portal_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_home_sale
 #: model:ir.ui.view,arch_db:website_portal_sale.portal_my_quotations
 msgid "Your Quotes"
-msgstr ""
+msgstr "Vaše RFQ (upiti za ponude)"

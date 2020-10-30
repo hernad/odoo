@@ -147,7 +147,7 @@ msgid ""
 "                            <span attrs=\"{'invisible':[('base', '!=', 'standard_price')]}\">Cost  -  </span>\n"
 "                            <span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Other Pricelist  -  </span>"
 msgstr ""
-"<span attrs=\"{'invisible':[('base', '!=', 'list_price')]}\">Javna cijena  -  </span>\n"
+"<span attrs=\"{'invisible':[('base', '!=', 'list_price')]}\">Maloprodajna cijena  -  </span>\n"
 "                            <span attrs=\"{'invisible':[('base', '!=', 'standard_price')]}\">Nabavna cijena  -  </span>\n"
 "                            <span attrs=\"{'invisible':[('base', '!=', 'pricelist')]}\">Drugi cjenovnik -  </span>"
 
@@ -2043,7 +2043,7 @@ msgstr "Proizvodi: "
 #: model:ir.model.fields,field_description:product.field_product_template_lst_price
 #: selection:product.pricelist.item,base:0
 msgid "Public Price"
-msgstr "Javna cijena"
+msgstr "Maloprodajna cijena"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_description_purchase

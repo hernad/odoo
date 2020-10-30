@@ -984,7 +984,7 @@ msgstr ""
 #. module: hr
 #: model:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Public Information"
-msgstr ""
+msgstr Javna informacija"
 
 #. module: hr
 #: model:hr.job,website_description:hr.job_consultant

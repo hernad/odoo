@@ -1753,7 +1753,7 @@ msgstr "Neoporezivo"
 #. module: purchase
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_amount_untaxed
 msgid "Untaxed Amount"
-msgstr "Neoporezivi iznos"
+msgstr "Osnovica bez PDV"
 
 #. module: purchase
 #: selection:purchase.config.settings,group_costing_method:0

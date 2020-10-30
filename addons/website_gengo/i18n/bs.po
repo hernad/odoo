@@ -215,7 +215,7 @@ msgstr ""
 #: code:addons/website_gengo/static/src/xml/website.gengo.xml:125
 #, python-format
 msgid "Public key"
-msgstr ""
+msgstr "Javni ključ"
 
 #. module: website_gengo
 #. openerp-web

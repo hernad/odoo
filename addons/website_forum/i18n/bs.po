@@ -2011,7 +2011,7 @@ msgstr ""
 #. module: website_forum
 #: model:ir.ui.view,arch_db:website_forum.edit_profile
 msgid "Public profile"
-msgstr ""
+msgstr "Javni profil"
 
 #. module: website_forum
 #: model:gamification.badge,name:website_forum.badge_25

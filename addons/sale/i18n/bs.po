@@ -2315,12 +2315,12 @@ msgstr "Nepročitane poruke"
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_order_amount_untaxed
 msgid "Untaxed Amount"
-msgstr "Neoporezivi iznos"
+msgstr "Osnovica bez PDV"
 
 #. module: sale
 #: model:ir.model.fields,field_description:sale.field_sale_report_price_subtotal
 msgid "Untaxed Total"
-msgstr "Ukupno neoporezovano"
+msgstr "Sveukupno osnovica bez PDV"
 
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.sale_order_view_search_inherit_sale
