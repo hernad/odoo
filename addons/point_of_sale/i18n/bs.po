@@ -316,7 +316,7 @@ msgstr "Sve stavke prodaje"
 #. module: point_of_sale
 #: selection:pos.config.settings,module_pos_reprint:0
 msgid "Allow cashier to reprint receipts"
-msgstr "Dozvoli kaseru da ponovno odštampa račun"
+msgstr "Dozvoli blagajniku da ponovno odštampa račun"
 
 #. module: point_of_sale
 #: selection:pos.config.settings,module_pos_discount:0
@@ -1335,14 +1335,14 @@ msgstr "Hardverski događaji"
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_form
 msgid "Hardware Proxy / PosBox"
-msgstr ""
+msgstr "Hardverski proksi PosBox"
 
 #. module: point_of_sale
 #. openerp-web
 #: code:addons/point_of_sale/static/src/xml/pos.xml:1318
 #, python-format
 msgid "Hardware Status"
-msgstr "Status hardwera"
+msgstr "Status hardvera"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_control
@@ -2895,7 +2895,7 @@ msgstr "Početna kategorija"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard_start_date
 msgid "Start date"
-msgstr "Datum početka"
+msgstr "Datum od"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session_cash_register_balance_start

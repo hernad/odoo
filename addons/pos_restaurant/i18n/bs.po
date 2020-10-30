@@ -203,6 +203,10 @@ msgid ""
 "                An Order Printer will only print updates for products belonging to one of\n"
 "                its categories."
 msgstr ""
+"Svaki štampač za narudžbe ima IP adresu koja definira PosBox/Hardver \n"
+"               Proxy gdje se može pronaći štampač i lista kategorija proizvoda.\n"
+"               Štampač za narudžbe ispisat će promjene za proizvode koji pripadaju jednoj od\n"
+"               sopstvenih kategorije."
 
 #. module: pos_restaurant
 #: model:ir.model.fields,help:pos_restaurant.field_pos_config_iface_splitbill

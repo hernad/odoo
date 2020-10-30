@@ -362,7 +362,7 @@ msgstr "Referenca ugovora"
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract_start_date
 msgid "Contract Start Date"
-msgstr "Datum početka ugovora"
+msgstr "Datum od ugovora"
 
 #. module: fleet
 #: model:ir.model.fields,help:fleet.field_fleet_vehicle_cost_contract_id

@@ -1401,7 +1401,7 @@ msgstr "Datum kreiranja"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project_credit
 msgid "Credit"
-msgstr "Potraživanje"
+msgstr "Potražuje"
 
 #. module: project
 #: model:ir.filters,name:project.filter_task_report_cumulative_flow
@@ -3030,12 +3030,12 @@ msgstr ""
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project_date_start
 msgid "Start Date"
-msgstr "Datum početka"
+msgstr "Datum od"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_date_start
 msgid "Starting Date"
-msgstr "Datum početka"
+msgstr "Datum od"
 
 #. module: project
 #: sql_constraint:project.tags:0

@@ -207,7 +207,7 @@ msgstr "Zarađeni iznos"
 #. module: membership
 #: model:ir.model.fields,field_description:membership.field_report_membership_date_to
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum do"
 
 #. module: membership
 #: model:ir.ui.view,arch_db:membership.view_res_partner_member_filter
@@ -573,7 +573,7 @@ msgstr "Odaberite ako želite da date besplatno članstvo"
 #. module: membership
 #: model:ir.model.fields,field_description:membership.field_report_membership_start_date
 msgid "Start Date"
-msgstr "Datum početka"
+msgstr "Datum od"
 
 #. module: membership
 #: model:ir.ui.view,arch_db:membership.view_res_partner_member_filter

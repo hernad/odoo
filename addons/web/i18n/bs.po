@@ -2527,7 +2527,7 @@ msgstr "sadrži"
 #: code:addons/web/static/src/js/views/search_filters.js:163
 #, python-format
 msgid "doesn't contain"
-msgstr "Ne sarži"
+msgstr "Ne sadrži"
 
 #. module: web
 #. openerp-web

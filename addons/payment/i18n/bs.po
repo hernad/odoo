@@ -404,7 +404,7 @@ msgstr "Nadoknade"
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_payment_acquirer_fees_implemented
 msgid "Fees Computation Supported"
-msgstr "Izračun provizija podržan"
+msgstr "Obračun provizija podržan"
 
 #. module: payment
 #: model:ir.model.fields,help:payment.field_payment_transaction_fees

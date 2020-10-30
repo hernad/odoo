@@ -164,7 +164,7 @@ msgstr "Ugovor zaposlenog"
 #. module: hr_contract
 #: model:ir.model.fields,field_description:hr_contract.field_hr_contract_date_end
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum do"
 
 #. module: hr_contract
 #: selection:hr.contract,state:0
@@ -300,7 +300,7 @@ msgstr "Izvodi se"
 #. module: hr_contract
 #: model:ir.ui.view,arch_db:hr_contract.hr_contract_view_form
 msgid "Salary and Advantages"
-msgstr ""
+msgstr "Plata i povlastice"
 
 #. module: hr_contract
 #: model:ir.ui.view,arch_db:hr_contract.hr_contract_view_search
@@ -321,7 +321,7 @@ msgstr "Sekvenca"
 #. module: hr_contract
 #: model:ir.model.fields,field_description:hr_contract.field_hr_contract_date_start
 msgid "Start Date"
-msgstr "Datum početka"
+msgstr "Datum od"
 
 #. module: hr_contract
 #: model:ir.model.fields,field_description:hr_contract.field_hr_contract_state

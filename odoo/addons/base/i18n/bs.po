@@ -2889,6 +2889,16 @@ msgid ""
 "regular openerp interface anymore. \n"
 "\n"
 msgstr ""
+"\n"
+"PosBox početna stranica \n"
+"===============\n"
+"Ovaj modul mijenja odoo web interfejs za prikaz jednostavne\n"
+"početne stranica koja objašnjava šta je posbox,\n"
+"gdje pronaći dokumentaciju.\n"
+"\n"
+"Ako aktivirate ovaj modul, nećete moći pristupiti \n"
+"standardnom oddo interfejsu.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_hw_posbox_upgrade
@@ -5249,7 +5259,7 @@ msgstr "Zadane vrijednosti analitičkih konta"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_bank_statement_import
 msgid "Account Bank Statement Import"
-msgstr "Uvoz izvoda iz banke"
+msgstr "Konto importa bankovnih izvoda"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_localization_account_charts
@@ -6330,7 +6340,7 @@ msgstr "Osnovno polje"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_kanban
 msgid "Base Kanban"
-msgstr "Osnovi kaban"
+msgstr "Bazne funkcije - kanban"
 
 #. module: base
 #: code:addons/base/res/res_lang.py:227
@@ -7998,7 +8008,7 @@ msgstr "Kursne oznake, koje će se koristiti prilikom štampanja iznosa."
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_users_form
 msgid "Current Company"
-msgstr "Trenutna preduzeće"
+msgstr "Trenutno preduzeće"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_currency_rate
@@ -8261,33 +8271,33 @@ msgstr "Uobičajeno"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_theme_default
 msgid "Default Theme"
-msgstr "Zadana tema"
+msgstr "Standardna tema"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_filters_is_default
 msgid "Default filter"
-msgstr "Zadani filter"
+msgstr "Stadardni filter"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_act_window_limit
 msgid "Default limit for the list view"
-msgstr "Podrazumjevana granica za prikaz liste"
+msgstr "Standardna granica za prikaz liste"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_values_value
 msgid "Default value (pickled) or reference to an action"
-msgstr "Zadana vrijednost (ustaljena) ili referenca do neke akcije"
+msgstr "Standardna vrijednost (ustaljena) ili referenca do neke akcije"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_values_value_unpickle
 #: model:ir.ui.view,arch_db:base.values_view_form_defaults
 msgid "Default value or action reference"
-msgstr "Zadana vrijednost ili referenca akcije"
+msgstr "Standardna vrijednost ili referenca akcije"
 
 #. module: base
 #: model:ir.module.module,description:base.module_theme_default
 msgid "Default website theme to showcase customization possibilities."
-msgstr "Zadana tema web stranice za prikazivanje mogućnosti prilagođavanja."
+msgstr "Standardna tema web stranice za prikazivanje mogućnosti prilagođavanja."
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_contract_asset
@@ -8302,7 +8312,7 @@ msgstr "Definiši PDV kao Python kod"
 #. module: base
 #: model:ir.ui.view,arch_db:base.module_form
 msgid "Defined Reports"
-msgstr "Definirani izvještaji"
+msgstr "Definisani izvještaji"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_constraint_definition
@@ -8338,7 +8348,7 @@ msgstr "Demo Podaci"
 #. module: base
 #: model:res.country,name:base.dk
 msgid "Denmark"
-msgstr ""
+msgstr "Danska"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields_depends
@@ -9600,7 +9610,7 @@ msgstr ""
 #: selection:ir.actions.act_window.view,view_mode:0
 #: model:ir.ui.view,arch_db:base.view_view_search selection:ir.ui.view,type:0
 msgid "Form"
-msgstr "Obrazac"
+msgstr "Forma"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner_email_formatted
@@ -9612,7 +9622,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_partner_email_formatted
 #: model:ir.model.fields,field_description:base.field_res_users_email_formatted
 msgid "Formatted Email"
-msgstr ""
+msgstr "Formatirani email"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_forum
@@ -13526,7 +13536,7 @@ msgstr "Izvorna kategorija"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company_parent_id
 msgid "Parent Company"
-msgstr "Nadređena preduzeće"
+msgstr "Nadređeno preduzeće"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_menu_parent_id
@@ -13919,7 +13929,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hw_posbox_homepage
 msgid "PosBox Homepage"
-msgstr ""
+msgstr "PosBox naslovna stranica"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hw_posbox_upgrade
@@ -14359,7 +14369,7 @@ msgstr "Stope"
 #: model:ir.model.fields,field_description:base.field_ir_model_access_perm_read
 #: model:ir.ui.view,arch_db:base.ir_access_view_search
 msgid "Read Access"
-msgstr "Ćitanje"
+msgstr "Čitanje"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_rule_search
@@ -14574,7 +14584,7 @@ msgstr "Popravi slomljene ili oštećene proizvode"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_repair
 msgid "Repairs Management"
-msgstr "Upravljanje Popravkama"
+msgstr "Popravke u proizvodnji"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron_doall
@@ -16127,7 +16137,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_hr
 msgid "Team Page"
-msgstr "Stranica tima"
+msgstr "Web stranica tima"
 
 #. module: base
 #: model:ir.ui.menu,name:base.menu_custom

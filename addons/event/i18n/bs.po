@@ -927,7 +927,7 @@ msgstr ""
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event_date_end
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum do"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event_date_end_located
@@ -1779,7 +1779,7 @@ msgstr "Izvorni dokument"
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event_date_begin
 msgid "Start Date"
-msgstr "Datum početka"
+msgstr "Datum od"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event_date_begin_located

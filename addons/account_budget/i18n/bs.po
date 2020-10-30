@@ -195,7 +195,7 @@ msgstr "Budžeti u pripremi"
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_date_to
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_lines_date_to
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum do"
 
 #. module: account_budget
 #: model:ir.model.fields,field_description:account_budget.field_account_budget_post_id
@@ -267,7 +267,7 @@ msgstr "Odgovoran"
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_date_from
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_lines_date_from
 msgid "Start Date"
-msgstr "Datum početka"
+msgstr "Datum od"
 
 #. module: account_budget
 #: model:ir.model.fields,field_description:account_budget.field_crossovered_budget_state

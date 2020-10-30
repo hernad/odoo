@@ -620,7 +620,7 @@ msgstr "U pripremi"
 #: model:ir.model.fields,field_description:gamification.field_gamification_goal_end_date
 #: model:ir.ui.view,arch_db:gamification.goal_search_view
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum do"
 
 #. module: gamification
 #: model:ir.model.fields,help:gamification.field_gamification_goal_definition_batch_mode
@@ -1418,7 +1418,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:gamification.field_gamification_challenge_start_date
 #: model:ir.model.fields,field_description:gamification.field_gamification_goal_start_date
 msgid "Start Date"
-msgstr "Datum početka"
+msgstr "Datum od"
 
 #. module: gamification
 #: model:ir.ui.view,arch_db:gamification.goal_form_view
