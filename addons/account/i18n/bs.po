@@ -888,7 +888,7 @@ msgstr ""
 #. module: account
 #: model:ir.actions.act_window,help:account.action_bank_statement_line
 msgid "A bank statement line is a financial transaction on a bank account."
-msgstr "Stavka izvoda iz banke je financijska transakcija na kontu banke."
+msgstr "Stavka bankovnog izvoda je finansijska transakcija na kontu banke."
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_move_journal_line
@@ -1933,7 +1933,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_company_bank_journal_ids
 msgid "Bank Journals"
-msgstr "Dnevik izvoda iz banke"
+msgstr "Dnevik bankovnih izvoda"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_move_filter
@@ -1945,43 +1945,43 @@ msgstr "Bankovne operacije"
 #: code:addons/account/static/src/js/account_reconciliation_widgets.js:1115
 #, python-format
 msgid "Bank Reconciliation"
-msgstr "Zatvaranje izvoda iz banke"
+msgstr "Poravnanje (zatvaranje) bankovnih izvoda"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_reconcile_model_tree
 msgid "Bank Reconciliation Move Presets"
-msgstr "Prijedlozi zatvaranja izvoda iz banke"
+msgstr "Prijedlozi poravnanja (zatvaranja) bankovnih izvoda"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_reconcile_model_search
 msgid "Bank Reconciliation Move preset"
-msgstr "Prijedlozi zatvaranja izvoda iz banke"
+msgstr "Prijedlozi poravnanja (zatvaranja) bankovnih izvoda"
 
 #. module: account
 #: model:ir.model,name:account.model_account_bank_statement model:ir.ui.view,arch_db:account.view_bank_statement_form model:ir.ui.view,arch_db:account.view_bank_statement_search
 msgid "Bank Statement"
-msgstr "Izvod banke"
+msgstr "Bankovni izvod"
 
 #. module: account
 #: code:addons/account/models/account_bank_statement.py:935
 #, python-format
-msgid "Bank Statement %s"
+msgid "Bankovni izvod %s"
 msgstr ""
 
 #. module: account
 #: model:ir.model,name:account.model_account_bank_statement_line
 msgid "Bank Statement Line"
-msgstr "Stavka izvoda banke"
+msgstr "Stavka bankovnog izvoda"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_bank_statement_line
 msgid "Bank Statement Lines"
-msgstr "Stavke izvoda iz banke"
+msgstr "Stavke bankovnog izvoda"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_bank_statement_tree model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view model:ir.ui.view,arch_db:account.view_account_config_settings
 msgid "Bank Statements"
-msgstr "Izvodi banke"
+msgstr "Bankovni izvodi"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.partner_view_buttons
@@ -1996,7 +1996,7 @@ msgstr "Bankovni računi, kako se vide na ispisu u podnožju dokumenta"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_config_settings_company_footer
 msgid "Bank accounts footer preview"
-msgstr "Pregled podnožja sa podacima od banke"
+msgstr "Pregled podnožja sa podacima banke"
 
 #. module: account
 #: model:account.account.type,name:account.data_account_type_liquidity
@@ -2018,7 +2018,7 @@ msgstr "Bankovni izvodi"
 #: code:addons/account/static/src/xml/account_reconciliation.xml:205
 #, python-format
 msgid "Bank statements are fully reconciled."
-msgstr "Izvodi iz banke su u potpunosti zatvoreni."
+msgstr "Bankovni izvodi su u potpunosti poravnati (zatvoreni)."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_tax_base model:ir.ui.view,arch_db:account.report_invoice_document
@@ -2089,7 +2089,7 @@ msgstr "Blokiranje poruke"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_type_include_initial_balance
 msgid "Bring Accounts Balance Forward"
-msgstr ""
+msgstr "Donesite inicijalni saldo konta"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.open_account_journal_dashboard_kanban
@@ -5910,12 +5910,12 @@ msgstr "Dospjele fakture, valuta plaćanja istekla"
 #. module: account
 #: model:ir.ui.menu,name:account.menu_finance_legal_statement
 msgid "PDF Reports"
-msgstr "PDF Izvještaji"
+msgstr "Izvještaji (PDF format)"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.invoice_form model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "PRO-FORMA"
-msgstr "PRO-FORMA"
+msgstr "Predračun"
 
 #. module: account
 #: selection:account.invoice,state:0 model:ir.ui.view,arch_db:account.report_overdue_document model:mail.message.subtype,name:account.mt_invoice_paid
