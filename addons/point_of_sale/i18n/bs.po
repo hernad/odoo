@@ -1402,17 +1402,17 @@ msgstr "Slika"
 #: code:addons/point_of_sale/static/src/xml/pos.xml:1312
 #, python-format
 msgid "Import Orders"
-msgstr "Uvezi narudžbe"
+msgstr "Import narudžbi"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config_settings_module_pos_data_drinks
 msgid "Import common drinks data"
-msgstr ""
+msgstr "Import opšte podatke o pićima"
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_sale_config_settings_form_pos
 msgid "Importable Point of Sale Data"
-msgstr ""
+msgstr "Import POS podatke"
 
 #. module: point_of_sale
 #: model:product.product,name:point_of_sale.tomate_en_grappe

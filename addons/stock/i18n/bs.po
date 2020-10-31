@@ -251,7 +251,7 @@ msgid ""
 msgstr ""
 "<span class=\"panel-title\">\n"
 "                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
-"                                        <strong>Uvezi datoteku</strong><br/>\n"
+"                                        <strong>Import fajla</strong><br/>\n"
 "                                        <span class=\"small\">Savjetujemo ako je broj proizvoda  &gt;100</span>\n"
 "                                    </span>"
 
@@ -443,7 +443,7 @@ msgstr ""
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner
 msgid "<strong>Import data</strong>"
-msgstr "<strong>Uvezi podatke</strong>"
+msgstr "<strong>Import podataka</strong>"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.report_inventory
