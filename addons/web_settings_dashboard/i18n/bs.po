@@ -51,21 +51,21 @@ msgstr "Aktiviraj developerski mod"
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:167
 #, python-format
 msgid "Activate the developer mode (with assets)"
-msgstr "Aktiviraj razvojni mod (sa resursima)"
+msgstr "Aktiviraj developerski mod (sa resursima)"
 
 #. module: web_settings_dashboard
 #. openerp-web
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:56
 #, python-format
 msgid "Active User"
-msgstr "Aktivni korisnik"
+msgstr "aktivni korisnik"
 
 #. module: web_settings_dashboard
 #. openerp-web
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:57
 #, python-format
 msgid "Active Users"
-msgstr "Aktivni korisnici"
+msgstr "aktivna korisnika"
 
 #. module: web_settings_dashboard
 #. openerp-web
@@ -120,7 +120,7 @@ msgstr "Unesi e-mail adrese (jednu po liniji)"
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:94
 #, python-format
 msgid "Follow these implementation guides to get the most out of Odoo."
-msgstr ""
+msgstr "Slijedite ove vodiče za implementaciju da biste dobili najbolje sa Odoo-om."
 
 #. module: web_settings_dashboard
 #. openerp-web
@@ -155,7 +155,7 @@ msgstr "Instalirane aplikacije"
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:32
 #, python-format
 msgid "Installed Apps"
-msgstr "Instalirano aplikacija"
+msgstr "instaliranih aplikacija"
 
 #. module: web_settings_dashboard
 #. openerp-web
@@ -176,7 +176,7 @@ msgstr "Pozovite nove korisnike:"
 #: code:addons/web_settings_dashboard/static/src/xml/dashboard.xml:61
 #, python-format
 msgid "Manage access rights"
-msgstr "Upravljajte pravima pristupa"
+msgstr "Upravljanje pravima pristupa"
 
 #. module: web_settings_dashboard
 #. openerp-web
