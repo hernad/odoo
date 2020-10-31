@@ -144,12 +144,12 @@ msgstr "Zadnje ažurirano"
 #. module: portal
 #: model:ir.model.fields,field_description:portal.field_portal_wizard_user_user_id
 msgid "Login User"
-msgstr ""
+msgstr "Korisnik za prijavu"
 
 #. module: portal
 #: model:ir.ui.view,arch_db:portal.group_search_view
 msgid "Non-Portal Groups"
-msgstr ""
+msgstr "Grupe van portala"
 
 #. module: portal
 #: model:ir.model.fields,field_description:portal.field_portal_wizard_portal_id
@@ -162,7 +162,7 @@ msgstr "Portal"
 #: model:ir.model,name:portal.model_portal_wizard
 #: model:ir.ui.view,arch_db:portal.wizard_view
 msgid "Portal Access Management"
-msgstr ""
+msgstr "Upravljanje pristupom portalu"
 
 #. module: portal
 #: model:ir.ui.view,arch_db:portal.group_search_view
@@ -172,7 +172,7 @@ msgstr "Portalske grupe"
 #. module: portal
 #: model:ir.model,name:portal.model_portal_wizard_user
 msgid "Portal User Config"
-msgstr ""
+msgstr "Konfiguracija korisnika portala"
 
 #. module: portal
 #: model:ir.ui.view,arch_db:portal.wizard_view

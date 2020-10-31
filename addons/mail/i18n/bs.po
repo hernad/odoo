@@ -3397,7 +3397,7 @@ msgstr "Partner"
 #. module: mail
 #: model:ir.actions.act_window,name:mail.action_partner_mass_mail
 msgid "Partner Mass Mailing"
-msgstr "Masovna pošta partnera"
+msgstr "Slanje grupnih email-ova"
 
 #. module: mail
 #: code:addons/mail/models/res_partner.py:39

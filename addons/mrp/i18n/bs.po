@@ -3054,7 +3054,7 @@ msgstr "Ažuriraj"
 #: code:addons/mrp/static/src/xml/mrp.xml:7
 #, python-format
 msgid "Upload your file"
-msgstr "Učitajte vašu datoteku"
+msgstr "Pošaljite vaš fajl (upload)"
 
 #. module: mrp
 #. openerp-web

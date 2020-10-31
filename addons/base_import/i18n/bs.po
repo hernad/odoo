@@ -443,7 +443,7 @@ msgstr "Relacijska polja"
 #: code:addons/base_import/static/src/xml/base_import.xml:24
 #, python-format
 msgid "Reload File"
-msgstr "Ponovno učitaj fajl"
+msgstr "Ponovo učitaj fajl"
 
 #. module: base_import
 #. openerp-web

@@ -883,28 +883,28 @@ msgstr "Proširi sve"
 #: code:addons/web/static/src/js/views/list_view.js:288
 #, python-format
 msgid "Export"
-msgstr "Izvoz"
+msgstr "Eksportuj"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/widgets/data_export.js:200
 #, python-format
 msgid "Export Data"
-msgstr "Izvezi podatke"
+msgstr "Eksport podataka"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/xml/base.xml:1096
 #, python-format
 msgid "Export Formats :"
-msgstr "Formati izvoza:"
+msgstr "Formati eksporta:"
 
 #. module: web
 #. openerp-web
 #: code:addons/web/static/src/js/widgets/data_export.js:202
 #, python-format
 msgid "Export To File"
-msgstr "Izvezi u datoteku"
+msgstr "Eskportuju u fajl"
 
 #. module: web
 #. openerp-web
@@ -2285,7 +2285,7 @@ msgstr "Nadogradnja na buduće verzije"
 #: code:addons/web/static/src/xml/base.xml:840
 #, python-format
 msgid "Upload your file"
-msgstr "Učitajte vašu datoteku"
+msgstr "Posšaljite vaš fajl (upload)"
 
 #. module: web
 #. openerp-web

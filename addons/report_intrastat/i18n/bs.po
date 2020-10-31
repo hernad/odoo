@@ -133,7 +133,7 @@ msgstr "Faktura u pripremi"
 #. module: report_intrastat
 #: selection:report.intrastat,type:0
 msgid "Export"
-msgstr "Izvoz"
+msgstr "Eksportuj"
 
 #. module: report_intrastat
 #: selection:report.intrastat,month:0

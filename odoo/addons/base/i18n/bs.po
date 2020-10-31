@@ -9041,27 +9041,27 @@ msgstr "Validacija troškova, Fakturisanje"
 #: model:ir.model.fields,field_description:base.field_ir_exports_line_export_id
 #: model:ir.ui.view,arch_db:base.wizard_lang_export
 msgid "Export"
-msgstr "Izvoz"
+msgstr "Eksportuj"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.wizard_lang_export
 msgid "Export Complete"
-msgstr "Izvoz je završen"
+msgstr "Eksport je završen"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_exports_export_fields
 msgid "Export ID"
-msgstr "ID izvoza"
+msgstr "ID exporta"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_exports_name
 msgid "Export Name"
-msgstr "Naziv izvoza"
+msgstr "Naziv eksporta"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.wizard_lang_export
 msgid "Export Settings"
-msgstr "Postavke izvoza"
+msgstr "Postavke eksporta"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_wizard_lang_export
@@ -9154,7 +9154,7 @@ msgid ""
 "External user with limited access, created only for the purpose of sharing "
 "data."
 msgstr ""
-"Vanjski korisnika sa limitiranim pravima pristupa, kreiran samo za svrhu "
+"Vanjski korisnik sa limitiranim pravima pristupa, kreiran samo za svrhu "
 "djeljenja podataka."
 
 #. module: base
@@ -14548,7 +14548,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_act_report_xml_attachment_use
 msgid "Reload from Attachment"
-msgstr "Ponovno učitaj iz priloga"
+msgstr "Ponovo učitaj iz priloga"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_server_action_form
@@ -15707,22 +15707,22 @@ msgstr "Započni konfiguraciju"
 #: model:ir.ui.view,arch_db:base.view_partner_form
 #: model:ir.ui.view,arch_db:base.view_res_bank_form
 msgid "State"
-msgstr "Rep./Fed."
+msgstr "Država"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country_state_code
 msgid "State Code"
-msgstr "Šifra republike"
+msgstr "Šifra države"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country_state_name
 msgid "State Name"
-msgstr "Naziv Fed. države/Kantona"
+msgstr "Naziv Države"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country_state_ids
 msgid "States"
-msgstr "Status"
+msgstr "Države"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_language_install_state
@@ -16646,7 +16646,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,help:base.field_res_country_state_code
 msgid "The state code."
-msgstr "Šifra Rep./Fed."
+msgstr "Šifra države"
 
 #. module: base
 #: code:addons/custom.py:518
