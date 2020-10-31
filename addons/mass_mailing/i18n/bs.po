@@ -795,7 +795,7 @@ msgstr "Zadnje mijenjano"
 #. module: mass_mailing
 #: model:ir.ui.view,arch_db:mass_mailing.view_mail_mail_statistics_search
 msgid "Last State Update"
-msgstr ""
+msgstr "Posljednja promjena stanja"
 
 #. module: mass_mailing
 #: model:ir.model.fields,field_description:mass_mailing.field_mail_mail_statistics_write_uid

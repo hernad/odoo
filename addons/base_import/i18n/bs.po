@@ -190,7 +190,7 @@ msgstr "Ćelija sa greškom je pronađena u toku čitanja XLS/XLSX datoteke: %s"
 #: code:addons/base_import/static/src/js/base_import.js:575
 #, python-format
 msgid "Everything seems valid."
-msgstr "Čini se da je sve u redu."
+msgstr "Import izgleda uspješan."
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:117

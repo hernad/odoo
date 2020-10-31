@@ -130,7 +130,7 @@ msgstr "Neka od obaveznih polja su prazna."
 #. module: website_portal
 #: model:ir.ui.view,arch_db:website_portal.details
 msgid "State / Province"
-msgstr "Rep./Fed."
+msgstr "Dio / Regija"
 
 #. module: website_portal
 #: model:ir.ui.view,arch_db:website_portal.details

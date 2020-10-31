@@ -2493,12 +2493,12 @@ msgstr ""
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.address
 msgid "State / Province"
-msgstr "Rep./Fed."
+msgstr "Dio države / Regija"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.address
 msgid "State / Province..."
-msgstr "Rep./Fed."
+msgstr "Dio države / Regija...."
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.address

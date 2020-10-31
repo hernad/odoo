@@ -1030,7 +1030,7 @@ msgstr "Faza"
 #. module: website_crm_partner_assign
 #: model:ir.ui.view,arch_db:website_crm_partner_assign.portal_my_opportunity
 msgid "States..."
-msgstr "Rep./Fed."
+msgstr "Djelovi države..."
 
 #. module: website_crm_partner_assign
 #: model:ir.ui.view,arch_db:website_crm_partner_assign.portal_my_opportunity
