@@ -38,7 +38,7 @@ msgstr "Dodajte ovdje svoje komentare za prevodioca..."
 #: model:ir.model.fields,field_description:base_gengo.field_base_config_settings_gengo_auto_approve
 #: model:ir.model.fields,field_description:base_gengo.field_res_company_gengo_auto_approve
 msgid "Auto Approve Translation ?"
-msgstr "Automatski odobri prevode?"
+msgstr "Automatski odobri prijevode?"
 
 #. module: base_gengo
 #: model:ir.ui.view,arch_db:base_gengo.view_general_configuration_form_inherit_base_gengo
@@ -173,7 +173,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:base_gengo.action_wizard_base_gengo_translations
 #: model:ir.ui.menu,name:base_gengo.menu_action_wizard_base_gengo_translations
 msgid "Gengo: Manual Request of Translation"
-msgstr "Gengo: ručni zahtjevi prevoda"
+msgstr "Gengo: ručni zahtjevi prijevoda"
 
 #. module: base_gengo
 #: model:ir.model.fields,field_description:base_gengo.field_base_gengo_translations_id
@@ -305,7 +305,7 @@ msgstr "Za odobrenje u Gengo"
 #. module: base_gengo
 #: selection:ir.translation,gengo_translation:0
 msgid "Translation By Machine"
-msgstr "Prevod od strane mašine"
+msgstr "Računarski prijevod"
 
 #. module: base_gengo
 #: selection:ir.translation,gengo_translation:0
@@ -318,7 +318,7 @@ msgid ""
 "You can select here the service level you want for an automatic translation "
 "using Gengo."
 msgstr ""
-"Ovdje možete odabrati nivo servisa koji želite za automatski prevod "
+"Ovdje možete odabrati nivo servisa koji želite za automatski prijevod "
 "koristeći Gengo."
 
 #. module: base_gengo

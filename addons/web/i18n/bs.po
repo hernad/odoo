@@ -2012,7 +2012,7 @@ msgstr "Uzmite minutu da odete po kafu,<br />jer se učitava..."
 #: code:addons/web/static/src/xml/base.xml:132
 #, python-format
 msgid "Technical Translation"
-msgstr "Tehnički prevod"
+msgstr "Tehnički prijevod"
 
 #. module: web
 #. openerp-web
@@ -2264,7 +2264,7 @@ msgstr "Ne podržana operacija %s u domenu %s"
 #: code:addons/web/static/src/xml/base.xml:1256
 #, python-format
 msgid "Update translations"
-msgstr "Ažuriraj prevode"
+msgstr "Ažuriraj prijevode"
 
 #. module: web
 #. openerp-web

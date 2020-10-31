@@ -6654,7 +6654,7 @@ msgid ""
 "                                the rightmost column (value) contains the translations"
 msgstr ""
 "CSV format: možete ga editovati direktno sa vašim omiljenim spreadsheet software-om,\n"
-"                                zadnja desna kolona (vrijednost) sadrži prevod"
+"                                zadnja desna kolona (vrijednost) sadrži prijevod"
 
 #. module: base
 #: selection:ir.actions.act_window.view,view_mode:0
@@ -8769,7 +8769,7 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_view_form
 msgid "Edit Translations"
-msgstr "Uredi prevode"
+msgstr "Uredi prijevode"
 
 #. module: base
 #: model:res.country,name:base.eg
@@ -9067,12 +9067,12 @@ msgstr "Postavke izvoza"
 #: model:ir.actions.act_window,name:base.action_wizard_lang_export
 #: model:ir.ui.menu,name:base.menu_wizard_lang_export
 msgid "Export Translation"
-msgstr "Izvoz prevoda"
+msgstr "Eksport prijevoda"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.wizard_lang_export
 msgid "Export Translations"
-msgstr "Izvoz prevoda"
+msgstr "Eksport prijevoda"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_expense_sepa
@@ -10665,7 +10665,7 @@ msgid ""
 "If you check this box, your customized translations will be overwritten and "
 "replaced by the official ones."
 msgstr ""
-"Ako označite ovo polje, Vaš prilagođeni prevod će biti prepisan i zamjenjen "
+"Ako označite ovo polje, Vaš prilagođeni prijevod će biti prepisan i zamjenjen "
 "sa oficijalnim."
 
 #. module: base
@@ -10683,7 +10683,7 @@ msgid ""
 "If you enable this option, existing translations (including custom ones) "
 "will be overwritten and replaced by those in this file"
 msgstr ""
-"Ako omogućite ovu opciju, postojeći prevodi (uključujući korisničke) će biti"
+"Ako omogućite ovu opciju, postojeći prijevodi (uključujući korisničke) će biti"
 " prepisani i zamjenjeni ovim iz ovih fajlova"
 
 #. module: base
@@ -10778,7 +10778,7 @@ msgstr ""
 #: model:ir.ui.menu,name:base.menu_view_base_import_language
 #: model:ir.ui.view,arch_db:base.view_base_import_language
 msgid "Import Translation"
-msgstr "Uvezi prevod"
+msgstr "Import prijevod"
 
 #. module: base
 #: model:ir.module.module,description:base.module_currency_rate_live
@@ -11909,7 +11909,7 @@ msgstr "Učitaj"
 #: model:ir.ui.menu,name:base.menu_view_base_language_install
 #: model:ir.ui.view,arch_db:base.view_base_language_install
 msgid "Load a Translation"
-msgstr "Učitaj prevod"
+msgstr "Učitaj prijevod"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang_code
@@ -12852,7 +12852,7 @@ msgstr ""
 #: code:addons/base/module/wizard/base_export_language.py:18
 #, python-format
 msgid "New Language (Empty translation template)"
-msgstr "Novi jezik (Prazan šablon prevoda)"
+msgstr "Novi jezik (Prazan uzorak prijevoda)"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_change_password_user_new_passwd
@@ -15992,7 +15992,7 @@ msgstr "Sinhronizacija termina"
 #. module: base
 #: model:ir.ui.view,arch_db:base.wizard_update_translations
 msgid "Synchronize Translation"
-msgstr "Sinkronizuj prevode"
+msgstr "Sinkronizuj prijevode"
 
 #. module: base
 #: model:res.country,name:base.sy
@@ -16171,7 +16171,7 @@ msgstr "Tehničke postavke"
 #: code:addons/base/ir/ir_translation.py:792
 #, python-format
 msgid "Technical Translations"
-msgstr "Tehnički prevodi"
+msgstr "Tehnički prijevodi"
 
 #. module: base
 #: model:ir.actions.report.xml,name:base.ir_module_reference_print
@@ -17009,7 +17009,7 @@ msgstr "Prelaz"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_wkf_instance_transition_ids
 msgid "Transition ids"
-msgstr "Prevodi"
+msgstr "Prijevodi"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_workflow_transition_form
@@ -17054,7 +17054,7 @@ msgstr "Prevedeno polje"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_translation_form
 msgid "Translation"
-msgstr "Prevod"
+msgstr "Prijevod"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_translation_value
@@ -17064,7 +17064,7 @@ msgstr "Prevedena vrijednost"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_translation_comments
 msgid "Translation comments"
-msgstr "Komentari prevoda"
+msgstr "Komentari prijevoda"
 
 #. module: base
 #: code:addons/base/ir/ir_translation.py:634
@@ -17072,12 +17072,12 @@ msgstr "Komentari prevoda"
 msgid ""
 "Translation features are unavailable until you install an extra translation."
 msgstr ""
-"Mogućnost prevoda je onemogućena sve dok ne instalirate dodatni prevod."
+"Mogućnost prijevoda je onemogućena sve dok ne instalirate dodatni prijevod."
 
 #. module: base
 #: selection:ir.translation,state:0
 msgid "Translation in Progress"
-msgstr "Prevod u toku"
+msgstr "Prijevod u toku"
 
 #. module: base
 #: code:addons/base/ir/ir_translation.py:555
@@ -17086,7 +17086,7 @@ msgid ""
 "Translation is not valid:\n"
 "%s"
 msgstr ""
-"Prevod nije validan:\n"
+"Prijevod nije validan:\n"
 "%s"
 
 #. module: base
@@ -17096,7 +17096,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:base.view_translation_search
 #: model:ir.ui.view,arch_db:base.view_translation_tree
 msgid "Translations"
-msgstr "Prevodi"
+msgstr "Prijevodi"
 
 #. module: base
 #: selection:ir.actions.act_window,view_type:0
@@ -17987,7 +17987,7 @@ msgstr "Slika web ikone"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_translation_search
 msgid "Web-only translations"
-msgstr "Samo Web prevodi"
+msgstr "Samo web prijevodi"
 
 #. module: base
 #: selection:ir.actions.report.xml,report_type:0
