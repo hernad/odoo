@@ -11931,7 +11931,7 @@ msgstr "Log"
 #: model:ir.actions.act_window,name:base.ir_logging_all_act
 #: model:ir.ui.menu,name:base.ir_logging_all_menu
 msgid "Logging"
-msgstr ""
+msgstr "Logiranje"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_users_login
@@ -11972,7 +11972,7 @@ msgstr "Narudžba hrane"
 #. module: base
 #: model:res.country,name:base.lu
 msgid "Luxembourg"
-msgstr ""
+msgstr "Luksemburg"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lu
