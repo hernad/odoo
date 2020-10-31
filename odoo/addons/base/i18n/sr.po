@@ -9078,12 +9078,12 @@ msgstr "Faks:"
 #: model:ir.model.fields,field_description:base.field_res_bank_state
 #: model:ir.model.fields,field_description:base.field_res_company_state_id
 msgid "Fed. State"
-msgstr "Država"
+msgstr "Dio države"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_country_state
 msgid "Fed. States"
-msgstr "Fed, Države"
+msgstr "Dijelovi države"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_fedex

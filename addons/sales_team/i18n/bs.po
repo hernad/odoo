@@ -220,7 +220,7 @@ msgstr "Prikaži naziv"
 #. module: sales_team
 #: model:ir.ui.menu,name:sales_team.menu_country_state_partner
 msgid "Fed. States"
-msgstr "Fed. države"
+msgstr "Dijelovi države"
 
 #. module: sales_team
 #: model:ir.ui.view,arch_db:sales_team.crm_team_view_form
