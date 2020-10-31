@@ -1273,7 +1273,7 @@ msgstr "Uredi filtere"
 #, python-format
 msgid "Maybe you should consider reloading the application by pressing F5..."
 msgstr ""
-"Možda bi ste trebali razmotriti da ponovno učitate aplikaciju pritiskom na "
+"Možda biste trebali razmotriti da ponovno učitate aplikaciju pritiskom na "
 "F5..."
 
 #. module: web

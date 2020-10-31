@@ -1413,7 +1413,7 @@ msgstr ""
 #: code:addons/hr_payroll/models/hr_payroll.py:838
 #, python-format
 msgid "You must set a contract to create a payslip line."
-msgstr "Morate odabrati ugovor da bi ste obračunali stavku plantog listića."
+msgstr "Morate odabrati ugovor da biste obračunali stavku plantog listića."
 
 #. module: hr_payroll
 #: model:ir.model,name:hr_payroll.model_hr_payroll_config_settings

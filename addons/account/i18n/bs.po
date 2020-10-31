@@ -1483,7 +1483,7 @@ msgstr "Svi izabrani dnevnički zapisi će biti verifikovani i proknjiženi. Ne�
 #: code:addons/account/models/account_bank_statement.py:240
 #, python-format
 msgid "All the account entries lines must be processed in order to close the statement."
-msgstr "Svi knjigovodsveni zapisi moraju biti obrađeni da bi ste zatvorili nalog."
+msgstr "Svi knjigovodsveni zapisi moraju biti obrađeni da biste zatvorili nalog."
 
 #. module: account
 #: selection:account.config.settings,group_warning_account:0

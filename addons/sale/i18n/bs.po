@@ -477,19 +477,19 @@ msgstr "Otkazan"
 #. module: sale
 #: model:ir.model.fields,help:sale.field_crm_team_use_invoices
 msgid "Check this box to manage invoices in this sales team."
-msgstr "Zakačite da bi ste upravljali fakturama u ovom prodajnom timu"
+msgstr "Zakačite da biste upravljali fakturama u ovom prodajnom timu"
 
 #. module: sale
 #: model:ir.model.fields,help:sale.field_crm_team_use_quotations
 msgid "Check this box to manage quotations in this sales team."
-msgstr "Zakačite da bi ste upravljali predračunima u ovom prodajnom timu."
+msgstr "Zakačite da biste upravljali predračunima u ovom prodajnom timu."
 
 #. module: sale
 #. openerp-web
 #: code:addons/sale/static/src/js/tour.js:39
 #, python-format
 msgid "Click here to add some lines to your quotations."
-msgstr "Kliknite ovdje da bi ste dodali neke stavke na vaš predračun."
+msgstr "Kliknite ovdje da biste dodali neke stavke na vaš predračun."
 
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.crm_team_salesteams_view_kanban
@@ -2344,7 +2344,7 @@ msgstr "Koristite cjenik za prilagođavanje cijena po kupcima"
 #, python-format
 msgid "Use the breadcrumbs to <b>go back to preceeding screens</b>."
 msgstr ""
-"Koristite breadcumb-ove da bi ste se  <b>vratili na prethodni ekran</b>."
+"Koristite breadcumb-ove da biste se  <b>vratili na prethodni ekran</b>."
 
 #. module: sale
 #. openerp-web

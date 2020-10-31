@@ -1573,7 +1573,7 @@ msgstr ""
 #: code:addons/delivery/models/sale_order.py:54
 #, python-format
 msgid "The order state have to be draft to add delivery lines."
-msgstr "Status narudžbe mora biti u pripremi da bi ste dodali stavke."
+msgstr "Status narudžbe mora biti u pripremi da biste dodali stavke."
 
 #. module: delivery
 #: model:ir.model.fields,help:delivery.field_delivery_carrier_lst_price

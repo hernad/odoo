@@ -1429,7 +1429,7 @@ msgstr "U Toku"
 #: code:addons/point_of_sale/models/pos_order.py:400
 #, python-format
 msgid "In order to delete a sale, it must be new or cancelled."
-msgstr "Da bi ste obrisali prodaju, mora biti nova ili otkazana."
+msgstr "Da biste obrisali prodaju, mora biti nova ili otkazana."
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_config_search
@@ -1816,7 +1816,7 @@ msgid ""
 "                to quickly open a new session."
 msgstr ""
 "Zapamtite da možete koristiti meni <i>Vaša sesija</i>\n"
-"                da bi ste brzo otvorili novu sesiju."
+"                da biste brzo otvorili novu sesiju."
 
 #. module: point_of_sale
 #: model:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
@@ -3419,7 +3419,7 @@ msgid ""
 "To return product(s), you need to open a session that will be used to "
 "register the refund."
 msgstr ""
-"Da bi ste vratili proizvod(e), prvo morate otvoriti sesiju koju ćete "
+"Da biste vratili proizvod(e), prvo morate otvoriti sesiju koju ćete "
 "koristiti za povrat."
 
 #. module: point_of_sale

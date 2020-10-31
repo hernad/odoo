@@ -4192,7 +4192,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "to get started."
-msgstr "da bi ste započeli."
+msgstr "da biste započeli."
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner

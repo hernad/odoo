@@ -728,7 +728,7 @@ msgstr "ID"
 #: code:addons/purchase/models/purchase.py:197
 #, python-format
 msgid "In order to delete a purchase order, you must cancel it first."
-msgstr "Da bi ste obrisali nabavnu narudžbu, prvo je morate otkazati."
+msgstr "Da biste obrisali nabavnu narudžbu, prvo je morate otkazati."
 
 #. module: purchase
 #: model:ir.ui.menu,name:purchase.menu_action_picking_tree_in_move

@@ -6843,7 +6843,7 @@ msgstr ""
 "Promjenu preduzeća kontakta trebate izvršiti samo u slučaju da nikada i nije"
 " bila pravilno postavljena. Ako postojeći kontakt počne raditi za novu "
 "preduzeće onda bi trebao biti otvoren novi kontakt na nivou te nove "
-"preduzeća. Možete da koristite dugme \"Odbaci\" da bi ste napustili ovu "
+"preduzeća. Možete da koristite dugme \"Odbaci\" da biste otkazali ovu "
 "promjenu."
 
 #. module: base
@@ -16930,7 +16930,7 @@ msgstr "Treba biti nadograđeno"
 msgid ""
 "To enable it, make sure this directory exists and is writable on the server:"
 msgstr ""
-"Da bi ste ga omogućili, obezbjedite da ovaj direktorijum postoji i da se u "
+"Da biste ga omogućili, obezbjedite da ovaj direktorij postoji i da se u "
 "njega može upisivati na serveru:"
 
 #. module: base

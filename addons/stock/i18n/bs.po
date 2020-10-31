@@ -2372,7 +2372,7 @@ msgid ""
 "Give to the more specialized category, a higher priority to have them in top"
 " of the list."
 msgstr ""
-"Dodjelite specijalizovanijoj kategoriji, veći prioritet da bi ste ih imali "
+"Dodjelite specijalizovanijoj kategoriji, veći prioritet da biste ih imali "
 "na vrhu liste."
 
 #. module: stock
