@@ -3503,7 +3503,7 @@ msgstr ""
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.message_user_assigned
 msgid "Powered by"
-msgstr "Podržano od strane"
+msgstr "Programska platforma"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.email_template_form

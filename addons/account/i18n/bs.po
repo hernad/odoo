@@ -477,7 +477,7 @@ msgstr "<span>Dupliciraj</span>"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
 msgid "<span>New Bill</span>"
-msgstr "<span>Novi račun</span>"
+msgstr "<span>Novi ulazni račun</span>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
@@ -492,7 +492,7 @@ msgstr "<span>Novi</span>"
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_agedpartnerbalance
 msgid "<span>Not due</span>"
-msgstr "<span>Nije van valute</span>"
+msgstr "<span>Unutar valute</span>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
@@ -502,7 +502,7 @@ msgstr "<span>Operacije</span>"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
 msgid "<span>Reconciliation</span>"
-msgstr "<span>Zatvaranje knjiženja</span>"
+msgstr "<span>Poravnanje (zatvaranje)</span>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
@@ -527,7 +527,7 @@ msgstr "<strong>1. Registracija prekoračenih faktura</strong>"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "<strong>2. Register Unmatched Payments</strong>"
-msgstr "<strong>2. Registracija nezatvorenih uplata</strong>"
+msgstr "<strong>2. Registracija neusaglašenih uplata</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -552,7 +552,7 @@ msgstr "<strong>Bankovni interface:</strong> sa sinhronizacijom obavještenja ba
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "<strong>Cash transactions</strong><br/> (for which there is no invoice or bill), should be entered directly into your Cash Registers bank account."
-msgstr ""
+msgstr "<strong>Gotovinske transakcije</strong><br/> (za koje ne postoji račun ili račun), trebate unijeti direktno na svoj račun u blagajni."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -606,7 +606,7 @@ msgstr "<strong>Kreiraj račun u Odoo-i</strong><br/> sa datumom valute plaćanj
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "<strong>Customer Code:</strong>"
-msgstr "<strong>Kod kupca:</strong>"
+msgstr "<strong>Kôd kupca:</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_financial model:ir.ui.view,arch_db:account.report_generalledger model:ir.ui.view,arch_db:account.report_partnerledger
@@ -623,7 +623,7 @@ msgstr "<strong>Datum do :</strong>"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "<strong>Deposit Tickets</strong>"
-msgstr ""
+msgstr "<strong>Depozit tiketi</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document
@@ -681,6 +681,8 @@ msgid ""
 "<strong>Mark the bills to pay</strong><br/>\n"
 "                                        Group or filter your bills to see those due in the next week, then open each bill individually, click on <strong>'Pay'</strong> and select the payment method you prefer."
 msgstr ""
+"<strong>Označi ulazne račune za plaćanje</strong><br/>\n"
+"                                       Grupišite ili filtrirajte račune da biste vidjeli rokove u narednih 7 dana, a zatim otvorite svaki račun pojedinačno, kliknite <strong>'Plati'</strong> i odaberite željeni način plaćanja."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -704,7 +706,7 @@ msgstr ""
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_agedpartnerbalance
 msgid "<strong>Partner's:</strong>"
-msgstr "<strong>Partneri:</strong>"
+msgstr "<strong>Od partnera:</strong>"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_agedpartnerbalance
@@ -4620,7 +4622,7 @@ msgstr "Fakture"
 #: code:addons/account/static/src/js/account_reconciliation_widgets.js:2126
 #, python-format
 msgid "Invoices & Payments Matching"
-msgstr "Fakture i Usklađivanje Uplata"
+msgstr "Ulazni/izlazni računi i usklađivanje uplata"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_account_invoice_report_all model:ir.actions.act_window,name:account.action_account_invoice_report_all_supp
@@ -4653,7 +4655,7 @@ msgstr "Fakturisanje"
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_config_settings
 msgid "Invoicing & Payments"
-msgstr "Fakturisanje i Plaćanje"
+msgstr "Fakturisanje i plaćanje"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_is_difference_zero
@@ -4697,13 +4699,14 @@ msgstr "Obavezno je navesti konto i dnevnik za stvaranje otpisa."
 msgid ""
 "It is not allowed to delete a payment that already created a journal entry since it would create a gap in the numbering. You should create the journal entry again and cancel it thanks to a regular revert."
 msgstr ""
+"Nije dozvoljeno brisanje uplate za koju je kreiran dnevnik, jer bi to stvorilo prazninu u numerisanju. Trebate ponovo napraviti unos u dnevnik i otkazati pomoću renovnog povrata."
 
 #. module: account
 #. openerp-web
 #: code:addons/account/static/src/xml/account_reconciliation.xml:213
 #, python-format
 msgid "It took you"
-msgstr ""
+msgstr "Trebalo ti je"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
@@ -4714,11 +4717,16 @@ msgid ""
 "                            we recommend you start using Odoo for invoicing and payments \n"
 "                            now, and then move all other accounting transactions at a later time."
 msgstr ""
+"Uobičajena je praksa mijenjati računovodstveni softver \n"
+"                           na kraju fiskalne godine. To vam omogućava da imate manje\n"
+"                           podatke za uvoz i stanja za postavljanje. Ako to planirate,\n"
+"                           preporučujemo da počnete koristiti Odoo za fakturiranje i praćenje naplata\n"
+"                           sada, a zatim sve ostale računovodstvene transakcije uvedite kasnije."
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "It's recommended that you do not delete any accounts, even if they are not relevant. Simply make them inactive."
-msgstr ""
+msgstr "Preporučuje se da ne brišete nijedan račun, čak i ako nije relevantan. Jednostavno ih učinite neaktivnim."
 
 #. module: account
 #: selection:account.financial.report,style_overwrite:0
@@ -4832,7 +4840,7 @@ msgstr "Naziv dnevnika"
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_generalledger
 msgid "Journal and Partner"
-msgstr "Dnevnik i Partner"
+msgstr "Dnevnik i partner"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_invoice_report_search
@@ -4872,7 +4880,7 @@ msgstr "Opravdanje"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_kanban_dashboard
 msgid "Kanban dashboard"
-msgstr ""
+msgstr "Kanban upravljačka ploča"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_journal_kanban_dashboard_graph
@@ -5222,7 +5230,7 @@ msgstr "Ručno zatvaranje"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_planner
 msgid "Manually enter your transactions using our"
-msgstr ""
+msgstr "Ručno unesite svoje transakcije koristeći našu"
 
 #. module: account
 #: selection:res.company,fiscalyear_last_month:0
@@ -5242,12 +5250,12 @@ msgstr "Usklađene stavke dnevnika"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_line_matched_credit_ids
 msgid "Matched credit ids"
-msgstr ""
+msgstr "Usaglašeni potražni id-ovi"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_line_matched_debit_ids
 msgid "Matched debit ids"
-msgstr ""
+msgstr "Usaglašeni dugovni id-ovi"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_full_reconcile_form model:ir.ui.view,arch_db:account.view_move_line_form

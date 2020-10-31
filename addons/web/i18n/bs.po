@@ -1681,7 +1681,7 @@ msgstr "Molimo da odaberete polja za čuvanje liste izvoza..."
 #. module: web
 #: model:ir.ui.view,arch_db:web.menu_secondary
 msgid "Powered by"
-msgstr "Podržano od strane"
+msgstr "Programska platforma"
 
 #. module: web
 #: model:ir.ui.view,arch_db:web.login_layout

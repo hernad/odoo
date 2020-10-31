@@ -1608,6 +1608,8 @@ msgid ""
 "Tell us why you are refusing this quotation, this will help us improve our "
 "services."
 msgstr ""
+"Recite nam zašto odbijate ovaj RFQ (zahtjev za ponduu), ovo će nam pomoći da poboljšamo naše"
+"usluge".
 
 #. module: website_quote
 #: model:ir.ui.view,arch_db:website_quote.pricing
@@ -1623,7 +1625,7 @@ msgstr "Pravila i Uslovi"
 #. module: website_quote
 #: model:sale.quote.template,website_description:website_quote.website_quote_template_1
 msgid "Test developments automatically"
-msgstr ""
+msgstr "Testirajte razvoj događaja automatski"
 
 #. module: website_quote
 #: model:product.product,quote_description:website_quote.product_product_quote_1

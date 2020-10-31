@@ -2655,7 +2655,7 @@ msgstr ""
 #. module: website
 #: model:ir.ui.view,arch_db:website.layout_footer_copyright
 msgid "Powered by"
-msgstr "Podržano od strane"
+msgstr "Programska platforma"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.kanban_contain
@@ -2700,12 +2700,12 @@ msgstr "Promovišite katalog usluga"
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Promote your job announces and attract new talents."
-msgstr ""
+msgstr "Promovišite najave za posao i privucite nove talente."
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Provide fast, professional and accurate information to your visitors"
-msgstr ""
+msgstr "Pružite svojim posjetiocima brze, profesionalne i tačne informacije"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_partner_id
@@ -2720,7 +2720,7 @@ msgstr "Javni korisnik"
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Publish a contact form to fill in your CRM pipeline."
-msgstr ""
+msgstr "Objavite obrazac za kontakt da biste popunili svoj CRM kanal."
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
@@ -2761,12 +2761,12 @@ msgstr "QWeb"
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid ""
 "Qualify your visitors in order to reach them out with marketing campaigns"
-msgstr ""
+msgstr "Kvalificirajte svoje posjetioce kako biste ih obavijestili o vašima marketinškim kampanjama"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner
 msgid "Reach your customers and prospects on a recurring basis"
-msgstr ""
+msgstr "Periodično obavještavajte svoje redovne i potencijalne kupce"
 
 #. module: website
 #: model:ir.ui.view,arch_db:website.website_planner

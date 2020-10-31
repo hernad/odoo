@@ -1151,7 +1151,7 @@ msgstr "Ukupno"
 #: model:ir.model.fields,field_description:hr_expense.field_hr_expense_tax_ids
 #: model:ir.ui.view,arch_db:hr_expense.report_expense_sheet
 msgid "Taxes"
-msgstr "Porezi"
+msgstr "PDV"
 
 #. module: hr_expense
 #: model:ir.model.fields,help:hr_expense.field_hr_expense_register_payment_wizard_hide_payment_method
