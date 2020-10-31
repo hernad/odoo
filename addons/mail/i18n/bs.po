@@ -840,7 +840,7 @@ msgstr "'Chat' diskusija"
 #. module: mail
 #: model:ir.actions.act_window,name:mail.mail_shortcode_action
 msgid "Chat Shortcode"
-msgstr "'Chat' kratki kod"
+msgstr "'Chat' kratki kôd"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message_child_ids
@@ -3842,13 +3842,13 @@ msgstr "Postavke"
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_shortcode_shortcode_type
 msgid "Shortcode type"
-msgstr "Tip kratke šifre"
+msgstr "Tip kratkog kôda"
 
 #. module: mail
 #: model:ir.ui.view,arch_db:mail.mail_shortcode_view_form
 #: model:ir.ui.view,arch_db:mail.mail_shortcode_view_tree
 msgid "Shortcodes"
-msgstr "Kratke šifre"
+msgstr "Kratki kôdovi"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_shortcode_source
@@ -4028,7 +4028,7 @@ msgstr "Pregled predloška"
 #: model:ir.ui.view,arch_db:mail.email_template_tree
 #: model:ir.ui.view,arch_db:mail.view_email_template_search
 msgid "Templates"
-msgstr "Predlošci"
+msgstr "Uzorci"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_test
