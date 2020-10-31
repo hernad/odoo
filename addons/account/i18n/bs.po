@@ -3746,7 +3746,7 @@ msgstr "Federalne jedinice"
 #. module: account
 #: selection:account.journal,bank_statements_source:0
 msgid "File Import"
-msgstr "Uvoz datoteke"
+msgstr "Import fajla"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.cash_box_in_form
@@ -4719,7 +4719,7 @@ msgid ""
 msgstr ""
 "Uobičajena je praksa mijenjati računovodstveni softver \n"
 "                           na kraju fiskalne godine. To vam omogućava da imate manje\n"
-"                           podatke za uvoz i stanja za postavljanje. Ako to planirate,\n"
+"                           podatke za import i stanja za postavljanje. Ako to planirate,\n"
 "                           preporučujemo da počnete koristiti Odoo za fakturiranje i praćenje naplata\n"
 "                           sada, a zatim sve ostale računovodstvene transakcije uvedite kasnije."
 

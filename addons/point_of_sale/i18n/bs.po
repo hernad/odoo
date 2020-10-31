@@ -1251,7 +1251,7 @@ msgstr "Karakteristike"
 #: code:addons/point_of_sale/static/src/xml/pos.xml:1167
 #, python-format
 msgid "Finished Importing Orders"
-msgstr "Završen uvoz narudžbi"
+msgstr "Završeno importovanje narudžbi"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_fiscal_position_id

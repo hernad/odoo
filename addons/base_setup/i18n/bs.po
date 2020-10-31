@@ -188,12 +188,12 @@ msgstr "ID"
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Import / Export"
-msgstr "Uvoz / Izvoz"
+msgstr "Import / Eksport"
 
 #. module: base_setup
 #: model:ir.ui.view,arch_db:base_setup.view_general_configuration
 msgid "Inter company"
-msgstr ""
+msgstr "Međukompanija"
 
 #. module: base_setup
 #: model:ir.model.fields,field_description:base_setup.field_base_config_settings___last_update

@@ -2736,17 +2736,17 @@ msgstr ""
 #: model:ir.ui.view,arch_db:website_sale.website_planner
 msgid "Use our import templates to get your catalog ready in no time!"
 msgstr ""
-"Koristite naše predloške uvoza da pripremite vaš katalog u najkraćem roku!"
+"Koristite naše uzorke import da pripremite katalog u najkraćem roku!"
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_website_config_settings_group_sale_pricelist
 msgid "Use pricelists to adapt your price per customers"
-msgstr "Koristite cjenik za prilagođavanje cijena po kupcima"
+msgstr "Koristite cjenovnik za prilagođavanje cijena po kupcima"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.cart_popover
 msgid "View Cart ("
-msgstr "Pogledaj Korpu ("
+msgstr "Pogledaj potrošačku korpu ("
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_delivery_carrier_website_published

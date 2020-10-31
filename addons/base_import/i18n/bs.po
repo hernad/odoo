@@ -156,7 +156,7 @@ msgstr "Prikaži naziv"
 #: code:addons/base_import/static/src/js/base_import.js:419
 #, python-format
 msgid "Don't import"
-msgstr "Nemoj uvoziti"
+msgstr "Ne importuj"
 
 #. module: base_import
 #. openerp-web
@@ -217,14 +217,14 @@ msgstr "Tip datoteke"
 #. module: base_import
 #: model:ir.model.fields,help:base_import.field_base_import_import_file
 msgid "File to check and/or import, raw binary (not base64)"
-msgstr "Datoteke za provjeru i/ili uvoz, sirovi binarni ( ne base64)"
+msgstr "Datoteke za provjeru i/ili import, sirovi binarni ( ne base64)"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/base_import.xml:115
 #, python-format
 msgid "For CSV files, the issue could be an incorrect encoding."
-msgstr ""
+msgstr "Za CSV fajlove, problem može biti neispravno kôdiranje znakova"
 
 #. module: base_import
 #. openerp-web
@@ -284,8 +284,8 @@ msgid ""
 msgstr ""
 "Ako datoteka sadrži\n"
 "                nazive kolona, Odoo može automatski detektovati\n"
-"                polja koja odgovaraju kolonama. Ovo čini uvoz jednostavnijim,\n"
-"                pogotovo kada datoteka sadrži mnogo kolona."
+"                polja koja odgovaraju kolonama. Ovo čini import jednostavnijim,\n"
+"                pogotovo kada fajl sadrži mnogo kolona."
 
 #. module: base_import
 #. openerp-web
@@ -297,8 +297,8 @@ msgid ""
 "                             during the import, but lead to a slower import."
 msgstr ""
 "Ako model koristi modul za četovanje (openchatter), praćenje istorije će "
-"postaviti pretplate i poslati notifikacije tokom uvoza, ali će isto tako "
-"dovesti do sporijeg uvoza podataka."
+"postaviti pretplate i poslati notifikacije tokom importa, ali će isto tako "
+"dovesti do sporijeg importa podataka."
 
 #. module: base_import
 #. openerp-web
@@ -306,7 +306,7 @@ msgstr ""
 #: code:addons/base_import/static/src/xml/base_import.xml:147
 #, python-format
 msgid "Import"
-msgstr "Uvoz"
+msgstr "Importuj"
 
 #. module: base_import
 #. openerp-web
@@ -320,7 +320,7 @@ msgstr "Importuj fajl"
 #: code:addons/base_import/static/src/xml/base_import.xml:114
 #, python-format
 msgid "Import preview failed due to:"
-msgstr "Predpregled uvoza nije uspio zbog:"
+msgstr "Pregled importa nije uspio zbog:"
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import___last_update
@@ -381,14 +381,14 @@ msgstr "Zadnje ažurirano"
 #: code:addons/base_import/static/src/xml/base_import.xml:19
 #, python-format
 msgid "Load File"
-msgstr "Učitaj datoteku"
+msgstr "Učitaj fajl"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/xml/base_import.xml:56
 #, python-format
 msgid "Map your columns to import"
-msgstr "Mapirajte kolone za uvoz"
+msgstr "Mapirajte kolone za import"
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import_res_model
@@ -405,7 +405,7 @@ msgstr "Naziv:"
 #: code:addons/base_import/static/src/xml/base_import.xml:15
 #, python-format
 msgid "No file chosen..."
-msgstr ""
+msgstr "Nije odabran fajl…"
 
 #. module: base_import
 #. openerp-web
@@ -419,7 +419,7 @@ msgstr "Normalna polja"
 #: code:addons/base_import/static/src/xml/base_import.xml:30
 #, python-format
 msgid "Options…"
-msgstr ""
+msgstr "Opcije…"
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview_othervalue
@@ -429,7 +429,7 @@ msgstr "Druga varijabla"
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_o2m_child_parent_id
 msgid "Parent id"
-msgstr ""
+msgstr "Roditelj-id"
 
 #. module: base_import
 #. openerp-web
@@ -450,14 +450,14 @@ msgstr "Ponovno učitaj datoteku"
 #: code:addons/base_import/static/src/xml/base_import.xml:11
 #, python-format
 msgid "Select a CSV or Excel file to import."
-msgstr "Odaberite CSV ili Excel datoteku za uvoz."
+msgstr "Odaberite CSV ili Excel fajl za import."
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/js/base_import.js:246
 #, python-format
 msgid "Semicolon"
-msgstr "Tačka-zarez"
+msgstr "Tačka-zarez ';'"
 
 #. module: base_import
 #. openerp-web
@@ -522,7 +522,7 @@ msgstr "Separator hiljade:"
 #: code:addons/base_import/static/src/xml/base_import.xml:62
 #, python-format
 msgid "Track history during import"
-msgstr "Prati istoriju tokom uvoza"
+msgstr "Prati istoriju tokom importa"
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:199
@@ -538,7 +538,7 @@ msgstr ""
 msgid ""
 "Unsupported file format \"{}\", import only supports CSV, ODS, XLS and XLSX"
 msgstr ""
-"Nije podržan format datoteke \"{}\", uvoz podržava samo CSV, ODS, XLS i XLSX"
+"Nije podržan format datoteke \"{}\", import podržava samo CSV, ODS, XLS i XLSX"
 
 #. module: base_import
 #. openerp-web
@@ -567,7 +567,7 @@ msgstr "Vrijednost"
 #: code:addons/base_import/models/base_import.py:537
 #, python-format
 msgid "You must configure at least one field to import"
-msgstr "Definirajte barem jedno polje za uvoz"
+msgstr "Definirajte barem jedno polje za import"
 
 #. module: base_import
 #. openerp-web

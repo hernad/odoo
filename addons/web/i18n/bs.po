@@ -1114,7 +1114,7 @@ msgstr "Slika"
 #: code:addons/web/static/src/xml/base.xml:1093
 #, python-format
 msgid "Import-Compatible Export"
-msgstr "Izvoz kompatibilan sa uvozom"
+msgstr "Eksport kompatibilan sa importom"
 
 #. module: web
 #. openerp-web

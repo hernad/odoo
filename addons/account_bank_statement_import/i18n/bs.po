@@ -223,6 +223,8 @@ msgid ""
 "Download a bank statement from your bank and import it here. Supported "
 "formats:"
 msgstr ""
+"Preuzmite bankovni izvod iz svoje banke i importujte ga ovdje. Podržani"
+"formati:"
 
 #. module: account_bank_statement_import
 #: model:ir.model.fields,field_description:account_bank_statement_import.field_account_bank_statement_import_journal_creation_sequence_id
@@ -240,6 +242,8 @@ msgid ""
 "Get you bank statements in electronic format from your bank and select them "
 "here."
 msgstr ""
+"Obezbjedite bankovne izvode u elektronskom formatu i odaberite ih"
+"ovdje."
 
 #. module: account_bank_statement_import
 #: model:ir.model.fields,field_description:account_bank_statement_import.field_account_bank_statement_import_journal_creation_group_invoice_lines
@@ -264,27 +268,27 @@ msgstr ""
 #. module: account_bank_statement_import
 #: model:ir.actions.act_window,name:account_bank_statement_import.action_account_bank_statement_import
 msgid "Import"
-msgstr "Uvoz"
+msgstr "Importuj"
 
 #. module: account_bank_statement_import
 #: model:ir.model,name:account_bank_statement_import.model_account_bank_statement_import
 msgid "Import Bank Statement"
-msgstr ""
+msgstr "Import bankovnog izvoda"
 
 #. module: account_bank_statement_import
 #: model:ir.model,name:account_bank_statement_import.model_account_bank_statement_import_journal_creation
 msgid "Import Bank Statement Journal Creation Wizard"
-msgstr ""
+msgstr "Čarobnjak za kreiranje dnevnika importom bankovnih izvoda"
 
 #. module: account_bank_statement_import
 #: model:ir.ui.view,arch_db:account_bank_statement_import.account_bank_statement_import_view
 msgid "Import Bank Statements"
-msgstr ""
+msgstr "Import bankovnih izvoda"
 
 #. module: account_bank_statement_import
 #: model:ir.model.fields,field_description:account_bank_statement_import.field_account_bank_statement_line_unique_import_id
 msgid "Import ID"
-msgstr ""
+msgstr "Import ID"
 
 #. module: account_bank_statement_import
 #: model:ir.ui.view,arch_db:account_bank_statement_import.journal_dashboard_view_inherit
@@ -547,6 +551,8 @@ msgid ""
 "You have to set a Default Debit Account and a Default Credit Account for the"
 " journal: %s"
 msgstr ""
+"Morate postaviti tekući dugovni i potražni konto za"
+"  dnevnik: %s"
 
 #. module: account_bank_statement_import
 #: model:ir.ui.view,arch_db:account_bank_statement_import.account_bank_statement_import_view

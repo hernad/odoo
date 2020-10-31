@@ -189,7 +189,7 @@ msgstr "ID"
 #. module: anonymization
 #: model:ir.model.fields,field_description:anonymization.field_ir_model_fields_anonymize_wizard_file_import
 msgid "Import"
-msgstr "Uvoz"
+msgstr "Importuj"
 
 #. module: anonymization
 #: code:addons/anonymization/wizard/anonymize_wizard.py:263
