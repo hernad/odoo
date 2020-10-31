@@ -313,7 +313,7 @@ msgstr "Uvoz"
 #: code:addons/base_import/static/src/js/base_import.js:182
 #, python-format
 msgid "Import a File"
-msgstr "Uvezi datoteku"
+msgstr "Importuj fajl"
 
 #. module: base_import
 #. openerp-web

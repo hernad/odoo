@@ -251,7 +251,7 @@ msgid ""
 msgstr ""
 "<span class=\"panel-title\">\n"
 "                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
-"                                        <strong>Uvezi datoteku</strong><br/>\n"
+"                                        <strong>Import fajla</strong><br/>\n"
 "                                        <span class=\"small\">Savjetujemo ako je &gt;50 items</span>\n"
 "                                    </span>"
 

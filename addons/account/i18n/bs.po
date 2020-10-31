@@ -296,7 +296,7 @@ msgid ""
 msgstr ""
 "<span class=\"panel-title\">\n"
 "                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
-"                                        <strong>Uvezi datoteku</strong><br/>\n"
+"                                        <strong>Import fajla</strong><br/>\n"
 "                                        <span class=\"small\">Savjetujemo ako je broj proizvoda  &gt;100</span>\n"
 "                                    </span>"
 
@@ -311,7 +311,7 @@ msgid ""
 msgstr ""
 "<span class=\"panel-title\">\n"
 "                                        <span class=\"fa\" data-icon=\"&#57408;\"/>\n"
-"                                        <strong>Uvezite</strong><br/>\n"
+"                                        <strong>Importuj</strong><br/>\n"
 "                                        <span class=\"small\">&gt; 200 kontakata</span>\n"
 "                                    </span>"
 
@@ -6195,7 +6195,7 @@ msgstr "Plaćanja"
 #. module: account
 #: model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
 msgid "Payments Matching"
-msgstr "Usklađena plaćanja"
+msgstr "Poravnanje (usklađivanje) plaćanja"
 
 #. module: account
 #: model:ir.actions.act_window,help:account.action_account_payments model:ir.actions.act_window,help:account.action_account_payments_payable
