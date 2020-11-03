@@ -718,12 +718,12 @@ msgstr "Tijelo poruke"
 #: model:ir.model.fields,field_description:mail.field_res_partner_message_bounce
 #: model:ir.model.fields,field_description:mail.field_res_users_message_bounce
 msgid "Bounce"
-msgstr "Odskočen"
+msgstr "Odbijeno"
 
 #. module: mail
 #: selection:mail.notification,email_status:0
 msgid "Bounced"
-msgstr "Odskočeno"
+msgstr "Odbijeno"
 
 #. module: mail
 #. openerp-web
@@ -1363,7 +1363,7 @@ msgid ""
 "Email address internally associated with this user. Incoming emails will "
 "appear in the user's notifications."
 msgstr ""
-"E-mail adresa interno povezana s ovim korisnikom. Dolazni e-mail će se "
+"Email adresa interno povezana s ovim korisnikom. Dolazni e-mail će se "
 "pojaviti u korisnikovim obavijestima."
 
 #. module: mail
@@ -1392,14 +1392,14 @@ msgstr "Čarobnjak sastavljanja email-a"
 #: model:ir.ui.view,arch_db:mail.view_mail_form
 #: model:ir.ui.view,arch_db:mail.view_mail_message_subtype_form
 msgid "Email message"
-msgstr "E-mail poruka"
+msgstr "Email poruka"
 
 #. module: mail
 #: model:ir.actions.act_window,name:mail.action_view_mail_mail
 #: model:ir.ui.menu,name:mail.menu_mail_mail
 #: model:ir.ui.view,arch_db:mail.view_mail_tree
 msgid "Emails"
-msgstr "E-mail"
+msgstr "Email-ovi"
 
 #. module: mail
 #: code:addons/mail/models/update.py:101
@@ -3317,7 +3317,7 @@ msgstr "Odlazeći"
 #: model:ir.model.fields,field_description:mail.field_email_template_preview_mail_server_id
 #: model:ir.model.fields,field_description:mail.field_mail_template_mail_server_id
 msgid "Outgoing Mail Server"
-msgstr "Odlazni E-mail server"
+msgstr "Odlazni mail server"
 
 #. module: mail
 #: model:ir.model,name:mail.model_mail_mail

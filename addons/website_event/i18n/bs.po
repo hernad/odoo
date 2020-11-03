@@ -194,7 +194,7 @@ msgstr ""
 #. module: website_event
 #: model:ir.ui.view,arch_db:website_event.registration_complete
 msgid "E-mail"
-msgstr "E-mail"
+msgstr "Email"
 
 #. module: website_event
 #: model:ir.ui.view,arch_db:website_event.view_event_sale_form

@@ -6268,7 +6268,7 @@ msgstr "Računi banke"
 #: model:ir.model.fields,field_description:base.field_res_bank_bic
 #: model:ir.model.fields,field_description:base.field_res_partner_bank_bank_bic
 msgid "Bank Identifier Code"
-msgstr "Identifikacijska šifra banke"
+msgstr "SWIFT kôd"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_partner_bank_search
@@ -6278,7 +6278,7 @@ msgstr "Naziv banke"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_partner_bank_form
 msgid "Bank account"
-msgstr "Žiro račun"
+msgstr "Transkcijski račun"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_partner_bank_acc_type
@@ -8811,7 +8811,7 @@ msgstr "E-Mail"
 #: model:ir.ui.view,arch_db:base.view_users_form
 #: model:ir.ui.view,arch_db:base.view_users_simple_form
 msgid "Email Address"
-msgstr "E-mail adresa"
+msgstr "Email adresa"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_fetchmail
@@ -8821,7 +8821,7 @@ msgstr "Email mrežni prolaz"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Email Preferences"
-msgstr "Podešavanja za E-mail"
+msgstr "Podešavanja za Email"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_employee
@@ -11018,7 +11018,7 @@ msgstr "Interne grupe"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_partner_form
 msgid "Internal Notes"
-msgstr "Interne zabilješke"
+msgstr "Interne bilješke"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_ref
@@ -13411,7 +13411,7 @@ msgstr ""
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_ir_mail_server_search
 msgid "Outgoing Mail Server"
-msgstr "Odlazni E-mail server"
+msgstr "Odlazni Email server"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_ir_mail_server_list
@@ -14956,12 +14956,12 @@ msgstr "Prodaja"
 #. module: base
 #: model:ir.ui.view,arch_db:base.view_partner_form
 msgid "Sales & Purchases"
-msgstr "Prodaja i Nabavka"
+msgstr "Prodaja i Nabavke"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_expense
 msgid "Sales Expense"
-msgstr ""
+msgstr "Troškovi prodaje"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_sales_team
@@ -14991,7 +14991,7 @@ msgstr "Upravljanje Prodajom i Proizvodnjom"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_stock
 msgid "Sales and Warehouse Management"
-msgstr "Upravljanje Prodajom i Skladištima"
+msgstr "Upravljanje Prodajom i skladištima"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_partner_user_id

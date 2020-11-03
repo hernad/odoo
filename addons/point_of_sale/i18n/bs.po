@@ -1451,7 +1451,7 @@ msgstr "Netačna lozinka"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order_note
 msgid "Internal Notes"
-msgstr "Interne zabilješke"
+msgstr "Interne bilješke"
 
 #. module: point_of_sale
 #. openerp-web

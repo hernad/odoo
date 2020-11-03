@@ -1671,7 +1671,7 @@ msgstr "Predložak email-a"
 #. module: project
 #: model:ir.ui.view,arch_db:project.edit_project
 msgid "Emails"
-msgstr "E-mail"
+msgstr "Email-ovi"
 
 #. module: project
 #: model:ir.ui.view,arch_db:project.project_planner

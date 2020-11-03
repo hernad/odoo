@@ -1086,7 +1086,7 @@ msgstr "Saldo konti partnera"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_partner_property_account_payable_id model:ir.model.fields,field_description:account.field_res_users_property_account_payable_id
 msgid "Account Payable"
-msgstr "Dugovni konto"
+msgstr "Konto dobavljača (potražuje)"
 
 #. module: account
 #: model:ir.model,name:account.model_account_print_journal
@@ -1101,7 +1101,7 @@ msgstr "Svojstva konta"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_partner_property_account_receivable_id model:ir.model.fields,field_description:account.field_res_users_property_account_receivable_id
 msgid "Account Receivable"
-msgstr "Potražni konto"
+msgstr "Konto kupca (duguje)"
 
 #. module: account
 #: model:ir.model,name:account.model_account_financial_report model:ir.model.fields,field_description:account.field_account_financial_report_children_ids
@@ -1856,7 +1856,7 @@ msgstr "Račun"
 #. module: account
 #: selection:res.partner,trust:0
 msgid "Bad Debtor"
-msgstr "Loš dužnik"
+msgstr "Loš platiša"
 
 #. module: account
 #: selection:account.payment.term.line,value:0 model:ir.model.fields,field_description:account.field_account_move_line_balance model:ir.ui.view,arch_db:account.report_financial
@@ -4059,7 +4059,7 @@ msgstr "Idite na panel konfiguracije"
 #. module: account
 #: selection:res.partner,trust:0
 msgid "Good Debtor"
-msgstr "Dobar platioc"
+msgstr "Uredan platiša"
 
 #. module: account
 #. openerp-web
@@ -4446,7 +4446,7 @@ msgstr "Interna bilješka"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_note
 msgid "Internal Notes"
-msgstr "Interne zabilješke"
+msgstr "Interne bilješke"
 
 #. module: account
 #: selection:account.payment,payment_type:0 model:ir.ui.view,arch_db:account.account_journal_dashboard_kanban_view
@@ -5555,7 +5555,7 @@ msgstr "Ništa"
 #. module: account
 #: selection:res.partner,trust:0
 msgid "Normal Debtor"
-msgstr "Normalan kupac"
+msgstr "Normalan platiša"
 
 #. module: account
 #: selection:account.financial.report,style_overwrite:0
@@ -8262,7 +8262,7 @@ msgstr "Sveukupno fakturisano"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_partner_debit model:ir.model.fields,field_description:account.field_res_users_debit
 msgid "Total Payable"
-msgstr Sveukupno potražuje"
+msgstr "Sveukupno potražuje"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_partner_credit model:ir.model.fields,field_description:account.field_res_users_credit

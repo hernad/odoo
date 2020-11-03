@@ -103,7 +103,7 @@ msgstr ""
 
 #. module: l10n_in_hr_payroll
 #: model:ir.ui.view,arch_db:l10n_in_hr_payroll.report_hryearlysalary
-msgid "<strong>E-mail Address</strong>"
+msgid "<strong>Email Address</strong>"
 msgstr ""
 
 #. module: l10n_in_hr_payroll

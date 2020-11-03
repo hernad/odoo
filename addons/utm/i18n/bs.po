@@ -105,7 +105,7 @@ msgstr "Prikazani naziv"
 #. module: utm
 #: model:utm.campaign,name:utm.utm_campaign_email_campaign_services
 msgid "Email Campaign - Services"
-msgstr "E-mail kampanja - usluge"
+msgstr "Email kampanja - usluge"
 
 #. module: utm
 #: model:utm.source,name:utm.utm_source_facebook

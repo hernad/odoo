@@ -1126,7 +1126,7 @@ msgstr ""
 #. module: crm
 #: model:ir.model.fields,field_description:crm.field_crm_lead_message_bounce
 msgid "Bounce"
-msgstr "Odskočen"
+msgstr "Odbijeno"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.view_sale_config_settings
@@ -1865,7 +1865,7 @@ msgstr "Email nadimak"
 #. module: crm
 #: model:ir.model.fields,help:crm.field_crm_lead_email_from
 msgid "Email address of the contact"
-msgstr "E-mail adresa kontakta"
+msgstr "Email adresa kontakta"
 
 #. module: crm
 #: model:ir.ui.view,arch_db:crm.crm_planner
