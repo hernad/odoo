@@ -2063,7 +2063,7 @@ msgstr "Ukupno"
 #. module: sale
 #: model:ir.ui.view,arch_db:sale.report_invoice_document_inherit_sale
 msgid "TIN:"
-msgstr "PIB:"
+msgstr "PDV/JMBG:"
 
 #. module: sale
 #: model:ir.model.fields,help:sale.field_crm_team_invoiced_target

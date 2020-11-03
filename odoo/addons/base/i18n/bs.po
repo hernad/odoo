@@ -14213,7 +14213,7 @@ msgstr "Nabavke"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase
 msgid "Purchase Management"
-msgstr "Upravljanje nabavkama"
+msgstr "Nabavke"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_purchase
@@ -14817,7 +14817,7 @@ msgstr "Pravila ne mogu biti primjenjena na modelu Pravila Zapisa."
 #: code:addons/base/ir/ir_actions.py:764
 #, python-format
 msgid "Run %s"
-msgstr "Pokrenit %s"
+msgstr "Pokrenuti %s"
 
 #. module: base
 #: model:ir.ui.view,arch_db:base.ir_cron_view
@@ -16046,7 +16046,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:base.field_res_users_vat
 #, python-format
 msgid "TIN"
-msgstr "JIB/JBMG"
+msgstr "PDV/JMBG"
 
 #. module: base
 #: selection:ir.mail_server,smtp_encryption:0

@@ -7333,7 +7333,7 @@ msgstr "Ukupno"
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_invoice_document
 msgid "TIN:"
-msgstr "PIB:"
+msgstr "PDV/JMBG:"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.view_account_form
@@ -7421,7 +7421,7 @@ msgstr "Izračunavanje PDV"
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_journal
 msgid "Tax Declaration"
-msgstr "Porezni iskaz"
+msgstr "Porezna deklaracija"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_tax_name
