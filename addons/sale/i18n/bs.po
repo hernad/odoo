@@ -2094,7 +2094,7 @@ msgstr "Prikaz PDV-a B2C"
 #: model:ir.ui.view,arch_db:sale.report_invoice_layouted
 #: model:ir.ui.view,arch_db:sale.report_saleorder_document
 msgid "Taxes"
-msgstr "Porezi"
+msgstr "PDV"
 
 #. module: sale
 #: model:ir.model.fields,help:sale.field_sale_advance_payment_inv_deposit_taxes_id

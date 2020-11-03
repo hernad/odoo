@@ -1544,7 +1544,7 @@ msgstr "Porez"
 #: model:ir.model.fields,field_description:purchase.field_purchase_order_line_taxes_id
 #: model:ir.ui.view,arch_db:purchase.report_purchaseorder_document
 msgid "Taxes"
-msgstr "Porezi"
+msgstr "PDV"
 
 #. module: purchase
 #: model:ir.model.fields,help:purchase.field_purchase_order_default_location_dest_id_usage
