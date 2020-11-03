@@ -1,6 +1,0 @@
-"id","description","chart_template_id/id","name","amount","amount_type","type_tax_use","sequence","account_id:id","refund_account_id:id","tag_ids:id","children_tax_ids:id"
-"bih_pdv_17","PDV 17%",,"17% PDV",17,"percent","sale",30,,,,
-"bih_pdv_0_izvoz","PDV 0% izvoz",,"0% PDV izvoz",0,"percent","sale",40,,,,
-"bih_pdv_0_oslob","PDV 0% oslobođeno",,"0% PDV oslobođeno",0,"percent","sale",50,,,,
-"bih_updv_0_nepdv","Ulazni PDV 0% ne-PDV dobavljači",,"0% ulazni PDV",0,"percent","purchase",20,,,,
-"bih_updv_17","Ulazni PDV 17%",,"17% ulazni PDV",17,"percent","purchase",10,,,,

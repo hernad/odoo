@@ -9623,7 +9623,7 @@ msgstr "Povrat dobavljaču"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_product_template_supplier_taxes_id
 msgid "Vendor Taxes"
-msgstr "Porezi dobavljača"
+msgstr "Ulazni PDV"
 
 #. module: account
 #. openerp-web

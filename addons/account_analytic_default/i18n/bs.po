@@ -153,7 +153,7 @@ msgstr "Proizvod"
 #. module: account_analytic_default
 #: model:ir.model,name:account_analytic_default.model_product_template
 msgid "Product Template"
-msgstr "Predlog proizvoda"
+msgstr "Uzorak proizvoda"
 
 #. module: account_analytic_default
 #: model:ir.model,name:account_analytic_default.model_sale_order_line

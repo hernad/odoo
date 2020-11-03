@@ -1,6 +1,6 @@
 "id","description","chart_template_id:id","name","amount","amount_type","type_tax_use","sequence","account_id:id","refund_account_id:id","tag_ids:id","children_tax_ids:id"
 "bih_pdv_17","PDV 17%","l10n_bs_fbih_chart_template","17% PDV",17,"percent","sale",30,"kto_bs_fbih_4700","kto_bs_fbih_4700","l10n_bs.tag_bs_pdv_17",
 "bih_pdv_0_izvoz","PDV 0% izvoz","l10n_bs_fbih_chart_template","0% PDV izvoz",0,"percent","sale",40,"kto_bs_fbih_4700","kto_bs_fbih_4700","l10n_bs.tag_bs_pdv_05",
-"bih_pdv_0_oslob","PDV 0% oslobođeno","l10n_bs_fbih_chart_template","0% PDV oslobođeno",0,"percent","sale",50,"kto_bs_fbih_4700","kto_bs_fbih_4700","l10n_bs.tag_bs_pdv_06",
+"bih_pdv_0_clan25","PDV 0% oslobođen po članu 25. ZPDV","l10n_bs_fbih_chart_template","0% PDV oslobođen po čl. 25 ZPDV",0,"percent","sale",50,"kto_bs_fbih_4700","kto_bs_fbih_4700","l10n_bs.tag_bs_pdv_06",
 "bih_updv_0_nepdv","Ulazni PDV 0% ne-PDV dobavljači","l10n_bs_fbih_chart_template","0% ulazni PDV",0,"percent","purchase",20,"kto_bs_fbih_2700","kto_bs_fbih_2700","l10n_bs.tag_bs_pdv_18",
 "bih_updv_17","Ulazni PDV 17%","l10n_bs_fbih_chart_template","17% ulazni PDV",17,"percent","purchase",10,"kto_bs_fbih_2700","kto_bs_fbih_2700","l10n_bs.tag_bs_pdv_18",

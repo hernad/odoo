@@ -15,7 +15,7 @@ Bosnian Chart of Accounts (FBiH ver.2020)
 
 
 """,
-    "version": "10.0.3",
+    "version": "10.0.4",
     "author": "bring.out",
     'category': 'Localization',
     "website": "https://github.com/hernad/odoo",

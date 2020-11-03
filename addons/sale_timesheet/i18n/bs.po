@@ -81,7 +81,7 @@ msgstr "Vrijeme uklanjanja proizvoda"
 #. module: sale_timesheet
 #: model:ir.model,name:sale_timesheet.model_product_template
 msgid "Product Template"
-msgstr "Predlog proizvoda"
+msgstr "Uzorak proizvoda"
 
 #. module: sale_timesheet
 #: model:ir.model.fields,field_description:sale_timesheet.field_product_product_use_time

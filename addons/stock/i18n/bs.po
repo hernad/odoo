@@ -4827,7 +4827,7 @@ msgstr "Vlasnici proizvoda"
 #: model:ir.model.fields,field_description:stock.field_report_stock_forecast_product_tmpl_id
 #: model:ir.model.fields,field_description:stock.field_stock_move_product_tmpl_id
 msgid "Product Template"
-msgstr "Predlog proizvoda"
+msgstr "Uzorak proizvoda"
 
 #. module: stock
 #: model:ir.ui.view,arch_db:stock.inventory_planner

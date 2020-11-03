@@ -1207,12 +1207,12 @@ msgstr "Zatvaranje stavke glavne knjige (otpis)"
 #. module: account
 #: model:ir.model,name:account.model_account_move_reversal
 msgid "Account move reversal"
-msgstr "Obrnuta knjiženja"
+msgstr "Konto povrata knjiženja"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position_account_account_src_id
 msgid "Account on Product"
-msgstr "Konto na proizvodu"
+msgstr "Konto asociran proizvodu"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_template_tag_ids model:ir.model.fields,field_description:account.field_account_tax_template_tag_ids
@@ -1232,7 +1232,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position_account_account_dest_id
 msgid "Account to Use Instead"
-msgstr "Konto za koristiti umjesto"
+msgstr "Prebaciti na konto"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_accounts_wizard_account_type
@@ -3079,7 +3079,7 @@ msgstr "Povrat kupcu"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_product_product_taxes_id model:ir.model.fields,field_description:account.field_product_template_taxes_id
 msgid "Customer Taxes"
-msgstr "Porezi kupca"
+msgstr "Izlazni PDV"
 
 #. module: account
 #: model:ir.ui.view,arch_db:account.report_overdue_document
@@ -3689,7 +3689,7 @@ msgstr "Trošak"
 #: model:ir.model.fields,field_description:account.field_product_category_property_account_expense_categ_id model:ir.model.fields,field_description:account.field_product_product_property_account_expense_id
 #: model:ir.model.fields,field_description:account.field_product_template_property_account_expense_id model:ir.ui.view,arch_db:account.view_account_chart_template_seacrh
 msgid "Expense Account"
-msgstr "Konto za rashode"
+msgstr "Konto troškova"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_chart_template_property_account_expense_id
@@ -6452,7 +6452,7 @@ msgstr "Količina proizvoda"
 #. module: account
 #: model:ir.model,name:account.model_product_template
 msgid "Product Template"
-msgstr "Predlog proizvoda"
+msgstr "Uzorak proizvoda"
 
 #. module: account
 #: code:addons/account/models/account_bank_statement.py:170
@@ -7508,7 +7508,7 @@ msgstr "PDV za proizvod"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position_tax_tax_dest_id
 msgid "Tax to Apply"
-msgstr "PDV za obračun"
+msgstr "PDV primjeniti"
 
 #. module: account
 #: selection:account.account.tag,applicability:0 model:account.tax.group,name:account.tax_group_taxes model:ir.actions.act_window,name:account.action_tax_form
@@ -8660,7 +8660,7 @@ msgstr "Povrat novca dobavljača"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_product_product_supplier_taxes_id model:ir.model.fields,field_description:account.field_product_template_supplier_taxes_id
 msgid "Vendor Taxes"
-msgstr "Porezi dobavljača"
+msgstr "Ulazni PDV"
 
 #. module: account
 #. openerp-web

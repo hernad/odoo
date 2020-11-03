@@ -725,7 +725,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:product.field_product_template_standard_price
 #: selection:product.pricelist.item,base:0
 msgid "Cost"
-msgstr "Cijena (Koštanje)"
+msgstr "Nabavna cijena"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_product_standard_price
@@ -734,6 +734,9 @@ msgid ""
 " and used as a base price on purchase orders. Expressed in the default unit "
 "of measure of the product."
 msgstr ""
+"Trošak uzorka proizvoda koji se koristi za standardnu procjenu zaliha u računovodstvu"
+"i koristi se kao osnovna cijena na narudžbenicama. Izraženo u zadanoj jedinici"
+"mjere proizvoda".
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_template_standard_price
@@ -1953,7 +1956,7 @@ msgstr "Naziv proizvoda"
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo_product_tmpl_id
 #: model:ir.ui.view,arch_db:product.product_search_form_view
 msgid "Product Template"
-msgstr "Predlog proizvoda"
+msgstr "Uzorak proizvoda"
 
 #. module: product
 #: model:ir.model.fields,field_description:product.field_product_product_type

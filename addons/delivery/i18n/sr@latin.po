@@ -1730,7 +1730,7 @@ msgstr ""
 #. module: delivery
 #: model:ir.model.fields,field_description:delivery.field_delivery_carrier_supplier_taxes_id
 msgid "Vendor Taxes"
-msgstr "Porezi dobavljača"
+msgstr "Ulazni PDV"
 
 #. module: delivery
 #: selection:delivery.price.rule,variable:0

@@ -114,7 +114,7 @@ msgstr "Proizvod"
 #. module: website_sale_options
 #: model:ir.model,name:website_sale_options.model_product_template
 msgid "Product Template"
-msgstr "Predlog proizvoda"
+msgstr "Uzorak proizvoda"
 
 #. module: website_sale_options
 #: model:ir.ui.view,arch_db:website_sale_options.modal

@@ -281,7 +281,7 @@ msgstr "Proizvod"
 #. module: event_sale
 #: model:ir.model,name:event_sale.model_product_template
 msgid "Product Template"
-msgstr "Predlog proizvoda"
+msgstr "Uzorak proizvoda"
 
 #. module: event_sale
 #: code:addons/event_sale/models/event.py:19

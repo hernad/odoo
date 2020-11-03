@@ -1,39 +1,56 @@
 <?xml version="1.0"  encoding="utf-8"?>
 <odoo>
-		<record id="account_fiscal_position_fbih_1" model="account.fiscal.position.template">
+		<record id="account_fiscal_position_template_fbih_1" model="account.fiscal.position.template">
 			<field name="chart_template_id" ref="l10n_bs_fbih_chart_template"/>
 			<field name="name">Domaći partneri</field>
 		</record>
 
-		<record id="account_fiscal_position_fbih_2" model="account.fiscal.position.template">
+		<record id="account_fiscal_position_template_fbih_2" model="account.fiscal.position.template">
 			<field name="chart_template_id" ref="l10n_bs_fbih_chart_template"/>
 			<field name="name">Inostrani partneri</field>
 		</record>
 
+		<record id="account_fiscal_position_template_fbih_3" model="account.fiscal.position.template">
+			<field name="chart_template_id" ref="l10n_bs_fbih_chart_template"/>
+			<field name="name">Partneri oslobođeni PDV po članu 25 ZPDV</field>
+		</record>
+
 
        <!-- Domaći Partneri -->
-		<record id="account_fiscal_position_tax_fbih_1" model="account.fiscal.position.tax.template">
-			<field name="position_id" ref="account_fiscal_position_fbih_1"/>
+		<record id="account_fiscal_position_tax_template_fbih_1" model="account.fiscal.position.tax.template">
+			<field name="position_id" ref="account_fiscal_position_template_fbih_1"/>
 			<field name="tax_src_id" ref="bih_updv_17"/>
 			<field name="tax_dest_id" ref="bih_pdv_17"/>
 		</record>
-		<record id="account_fiscal_position_account_fbih_1" model="account.fiscal.position.account.template">
-			<field name="position_id" ref="account_fiscal_position_fbih_1"/>
+		<record id="account_fiscal_position_account_template_fbih_1" model="account.fiscal.position.account.template">
+			<field name="position_id" ref="account_fiscal_position_template_fbih_1"/>
 			<field name="account_src_id" ref="kto_bs_fbih_2700"/>
 			<field name="account_dest_id" ref="kto_bs_fbih_4700"/>
 		</record>
 	
        <!-- INO Partneri -->
-	   <record id="account_fiscal_position_tax_fbih_2" model="account.fiscal.position.tax.template">
-		  <field name="position_id" ref="account_fiscal_position_fbih_1"/>
+	   <record id="account_fiscal_position_tax_template_fbih_2" model="account.fiscal.position.tax.template">
+		  <field name="position_id" ref="account_fiscal_position_template_fbih_2"/>
 		  <field name="tax_src_id" ref="bih_updv_17"/>
 		  <field name="tax_dest_id" ref="bih_pdv_0_izvoz"/>
 	    </record>
-		<record id="account_fiscal_position_account_fbih_2" model="account.fiscal.position.account.template">
-			<field name="position_id" ref="account_fiscal_position_fbih_2"/>
+		<record id="account_fiscal_position_account_template_fbih_2" model="account.fiscal.position.account.template">
+			<field name="position_id" ref="account_fiscal_position_template_fbih_2"/>
 			<field name="account_src_id" ref="kto_bs_fbih_2700"/>
 			<field name="account_dest_id" ref="kto_bs_fbih_4700"/>
 		</record>
 		
+		<!-- Partneri oslobođeni po članu 25. Zakona o PDV -->
+		<record id="account_fiscal_position_tax_template_fbih_3" model="account.fiscal.position.tax.template">
+			<field name="position_id" ref="account_fiscal_position_template_fbih_3"/>
+			<field name="tax_src_id" ref="bih_updv_17"/>
+			<field name="tax_dest_id" ref="bih_pdv_0_clan25"/>
+		</record>
+
+		<record id="account_fiscal_position_account_template_fbih_3" model="account.fiscal.position.account.template">
+			  <field name="position_id" ref="account_fiscal_position_template_fbih_3"/>
+			  <field name="account_src_id" ref="kto_bs_fbih_2700"/>
+			  <field name="account_dest_id" ref="kto_bs_fbih_4700"/>
+		</record>
 
 </odoo>

@@ -1996,7 +1996,7 @@ msgstr "Javne kategorije proizvoda"
 #. module: website_sale
 #: model:ir.model,name:website_sale.model_product_template
 msgid "Product Template"
-msgstr "Predlog proizvoda"
+msgstr "Uzorak proizvoda"
 
 #. module: website_sale
 #: model:ir.ui.view,arch_db:website_sale.website_planner
