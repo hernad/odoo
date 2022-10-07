@@ -41,22 +41,22 @@ msgstr "Aktivan"
 #. module: uom
 #: model_terms:ir.actions.act_window,help:uom.product_uom_form_action
 msgid "Add a new unit of measure"
-msgstr ""
+msgstr "Dodaj novu jedinicu mjere"
 
 #. module: uom
 #: model_terms:ir.actions.act_window,help:uom.product_uom_categ_form_action
 msgid "Add a new unit of measure category"
-msgstr ""
+msgstr "Dodaj novu kategoriju jedinice mjere"
 
 #. module: uom
 #: model_terms:ir.ui.view,arch_db:uom.uom_uom_view_search
 msgid "Archived"
-msgstr ""
+msgstr "Arhiviran"
 
 #. module: uom
 #: model:ir.model.fields,field_description:uom.field_uom_uom__factor_inv
 msgid "Bigger Ratio"
-msgstr ""
+msgstr "Veći omjer"
 
 #. module: uom
 #: model:ir.model.fields.selection,name:uom.selection__uom_uom__uom_type__bigger
@@ -72,12 +72,12 @@ msgstr "Kategorija"
 #. module: uom
 #: model:ir.model.fields,field_description:uom.field_uom_uom__color
 msgid "Color"
-msgstr ""
+msgstr "Boja"
 
 #. module: uom
 #: model:ir.model.fields,field_description:uom.field_uom_uom__ratio
 msgid "Combined Ratio"
-msgstr ""
+msgstr "Kombinovani omjer"
 
 #. module: uom
 #: model:ir.model.fields,help:uom.field_uom_uom__category_id
@@ -103,7 +103,7 @@ msgstr "Kreirano"
 #. module: uom
 #: model:uom.uom,name:uom.product_uom_day
 msgid "Days"
-msgstr ""
+msgstr "Dana"
 
 #. module: uom
 #: model:ir.model.fields,field_description:uom.field_uom_category__display_name
@@ -114,12 +114,12 @@ msgstr "Prikazani naziv"
 #. module: uom
 #: model:uom.uom,name:uom.product_uom_dozen
 msgid "Dozens"
-msgstr ""
+msgstr "Stotice"
 
 #. module: uom
 #: model_terms:ir.ui.view,arch_db:uom.uom_uom_view_search
 msgid "Group By"
-msgstr ""
+msgstr "Grupiši po"
 
 #. module: uom
 #: model:uom.uom,name:uom.product_uom_hour
@@ -198,7 +198,7 @@ msgstr "Referentna jedinica mjere za ovu kategoriju"
 #. module: uom
 #: model:ir.model.fields,field_description:uom.field_uom_category__reference_uom_id
 msgid "Reference UoM"
-msgstr ""
+msgstr "Referentna JMJ"
 
 #. module: uom
 #: model:ir.model.fields,field_description:uom.field_uom_uom__rounding
@@ -213,7 +213,7 @@ msgstr "Traži JMJ"
 #. module: uom
 #: model_terms:ir.ui.view,arch_db:uom.uom_categ_view_search
 msgid "Search UoM Category"
-msgstr ""
+msgstr "Traži kategoriju JMJ"
 
 #. module: uom
 #: model:ir.model.fields.selection,name:uom.selection__uom_uom__uom_type__smaller
@@ -303,7 +303,7 @@ msgstr "Jedinica mjere"
 #. module: uom
 #: model:ir.model.fields,field_description:uom.field_uom_category__name
 msgid "Unit of Measure Category"
-msgstr ""
+msgstr "Kategorija jedinice mjere"
 
 #. module: uom
 #: model:uom.uom,name:uom.product_uom_unit
