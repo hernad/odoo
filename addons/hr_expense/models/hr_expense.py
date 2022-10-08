@@ -129,7 +129,7 @@ class HrExpense(models.Model):
         date_today = fields.Date.context_today(self.env.user)
         for expense in self:
             target_currency = expense.currency_id or self.env.company.currency_id
-            expense.currency_rate = self.env['res.currency']._get_conversion_rate(
+            expense.currency_rate = expense.company_id and self.env['res.currency']._get_conversion_rate(
                 from_currency=target_currency,
                 to_currency=expense.company_currency_id,
                 company=expense.company_id,
@@ -602,7 +602,7 @@ Or send your receipts at <a href="mailto:%(email)s?subject=Lunch%%20with%%20cust
                     Command.create({
                         'name': expense.employee_id.name + ': ' + expense.name.split('\n')[0][:64],
                         'quantity': expense.quantity or 1,
-                        'price_unit': expense.total_amount,
+                        'price_unit': expense.unit_amount if expense.unit_amount != 0 else expense.total_amount,
                         'product_id': expense.product_id.id,
                         'product_uom_id': expense.product_uom_id.id,
                         'analytic_distribution': expense.analytic_distribution,
