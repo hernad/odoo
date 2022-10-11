@@ -298,6 +298,10 @@ class WebsiteSale(http.Controller):
             'order': order,
         }
 
+    def _get_additional_shop_values(self, values):
+        """ Hook to update values used for rendering website_sale.products template """
+        return {}
+
     @http.route([
         '/shop',
         '/shop/page/<int:page>',
@@ -475,6 +479,7 @@ class WebsiteSale(http.Controller):
             values['available_max_price'] = tools.float_round(available_max_price, 2)
         if category:
             values['main_object'] = category
+        values.update(self._get_additional_shop_values(values))
         return request.render("website_sale.products", values)
 
     @http.route(['/shop/<model("product.template"):product>'], type='http', auth="public", website=True, sitemap=True)
@@ -1596,15 +1601,6 @@ class WebsiteSale(http.Controller):
     # ------------------------------------------------------
     # Edit
     # ------------------------------------------------------
-
-    @http.route(['/shop/add_product'], type='json', auth="user", methods=['POST'], website=True)
-    def add_product(self, name=None, category=None, **post):
-        product = request.env['product.product'].create({
-            'name': name or _("New Product"),
-            'public_categ_ids': category,
-            'website_id': request.website.id,
-        })
-        return self.env["website"].get_client_action_url(product.product_tmpl_id.website_url, True)
 
     @http.route(['/shop/config/product'], type='json', auth='user')
     def change_product_config(self, product_id, **options):

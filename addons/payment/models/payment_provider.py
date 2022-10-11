@@ -589,35 +589,23 @@ class PaymentProvider(models.Model):
         :return: None
         """
         providers = self.search([('code', '=', provider_code)])
-        providers.write({
+        providers.write(self._get_removal_values())
+
+    def _get_removal_values(self):
+        """ Return the values to update a provider with when its module is uninstalled.
+
+        For a module to specify additional removal values, it must override this method and complete
+        the generic values with its specific values.
+
+        :return: The removal values to update the removed provider with.
+        :rtype: dict
+        """
+        return {
             'code': 'none',
             'state': 'disabled',
-        })
-
-    def _neutralize(self):
-        super()._neutralize()
-        self.flush_model()
-        self.invalidate_model()
-        self.env.cr.execute("""
-            UPDATE payment_provider SET state = 'disabled'
-            WHERE state NOT IN ('test', 'disabled')
-        """)
-
-    def _neutralize_fields(self, provider_code, field_names):
-        """ Helper to neutralize API keys for the given provider.
-
-        :param str provider_code: The code of the provider whose fields to neutralize.
-        :param list field_names: The names of the fields to neutralize.
-        :return: None
-        """
-        self.flush_model()
-        self.invalidate_model()
-        query = sql.SQL("""
-            UPDATE payment_provider
-            SET ({fields}) = ROW({vals})
-            WHERE code = %s
-        """).format(
-            fields=sql.SQL(','.join(field_names)),
-            vals=sql.SQL(', '.join(['NULL'] * len(field_names))),
-        )
-        self.env.cr.execute(query, (provider_code,))
+            'is_published': False,
+            'redirect_form_view_id': None,
+            'inline_form_view_id': None,
+            'token_inline_form_view_id': None,
+            'express_checkout_form_view_id': None,
+        }
