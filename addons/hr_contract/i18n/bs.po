@@ -484,7 +484,7 @@ msgstr "Odgovorni korisnik"
 #. module: hr_contract
 #: selection:hr.contract,state:0
 msgid "Running"
-msgstr "Izvodi se"
+msgstr "Aktivan"
 
 #. module: hr_contract
 #: model_terms:ir.ui.view,arch_db:hr_contract.hr_contract_view_form
