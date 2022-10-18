@@ -1100,7 +1100,7 @@ msgstr ""
 #. module: calendar
 #: model:ir.model.fields,help:calendar.field_calendar_event__partner_id
 msgid "Partner-related data of the user"
-msgstr "Podatci vezani za partnera na korisniku"
+msgstr "Podaci vezani za partnera na korisniku"
 
 #. module: calendar
 #: code:addons/calendar/models/calendar.py:1247

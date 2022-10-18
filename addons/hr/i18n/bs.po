@@ -285,7 +285,7 @@ msgstr "Pododjeljenja"
 #. module: hr
 #: model_terms:ir.ui.view,arch_db:hr.view_employee_form
 msgid "Citizenship & Other Information"
-msgstr "Državljanstvo i ostali podatci"
+msgstr "Državljanstvo i ostali podaci"
 
 #. module: hr
 #: model_terms:hr.job,website_description:hr.job_ceo

@@ -1497,7 +1497,7 @@ msgstr "Sačuvaj moje podatke plaćanja"
 #: model:ir.actions.act_window,name:payment.payment_token_action
 #: model:ir.ui.menu,name:payment.payment_token_menu
 msgid "Saved Payment Data"
-msgstr "Sačuvani podatci plaćanja"
+msgstr "Sačuvani podaci plaćanja"
 
 #. module: payment
 #: model:ir.model.fields,field_description:payment.field_account_payment__payment_token_id
