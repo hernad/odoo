@@ -2719,7 +2719,7 @@ msgstr "Model"
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_page__model_data_id
 msgid "Model Data"
-msgstr "Podatci modela"
+msgstr "Podaci modela"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_website_page__model_ids
@@ -3426,7 +3426,7 @@ msgstr "Zaobljeni uglovi"
 #. module: website
 #: model:ir.model,name:website.model_website_seo_metadata
 msgid "SEO metadata"
-msgstr "SEO metapodatci"
+msgstr "SEO metapodaci"
 
 #. module: website
 #: model:ir.model.fields,field_description:website.field_ir_ui_view__is_seo_optimized
