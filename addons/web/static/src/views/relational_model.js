@@ -24,7 +24,7 @@ import { Model } from "@web/views/model";
 import { archParseBoolean, evalDomain, isNumeric, isRelational, isX2Many } from "@web/views/utils";
 
 const { DateTime } = luxon;
-const { markRaw, markup, toRaw } = owl;
+import { markRaw, markup, toRaw } from "@odoo/owl";
 
 const preloadedDataRegistry = registry.category("preloadedData");
 
@@ -128,12 +128,12 @@ async function toggleArchive(model, resModel, resIds, doArchive, context) {
 
 async function unselectRecord(editedRecord, abandonRecord) {
     if (editedRecord) {
-        const isValid = await editedRecord.checkValidity();
+        await editedRecord.askChanges();
         const canBeAbandoned = editedRecord.canBeAbandoned;
-        if (isValid && !canBeAbandoned) {
-            return editedRecord.switchMode("readonly");
-        } else if (canBeAbandoned) {
+        if (canBeAbandoned) {
             return abandonRecord(editedRecord.id);
+        } else {
+            return editedRecord.switchMode("readonly");
         }
     }
 }
@@ -169,7 +169,12 @@ class RequestBatcherORM extends ORM {
             batch.scheduled = true;
             Promise.resolve().then(async () => {
                 delete this.batches[key];
-                const result = await callback(batch.ids);
+                let result;
+                try {
+                    result = await callback(batch.ids);
+                } catch (e) {
+                    return batch.deferred.reject(e);
+                }
                 batch.deferred.resolve(result);
             });
         }
@@ -471,6 +476,7 @@ export class Record extends DataPoint {
         return {
             // ...
             ...this.dataContext,
+            ...this.context,
             active_id: this.resId || false,
             active_ids: this.resId ? [this.resId] : [],
             active_model: this.resModel,
@@ -573,11 +579,15 @@ export class Record extends DataPoint {
         this.invalidateCache();
     }
 
+    async askChanges() {
+        const proms = [];
+        this.model.env.bus.trigger("RELATIONAL_MODEL:NEED_LOCAL_CHANGES", { proms });
+        await Promise.all([...proms, this.model.mutex.getUnlockedDef()]);
+    }
+
     async checkValidity() {
         if (!this._urgentSave) {
-            const proms = [];
-            this.model.env.bus.trigger("RELATIONAL_MODEL:NEED_LOCAL_CHANGES", { proms });
-            await Promise.all([...proms, this.model.mutex.getUnlockedDef()]);
+            await this.askChanges();
         }
         return this._checkValidity();
     }
@@ -1436,10 +1446,12 @@ class DynamicList extends DataPoint {
                         isSaved = await editedRecord.save();
                     } catch (e) {
                         this.editedRecord = editedRecord;
+                        this.model.notify();
                         throw e;
                     }
                     if (!isSaved) {
                         this.editedRecord = editedRecord;
+                        this.model.notify();
                         return false;
                     }
                 }
@@ -1706,18 +1718,21 @@ class DynamicList extends DataPoint {
         // Determine what records need to be modified
         const firstIndex = Math.min(fromIndex, toIndex);
         const lastIndex = Math.max(fromIndex, toIndex) + 1;
-        let reorderAll = false;
-        let lastSequence = (asc ? -1 : 1) * Infinity;
-        for (let index = 0; index < records.length; index++) {
-            const sequence = getSequence(records[index]);
-            if (
-                ((index < firstIndex || index >= lastIndex) &&
-                    ((asc && lastSequence >= sequence) || (!asc && lastSequence <= sequence))) ||
-                (index >= firstIndex && index < lastIndex && lastSequence === sequence)
-            ) {
-                reorderAll = true;
+        let reorderAll = records.some((record) => record.data[handleField] === undefined);
+        if (!reorderAll) {
+            let lastSequence = (asc ? -1 : 1) * Infinity;
+            for (let index = 0; index < records.length; index++) {
+                const sequence = getSequence(records[index]);
+                if (
+                    ((index < firstIndex || index >= lastIndex) &&
+                        ((asc && lastSequence >= sequence) ||
+                            (!asc && lastSequence <= sequence))) ||
+                    (index >= firstIndex && index < lastIndex && lastSequence === sequence)
+                ) {
+                    reorderAll = true;
+                }
+                lastSequence = sequence;
             }
-            lastSequence = sequence;
         }
 
         // Perform the resequence in the list of records
