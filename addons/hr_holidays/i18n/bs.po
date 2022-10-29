@@ -2866,7 +2866,7 @@ msgstr "Preostalo odmora"
 #. module: hr_holidays
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_leave_type__remaining_leaves
 msgid "Remaining Time Off"
-msgstr "Preostalo odsustva"
+msgstr "Preostalo od odsustva"
 
 #. module: hr_holidays
 #: model_terms:ir.ui.view,arch_db:hr_holidays.res_users_view_form model_terms:ir.ui.view,arch_db:hr_holidays.view_employee_form_leave_inherit
