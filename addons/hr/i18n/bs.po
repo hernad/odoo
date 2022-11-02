@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * hr
-# 
+#
 # Translators:
 # Martin Trigaux, 2018
 # Boško Stojaković <bluesoft83@gmail.com>, 2018
@@ -11,14 +11,16 @@ msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-08 06:48+0000\n"
-"PO-Revision-Date: 2018-10-08 06:48+0000\n"
+"PO-Revision-Date: 2022-11-02 16:55+0100\n"
 "Last-Translator: Bole <bole@dajmi5.com>, 2018\n"
 "Language-Team: Bosnian (https://www.transifex.com/odoo/teams/41243/bs/)\n"
+"Language: bs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: bs\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #. module: hr
 #: code:addons/hr/models/hr.py:76
@@ -101,16 +103,23 @@ msgstr "<span>Za uraditi</span>"
 #. module: hr
 #: model:mail.template,body_html:hr.mail_template_data_unknown_employee_email_address
 msgid ""
-"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">\n"
-"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; "
+"background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: "
+"100%; border-collapse:separate;\"><tr><td align=\"center\">\n"
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: "
+"16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
 "<tbody>\n"
 "    <tr>\n"
 "        <td align=\"center\" style=\"min-width: 590px;\">\n"
-"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style="
+"\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:"
+"separate;\">\n"
 "                <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
 "                    <div>\n"
 "                        Hi,<br/>\n"
-"                        Your document has not been created because your email address is not recognized. Please send emails with the email address recorded on your employee information, or contact your HR manager.\n"
+"                        Your document has not been created because your email address is "
+"not recognized. Please send emails with the email address recorded on your employee "
+"information, or contact your HR manager.\n"
 "                    </div>\n"
 "                </td></tr>\n"
 "            </table>\n"
@@ -120,9 +129,12 @@ msgid ""
 "</td></tr>\n"
 "<!-- POWERED BY -->\n"
 "<tr><td align=\"center\" style=\"min-width: 590px;\">\n"
-"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-"
+"width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:"
+"separate;\">\n"
 "      <tr><td style=\"text-align: center; font-size: 13px;\">\n"
-"        Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=hr\" style=\"color: #875A7B;\">Odoo</a>\n"
+"        Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;"
+"utm_medium=hr\" style=\"color: #875A7B;\">Odoo</a>\n"
 "      </td></tr>\n"
 "    </table>\n"
 "</td></tr>\n"
@@ -139,10 +151,10 @@ msgstr ""
 #: model_terms:hr.job,website_description:hr.job_marketing
 #: model_terms:hr.job,website_description:hr.job_trainee
 msgid ""
-"A full time job, with an attractive salary package in a small team of smart "
-"people. You will start contract with a full technical and functional "
-"training. If you are passionate, motivate and flexible apply for this job, "
-"you will certainly join the best company ever."
+"A full time job, with an attractive salary package in a small team of smart people. You "
+"will start contract with a full technical and functional training. If you are "
+"passionate, motivate and flexible apply for this job, you will certainly join the best "
+"company ever."
 msgstr ""
 
 #. module: hr
@@ -246,10 +258,9 @@ msgstr "Broj bankovnog računa"
 #. module: hr
 #: model_terms:hr.job,website_description:hr.job_cto
 msgid ""
-"Because of our constant growth, we're now looking for people to reinforce "
-"our team of enthusiastic chief technical officer. So if working on an open "
-"source project in a friendly and cooperative atmosphere sounds like fun to "
-"you, read on..."
+"Because of our constant growth, we're now looking for people to reinforce our team of "
+"enthusiastic chief technical officer. So if working on an open source project in a "
+"friendly and cooperative atmosphere sounds like fun to you, read on..."
 msgstr ""
 
 #. module: hr
@@ -259,17 +270,17 @@ msgstr ""
 #: model_terms:hr.job,website_description:hr.job_hrm
 #: model_terms:hr.job,website_description:hr.job_marketing
 msgid ""
-"Because of our constant growth, we're now looking for people to reinforce "
-"our team of enthusiastic developers. So if working on an open source project"
-" in a friendly and cooperative atmosphere sounds like fun to you, read on..."
+"Because of our constant growth, we're now looking for people to reinforce our team of "
+"enthusiastic developers. So if working on an open source project in a friendly and "
+"cooperative atmosphere sounds like fun to you, read on..."
 msgstr ""
 
 #. module: hr
 #: model_terms:hr.job,website_description:hr.job_trainee
 msgid ""
-"Because of our constant growth, we're now looking for people to reinforce "
-"our team of enthusiastic trainees. So if working on an open source project "
-"in a friendly and cooperative atmosphere sounds like fun to you, read on..."
+"Because of our constant growth, we're now looking for people to reinforce our team of "
+"enthusiastic trainees. So if working on an open source project in a friendly and "
+"cooperative atmosphere sounds like fun to you, read on..."
 msgstr ""
 
 #. module: hr
@@ -565,12 +576,8 @@ msgstr "Ozanake zaposlenih"
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_employee__address_home_id
-msgid ""
-"Enter here the private address of the employee, not the one linked to your "
-"company."
-msgstr ""
-"Ovde unesite privatnu adresu zaposlenog, ne adresu povezanu sa vašom "
-"kompanijom."
+msgid "Enter here the private address of the employee, not the one linked to your company."
+msgstr "Ovde unesite privatnu adresu zaposlenog, ne adresu povezanu sa vašom kompanijom."
 
 #. module: hr
 #: selection:mail.alias,alias_contact:0
@@ -584,10 +591,8 @@ msgstr "Očekivani novi zaposlenici"
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_job__expected_employees
-msgid ""
-"Expected number of employees for this job position after new recruitment."
-msgstr ""
-"Očekivani broj zaposlenih za ovo radno mjesto nakon novog zapošljavanja."
+msgid "Expected number of employees for this job position after new recruitment."
+msgstr "Očekivani broj zaposlenih za ovo radno mjesto nakon novog zapošljavanja."
 
 #. module: hr
 #: model:hr.job,name:hr.job_developer
@@ -761,7 +766,7 @@ msgstr "Ako je označeno nove poruke će zahtjevati vašu pažnju."
 #: model:ir.model.fields,help:hr.field_hr_employee__message_needaction
 #: model:ir.model.fields,help:hr.field_hr_job__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Ako je zakačeno, nove poruke će zahtjevati vašu pažnju"
+msgstr "Ako je zakačeno, nove poruke će zahtjevati vašu pažnju."
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_department__message_has_error
@@ -773,11 +778,10 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_employee__active
 msgid ""
-"If the active field is set to False, it will allow you to hide the resource "
-"record without removing it."
+"If the active field is set to False, it will allow you to hide the resource record "
+"without removing it."
 msgstr ""
-"Ako je ovo polje postavljeno na neaktivno, moežte sakriti resurs bez da ga "
-"uklonite."
+"Ako je ovo polje postavljeno na neaktivno, moežte sakriti resurs bez da ga uklonite."
 
 #. module: hr
 #: code:addons/hr/models/hr.py:296
@@ -968,9 +972,8 @@ msgstr "Slika srednje veličine"
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_employee__image_medium
 msgid ""
-"Medium-sized photo of the employee. It is automatically resized as a "
-"128x128px image, with aspect ratio preserved. Use this field in form views "
-"or some kanban views."
+"Medium-sized photo of the employee. It is automatically resized as a 128x128px image, "
+"with aspect ratio preserved. Use this field in form views or some kanban views."
 msgstr ""
 
 #. module: hr
@@ -1006,7 +1009,7 @@ msgstr ""
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee__name
 msgid "Name"
-msgstr "Naziv:"
+msgstr "Ime"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_employee__country_id
@@ -1069,7 +1072,7 @@ msgstr "Broj dijece"
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_job__no_of_employee
 msgid "Number of employees currently occupying this job position."
-msgstr "Broj zaposlenih na ovom radnom mjestu"
+msgstr "Broj zaposlenih na ovom radnom mjestu."
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department__message_has_error_counter
@@ -1080,8 +1083,7 @@ msgstr ""
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_job__no_of_hired_employee
-msgid ""
-"Number of hired employees for this job position during recruitment phase."
+msgid "Number of hired employees for this job position during recruitment phase."
 msgstr "Broj zaposlenih na ovom radnom mjestu u procesu zapošljavanja."
 
 #. module: hr
@@ -1316,20 +1318,13 @@ msgstr ""
 
 #. module: hr
 #: model_terms:ir.ui.view,arch_db:hr.res_config_settings_view_form
-msgid ""
-"Set default calendar used to compute time allocation for leaves, timesheets,"
-" ..."
-msgstr ""
-"Postavi zadani kalendar za računanje vremena godišnjih odmora, radne "
-"listove, ..."
+msgid "Set default calendar used to compute time allocation for leaves, timesheets, ..."
+msgstr "Postavi zadani kalendar za računanje vremena godišnjih odmora, radne listove, ..."
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_job__state
-msgid ""
-"Set whether the recruitment process is open or closed for this job position."
-msgstr ""
-"Postavi dali je proces zapošljavanja otvoren ili zatvoren za ovo radno "
-"mjesto."
+msgid "Set whether the recruitment process is open or closed for this job position."
+msgstr "Postavi dali je proces zapošljavanja otvoren ili zatvoren za ovo radno mjesto."
 
 #. module: hr
 #: model:ir.actions.act_window,name:hr.hr_config_settings_action
@@ -1351,7 +1346,7 @@ msgstr "Prikaži organizacijsku strukturu na formi zaposlenog"
 #. module: hr
 #: model_terms:ir.ui.view,arch_db:hr.res_config_settings_view_form
 msgid "Show organizational chart on employee form."
-msgstr "Prikaži organizacijsku strukturu na formi zaposlenog"
+msgstr "Prikaži organizacijsku strukturu na formi zaposlenog."
 
 #. module: hr
 #: selection:hr.employee,marital:0
@@ -1377,9 +1372,8 @@ msgstr "Fotografija malog formata"
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_employee__image_small
 msgid ""
-"Small-sized photo of the employee. It is automatically resized as a 64x64px "
-"image, with aspect ratio preserved. Use this field anywhere a small image is"
-" required."
+"Small-sized photo of the employee. It is automatically resized as a 64x64px image, with "
+"aspect ratio preserved. Use this field anywhere a small image is required."
 msgstr ""
 
 #. module: hr
@@ -1466,8 +1460,7 @@ msgstr "Adresa zaposlenog im povezanu kompaniju"
 #. module: hr
 #: sql_constraint:hr.job:0
 msgid "The name of the job position must be unique per department in company!"
-msgstr ""
-"Naziv radnog mjesta mora biti jedinstveno po odjeljenju unutar kompanije!"
+msgstr "Naziv radnog mjesta mora biti jedinstveno po odjeljenju unutar kompanije!"
 
 #. module: hr
 #: model:res.groups,comment:hr.group_hr_user
@@ -1477,24 +1470,20 @@ msgstr ""
 #. module: hr
 #: model:res.groups,comment:hr.group_hr_manager
 msgid ""
-"The user will have access to the human resources configuration as well as "
-"statistic reports."
+"The user will have access to the human resources configuration as well as statistic "
+"reports."
 msgstr ""
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_employee__image
-msgid ""
-"This field holds the image used as photo for the employee, limited to "
-"1024x1024px."
+msgid "This field holds the image used as photo for the employee, limited to 1024x1024px."
 msgstr ""
-"Ovo polje sadrži sliku koja se koristi kao fotografija zaposlenog, "
-"limitirana na 1024x1024px."
+"Ovo polje sadrži sliku koja se koristi kao fotografija zaposlenog, limitirana na "
+"1024x1024px."
 
 #. module: hr
 #: model:ir.model.fields,help:hr.field_hr_employee__tz
-msgid ""
-"This field is used in order to define in which timezone the resources will "
-"work."
+msgid "This field is used in order to define in which timezone the resources will work."
 msgstr ""
 
 #. module: hr
@@ -1543,11 +1532,13 @@ msgstr "Brojač nepročitanih poruka"
 #: model_terms:ir.ui.view,arch_db:hr.view_employee_form
 msgid ""
 "Use here the home address of the employee.\n"
-"                                            This private address is used in the expense report reimbursement document.\n"
+"                                            This private address is used in the expense "
+"report reimbursement document.\n"
 "                                            It should be different from the work address."
 msgstr ""
 "Koristi ovdje kućnu adresu zaposlenog.\n"
-"                                            Ova privatna adresa se koristi na dokumentima nadoknade izvještaja troškova.\n"
+"                                            Ova privatna adresa se koristi na "
+"dokumentima nadoknade izvještaja troškova.\n"
 "                                            Trebala bi biti drugačija od poslovne adrese."
 
 #. module: hr
@@ -1578,37 +1569,35 @@ msgstr "Broj Vize"
 #. module: hr
 #: model_terms:hr.job,website_description:hr.job_consultant
 msgid ""
-"We are looking for a motivated and results-driven Functional Consultant! You"
-" will take part in the consulting services we provide to our partners and "
-"customers, on the functional side. Your job start from the quotation to the "
-"customer to the delivery to the customer. You listen the customer and try to"
-" give him the best service. You report to the head of consulting service and"
-" will be coached by a senior consultant."
+"We are looking for a motivated and results-driven Functional Consultant! You will take "
+"part in the consulting services we provide to our partners and customers, on the "
+"functional side. Your job start from the quotation to the customer to the delivery to "
+"the customer. You listen the customer and try to give him the best service. You report "
+"to the head of consulting service and will be coached by a senior consultant."
 msgstr ""
 
 #. module: hr
 #: model_terms:hr.job,website_description:hr.job_hrm
 msgid ""
-"We are looking for a passionated Human Resources Manager to help us make "
-"products people love to use. We need someone who is ambitious, passionated, "
-"and ..... not afraid to start new things, a lot of new things and scale "
-"them."
+"We are looking for a passionated Human Resources Manager to help us make products people "
+"love to use. We need someone who is ambitious, passionated, and ..... not afraid to "
+"start new things, a lot of new things and scale them."
 msgstr ""
 
 #. module: hr
 #: model_terms:hr.job,website_description:hr.job_ceo
 msgid ""
-"We are looking for a passionated executive manager to help us make products "
-"people love to use. We need someone who is ambitious, passionated, and ....."
-" not afraid to start new things, a lot of new things and scale them."
+"We are looking for a passionated executive manager to help us make products people love "
+"to use. We need someone who is ambitious, passionated, and ..... not afraid to start new "
+"things, a lot of new things and scale them."
 msgstr ""
 
 #. module: hr
 #: model_terms:hr.job,website_description:hr.job_marketing
 msgid ""
-"We are looking for a passionated marketer manager to help us make products "
-"people love to use. We need someone who is ambitious, passionated, and ....."
-" not afraid to start new things, a lot of new things and scale them."
+"We are looking for a passionated marketer manager to help us make products people love "
+"to use. We need someone who is ambitious, passionated, and ..... not afraid to start new "
+"things, a lot of new things and scale them."
 msgstr ""
 
 #. module: hr
@@ -1664,9 +1653,9 @@ msgstr ""
 #: model_terms:hr.job,website_description:hr.job_marketing
 #: model_terms:hr.job,website_description:hr.job_trainee
 msgid ""
-"With our product, which is a suite of 3000 business apps. It is fully open "
-"source, full featured and it’s online offer is 3 times cheaper than "
-"traditional competitors. We have 2.000.000 users, and we're growing fast."
+"With our product, which is a suite of 3000 business apps. It is fully open source, full "
+"featured and it’s online offer is 3 times cheaper than traditional competitors. We have "
+"2.000.000 users, and we're growing fast."
 msgstr ""
 
 #. module: hr
@@ -1829,19 +1818,18 @@ msgstr ""
 #: model_terms:hr.job,website_description:hr.job_cto
 #: model_terms:hr.job,website_description:hr.job_trainee
 msgid ""
-"You will be responsible for developing and improving applications. You will "
-"work autonomously as well as                     coordinate and supervise "
-"small distributed development teams for specific projects. You will become a"
-" technical                 expert of the product."
+"You will be responsible for developing and improving applications. You will work "
+"autonomously as well as                     coordinate and supervise small distributed "
+"development teams for specific projects. You will become a technical                 "
+"expert of the product."
 msgstr ""
 
 #. module: hr
 #: model_terms:hr.job,website_description:hr.job_developer
 msgid ""
-"You will be responsible for developing and improving applications. You will "
-"work autonomously as well as coordinate and supervise small distributed "
-"development teams for specific projects. You will become a technical expert "
-"of the product."
+"You will be responsible for developing and improving applications. You will work "
+"autonomously as well as coordinate and supervise small distributed development teams for "
+"specific projects. You will become a technical expert of the product."
 msgstr ""
 
 #. module: hr
@@ -1849,10 +1837,9 @@ msgstr ""
 #: model_terms:hr.job,website_description:hr.job_hrm
 #: model_terms:hr.job,website_description:hr.job_marketing
 msgid ""
-"You will be responsible for developing and improving product communication. "
-"You will work autonomously as well as coordinate and supervise small "
-"distributed development teams for specific projects. You will become a "
-"techinical expert of the product."
+"You will be responsible for developing and improving product communication. You will "
+"work autonomously as well as coordinate and supervise small distributed development "
+"teams for specific projects. You will become a techinical expert of the product."
 msgstr ""
 
 #. module: hr
