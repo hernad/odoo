@@ -23,12 +23,12 @@ msgstr ""
 #. module: project
 #: model:ir.model.fields,field_description:project.field_report_project_task_user__delay_endings_days
 msgid "# Days to Deadline"
-msgstr ""
+msgstr "# dana do dogovorenog roka"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_res_partner__task_count
 msgid "# Tasks"
-msgstr ""
+msgstr "# zadataka"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_report_project_task_user__working_days_open
@@ -1352,7 +1352,7 @@ msgstr ""
 #: code:addons/project/static/src/js/project_task_kanban_examples.js:51
 #, python-format
 msgid "Inbox"
-msgstr "Prijemno sanduče"
+msgstr "Prijem"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_id
@@ -1366,7 +1366,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:project.field_project_project__message_is_follower
 #: model:ir.model.fields,field_description:project.field_project_task__message_is_follower
 msgid "Is Follower"
-msgstr "Je pratilac"
+msgstr "Pratilac?"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.project_tags_search_view
@@ -1810,7 +1810,7 @@ msgstr ""
 #. module: project
 #: model:ir.model.fields,field_description:project.field_digest_digest__kpi_project_task_opened
 msgid "Open Tasks"
-msgstr ""
+msgstr "Otvoreni zadaci"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_force_thread_id
@@ -1839,17 +1839,17 @@ msgstr ""
 #: code:addons/project/controllers/portal.py:129
 #, python-format
 msgid "Others"
-msgstr ""
+msgstr "Ostali"
 
 #. module: project
 #: selection:project.task,activity_state:0
 msgid "Overdue"
-msgstr "Dospjele"
+msgstr "Prekoračenja"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.action_view_task_overpassed_draft
 msgid "Overpassed Tasks"
-msgstr ""
+msgstr "Prekoračeni zadaci"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_task__legend_blocked
@@ -1890,12 +1890,12 @@ msgstr ""
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__alias_parent_model_id
 msgid "Parent Model"
-msgstr "Roditeljski model"
+msgstr "Nadređeni model"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__alias_parent_thread_id
 msgid "Parent Record Thread ID"
-msgstr "Roditeljski zapis niti"
+msgstr "Nadređeni zapis (ID niza)"
 
 #. module: project
 #: code:addons/project/models/project.py:919
@@ -1903,7 +1903,7 @@ msgstr "Roditeljski zapis niti"
 #: model_terms:ir.ui.view,arch_db:project.view_task_form2
 #, python-format
 msgid "Parent Task"
-msgstr ""
+msgstr "Nadređeni zadatak"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_parent_model_id
@@ -1923,13 +1923,13 @@ msgstr ""
 #. module: project
 #: selection:project.project,rating_status:0
 msgid "Periodical Rating"
-msgstr ""
+msgstr "Periodično ocjenjivanje"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_popover
 msgid "Placeholder"
-msgstr ""
+msgstr "Nosač"
 
 #. module: project
 #: selection:project.task,activity_state:0
@@ -1939,7 +1939,7 @@ msgstr "Planiran"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__planned_hours
 msgid "Planned Hours"
-msgstr ""
+msgstr "Planirani sati"
 
 #. module: project
 #: model:ir.model.fields,help:project.field_project_project__alias_contact
@@ -1982,7 +1982,7 @@ msgstr "Privatnost"
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 #, python-format
 msgid "Project"
-msgstr "Projekat"
+msgstr "Projekti"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_project__user_id
@@ -2002,28 +2002,28 @@ msgstr "Rukovodilac projekta"
 #: model_terms:ir.ui.view,arch_db:project.view_project
 #: model_terms:ir.ui.view,arch_db:project.view_project_project_filter
 msgid "Project Name"
-msgstr ""
+msgstr "Ime projekta"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.rating_index
 msgid "Project Satisfaction"
-msgstr ""
+msgstr "Zadovoljstvo projektom"
 
 #. module: project
 #: model:ir.model,name:project.model_project_tags
 msgid "Project Tags"
-msgstr ""
+msgstr "Oznake projekta"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_graph
 #: model_terms:ir.ui.view,arch_db:project.view_project_task_pivot
 msgid "Project Tasks"
-msgstr ""
+msgstr "Zadaci projekta"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.dblc_proj
 msgid "Project's tasks"
-msgstr ""
+msgstr "Projektni zadaci"
 
 #. module: project
 #: model:ir.actions.server,name:project.ir_actions_server_project_sample
@@ -2035,7 +2035,7 @@ msgstr ""
 #: model:ir.cron,cron_name:project.ir_cron_rating_project
 #: model:ir.cron,name:project.ir_cron_rating_project
 msgid "Project: Send rating"
-msgstr ""
+msgstr "Projekat: pošalji ocjenu"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.open_view_project_all
@@ -2049,35 +2049,35 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:project.rating_index
 #: model_terms:ir.ui.view,arch_db:project.view_project
 msgid "Projects"
-msgstr ""
+msgstr "Projekti"
 
 #. module: project
 #: model:mail.channel,name:project.mail_channel_project_task
 msgid "Projects & Tasks"
-msgstr ""
+msgstr "Projekti i zadaci"
 
 #. module: project
 #: selection:project.project,rating_status_period:0
 msgid "Quarterly"
-msgstr ""
+msgstr "Kvartalno"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_partner_stat
 #: model_terms:ir.ui.view,arch_db:project.portal_project_rating_popover
 msgid "Rated partner"
-msgstr ""
+msgstr "Ocjenjeni partner"
 
 #. module: project
 #: model_terms:ir.ui.view,arch_db:project.view_task_search_form
 msgid "Rated tasks"
-msgstr ""
+msgstr "Ocjenjeni zadaci"
 
 #. module: project
 #: model:ir.actions.act_window,name:project.rating_rating_action_view_project_rating
 #: model:ir.model.fields,field_description:project.field_project_task__rating_ids
 #: model_terms:ir.ui.view,arch_db:project.view_task_form2
 msgid "Rating"
-msgstr "Ocijena"
+msgstr "Ocjena"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task_type__rating_template_id
@@ -2097,7 +2097,7 @@ msgstr "Ocijenjivanje zadnjeg odgovora"
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__rating_last_image
 msgid "Rating Last Image"
-msgstr "Ocijenjivanje zadnje slike"
+msgstr "Ocjenjivanje zadnje slike"
 
 #. module: project
 #: model:ir.model.fields,field_description:project.field_project_task__rating_last_value
@@ -2127,7 +2127,7 @@ msgstr ""
 #. module: project
 #: model:mail.message.subtype,description:project.mt_task_rating
 msgid "Ratings"
-msgstr ""
+msgstr "Ocjene"
 
 #. module: project
 #: code:addons/project/models/project.py:388
