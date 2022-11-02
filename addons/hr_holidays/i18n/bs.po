@@ -1697,7 +1697,7 @@ msgstr "Zaposleni"
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_leave_report__date_to
 #: model:ir.model.fields,field_description:hr_holidays.field_hr_leave_stress_day__end_date
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum završetka"
 
 #. module: hr_holidays
 #: model:ir.model.fields.selection,name:hr_holidays.selection__hr_leave_type__employee_requests__yes

@@ -1503,7 +1503,7 @@ msgstr "Omogući generisanje faktura iz POS-a"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_details_wizard__end_date
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum završetka"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form

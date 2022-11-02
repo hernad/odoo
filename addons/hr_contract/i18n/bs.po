@@ -249,7 +249,7 @@ msgstr "Raspored rada zaposlenog"
 #. module: hr_contract
 #: model:ir.model.fields,field_description:hr_contract.field_hr_contract__date_end
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum završetka"
 
 #. module: hr_contract
 #: model:ir.model.fields,help:hr_contract.field_hr_contract__date_end

@@ -1116,7 +1116,7 @@ msgstr "Kategorija efektivnosti"
 #: model:ir.model.fields,field_description:mrp.field_mrp_production__date_finished
 #: model:ir.model.fields,field_description:mrp.field_mrp_workcenter_productivity__date_end
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum završetka"
 
 #. module: mrp
 #: model:ir.model.fields,help:mrp.field_mrp_product_produce__product_tracking

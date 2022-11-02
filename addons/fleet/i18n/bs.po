@@ -733,7 +733,7 @@ msgstr "Pražnjenje vrijednosti kilometraže vozila nije dozvoljeno."
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_assignation_log__date_end
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum završetka"
 
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_18

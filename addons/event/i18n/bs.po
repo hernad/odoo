@@ -998,7 +998,7 @@ msgstr "Predložak email-a"
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__date_end
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum završetka"
 
 #. module: event
 #: model:ir.model.fields,field_description:event.field_event_event__date_end_located

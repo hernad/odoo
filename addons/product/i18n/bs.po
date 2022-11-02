@@ -766,7 +766,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:product.field_product_pricelist_item__date_end
 #: model:ir.model.fields,field_description:product.field_product_supplierinfo__date_end
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum završetka"
 
 #. module: product
 #: model:ir.model.fields,help:product.field_product_supplierinfo__date_end

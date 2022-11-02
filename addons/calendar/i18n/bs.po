@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server saas~11.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-21 13:18+0000\n"
-"PO-Revision-Date: 2022-10-29 15:12+0200\n"
+"PO-Revision-Date: 2022-11-02 17:30+0100\n"
 "Last-Translator: Bole <bole@dajmi5.com>, 2018\n"
 "Language-Team: Bosnian (https://www.transifex.com/odoo/teams/41243/bs/)\n"
 "Language: bs\n"
@@ -735,7 +735,7 @@ msgstr "Zaposleni"
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__stop_date
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_tree
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum završetka"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__stop_datetime
@@ -750,7 +750,7 @@ msgstr "Završni datum"
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
 msgid "Ending at"
-msgstr ""
+msgstr "Završava na"
 
 #. module: calendar
 #: model:ir.model,name:calendar.model_calendar_event
@@ -1435,7 +1435,7 @@ msgstr "Oznake"
 #. module: calendar
 #: model_terms:ir.ui.view,arch_db:calendar.view_calendar_event_form
 msgid "The"
-msgstr "!"
+msgstr " "
 
 #. module: calendar
 #. openerp-web
@@ -1596,3 +1596,9 @@ msgstr ""
 #, python-format
 msgid "interval cannot be negative."
 msgstr ""
+
+#. module: resource
+#: code:addons/resource/models/res_company.py:0
+#, python-format
+msgid "Standard 40 hours/week"
+msgstr "Standardno 40 sati u sedmici"

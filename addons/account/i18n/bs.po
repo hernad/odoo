@@ -4231,7 +4231,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_fiscal_year__date_to
 #: model:ir.model.fields,field_description:account.field_account_print_journal__date_to
 msgid "End Date"
-msgstr "Datum Završetka"
+msgstr "Datum završetka"
 
 #. module: account
 #: model:account.payment.term,name:account.account_payment_term
