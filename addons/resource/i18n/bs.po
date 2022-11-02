@@ -34,12 +34,12 @@ msgstr "Aktivan"
 #. module: resource
 #: selection:resource.calendar.attendance,day_period:0
 msgid "Afternoon"
-msgstr ""
+msgstr "Poslije podne"
 
 #. module: resource
 #: model:ir.model.fields,field_description:resource.field_resource_calendar__hours_per_day
 msgid "Average hour per day"
-msgstr ""
+msgstr "Prosječno sati po danu"
 
 #. module: resource
 #: model:ir.model.fields,help:resource.field_resource_calendar__hours_per_day
@@ -89,7 +89,7 @@ msgstr "Kreirano"
 #. module: resource
 #: model:ir.model.fields,field_description:resource.field_resource_calendar_attendance__day_period
 msgid "Day Period"
-msgstr ""
+msgstr "Period dana"
 
 #. module: resource
 #: model:ir.model.fields,field_description:resource.field_resource_calendar_attendance__dayofweek
@@ -276,18 +276,24 @@ msgstr "Ponedjeljak"
 #: code:addons/resource/models/resource.py:158
 #, python-format
 msgid "Monday Evening"
-msgstr "Ponedeljak veče"
+msgstr "Ponedeljak uveče"
 
 #. module: resource
 #: code:addons/resource/models/resource.py:157
 #, python-format
 msgid "Monday Morning"
-msgstr "Ponedeljak jutro"
+msgstr "Ponedjeljak ujutro"
+
+#. module: resource
+#: code:addons/resource/models/resource.py:0
+#, python-format
+msgid "Monday Afternoon"
+msgstr "Ponedjeljak poslije podne"
 
 #. module: resource
 #: selection:resource.calendar.attendance,day_period:0
 msgid "Morning"
-msgstr ""
+msgstr "Ujutro"
 
 #. module: resource
 #: model:ir.model.fields,field_description:resource.field_resource_calendar__name
@@ -295,7 +301,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:resource.field_resource_resource__name
 #: model:ir.model.fields,field_description:resource.field_resource_test__name
 msgid "Name"
-msgstr "Naziv:"
+msgstr "Naziv"
 
 #. module: resource
 #: selection:resource.calendar.leaves,time_type:0
@@ -324,7 +330,7 @@ msgstr "Povezano korisničko ime za resurs da upravlja njegovim pristupom."
 #: model_terms:ir.ui.view,arch_db:resource.view_resource_calendar_leaves_search
 #: model_terms:ir.ui.view,arch_db:resource.view_resource_resource_search
 msgid "Resource"
-msgstr "Resurs"
+msgstr "Resursi"
 
 #. module: resource
 #: model:ir.actions.act_window,name:resource.action_resource_calendar_leave_tree
@@ -406,10 +412,27 @@ msgid "Search Working Time"
 msgstr "Pretraži radno vrijeme"
 
 #. module: resource
-#: code:addons/resource/models/res_company.py:22
+#: code:addons/resource/models/res_company.py:0
 #, python-format
 msgid "Standard 40 hours/week"
 msgstr "Standardno 40 sati/sedmično"
+
+#. module: resource
+#: model:ir.model.fields,field_description:resource.field_resource_calendar__global_leave_ids
+msgid "Global Time Off"
+msgstr "Globalno odsustvo"
+
+#. module: resource
+#: model:ir.model.fields,field_description:resource.field_resource_calendar__leave_ids
+#: model:ir.model.fields.selection,name:resource.selection__resource_calendar_leaves__time_type__leave
+#: model_terms:ir.ui.view,arch_db:resource.resource_calendar_form
+msgid "Time Off"
+msgstr "Odsustvo"
+
+#. module: resource
+#: model:ir.model.fields,field_description:resource.field_resource_calendar_attendance__week_type
+msgid "Week Number"
+msgstr "Sedmica broj"
 
 #. module: resource
 #: model:ir.model.fields,field_description:resource.field_resource_calendar_leaves__date_from
@@ -488,7 +511,7 @@ msgstr "Četvrtak"
 #: code:addons/resource/models/resource.py:164
 #, python-format
 msgid "Thursday Evening"
-msgstr "Četvrtak veče"
+msgstr "Četvrtak uveče"
 
 #. module: resource
 #: code:addons/resource/models/resource.py:163
@@ -523,13 +546,37 @@ msgstr "Utorak"
 #: code:addons/resource/models/resource.py:160
 #, python-format
 msgid "Tuesday Evening"
-msgstr "Utorak veče"
+msgstr "Utorak uveče"
+
+#. module: resource
+#: code:addons/resource/models/resource.py:0
+#, python-format
+msgid "Tuesday Afternoon"
+msgstr "Utorak poslije podne"
+
+#. module: resource
+#: code:addons/resource/models/resource.py:0
+#, python-format
+msgid "Wednesday Afternoon"
+msgstr "Srijeda poslije podne"
+
+#. module: resource
+#: code:addons/resource/models/resource.py:0
+#, python-format
+msgid "Thursday Afternoon"
+msgstr "Četvrtak poslije podne"
+
+#. module: resource
+#: code:addons/resource/models/resource.py:0
+#, python-format
+msgid "Friday Afternoon"
+msgstr "Petak poslije podne"
 
 #. module: resource
 #: code:addons/resource/models/resource.py:159
 #, python-format
 msgid "Tuesday Morning"
-msgstr "Utorak jutro"
+msgstr "Utorak ujutro"
 
 #. module: resource
 #: model_terms:ir.ui.view,arch_db:resource.view_resource_resource_search
@@ -556,13 +603,13 @@ msgstr "Srijeda"
 #: code:addons/resource/models/resource.py:162
 #, python-format
 msgid "Wednesday Evening"
-msgstr "Srijeda veče"
+msgstr "Srijeda uveče"
 
 #. module: resource
 #: code:addons/resource/models/resource.py:161
 #, python-format
 msgid "Wednesday Morning"
-msgstr "Srijeda jutro"
+msgstr "Srijeda ujutro"
 
 #. module: resource
 #: model:ir.model.fields,help:resource.field_resource_calendar_leaves__time_type

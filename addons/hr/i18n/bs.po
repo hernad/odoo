@@ -343,7 +343,7 @@ msgstr "Kompanija"
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_res_config_settings__resource_calendar_id
 msgid "Company Working Hours"
-msgstr "Radni sati kompanije"
+msgstr "Radni sati preduzeća"
 
 #. module: hr
 #: model:ir.model.fields,field_description:hr.field_hr_department__complete_name
