@@ -414,34 +414,10 @@ msgid "Search Working Time"
 msgstr "Pretraži radno vrijeme"
 
 #. module: resource
-#: code:addons/resource/models/res_company.py:0
+#: code:addons/resource/models/res_company.py:31
 #, python-format
 msgid "Standard 40 hours/week"
 msgstr "Standardno 40 sati u sedmici"
-
-#. module: resource
-#: code:addons/resource/models/res_company.py:0
-#, python-format
-msgid "Standard 40 hours"
-msgstr "Standardno 40 sati"
-
-#. module: resource
-#: code:addons/resource/models/res_company.py:0
-#, python-format
-msgid "Standard 35 hours"
-msgstr "Standardno 35 sati"
-
-#. module: resource
-#: code:addons/resource/models/res_company.py:0
-#, python-format
-msgid "Standard 38 hours"
-msgstr "Standardno 38 sati"
-
-#. module: resource
-#: code:addons/resource/models/res_company.py:0
-#, python-format
-msgid "week"
-msgstr "sedmica"
 
 #. module: resource
 #: model:ir.model.fields,field_description:resource.field_resource_calendar__global_leave_ids

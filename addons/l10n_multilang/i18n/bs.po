@@ -98,7 +98,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:l10n_multilang.field_account_account_template__name
 #: model:ir.model.fields,field_description:l10n_multilang.field_account_chart_template__name
 msgid "Name"
-msgstr "Naziv:"
+msgstr "Ime"
 
 #. module: l10n_multilang
 #: model:ir.model.fields,field_description:l10n_multilang.field_account_fiscal_position__note
@@ -114,7 +114,7 @@ msgstr ""
 #. module: l10n_multilang
 #: model:ir.model.fields,field_description:l10n_multilang.field_res_country_state__name
 msgid "State Name"
-msgstr "Naziv Fed. države/Kantona"
+msgstr "Naziv Ent/Kanton"
 
 #. module: l10n_multilang
 #: model:ir.model.fields,help:l10n_multilang.field_account_chart_template__spoken_languages
@@ -128,7 +128,7 @@ msgstr ""
 #. module: l10n_multilang
 #: model:ir.model,name:l10n_multilang.model_account_tax
 msgid "Tax"
-msgstr "Porez"
+msgstr "PDV"
 
 #. module: l10n_multilang
 #: model:ir.model.fields,field_description:l10n_multilang.field_account_tax__name
