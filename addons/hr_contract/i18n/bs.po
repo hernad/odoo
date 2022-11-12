@@ -6,6 +6,7 @@
 # Martin Trigaux, 2018
 # Boško Stojaković <bluesoft83@gmail.com>, 2018
 # Bole <bole@dajmi5.com>, 2018
+# Ernad Husremović <hernad@bring.out.ba>, 2022
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server saas~11.5\n"
@@ -469,12 +470,12 @@ msgstr "Broj nepročitanih poruka"
 #. module: hr_contract
 #: selection:hr.contract,activity_state:0
 msgid "Overdue"
-msgstr "Dospjele"
+msgstr "Prekoračenje"
 
 #. module: hr_contract
 #: selection:hr.contract,activity_state:0
 msgid "Planned"
-msgstr "Planiran"
+msgstr "Planirano"
 
 #. module: hr_contract
 #: model:ir.model.fields,field_description:hr_contract.field_hr_contract__activity_user_id
