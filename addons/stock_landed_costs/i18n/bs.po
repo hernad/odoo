@@ -47,24 +47,24 @@ msgstr "Potrebna akcija"
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_valuation_adjustment_lines__additional_landed_cost
 msgid "Additional Landed Cost"
-msgstr ""
+msgstr "Dodatni zavisni tošak"
 
 #. module: stock_landed_costs
 #: model:ir.model.fields,field_description:stock_landed_costs.field_stock_landed_cost__message_attachment_count
 msgid "Attachment Count"
-msgstr "Broj zakački"
+msgstr "Broj priloga"
 
 #. module: stock_landed_costs
 #: selection:product.template,split_method:0
 #: selection:stock.landed.cost.lines,split_method:0
 msgid "By Current Cost"
-msgstr ""
+msgstr "To tekućem trošku"
 
 #. module: stock_landed_costs
 #: selection:product.template,split_method:0
 #: selection:stock.landed.cost.lines,split_method:0
 msgid "By Quantity"
-msgstr ""
+msgstr "Po količini"
 
 #. module: stock_landed_costs
 #: selection:product.template,split_method:0
@@ -76,7 +76,7 @@ msgstr ""
 #: selection:product.template,split_method:0
 #: selection:stock.landed.cost.lines,split_method:0
 msgid "By Weight"
-msgstr ""
+msgstr "Po težini"
 
 #. module: stock_landed_costs
 #: model_terms:ir.ui.view,arch_db:stock_landed_costs.view_stock_landed_cost_form
