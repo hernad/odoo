@@ -23,7 +23,7 @@ class AccountPaymentMethod(models.Model):
         payment_methods = super().create(vals_list)
         methods_info = self._get_payment_method_information()
         for method in payment_methods:
-            information = methods_info.get(method.code)
+            information = methods_info.get(method.code, {})
 
             if information.get('mode') == 'multi':
                 method_domain = method._get_payment_method_domain(method.code)
@@ -110,7 +110,7 @@ class AccountPaymentMethodLine(models.Model):
         domain="[('deprecated', '=', False), "
                 "('company_id', '=', company_id), "
                 "('account_type', 'not in', ('asset_receivable', 'liability_payable')), "
-                "'|', ('account_type', '=', 'asset_current'), ('id', '=', parent.default_account_id)]"
+                "'|', ('account_type', 'in', ('asset_current', 'liability_current')), ('id', '=', parent.default_account_id)]"
     )
     journal_id = fields.Many2one(comodel_name='account.journal', ondelete="cascade")
 

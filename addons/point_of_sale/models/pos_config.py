@@ -28,13 +28,17 @@ class PosConfig(models.Model):
     def _default_payment_methods(self):
         """ Should only default to payment methods that are compatible to this config's company and currency.
         """
-        return self.env['pos.payment.method'].search([
+        domain = [
             ('split_transactions', '=', False),
             ('company_id', '=', self.env.company.id),
             '|',
                 ('journal_id', '=', False),
                 ('journal_id.currency_id', 'in', (False, self.env.company.currency_id.id)),
-        ])
+        ]
+        non_cash_pm = self.env['pos.payment.method'].search(domain + [('is_cash_count', '=', False)])
+        available_cash_pm = self.env['pos.payment.method'].search(domain + [('is_cash_count', '=', True),
+                                                                            ('config_ids', '=', False)], limit=1)
+        return non_cash_pm | available_cash_pm
 
     def _default_pricelist(self):
         return self.env['product.pricelist'].search([('company_id', 'in', (False, self.env.company.id)), ('currency_id', '=', self.env.company.currency_id.id)], limit=1)
@@ -165,14 +169,14 @@ class PosConfig(models.Model):
                                                    "When the session is open, we keep on loading all remaining products in the background.\n"
                                                    "In the meantime, you can click on the 'database icon' in the searchbar to load products from database.")
     limited_products_amount = fields.Integer(default=20000)
-    product_load_background = fields.Boolean(default=True)
+    product_load_background = fields.Boolean(default=False)
     limited_partners_loading = fields.Boolean('Limited Partners Loading',
                                               default=True,
                                               help="By default, 100 partners are loaded.\n"
                                                    "When the session is open, we keep on loading all remaining partners in the background.\n"
                                                    "In the meantime, you can use the 'Load Customers' button to load partners from database.")
     limited_partners_amount = fields.Integer(default=100)
-    partner_load_background = fields.Boolean(default=True)
+    partner_load_background = fields.Boolean(default=False)
 
     @api.depends('payment_method_ids')
     def _compute_cash_control(self):
@@ -182,10 +186,7 @@ class PosConfig(models.Model):
     @api.depends('company_id')
     def _compute_company_has_template(self):
         for config in self:
-            if config.company_id.chart_template_id:
-                config.company_has_template = True
-            else:
-                config.company_has_template = False
+            config.company_has_template = self.env['account.chart.template'].existing_accounting(config.company_id) or config.company_id.chart_template_id
 
     def _compute_is_installed_account_accountant(self):
         account_accountant = self.env['ir.module.module'].sudo().search([('name', '=', 'account_accountant'), ('state', '=', 'installed')])
@@ -498,7 +499,7 @@ class PosConfig(models.Model):
             domain.append(('pos_categ_id', 'in', self.iface_available_categ_ids.ids))
         if not self.env['product.product'].search(domain):
             return {
-                'name': _("There is no products linked to your PoS"),
+                'name': _("There is no product linked to your PoS"),
                 'type': 'ir.actions.act_window',
                 'view_type': 'form',
                 'view_mode': 'form',
@@ -612,8 +613,9 @@ class PosConfig(models.Model):
             WITH pm AS (
                   SELECT product_id,
                          Max(write_date) date
-                    FROM stock_quant
+                    FROM stock_move_line
                 GROUP BY product_id
+                ORDER BY date DESC
             )
                SELECT p.id
                  FROM product_product p
@@ -625,10 +627,11 @@ class PosConfig(models.Model):
                     AND (t.company_id=%(company_id)s OR t.company_id IS NULL)
                     AND %(available_categ_ids)s IS NULL OR t.pos_categ_id=ANY(%(available_categ_ids)s)
                 )    OR p.id=%(tip_product_id)s
-             ORDER BY t.priority DESC,
-                      t.detailed_type DESC,
-                      COALESCE(pm.date,p.write_date) DESC 
-                LIMIT %(limit)s
+            ORDER BY t.priority DESC,
+                    case when t.detailed_type = 'service' then 1 else 0 end DESC,
+                    pm.date DESC NULLS LAST,
+                    p.write_date
+            LIMIT %(limit)s
         """
         params = {
             'company_id': self.company_id.id,

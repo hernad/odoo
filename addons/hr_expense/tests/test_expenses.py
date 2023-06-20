@@ -4,6 +4,7 @@ from odoo.addons.hr_expense.tests.common import TestExpenseCommon
 from odoo.tests import tagged, Form
 from odoo.tools.misc import formatLang
 from odoo import fields, Command
+from odoo.exceptions import UserError
 
 
 @tagged('-at_install', 'post_install')
@@ -102,6 +103,45 @@ class TestExpenses(TestExpenseCommon):
 
         self.assertEqual(expense_sheet.payment_state, 'paid', 'payment_state should be paid')
 
+    def test_expense_sheet_company_payment_state(self):
+        ''' Test expense sheet company payment states'''
+
+        expense_sheet = self.env['hr.expense.sheet'].create({
+            'name': 'Expense for John Smith',
+            'employee_id': self.expense_employee.id,
+            'accounting_date': '2021-01-01',
+            'expense_line_ids': [(0, 0, {
+                'name': 'Car Travel Expenses',
+                'employee_id': self.expense_employee.id,
+                'product_id': self.product_a.id,
+                'unit_amount': 350.00,
+                'payment_mode': 'company_account',
+            })]
+        })
+
+        expense_sheet.action_submit_sheet()
+        expense_sheet.approve_expense_sheets()
+        expense_sheet.action_sheet_move_create()
+
+        self.assertEqual(expense_sheet.payment_state, 'paid', 'payment_state should be paid')
+        liquidity_line = expense_sheet.account_move_id.payment_id._seek_for_lines()[0]
+
+        statement_line = self.env['account.bank.statement.line'].create({
+            'journal_id': self.company_data['default_journal_bank'].id,
+            'payment_ref': 'pay_ref',
+            'amount': -350.0,
+            'partner_id': self.expense_employee.address_home_id.id,
+        })
+
+        # Reconcile without the bank reconciliation widget since the widget is in enterprise.
+        _st_liquidity_lines, st_suspense_lines, _st_other_lines = statement_line\
+            .with_context(skip_account_move_synchronization=True)\
+            ._seek_for_lines()
+        st_suspense_lines.account_id = liquidity_line.account_id
+        (st_suspense_lines + liquidity_line).reconcile()
+
+        self.assertEqual(expense_sheet.payment_state, 'paid', 'payment_state should be paid')
+
     def test_expense_values(self):
         """ Checking accounting move entries and analytic entries when submitting expense """
         # The expense employee is able to a create an expense sheet.
@@ -117,7 +157,7 @@ class TestExpenses(TestExpenseCommon):
             'expense_line_ids': [
                 (0, 0, {
                     # Expense without foreign currency.
-                    'name': 'expense_1',
+                    'name': 'expense_company_currency',
                     'date': '2016-01-01',
                     'product_id': self.product_a.id,
                     'unit_amount': 1000.0,
@@ -127,10 +167,10 @@ class TestExpenses(TestExpenseCommon):
                 }),
                 (0, 0, {
                     # Expense with foreign currency (rate 1:3).
-                    'name': 'expense_1',
+                    'name': 'expense_foreign_currency',
                     'date': '2016-01-01',
-                    'product_id': self.product_b.id,
-                    'unit_amount': 1500.0,
+                    'product_id': self.product_c.id, # product with no cost, else not possible to enter amount in different currency
+                    'total_amount': 1500.0,
                     'tax_ids': [(6, 0, self.company_data['default_tax_purchase'].ids)],
                     'analytic_distribution': {self.analytic_account_2.id: 100},
                     'currency_id': self.currency_data['currency'].id,
@@ -150,33 +190,22 @@ class TestExpenses(TestExpenseCommon):
             # Receivable line (company currency):
             {
                 'debit': 0.0,
-                'credit': 1000.0,
-                'amount_currency': -1000.0,
+                'credit': 1500.0,
+                'amount_currency': -1500.0,
                 'account_id': self.company_data['default_account_payable'].id,
                 'product_id': False,
                 'currency_id': self.company_data['currency'].id,
                 'tax_line_id': False,
                 'analytic_distribution': False,
             },
-            # Receivable line (foreign currency):
-            {
-                'debit': 0.0,
-                'credit': 750,
-                'amount_currency': -1500.0,
-                'account_id': self.company_data['default_account_payable'].id,
-                'product_id': False,
-                'currency_id': self.currency_data['currency'].id,
-                'tax_line_id': False,
-                'analytic_distribution': False,
-            },
             # Tax line (foreign currency):
             {
-                'debit': 97.83,
+                'debit': 65.22,
                 'credit': 0.0,
-                'amount_currency': 195.652,
+                'amount_currency': 65.22,
                 'account_id': self.company_data['default_account_tax_purchase'].id,
                 'product_id': False,
-                'currency_id': self.currency_data['currency'].id,
+                'currency_id': self.company_data['currency'].id,
                 'tax_line_id': self.company_data['default_tax_purchase'].id,
                 'analytic_distribution': False,
             },
@@ -193,18 +222,18 @@ class TestExpenses(TestExpenseCommon):
             },
             # Product line (foreign currency):
             {
-                'debit': 652.17,
+                'debit': 434.78, # 1500 * 1:3 (rate) / 1.15 (incl. tax)
                 'credit': 0.0,
-                'amount_currency': 1304.348, # untaxed amount
-                'account_id': self.product_b.property_account_expense_id.id,
-                'product_id': self.product_b.id,
-                'currency_id': self.currency_data['currency'].id,
+                'amount_currency': 434.78, # untaxed amount
+                'account_id': self.product_c.property_account_expense_id.id,
+                'product_id': self.product_c.id,
+                'currency_id': self.company_data['currency'].id,
                 'tax_line_id': False,
                 'analytic_distribution': {str(self.analytic_account_2.id): 100},
             },
             # Product line (company currency):
             {
-                'debit': 869.57,
+                'debit': 869.57, # 1000 * 1:1 (rate) / 1.15 (incl. tax)
                 'credit': 0.0,
                 'amount_currency': 869.57,
                 'account_id': self.company_data['default_account_expense'].id,
@@ -224,12 +253,34 @@ class TestExpenses(TestExpenseCommon):
                 'currency_id': self.company_data['currency'].id,
             },
             {
-                'amount': -652.17,
+                'amount': -434.78,
                 'date': fields.Date.from_string('2017-01-01'),
                 'account_id': self.analytic_account_2.id,
                 'currency_id': self.company_data['currency'].id,
             },
         ])
+
+    def test_expense_company_account(self):
+        """ Create an expense with payment mode 'Company' and post it (it should not fail) """
+        with Form(self.env['hr.expense']) as expense_form:
+            expense_form.name = 'Company expense'
+            expense_form.date = '2022-11-17'
+            expense_form.total_amount = 1000.0
+            expense_form.payment_mode = 'company_account'
+            expense_form.employee_id = self.expense_employee
+            expense_form.product_id = self.product_a
+            expense = expense_form.save()
+
+        with Form(self.env['hr.expense.sheet']) as expense_sheet_form:
+            # Use same values that will be used by action_submit_expenses
+            expense_sheet_form.employee_id = expense.employee_id
+            expense_sheet_form.name = expense.name
+            expense_sheet_form.expense_line_ids.add(expense)
+            expense_sheet = expense_sheet_form.save()
+
+        expense_sheet.action_submit_sheet()
+        expense_sheet.approve_expense_sheets()
+        expense_sheet.action_sheet_move_create()
 
     def test_account_entry_multi_currency(self):
         """ Checking accounting move entries and analytic entries when submitting expense. With
@@ -239,7 +290,7 @@ class TestExpenses(TestExpenseCommon):
             'employee_id': self.expense_employee.id,
         })
         tax = self.env['account.tax'].create({
-            'name': 'Expense 10%',
+            'name': 'Tax Expense 10%',
             'amount': 10,
             'amount_type': 'percent',
             'type_tax_use': 'purchase',
@@ -248,12 +299,12 @@ class TestExpenses(TestExpenseCommon):
         self.env['hr.expense'].create({
             'name': 'Choucroute Saucisse',
             'employee_id': self.expense_employee.id,
-            'product_id': self.product_a.id,
-            'unit_amount': 700.00,
+            'product_id': self.product_c.id, # product with no cost, else not possible to enter amount in different currency
+            'total_amount': 700.0,
             'tax_ids': [(6, 0, tax.ids)],
             'sheet_id': expense.id,
             'analytic_distribution': {self.analytic_account_1.id: 100},
-            'currency_id': self.currency_data['currency'].id,
+            'currency_id': self.currency_data['currency'].id, # rate is 1:2
         })
 
         # State should default to draft
@@ -272,16 +323,16 @@ class TestExpenses(TestExpenseCommon):
         self.assertEqual(len(analytic_line), 1)
         self.assertInvoiceValues(expense.account_move_id, [
             {
-                'balance': 318.18,
-                'amount_currency': 636.364,
-                'product_id': self.product_a.id,
-                'price_unit': 700.0,
-                'price_subtotal': 636.364,
-                'price_total': 700.0,
+                'balance': 318.18, # 700 * 1:2 (rate) / 1.1 (incl. tax)
+                'amount_currency': 318.18,
+                'product_id': self.product_c.id,
+                'price_unit': 350.0,
+                'price_subtotal': 318.18,
+                'price_total': 350.0,
                 'analytic_line_ids': analytic_line.ids,
             }, {
                 'balance': 31.82,
-                'amount_currency': 63.636,
+                'amount_currency': 31.82,
                 'product_id': False,
                 'price_unit': 0.0,
                 'price_subtotal': 0.0,
@@ -289,7 +340,7 @@ class TestExpenses(TestExpenseCommon):
                 'analytic_line_ids': [],
             }, {
                 'balance': -350.0,
-                'amount_currency': -700.0,
+                'amount_currency': -350.0,
                 'product_id': False,
                 'price_unit': 0.0,
                 'price_subtotal': 0.0,
@@ -297,8 +348,82 @@ class TestExpenses(TestExpenseCommon):
                 'analytic_line_ids': [],
             },
         ], {
-            'amount_total': 700.0,
+            'amount_total': 350.0,
         })
+
+    def test_account_entry_multi_currency_company_account(self):
+        """ Checking accounting payment entry when payment_mode is 'Company'. With multi-currency."""
+        expense = self.env['hr.expense'].create({
+            'name': 'Company expense',
+            'date': '2022-11-17',
+            'total_amount': 1000.0,
+            'payment_mode': 'company_account',
+            'employee_id': self.expense_employee.id,
+            'product_id': self.product_a.id,
+            'currency_id': self.currency_data['currency'].id,  # rate is 1:2
+        })
+
+        foreign_bank_journal = self.company_data['default_journal_bank'].copy()
+        foreign_bank_journal.currency_id = self.currency_data['currency'].id
+        foreign_bank_journal_account = foreign_bank_journal.default_account_id.copy()
+        foreign_bank_journal_account.currency_id = self.currency_data['currency'].id
+        foreign_bank_journal.default_account_id = foreign_bank_journal_account.id
+
+        expense_sheet = self.env['hr.expense.sheet'].create({
+            'name': "test_account_entry_multi_currency_own_account",
+            'employee_id': self.expense_employee.id,
+            'accounting_date': '2020-01-01',
+            'bank_journal_id': foreign_bank_journal.id,
+            'expense_line_ids': [Command.set(expense.ids)],
+        })
+
+        expense_sheet.action_submit_sheet()
+        expense_sheet.approve_expense_sheets()
+        expense_sheet.action_sheet_move_create()
+        self.assertRecordValues(expense_sheet.account_move_id.payment_id, [{
+            'currency_id': self.env.company.currency_id.id,
+        }])
+        self.assertRecordValues(expense_sheet.account_move_id.line_ids, [
+            {'currency_id': self.env.company.currency_id.id},
+            {'currency_id': self.env.company.currency_id.id},
+            {'currency_id': self.env.company.currency_id.id},
+            {'currency_id': self.env.company.currency_id.id},
+        ])
+
+    def test_account_entry_multi_currency_own_account(self):
+        """ Checking accounting payment entry when payment_mode is 'Company'. With multi-currency."""
+        expense = self.env['hr.expense'].create({
+            'name': 'Company expense',
+            'date': '2022-11-17',
+            'total_amount': 1000.0,
+            'payment_mode': 'own_account',
+            'employee_id': self.expense_employee.id,
+            'product_id': self.product_a.id,
+            'currency_id': self.currency_data['currency'].id, # rate is 1:2
+        })
+
+        foreign_sale_journal = self.company_data['default_journal_sale'].copy()
+        foreign_sale_journal.currency_id = self.currency_data['currency'].id
+
+        expense_sheet = self.env['hr.expense.sheet'].create({
+            'name': "test_account_entry_multi_currency_own_account",
+            'employee_id': self.expense_employee.id,
+            'accounting_date': '2020-01-01',
+            'journal_id': foreign_sale_journal.id,
+            'expense_line_ids': [Command.set(expense.ids)],
+        })
+
+        expense_sheet.action_submit_sheet()
+        expense_sheet.approve_expense_sheets()
+        expense_sheet.action_sheet_move_create()
+        self.assertRecordValues(expense_sheet.account_move_id, [{
+            'currency_id': self.env.company.currency_id.id,
+        }])
+        self.assertRecordValues(expense_sheet.account_move_id.line_ids, [
+            {'currency_id': self.env.company.currency_id.id},
+            {'currency_id': self.env.company.currency_id.id},
+            {'currency_id': self.env.company.currency_id.id},
+        ])
 
     def test_expenses_with_tax_and_lockdate(self):
         ''' Test creating a journal entry for multiple expenses using taxes. A lock date is set in order to trigger
@@ -381,7 +506,7 @@ class TestExpenses(TestExpenseCommon):
         wizard = Form(self.env['account.payment.register'].with_context(action_data['context'])).save()
         action = wizard.action_create_payments()
         self.assertEqual(sheet.state, 'done', 'all account.move.line linked to expenses must be reconciled after payment')
-        move = self.env['account.payment'].search(action['domain']).move_id
+        move = self.env['account.payment'].browse(action['res_id']).move_id
         move.button_cancel()
         self.assertEqual(sheet.state, 'done', 'Sheet state must not change when the payment linked to that sheet is canceled')
 
@@ -488,11 +613,7 @@ class TestExpenses(TestExpenseCommon):
         self.assertRecordValues(expense_sheet.account_move_id.line_ids.sorted('balance'), [
             # Receivable lines:
             {
-                'balance': -230.0,
-                'account_id': self.company_data['default_account_payable'].id,
-            },
-            {
-                'balance': -115.0,
+                'balance': -345.0, # 115 + 230
                 'account_id': self.company_data['default_account_payable'].id,
             },
             # Tax lines:
@@ -506,12 +627,12 @@ class TestExpenses(TestExpenseCommon):
             },
             # Expense line 1:
             {
-                'balance': 100.0,
+                'balance': 100.0, # 115 / 1.15 (tax incl.)
                 'account_id': account_expense_1.id,
             },
             # Expense line 2:
             {
-                'balance': 200.0,
+                'balance': 200.0, # 230 / 1.15 (tax incl.)
                 'account_id': account_expense_2.id,
             },
         ])
@@ -592,7 +713,7 @@ class TestExpenses(TestExpenseCommon):
         action = wizard.action_create_payments()
         self.assertEqual(sheet.state, 'done', 'all account.move.line linked to expenses must be reconciled after payment')
 
-        payments = self.env[action['res_model']].search(action['domain'])
+        payments = self.env[action['res_model']].browse(action['res_id'])
         for payment in payments:
             pages = payment._check_get_pages()
             stub_line = pages[0]['stub_lines'][:1]
@@ -606,3 +727,232 @@ class TestExpenses(TestExpenseCommon):
                 'amount_paid': formatLang(self.env, payment.amount_total, currency_obj=self.env.company.currency_id),
                 'currency': self.env.company.currency_id
             })
+
+    def test_hr_expense_split(self):
+        """
+        Check Split Expense flow.
+        """
+        expense = self.env['hr.expense'].create({
+            'name': 'Expense To Test Split - Diego, libre dans sa tête',
+            'employee_id': self.expense_employee.id,
+            'product_id': self.product_zero_cost.id,
+            'total_amount': 100.00,
+            'tax_ids': [(6, 0, [self.tax_purchase_a.id])],
+            'analytic_distribution': {self.analytic_account_1.id: 100},
+        })
+
+        split_wizard = expense.action_split_wizard()
+        wizard = self.env['hr.expense.split.wizard'].browse(split_wizard['res_id'])
+
+        # Check default hr.expense.split values
+        self.assertRecordValues(wizard.expense_split_line_ids, [
+            {
+                'name': expense.name,
+                'wizard_id': wizard.id,
+                'expense_id': expense.id,
+                'product_id': expense.product_id.id,
+                'tax_ids': expense.tax_ids.ids,
+                'total_amount': expense.total_amount / 2,
+                'amount_tax': 6.52,
+                'employee_id': expense.employee_id.id,
+                'company_id': expense.company_id.id,
+                'currency_id': expense.currency_id.id,
+                'analytic_distribution': expense.analytic_distribution,
+            } for i in range(0, 2)])
+
+        self.assertEqual(wizard.split_possible, True)
+        self.assertEqual(wizard.total_amount, expense.total_amount)
+
+        # Grant Analytic Accounting rights, to be able to modify analytic_distribution from the wizard
+        self.env.user.groups_id += self.env.ref('analytic.group_analytic_accounting')
+
+        with Form(wizard) as form:
+            form.expense_split_line_ids.remove(index=0)
+            self.assertEqual(form.split_possible, False)
+
+            # Check removing tax_ids and analytic_distribution
+            with form.expense_split_line_ids.edit(0) as line:
+                line.total_amount = 20
+                line.tax_ids.clear()
+                line.analytic_distribution = {}
+                self.assertEqual(line.total_amount, 20)
+                self.assertEqual(line.amount_tax, 0)
+
+            self.assertEqual(form.split_possible, False)
+
+            # This line should have the same tax_ids and analytic_distribution as original expense
+            with form.expense_split_line_ids.new() as line:
+                line.total_amount = 30
+                self.assertEqual(line.total_amount, 30)
+                self.assertEqual(line.amount_tax, 3.91)
+            self.assertEqual(form.split_possible, False)
+            self.assertEqual(form.total_amount, 50)
+
+            # Check adding tax_ids and setting analytic_distribution
+            with form.expense_split_line_ids.new() as line:
+                line.total_amount = 50
+                line.tax_ids.add(self.tax_purchase_b)
+                line.analytic_distribution = {self.analytic_account_2.id: 100}
+                self.assertEqual(line.total_amount, 50)
+                self.assertAlmostEqual(line.amount_tax, 11.54)
+
+            # Check wizard values
+            self.assertEqual(form.total_amount, 100)
+            self.assertEqual(form.total_amount_original, 100)
+            self.assertAlmostEqual(form.total_amount_taxes, 15.45)
+            self.assertEqual(form.split_possible, True)
+
+        wizard.action_split_expense()
+        # Check that split resulted into expenses with correct values
+        expenses_after_split = self.env['hr.expense'].search(
+            [
+                ('name', '=', expense.name)
+            ]
+        )
+        self.assertRecordValues(expenses_after_split.sorted('total_amount'), [
+            {
+                'name': expense.name,
+                'employee_id': expense.employee_id.id,
+                'product_id': expense.product_id.id,
+                'total_amount': 20.0,
+                'tax_ids': [],
+                'amount_tax': 0,
+                'untaxed_amount': 20,
+                'analytic_distribution': False,
+            },
+            {
+                'name': expense.name,
+                'employee_id': expense.employee_id.id,
+                'product_id': expense.product_id.id,
+                'total_amount': 30,
+                'tax_ids': [self.tax_purchase_a.id],
+                'amount_tax': 3.91,
+                'untaxed_amount': 26.09,
+                'analytic_distribution': {str(self.analytic_account_1.id): 100},
+            },
+            {
+                'name': expense.name,
+                'employee_id': expense.employee_id.id,
+                'product_id': expense.product_id.id,
+                'total_amount': 50,
+                'tax_ids': [self.tax_purchase_a.id, self.tax_purchase_b.id],
+                'amount_tax': 11.54,
+                'untaxed_amount': 38.46,
+                'analytic_distribution': {str(self.analytic_account_2.id): 100},
+            }
+        ])
+
+    def test_analytic_account_deleted(self):
+        """ Test that an analytic account cannot be deleted if it is used in an expense """
+
+        expense = self.env['hr.expense.sheet'].create({
+            'name': 'Expense for Dick Tracy',
+            'employee_id': self.expense_employee.id,
+        })
+        expense = self.env['hr.expense'].create({
+            'name': 'Choucroute Saucisse',
+            'employee_id': self.expense_employee.id,
+            'product_id': self.product_a.id,
+            'unit_amount': 700.00,
+            'sheet_id': expense.id,
+            'analytic_distribution': {
+                self.analytic_account_1.id: 50,
+                self.analytic_account_2.id: 50,
+            },
+        })
+
+        with self.assertRaises(UserError):
+            (self.analytic_account_1 | self.analytic_account_2).unlink()
+
+        expense.unlink()
+        self.analytic_account_1.unlink()
+
+    def test_reset_move_to_draft(self):
+        """
+        Test the state of an expense and its report
+        after resetting the paid move to draft
+        """
+        expense_sheet = self.env['hr.expense.sheet'].create({
+            'company_id': self.env.company.id,
+            'employee_id': self.expense_employee.id,
+            'name': 'test sheet',
+            'expense_line_ids': [
+                (0, 0, {
+                    'name': 'expense_1',
+                    'employee_id': self.expense_employee.id,
+                    'product_id': self.product_a.id,
+                    'unit_amount': 1000.00,
+                }),
+            ],
+        })
+
+        expense = expense_sheet.expense_line_ids
+
+        self.assertEqual(expense.state, 'draft', 'Expense state must be draft before sheet submission')
+        self.assertEqual(expense_sheet.state, 'draft', 'Sheet state must be draft before submission')
+
+        # Submit report
+        expense_sheet.action_submit_sheet()
+
+        self.assertEqual(expense.state, 'reported', 'Expense state must be reported after sheet submission')
+        self.assertEqual(expense_sheet.state, 'submit', 'Sheet state must be submit after submission')
+
+        # Approve report
+        expense_sheet.approve_expense_sheets()
+
+        self.assertEqual(expense.state, 'approved', 'Expense state must be draft after sheet approval')
+        self.assertEqual(expense_sheet.state, 'approve', 'Sheet state must be draft after approval')
+
+        # Create move
+        expense_sheet.action_sheet_move_create()
+
+        self.assertEqual(expense.state, 'approved', 'Expense state must be draft after posting move')
+        self.assertEqual(expense_sheet.state, 'post', 'Sheet state must be draft after posting move')
+
+        # Pay move
+        move = expense_sheet.account_move_id
+        self.env['account.payment.register'].with_context(active_model='account.move', active_ids=move.ids).create({
+            'amount': 1000.0,
+        })._create_payments()
+
+        self.assertEqual(expense.state, 'done', 'Expense state must be done after payment')
+        self.assertEqual(expense_sheet.state, 'done', 'Sheet state must be done after payment')
+
+        # Reset move to draft
+        move.button_draft()
+
+        self.assertEqual(expense.state, 'approved', 'Expense state must be approved after resetting move to draft')
+        self.assertEqual(expense_sheet.state, 'post', 'Sheet state must be done after resetting move to draft')
+
+        # Post and pay move again
+        move.action_post()
+        self.env['account.payment.register'].with_context(active_model='account.move', active_ids=move.ids).create({
+            'amount': 1000.0,
+        })._create_payments()
+
+        self.assertEqual(expense.state, 'done', 'Expense state must be done after payment')
+        self.assertEqual(expense_sheet.state, 'done', 'Sheet state must be done after payment')
+
+    def test_expense_sheet_due_date(self):
+        ''' Test expense sheet bill due date'''
+
+        self.expense_employee.user_partner_id.property_supplier_payment_term_id = self.env.ref('account.account_payment_term_30days')
+
+        expense_sheet = self.env['hr.expense.sheet'].create({
+            'name': 'Expense for John Smith',
+            'employee_id': self.expense_employee.id,
+            'accounting_date': '2021-01-01',
+            'expense_line_ids': [(0, 0, {
+                'name': 'Car Travel Expenses',
+                'employee_id': self.expense_employee.id,
+                'product_id': self.product_a.id,
+                'unit_amount': 350.00,
+            })]
+        })
+
+        expense_sheet.action_submit_sheet()
+        expense_sheet.approve_expense_sheets()
+        expense_sheet.action_sheet_move_create()
+        move = expense_sheet.account_move_id
+        expected_date = fields.Date.from_string('2021-01-31')
+        self.assertEqual(move.invoice_date_due, expected_date, 'Bill due date should follow employee payment terms')

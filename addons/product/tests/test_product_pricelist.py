@@ -104,7 +104,7 @@ class TestProductPricelist(ProductCommon):
                     'min_quantity': 2,
                     'compute_price': 'formula',
                     'base': 'list_price',
-                    'categ_id': cls.category_5_id,
+                    'categ_id': cls.product_category.id,
                     'price_discount': 5,
                 }),
                 Command.create({
@@ -256,3 +256,16 @@ class TestProductPricelist(ProductCommon):
         price = pricelist._get_product_price(self.monitor, quantity=1.0)
         # product price use the currency of the pricelist
         self.assertEqual(price, 10090)
+
+    def test_30_pricelist_delete(self):
+        """ Test that `unlink` on many records doesn't raise a RecursionError. """
+        self.customer_pricelist = self.env['product.pricelist'].create({
+            'name': 'Customer Pricelist',
+            'item_ids': [
+                Command.create({
+                    'compute_price': 'formula',
+                    'base': 'pricelist',
+                }),
+            ] * 101,
+        })
+        self.customer_pricelist.unlink()

@@ -175,9 +175,9 @@ var PaymentAdyen = PaymentInterface.extend({
             var params = new URLSearchParams(entry.Text);
 
             if (params.get('name') && !params.get('value')) {
-                return acc + _.str.sprintf('<br/>%s', params.get('name'));
+                return acc + _.str.sprintf('\n%s', params.get('name'));
             } else if (params.get('name') && params.get('value')) {
-                return acc + _.str.sprintf('<br/>%s: %s', params.get('name'), params.get('value'));
+                return acc + _.str.sprintf('\n%s: %s', params.get('name'), params.get('value'));
             }
 
             return acc;
@@ -212,7 +212,7 @@ var PaymentAdyen = PaymentInterface.extend({
         }).then(function (status) {
             var notification = status.latest_response;
             var order = self.pos.get_order();
-            var line = self.pending_adyen_line();
+            var line = self.pending_adyen_line() || resolve(false);
 
             if (notification && notification.SaleToPOIResponse.MessageHeader.ServiceID == line.terminalServiceId) {
                 var response = notification.SaleToPOIResponse.PaymentResponse.Response;

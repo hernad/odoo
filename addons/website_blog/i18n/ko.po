@@ -5,6 +5,8 @@
 # Translators:
 # Martin Trigaux, 2022
 # JH CHOI <hwangtog@gmail.com>, 2022
+# Sarah Park, 2023
+# Daye Jeong, 2023
 # 
 msgid ""
 msgstr ""
@@ -12,8 +14,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-03 16:41+0000\n"
 "PO-Revision-Date: 2022-09-22 05:56+0000\n"
-"Last-Translator: JH CHOI <hwangtog@gmail.com>, 2022\n"
-"Language-Team: Korean (https://www.transifex.com/odoo/teams/41243/ko/)\n"
+"Last-Translator: Daye Jeong, 2023\n"
+"Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -44,7 +46,7 @@ msgstr "' 페이지 머리말."
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_short
 msgid "'. Showing results for '"
-msgstr ""
+msgstr "'. 다음에 대한 결과 표시 중 '"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.date_selector
@@ -161,7 +163,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_tags_display
 msgid "<em>No tags defined</em>"
-msgstr ""
+msgstr "<em>정의된 태그 없음</em>"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_complete
@@ -177,7 +179,7 @@ msgstr ""
 msgid ""
 "<i class=\"fa fa-clock-o me-1\" role=\"img\" aria-label=\"Post date\" "
 "title=\"Post date\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-clock-o me-1\" role=\"img\" aria-label=\"게시일\" title=\"게시일\"/>"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_sidebar_blog_index_follow_us
@@ -187,7 +189,7 @@ msgstr "<i class=\"fa fa-github text-github\" aria-label=\"Github\" title=\"Gith
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_view_kanban
 msgid "<i class=\"fa fa-globe me-1\" title=\"Website\"/>"
-msgstr ""
+msgstr "<i class=\"fa fa-globe me-1\" title=\"Website\"/>"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_sidebar_blog_index_follow_us
@@ -236,6 +238,8 @@ msgid ""
 "<span class=\"bg-o-color-3 h6 d-inline-block py-1 px-2 rounded-1\">Read "
 "Next</span>"
 msgstr ""
+"<span class=\"bg-o-color-3 h6 d-inline-block py-1 px-2 rounded-1\">다음 "
+"보기</span>"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_read_next
@@ -244,16 +248,19 @@ msgid ""
 "                                    <i class=\"fa fa-angle-right fa-3x text-white\" aria-label=\"Read next\" title=\"Read Next\"/>\n"
 "                                </span>"
 msgstr ""
+"<span class=\"h4 d-inline-block py-1 px-2 rounded-1 text-white\">\n"
+"                                    <i class=\"fa fa-angle-right fa-3x text-white\" aria-label=\"다음 보기\" title=\"다음 보기\"/>\n"
+"                                </span>"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.posts_loop
 msgid "<span class=\"me-1\">Show:</span>"
-msgstr ""
+msgstr "<span class=\"me-1\">보기:</span>"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blogs_nav
 msgid "<span class=\"nav-link disabled ps-0\">Blogs:</span>"
-msgstr ""
+msgstr "<span class=\"nav-link disabled ps-0\">블로그:</span>"
 
 #. module: website_blog
 #: model:blog.post,subtitle:website_blog.blog_post_2
@@ -344,7 +351,7 @@ msgstr "모든 블로그"
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Alone in the ocean"
-msgstr ""
+msgstr "바다에서 홀로"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_6
@@ -467,7 +474,7 @@ msgstr "아바타"
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Awesome hotel rooms"
-msgstr ""
+msgstr "Aw근사한 호텔 객실"
 
 #. module: website_blog
 #: model:blog.post,subtitle:website_blog.blog_post_4
@@ -546,7 +553,7 @@ msgstr "블로그 이름"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Blog Page"
-msgstr ""
+msgstr "블로그 페이지"
 
 #. module: website_blog
 #: model:ir.model,name:website_blog.model_blog_post
@@ -558,12 +565,12 @@ msgstr "블로그 게시물"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_complete
 msgid "Blog Post Cover"
-msgstr ""
+msgstr "블로그 게시물 표지"
 
 #. module: website_blog
 #: model:ir.actions.act_window,name:website_blog.action_blog_post
 msgid "Blog Post Pages"
-msgstr ""
+msgstr "블로그 게시물 페이지"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_complete
@@ -578,6 +585,7 @@ msgstr "블로그 게시물 제목"
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__blog_post_ids
 #: model:ir.ui.menu,name:website_blog.menu_blog_post_pages
+#: model_terms:ir.ui.view,arch_db:website_blog.website_blog
 msgid "Blog Posts"
 msgstr "블로그 게시물"
 
@@ -625,12 +633,12 @@ msgstr "블로그"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Blogs List"
-msgstr ""
+msgstr "블로그 목록"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Blogs Page"
-msgstr ""
+msgstr "블로그 페이지"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
@@ -680,7 +688,7 @@ msgstr "게시 가능"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Cards"
-msgstr ""
+msgstr "카드"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__category_id
@@ -704,7 +712,7 @@ msgstr "라이브러리에서 이미지를 선택하십시오."
 #: code:addons/website_blog/static/src/js/tours/website_blog.js:0
 #, python-format
 msgid "Click here to add new content to your website."
-msgstr ""
+msgstr "웹사이트에 새 콘텐츠를 추가하려면 여기를 클릭하세요."
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.posts_loop
@@ -733,7 +741,7 @@ msgstr "의견"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Comments/Views Stats"
-msgstr ""
+msgstr "댓글/조회수 통계"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__content
@@ -791,12 +799,12 @@ msgstr "작성일자"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_searchbar_input_snippet_options
 msgid "Date (new to old)"
-msgstr ""
+msgstr "날짜 (최근 날짜 순)"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_searchbar_input_snippet_options
 msgid "Date (old to new)"
-msgstr ""
+msgstr "날짜 (오래된 날짜 순)"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_searchbar_input_snippet_options
@@ -806,7 +814,7 @@ msgstr "설명"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.s_dynamic_snippet_options_template
 msgid "Dexter"
-msgstr ""
+msgstr "덱스터"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__display_name
@@ -819,7 +827,7 @@ msgstr "표시명"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Drop Zone for Building Blocks"
-msgstr ""
+msgstr "빌딩 블록 드롭존"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_2
@@ -864,14 +872,14 @@ msgstr "'필터 결과' 페이지 헤더를 편집하기."
 #: code:addons/website_blog/static/src/js/tours/website_blog.js:0
 #, python-format
 msgid "Edit your title, the subtitle is optional."
-msgstr ""
+msgstr "제목을 변경하세요, 소제목은 선택 사항입니다."
 
 #. module: website_blog
 #. openerp-web
 #: code:addons/website_blog/static/src/js/tours/website_blog.js:0
 #, python-format
 msgid "Enter your post's title"
-msgstr ""
+msgstr "글 제목을 입력합니다"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_share_links_display
@@ -1004,7 +1012,7 @@ msgstr "휴일 팁"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.s_dynamic_snippet_options_template
 msgid "Hover effect"
-msgstr ""
+msgstr "마우스 오버 효과"
 
 #. module: website_blog
 #: model:blog.post,name:website_blog.blog_post_4
@@ -1094,7 +1102,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Increase Readability"
-msgstr ""
+msgstr "가독성 향상"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__message_is_follower
@@ -1111,7 +1119,7 @@ msgstr "게시 여부"
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Islands"
-msgstr ""
+msgstr "섬"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_5
@@ -1162,7 +1170,7 @@ msgstr ""
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Jungle"
-msgstr ""
+msgstr "정글"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_5
@@ -1219,7 +1227,7 @@ msgstr "최근"
 #. module: website_blog
 #: model:website.snippet.filter,name:website_blog.dynamic_filter_latest_blog_posts
 msgid "Latest Blog Posts"
-msgstr ""
+msgstr "최신 블로그 게시물"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
@@ -1234,8 +1242,8 @@ msgid ""
 "earth so find out the greats of history who have looked at these stars "
 "before you."
 msgstr ""
-"천문학에서의 위대한 발견에 대한 배경을 배우는 것은 스타들이 보는 순간을 더 의미 있게 만들 것입니다. 그것은 지구상에서 가장 오래된 "
-"과학 중 하나이기 때문에 여러분 앞에서 이 별들을 본 역사의 위대한 인물들을 찾아보세요."
+"천문학에서 이루어진 위대한 발견에 대한 배경을 배우면 별을 바라보는 순간이 더 의미 있게 될 것입니다. 지구 상에서 가장 오래된 과학 "
+"지식 중의 하나인 것을 상기하며 역사의 위인들이 발견한 별들을 직접 찾아보십시오."
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_3
@@ -1277,12 +1285,12 @@ msgstr "주요 첨부 파일"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.s_dynamic_snippet_options_template
 msgid "Marley"
-msgstr ""
+msgstr "Marley"
 
 #. module: website_blog
 #: model:blog.post,name:website_blog.blog_post_2
 msgid "Maui helicopter tours"
-msgstr "마우이 헬리콥터 관광"
+msgstr "마우이 헬리콥터 투어"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_2
@@ -1291,8 +1299,8 @@ msgid ""
 "perspective and have a fun adventure. If you have never been on a helicopter"
 " before, this is a great place to do it."
 msgstr ""
-"마우이 헬리콥터 여행은 섬을 다른 시각으로 보고 즐거운 모험을 할 수 있는 좋은 방법입니다. 만약 여러분이 헬리콥터를 타본 적이 없다면,"
-" 이곳은 그것을 하기에 좋은 장소입니다."
+"마우이 헬리콥터 투어는 다른 관점에서 섬을 관광하고 신나는 모험을 하기에 더없이 좋은 방법입니다. 이전에 헬리콥터를 타본 경험이 없다면,"
+" 이곳이야말로 최고의 장소입니다."
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_2
@@ -1305,9 +1313,10 @@ msgid ""
 "to capture the moments will also allow you to relive the tour again and "
 "again as you reminisce throughout the years."
 msgstr ""
-"마우이 헬리콥터 여행은 도보나 차로 갈 수 없는 곳을 여행하는 좋은 방법입니다. 투어는 약 1시간 동안 진행되며, 1인당 1008달러에서"
-" 240달러까지 다양합니다. 많은 사람들에게 이것은 평생에 한번은 다시 볼 수 없는 자연경관을 볼 수 있는 기회이다. 그 순간을 포착하기"
-" 위해 카메라와 비디오를 촬영하는 것은 또한 여러분이 몇 년 동안 추억하면서 이 투어를 반복할 수 있게 해줄 것입니다."
+"마우이 헬리콥터 투어는 도보나 자동차로는 갈 수 없는 곳을 여행하는 좋은 방법입니다. 투어는 약 1 시간 동안 진행되며,  비용은 1 "
+"인당 1008 달러에서 240 달러까지 다양합니다. 대부분의 관광객들에게 평생에 한번 있을만한 멋진 자연 경관을 감상할 수 있는 좋은 "
+"기회일 것입니다. 카메라나 비디오로 영상을 순간 포착하여 이후 몇 년동안 이 여행을 추억하면서 계속해서 투어에 참가하는 것처럼 기억할 수"
+" 있게 해줄 것입니다. "
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_2
@@ -1317,8 +1326,8 @@ msgid ""
 "capture the beauty of the scenery and to show friends and family at home all"
 " the wonderful things you saw while on vacation."
 msgstr ""
-"마우이 헬리콥터 투어를 통해 이 모든 광경을 볼 수 있습니다. 마우이 헬리콥터 여행을 갈 때는 반드시 카메라나 비디오를 가지고 가서 "
-"경치의 아름다움을 포착하고 휴가 중에 본 모든 멋진 것들을 집에서 친구들과 가족들에게 보여주세요."
+"마우이 헬리콥터 투어를 통해 이 모든 명소들을 둘러보실 수 있습니다. 마우이 헬리콥터 투어에는 반드시 카메라나 캠코더를 가지고 가서 "
+"아름다운 풍광을 포착하여 휴가 중에 본 이 모든 멋진 광경들을 집에서 친구들과 가족들에게 보여주세요."
 
 #. module: website_blog
 #. openerp-web
@@ -1385,7 +1394,7 @@ msgstr ""
 #. module: website_blog
 #: model:website.snippet.filter,name:website_blog.dynamic_filter_most_viewed_blog_posts
 msgid "Most Viewed Blog Posts"
-msgstr ""
+msgstr "가장 많이 본 블로그 게시물"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_tag__name
@@ -1396,7 +1405,7 @@ msgstr "이름"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Name / Latest Post"
-msgstr ""
+msgstr "이름 / 최근 게시물"
 
 #. module: website_blog
 #: model:ir.actions.act_window,name:website_blog.blog_post_action_add
@@ -1406,12 +1415,12 @@ msgstr "새 블로그 게시물"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Next Article"
-msgstr ""
+msgstr "다음 게시물"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "No Cover"
-msgstr ""
+msgstr "표지 없음"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.posts_loop
@@ -1426,12 +1435,12 @@ msgstr "조회수"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.posts_loop
 msgid "No results for \"%s\"."
-msgstr ""
+msgstr "\"%s\"에 대한 결과가 없습니다."
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_short
 msgid "No results found for '"
-msgstr ""
+msgstr "' 에 대한 결과를 찾을 수 없습니다."
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_sidebar_blog_index_tags
@@ -1459,7 +1468,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_view_kanban
 msgid "Not Published"
-msgstr ""
+msgstr "게시 안됨"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_5
@@ -1517,7 +1526,7 @@ msgstr ""
 msgid ""
 "Once you have reviewed the content on mobile, you can switch back to the "
 "normal view by clicking here again"
-msgstr ""
+msgstr "모바일에서 콘텐츠를 확인한 후 여기를 클릭하면 일반 화면으로 다시 전환할 수 있습니다."
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_sidebar_blog_index_tags
@@ -1593,12 +1602,12 @@ msgstr "게시물"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Posts List"
-msgstr ""
+msgstr "게시물 목록"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_searchbar_input_snippet_options
 msgid "Publication Date"
-msgstr ""
+msgstr "게시 날짜"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_view_kanban
@@ -1682,26 +1691,26 @@ msgstr "견본"
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Satellites"
-msgstr ""
+msgstr "위성"
 
 #. module: website_blog
 #. openerp-web
 #: code:addons/website_blog/static/src/js/tours/website_blog.js:0
 #, python-format
 msgid "Search for an image. (eg: type \"business\")"
-msgstr ""
+msgstr "이미지를 검색합니다. (예: \"비즈니스\" 입력)"
 
 #. module: website_blog
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Seaside vs mountain side"
-msgstr ""
+msgstr "해변 대 산악지대"
 
 #. module: website_blog
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Seeing the world from above"
-msgstr ""
+msgstr "위에서 내려다본 세상"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.blog_post_view_form_add
@@ -1725,12 +1734,12 @@ msgstr "새 블로그 게시물을 작성하려면 이 메뉴 항목을 선택�
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Select to Comment"
-msgstr ""
+msgstr "댓글 남기기 선택"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Select to Tweet"
-msgstr ""
+msgstr "트윗하기 선택"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_blog__seo_name
@@ -1809,13 +1818,13 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.s_dynamic_snippet_options_template
 msgid "Silly-Chico"
-msgstr ""
+msgstr "Silly-Chico"
 
 #. module: website_blog
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Skies"
-msgstr ""
+msgstr "하늘"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_6
@@ -1880,7 +1889,7 @@ msgstr "<cite title=\"Source Title\">소스 제목</cite>으로 유명한 사람
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Spotting the fauna"
-msgstr ""
+msgstr "동물 관찰하기"
 
 #. module: website_blog
 #: code:addons/website_blog/models/website_blog.py:0
@@ -1956,13 +1965,13 @@ msgstr "태그"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Tags List"
-msgstr ""
+msgstr "태그 목록"
 
 #. module: website_blog
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Taking pictures in the dark"
-msgstr ""
+msgstr "어두운 곳에서 사진 촬영하기"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__teaser
@@ -1972,7 +1981,7 @@ msgstr "티저"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Teaser & Tags"
-msgstr ""
+msgstr "티저 & 태그"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__teaser_manual
@@ -2172,7 +2181,7 @@ msgstr "이 상자는 방문자가 볼 수 없습니다."
 #: code:addons/website_blog/static/src/js/options.js:0
 #, python-format
 msgid "This tag already exists"
-msgstr ""
+msgstr "이 태그는 이미 존재합니다"
 
 #. module: website_blog
 #. openerp-web
@@ -2190,12 +2199,12 @@ msgstr "제목"
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Title Above Cover"
-msgstr ""
+msgstr "표지 위 제목"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Title Inside Cover"
-msgstr ""
+msgstr "표지 내부 제목"
 
 #. module: website_blog
 #: model_terms:blog.post,content:website_blog.blog_post_7
@@ -2265,7 +2274,7 @@ msgstr ""
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.snippet_options
 msgid "Top Banner"
-msgstr ""
+msgstr "상단 배너"
 
 #. module: website_blog
 #: model:blog.blog,name:website_blog.blog_blog_1
@@ -2303,7 +2312,7 @@ msgstr "다음에서 사용 :"
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "Viewpoints"
-msgstr ""
+msgstr "관점"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.post_info
@@ -2341,7 +2350,7 @@ msgstr "웹사이트 메시지"
 #. module: website_blog
 #: model:ir.model,name:website_blog.model_website_snippet_filter
 msgid "Website Snippet Filter"
-msgstr ""
+msgstr "웹사이트 스니펫 필터"
 
 #. module: website_blog
 #: model:ir.model.fields,field_description:website_blog.field_blog_post__website_url
@@ -2404,7 +2413,7 @@ msgstr ""
 #: code:addons/website_blog/models/website_snippet_filter.py:0
 #, python-format
 msgid "With a View"
-msgstr ""
+msgstr "보기 포함"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.sidebar_blog_index
@@ -2521,6 +2530,8 @@ msgid ""
 "|\n"
 "                            <i class=\"fa fa-comment text-muted me-1\"/>"
 msgstr ""
+"|\n"
+"                            <i class=\"fa fa-comment text-muted me-1\"/>"
 
 #. module: website_blog
 #: model_terms:ir.ui.view,arch_db:website_blog.opt_blog_post_regular_cover

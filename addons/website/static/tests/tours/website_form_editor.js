@@ -8,6 +8,34 @@ odoo.define('website.tour.form_editor', function (require) {
     const HIDDEN = 'Hidden';
     const CONDITIONALVISIBILITY = 'Visible only if';
 
+    const NB_NON_ESSENTIAL_REQUIRED_FIELDS_IN_DEFAULT_FORM = 2;
+    const ESSENTIAL_FIELDS_VALID_DATA_FOR_DEFAULT_FORM = [
+        {
+            name: 'email_from',
+            value: 'admin@odoo.com',
+        },
+        {
+            name: 'subject',
+            value: 'Hello, world!',
+        }
+    ];
+    const essentialFieldsForDefaultFormFillInSteps = [];
+    for (const data of ESSENTIAL_FIELDS_VALID_DATA_FOR_DEFAULT_FORM) {
+        essentialFieldsForDefaultFormFillInSteps.push({
+            content: "Enter data in model-required field",
+            trigger: `iframe .s_website_form_model_required .s_website_form_input[name="${data.name}"]`,
+            run: `text ${data.value}`,
+        });
+    }
+
+    // Replace all `"` character by `&quot;`, all `'` character by `&apos;` and
+    // all "`" character by `&lsquo;`.
+    const getQuotesEncodedName = function (name) {
+            return name.replaceAll(/"/g, character => `&quot;`)
+                       .replaceAll(/'/g, character => `&apos;`)
+                       .replaceAll(/`/g, character => `&lsquo;`);
+    };
+
     const selectButtonByText = function (text) {
         return [{
             content: "Open the select",
@@ -27,7 +55,9 @@ odoo.define('website.tour.form_editor', function (require) {
             trigger: `we-select we-button[${data}]`,
         }];
     };
-    const addField = function (data, name, type, label, required, display = {visibility: VISIBLE, condition: ''}) {
+    const addField = function (name, type, label, required, isCustom,
+                               display = {visibility: VISIBLE, condition: ""}) {
+        const data = isCustom ? `data-custom-field="${name}"` : `data-existing-field="${name}"`;
         const ret = [{
             content: "Select form",
             extra_trigger: 'iframe .s_website_form_field',
@@ -60,7 +90,7 @@ odoo.define('website.tour.form_editor', function (require) {
             });
         }
         if (label) {
-            testText += `:has(label:contains("${label}"))`;
+            testText += `:has(label:contains(${label}))`;
             ret.push({
                 content: "Change the label text",
                 trigger: 'we-input[data-set-label-text] input',
@@ -69,7 +99,8 @@ odoo.define('website.tour.form_editor', function (require) {
         }
         if (type !== 'checkbox' && type !== 'radio' && type !== 'select') {
             let inputType = type === 'textarea' ? type : `input[type="${type}"]`;
-            testText += `:has(${inputType}[name="${name}"]${required ? '[required]' : ''})`;
+            const nameAttribute = isCustom && label ? getQuotesEncodedName(label) : name;
+            testText += `:has(${inputType}[name="${nameAttribute}"]${required ? "[required]" : ""})`;
         }
         ret.push({
             content: "Check the resulting field",
@@ -79,10 +110,10 @@ odoo.define('website.tour.form_editor', function (require) {
         return ret;
     };
     const addCustomField = function (name, type, label, required, display) {
-        return addField(`data-custom-field="${name}"`, name, type, label, required, display);
+        return addField(name, type, label, required, true, display);
     };
     const addExistingField = function (name, type, label, required, display) {
-        return addField(`data-existing-field="${name}"`, name, type, label, required, display);
+        return addField(name, type, label, required, false, display);
     };
 
     wTourUtils.registerWebsitePreviewTour("website_form_editor_tour", {
@@ -252,6 +283,22 @@ odoo.define('website.tour.form_editor', function (require) {
             content: "Remove Germany Option",
             trigger: '.o_we_select_remove_option:eq(0)',
         }, {
+            content: "Click on Add new Checkbox",
+            trigger: 'we-list we-button.o_we_list_add_optional',
+        }, {
+            content: "Change last option label with a number",
+            trigger: 'we-list table input:eq(3)',
+            run: 'text 44 - UK',
+        }, {
+            content: "Check that the input value is the full option value",
+            trigger: 'we-list table input:eq(3)',
+            run: () => {
+                const addedOptionEl = document.querySelector('iframe.o_iframe').contentDocument.querySelector('.s_website_form_field select option[value="44 - UK"]');
+                if (!addedOptionEl) {
+                    console.error('The number option was not correctly added');
+                }
+            },
+        }, {
             content: "Check the resulting snippet",
             trigger: "iframe .s_website_form_field.s_website_form_custom.s_website_form_required" +
                         ":has(label:contains('State'))" +
@@ -259,6 +306,7 @@ odoo.define('website.tour.form_editor', function (require) {
                         ":has(.s_website_form_select_item:contains('Belgium'))" +
                         ":has(.s_website_form_select_item:contains('France'))" +
                         ":has(.s_website_form_select_item:contains('Canada'))" +
+                        ":has(.s_website_form_select_item:contains('44 - UK'))" +
                         ":not(:has(.s_website_form_select_item:contains('Germany')))",
             run: function () {},
         },
@@ -323,15 +371,10 @@ odoo.define('website.tour.form_editor', function (require) {
             trigger: 'iframe .s_website_form_field input[data-fill-with="phone"]:propValue("+1 555-555-5555")',
         },
         // Check that if we edit again and save again the default value is not deleted.
-        {
-            content: 'Enter in edit mode again',
-            trigger: '.o_edit_website_container > a',
-            run: 'click',
-        },
+        ...wTourUtils.clickOnEditAndWaitEditMode(),
         {
             content: 'Edit the form',
             trigger: 'iframe .s_website_form_field:eq(0) input',
-            extra_trigger: 'button[data-action="save"]',
             run: 'click',
         },
         ...addCustomField('many2one', 'select', 'Select Field', true),
@@ -345,11 +388,10 @@ odoo.define('website.tour.form_editor', function (require) {
             extra_trigger: 'iframe body:not(.editor_enable)',
             trigger: 'iframe .s_website_form_field:eq(0) input[value="John Smith"]',
         },
-        wTourUtils.clickOnEdit(),
+        ...wTourUtils.clickOnEditAndWaitEditMode(),
         {
             content: 'Click on the submit button',
             trigger: 'iframe .s_website_form_send',
-            extra_trigger: '.o_website_preview.editor_enable',
             run: 'click',
         },
         {
@@ -357,6 +399,9 @@ odoo.define('website.tour.form_editor', function (require) {
             trigger: '[data-field-name="email_to"] input',
             run: 'text test@test.test',
         },
+        ...addCustomField("char", "text", "''", false),
+        ...addCustomField("char", "text", '""', false),
+        ...addCustomField("char", "text", "``", false),
         {
             content: 'Save the page',
             trigger: 'button[data-action=save]',
@@ -412,6 +457,122 @@ odoo.define('website.tour.form_editor', function (require) {
             run: 'text_blur **',
         },
     ]));
+
+    wTourUtils.registerWebsitePreviewTour('website_form_conditional_required_checkboxes', {
+        test: true,
+        url: '/',
+        edition: true,
+    }, [
+        // Create a form with two checkboxes: the second one required but
+        // invisible when the first one is checked. Basically this should allow
+        // to have: both checkboxes are visible by default but the form can
+        // only be sent if one of the checkbox is checked.
+        {
+            content: "Add the form snippet",
+            trigger: '#oe_snippets .oe_snippet:has(.s_website_form) .oe_snippet_thumbnail',
+            run: 'drag_and_drop iframe #wrap',
+        }, {
+            content: "Select the form by clicking on an input field",
+            extra_trigger: 'iframe .s_website_form_field',
+            trigger: 'iframe section.s_website_form input',
+            run: function (actions) {
+                actions.auto();
+
+                // The next steps will be about removing non essential required
+                // fields. For the robustness of the test, check that amount
+                // of field stays the same.
+                const requiredFields = this.$anchor.closest('[data-snippet]').find('.s_website_form_required');
+                if (requiredFields.length !== NB_NON_ESSENTIAL_REQUIRED_FIELDS_IN_DEFAULT_FORM) {
+                    console.error('The amount of required fields seems to have changed');
+                }
+            },
+        },
+        ...((function () {
+            const steps = [];
+            for (let i = 0; i < NB_NON_ESSENTIAL_REQUIRED_FIELDS_IN_DEFAULT_FORM; i++) {
+                steps.push({
+                    content: "Select required field to remove",
+                    trigger: 'iframe .s_website_form_required .s_website_form_input',
+                });
+                steps.push({
+                    content: "Remove required field",
+                    trigger: 'iframe .oe_overlay .oe_snippet_remove',
+                });
+            }
+            return steps;
+        })()),
+        ...addCustomField('boolean', 'checkbox', 'Checkbox 1', false),
+        ...addCustomField('boolean', 'checkbox', 'Checkbox 2', true, {visibility: CONDITIONALVISIBILITY}),
+        {
+            content: "Open condition item select",
+            trigger: 'we-select[data-name="hidden_condition_opt"] we-toggler',
+        }, {
+            content: "Choose first checkbox as condition item",
+            trigger: 'we-button[data-set-visibility-dependency="Checkbox 1"]',
+        }, {
+            content: "Open condition comparator select",
+            trigger: 'we-select[data-attribute-name="visibilityComparator"] we-toggler',
+        }, {
+            content: "Choose 'not equal to' comparator",
+            trigger: 'we-button[data-select-data-attribute="!selected"]',
+        }, {
+            content: 'Save the page',
+            trigger: 'button[data-action=save]',
+        },
+
+        // Check that the resulting form behavior is correct
+        {
+            content: "Wait for page reload",
+            trigger: 'iframe body:not(.editor_enable) [data-snippet="s_website_form"]',
+            run: function (actions) {
+                // The next steps will be about removing non essential required
+                // fields. For the robustness of the test, check that amount
+                // of field stays the same.
+                const essentialFields = this.$anchor.find('.s_website_form_model_required');
+                if (essentialFields.length !== ESSENTIAL_FIELDS_VALID_DATA_FOR_DEFAULT_FORM.length) {
+                    console.error('The amount of model-required fields seems to have changed');
+                }
+            },
+        },
+        ...essentialFieldsForDefaultFormFillInSteps,
+        {
+            content: 'Try sending empty form',
+            trigger: 'iframe .s_website_form_send',
+        }, {
+            content: 'Check the form could not be sent',
+            trigger: 'iframe #s_website_form_result.text-danger',
+            run: () => null,
+        }, {
+            content: 'Check the first checkbox',
+            trigger: 'iframe input[type="checkbox"][name="Checkbox 1"]',
+        }, {
+            content: 'Check the second checkbox is now hidden',
+            trigger: 'iframe .s_website_form:has(input[type="checkbox"][name="Checkbox 2"]:not(:visible))',
+            run: () => null,
+        }, {
+            content: 'Try sending the form',
+            trigger: 'iframe .s_website_form_send',
+        }, {
+            content: "Check the form was sent (success page without form)",
+            trigger: 'iframe body:not(:has([data-snippet="s_website_form"])) .fa-check-circle',
+            run: () => null,
+        }, {
+            content: "Go back to the form",
+            trigger: 'iframe a.navbar-brand.logo',
+        },
+        ...essentialFieldsForDefaultFormFillInSteps,
+        {
+            content: 'Check the second checkbox',
+            trigger: 'iframe input[type="checkbox"][name="Checkbox 2"]',
+        }, {
+            content: 'Try sending the form again',
+            trigger: 'iframe .s_website_form_send',
+        }, {
+            content: "Check the form was again sent (success page without form)",
+            trigger: 'iframe body:not(:has([data-snippet="s_website_form"])) .fa-check-circle',
+            run: () => null,
+        }
+    ]);
 
     return {};
 });

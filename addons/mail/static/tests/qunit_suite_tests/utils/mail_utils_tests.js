@@ -1,6 +1,7 @@
 /** @odoo-module **/
 
 import * as utils from '@mail/js/utils';
+import { start, startServer } from "@mail/../tests/helpers/test_utils";
 
 QUnit.module('mail', {}, function () {
 
@@ -31,6 +32,37 @@ QUnit.test('add_link utility function', function (assert) {
         } else {
             assert.strictEqual(output.indexOf('<a '), -1, "There should be no link");
         }
+    });
+});
+
+QUnit.test('addLink: utility function and special entities', function (assert) {
+    assert.expect(8);
+
+    var testInputs = {
+        // textContent not unescaped
+        '<p>https://example.com/?&amp;currency_id</p>':
+        '<p><a target="_blank" rel="noreferrer noopener" href="https://example.com/?&amp;currency_id">https://example.com/?&amp;currency_id</a></p>',
+        // entities not unescaped
+        '&amp; &amp;amp; &gt; &lt;': '&amp; &amp;amp; &gt; &lt;',
+        // > and " not linkified since they are not in URL regex
+        '<p>https://example.com/&gt;</p>':
+        '<p><a target="_blank" rel="noreferrer noopener" href="https://example.com/">https://example.com/</a>&gt;</p>',
+        '<p>https://example.com/"hello"&gt;</p>':
+        '<p><a target="_blank" rel="noreferrer noopener" href="https://example.com/">https://example.com/</a>"hello"&gt;</p>',
+        // & and ' linkified since they are in URL regex
+        '<p>https://example.com/&amp;hello</p>':
+        '<p><a target="_blank" rel="noreferrer noopener" href="https://example.com/&amp;hello">https://example.com/&amp;hello</a></p>',
+        '<p>https://example.com/\'yeah\'</p>':
+        '<p><a target="_blank" rel="noreferrer noopener" href="https://example.com/\'yeah\'">https://example.com/\'yeah\'</a></p>',
+        // normal character should not be escaped
+        ':\'(': ':\'(',
+        // special character in smileys should be escaped
+        '&lt;3': '&lt;3',
+    };
+
+    _.each(testInputs, function (result, content) {
+        var output = utils.parseAndTransform(content, utils.addLink);
+        assert.strictEqual(output, result);
     });
 });
 
@@ -104,6 +136,86 @@ QUnit.test('addLink: linkify inside text node (2 occurrences)', function (assert
         'https://somelink2.com',
         "text content of 2nd link should be equivalent to its non-linkified version"
     );
+});
+
+QUnit.test("url", async (assert) => {
+    const pyEnv = await startServer();
+    const channelId = pyEnv["mail.channel"].create({ name: "General" });
+    const { click, insertText, openDiscuss } = await start({
+        discuss: {
+            context: { active_id: channelId },
+        },
+    });
+    await openDiscuss();
+    // see: https://www.ietf.org/rfc/rfc1738.txt
+    const messageBody = "https://odoo.com?test=~^|`{}[]#";
+    await insertText(".o_ComposerTextInput_textarea", messageBody);
+    await click("button:contains(Send)");
+    assert.containsOnce($, `.o_Message a:contains(${messageBody})`);
+});
+
+QUnit.test("url with comma at the end", async (assert) => {
+    const pyEnv = await startServer();
+    const channelId = pyEnv["mail.channel"].create({ name: "General" });
+    const { click, insertText, openDiscuss } = await start({
+        discuss: {
+            context: { active_id: channelId },
+        },
+    });
+    await openDiscuss();
+    const messageBody = "Go to https://odoo.com, it's great!";
+    await insertText(".o_ComposerTextInput_textarea", messageBody);
+    await click("button:contains(Send)");
+    assert.containsOnce($, `.o_Message a:contains(https://odoo.com)`);
+    assert.containsOnce($, `.o_Message:contains(${messageBody})`);
+});
+
+QUnit.test("url with dot at the end", async (assert) => {
+    const pyEnv = await startServer();
+    const channelId = pyEnv["mail.channel"].create({ name: "General" });
+    const { click, insertText, openDiscuss } = await start({
+        discuss: {
+            context: { active_id: channelId },
+        },
+    });
+    await openDiscuss();
+    const messageBody = "Go to https://odoo.com. It's great!";
+    await insertText(".o_ComposerTextInput_textarea", messageBody);
+    await click("button:contains(Send)");
+    assert.containsOnce($, `.o_Message a:contains(https://odoo.com)`);
+    assert.containsOnce($, `.o_Message:contains(${messageBody})`);
+});
+
+QUnit.test("url with semicolon at the end", async (assert) => {
+    const pyEnv = await startServer();
+    const channelId = pyEnv["mail.channel"].create({ name: "General" });
+    const { click, insertText, openDiscuss } = await start({
+        discuss: {
+            context: { active_id: channelId },
+        },
+    });
+    await openDiscuss();
+    const messageBody = "Go to https://odoo.com; it's great!";
+    await insertText(".o_ComposerTextInput_textarea", messageBody);
+    await click("button:contains(Send)");
+    assert.containsOnce($, `.o_Message a:contains(https://odoo.com)`);
+    assert.containsOnce($, `.o_Message:contains(${messageBody})`);
+});
+
+QUnit.test("url with ellipsis at the end", async (assert) => {
+    const pyEnv = await startServer();
+    const channelId = pyEnv["mail.channel"].create({ name: "General" });
+    const { click, insertText, openDiscuss } = await start({
+        discuss: {
+            context: { active_id: channelId },
+        },
+    });
+    await openDiscuss();
+    const messageBody = "Go to https://odoo.com... it's great!";
+    await insertText(".o_ComposerTextInput_textarea", messageBody);
+    await click("button:contains(Send)");
+    assert.containsOnce($, `.o_Message a:contains(https://odoo.com)`);
+    assert.containsOnce($, `.o_Message:contains(${messageBody})`);
 });
 
 });

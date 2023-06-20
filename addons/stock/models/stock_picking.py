@@ -32,7 +32,7 @@ class PickingType(models.Model):
     sequence = fields.Integer('Sequence', help="Used to order the 'All Operations' kanban view")
     sequence_id = fields.Many2one(
         'ir.sequence', 'Reference Sequence',
-        check_company=True, copy=False)
+        check_company=True, copy=True)
     sequence_code = fields.Char('Sequence Prefix', required=True)
     default_location_src_id = fields.Many2one(
         'stock.location', 'Default Source Location',
@@ -99,7 +99,7 @@ class PickingType(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:
-            if 'sequence_id' not in vals or not vals['sequence_id']:
+            if not vals.get('sequence_id') and vals.get('sequence_code'):
                 if vals.get('warehouse_id'):
                     wh = self.env['stock.warehouse'].browse(vals['warehouse_id'])
                     vals['sequence_id'] = self.env['ir.sequence'].sudo().create({
@@ -521,6 +521,7 @@ class Picking(models.Model):
         picking_no_alert.json_popover = False
         for picking in (self - picking_no_alert):
             picking.json_popover = json.dumps({
+                'popoverTemplate': 'stock.PopoverStockRescheduling',
                 'delay_alert_date': format_datetime(self.env, picking.delay_alert_date, dt_format=False),
                 'late_elements': [{
                     'id': late_move.id,
@@ -726,6 +727,8 @@ class Picking(models.Model):
                 "company_id": self.company_id,
             })
             for move in (self.move_ids | self.move_ids_without_package):
+                if not move.product_id:
+                    continue
                 move.description_picking = move.product_id._get_description(move.picking_type_id)
 
         if self.partner_id and self.partner_id.picking_warn:
@@ -749,6 +752,12 @@ class Picking(models.Model):
             "location_id": self.location_id,
             "location_dest_id": self.location_dest_id
         })
+        if any(line.reserved_qty or line.qty_done for line in self.move_ids.move_line_ids):
+            return {'warning': {
+                    'title': 'Locations to update',
+                    'message': _("You might want to update the locations of this transfer's operations")
+                }
+            }
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -820,6 +829,14 @@ class Picking(models.Model):
         self.write({'printed': True})
         return self.env.ref('stock.action_report_picking').report_action(self)
 
+    def should_print_delivery_address(self):
+        self.ensure_one()
+        return self.move_ids and self.move_ids[0].partner_id and self._is_to_external_location()
+
+    def _is_to_external_location(self):
+        self.ensure_one()
+        return self.picking_type_code == 'outgoing'
+
     def action_confirm(self):
         self._check_company()
         self.mapped('package_level_ids').filtered(lambda pl: pl.state == 'draft' and not pl.move_ids)._generate_moves()
@@ -854,6 +871,7 @@ class Picking(models.Model):
     def action_cancel(self):
         self.move_ids._action_cancel()
         self.write({'is_locked': True})
+        self.filtered(lambda x: not x.move_ids).state = 'cancel'
         return True
 
     def _action_done(self):
@@ -933,7 +951,7 @@ class Picking(models.Model):
             for pack in origin_packages:
                 if picking._check_move_lines_map_quant_package(pack):
                     package_level_ids = picking.package_level_ids.filtered(lambda pl: pl.package_id == pack)
-                    move_lines_to_pack = picking.move_line_ids.filtered(lambda ml: ml.package_id == pack and not ml.result_package_id)
+                    move_lines_to_pack = picking.move_line_ids.filtered(lambda ml: ml.package_id == pack and not ml.result_package_id and ml.state not in ('done', 'cancel'))
                     if not package_level_ids:
                         self.env['stock.package_level'].create({
                             'picking_id': picking.id,
@@ -1070,21 +1088,21 @@ class Picking(models.Model):
         pickings_not_to_backorder.with_context(cancel_backorder=True)._action_done()
         pickings_to_backorder.with_context(cancel_backorder=False)._action_done()
 
-        if self.user_has_groups('stock.group_reception_report') \
-                and self.picking_type_id.auto_show_reception_report:
-            lines = self.move_ids.filtered(lambda m: m.product_id.type == 'product' and m.state != 'cancel' and m.quantity_done and not m.move_dest_ids)
+        if self.user_has_groups('stock.group_reception_report'):
+            pickings_show_report = self.filtered(lambda p: p.picking_type_id.auto_show_reception_report)
+            lines = pickings_show_report.move_ids.filtered(lambda m: m.product_id.type == 'product' and m.state != 'cancel' and m.quantity_done and not m.move_dest_ids)
             if lines:
                 # don't show reception report if all already assigned/nothing to assign
-                wh_location_ids = self.env['stock.location']._search([('id', 'child_of', self.picking_type_id.warehouse_id.view_location_id.id), ('usage', '!=', 'supplier')])
+                wh_location_ids = self.env['stock.location']._search([('id', 'child_of', pickings_show_report.picking_type_id.warehouse_id.view_location_id.ids), ('usage', '!=', 'supplier')])
                 if self.env['stock.move'].search([
                         ('state', 'in', ['confirmed', 'partially_available', 'waiting', 'assigned']),
                         ('product_qty', '>', 0),
                         ('location_id', 'in', wh_location_ids),
                         ('move_orig_ids', '=', False),
-                        ('picking_id', 'not in', self.ids),
+                        ('picking_id', 'not in', pickings_show_report.ids),
                         ('product_id', 'in', lines.product_id.ids)], limit=1):
-                    action = self.action_view_reception_report()
-                    action['context'] = {'default_picking_ids': self.ids}
+                    action = pickings_show_report.action_view_reception_report()
+                    action['context'] = {'default_picking_ids': pickings_show_report.ids}
                     return action
         return True
 
@@ -1586,3 +1604,6 @@ class Picking(models.Model):
             body=message,
         )
         return True
+
+    def _get_report_lang(self):
+        return self.move_ids and self.move_ids[0].partner_id.lang or self.partner_id.lang or self.env.lang

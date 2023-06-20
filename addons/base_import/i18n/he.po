@@ -13,6 +13,7 @@
 # Martin Trigaux, 2022
 # ZVI BLONDER <ZVIBLONDER@gmail.com>, 2022
 # NoaFarkash, 2022
+# Ha Ketem <haketem@gmail.com>, 2022
 # 
 msgid ""
 msgstr ""
@@ -20,8 +21,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-20 09:01+0000\n"
 "PO-Revision-Date: 2022-09-22 05:45+0000\n"
-"Last-Translator: NoaFarkash, 2022\n"
-"Language-Team: Hebrew (https://www.transifex.com/odoo/teams/41243/he/)\n"
+"Last-Translator: Ha Ketem <haketem@gmail.com>, 2022\n"
+"Language-Team: Hebrew (https://app.transifex.com/odoo/teams/41243/he/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -50,7 +51,7 @@ msgstr "נמצאה עמודה אחת בקובץ, פירוש הדבר לעתים 
 #: code:addons/base_import/static/src/legacy/js/import_action.js:0
 #, python-format
 msgid "Additional Fields"
-msgstr ""
+msgstr "שדות נוספים"
 
 #. module: base_import
 #. openerp-web
@@ -64,7 +65,7 @@ msgstr "מתקדם"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Allow matching with subfields"
-msgstr ""
+msgstr "לאפשר התאמה עם תתי-שדות"
 
 #. module: base_import
 #. openerp-web
@@ -100,7 +101,7 @@ msgstr "מיפוי ייבוא בסיסי"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Batch Import"
-msgstr ""
+msgstr "ייבוא בבת-אחת"
 
 #. module: base_import
 #. openerp-web
@@ -330,7 +331,7 @@ msgstr "הכל נראה תקף."
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Excel files are recommended as formatting is automatic."
-msgstr ""
+msgstr "מומלץ קבצי אקסל כי הפורמט אוטומטי."
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:0
@@ -357,7 +358,7 @@ msgstr "קובץ"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "File Column"
-msgstr ""
+msgstr "עמודת קובץ"
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_import__file_name
@@ -386,7 +387,7 @@ msgstr "קובץ כדי לבדוק ו / או לייבא, בינארי גולמי
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Finalizing current batch before interrupting..."
-msgstr ""
+msgstr "מסיים את הסבב האחרון לפני הפרעה..."
 
 #. module: base_import
 #. openerp-web
@@ -400,7 +401,7 @@ msgstr "עבור קבצי CSV, ייתכן שתצטרך לבחור במפריד �
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Formatting"
-msgstr ""
+msgstr "פורמט"
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:0
@@ -417,7 +418,7 @@ msgstr ""
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Go to Import FAQ"
-msgstr ""
+msgstr "לתשובות לשאלות נפוצות על ייבוא"
 
 #. module: base_import
 #. openerp-web
@@ -464,6 +465,10 @@ msgid ""
 "                    field corresponding to the column. This makes imports\n"
 "                    simpler especially when the file has many columns."
 msgstr ""
+"אם הקובץ מכיל\n"
+"                    את שמות העמודות, Odoo יכול לנסות לזהות אוטומטית\n"
+"                    את השדה המתאים לעמודה. זה הופך את הייבוא לפשוט\n"
+"                    יותר, בייחוד כשלקובץ יש הרבה עמודות."
 
 #. module: base_import
 #. openerp-web
@@ -481,7 +486,7 @@ msgstr ""
 #, python-format
 msgid ""
 "Image size excessive, imported images must be smaller than 42 million pixel"
-msgstr ""
+msgstr "קובץ הדימוי גדולמדי, ייבוא דימויים צריך להיות קטן מ-24 מיליון פיקסלים"
 
 #. module: base_import
 #. openerp-web
@@ -508,7 +513,7 @@ msgstr "ייבא קובץ"
 #: code:addons/base_import/models/base_import.py:0
 #, python-format
 msgid "Import file has no content or is corrupt"
-msgstr ""
+msgstr "אין מידע או שיש תקלה בקובץ המיובא"
 
 #. module: base_import
 #. openerp-web
@@ -541,14 +546,14 @@ msgstr ""
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Imported file"
-msgstr ""
+msgstr "קובץ מיובא"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/js/import_action.js:0
 #, python-format
 msgid "Importing"
-msgstr ""
+msgstr "מייבא"
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:0
@@ -638,7 +643,7 @@ msgstr "טען קובץ"
 #: code:addons/base_import/static/src/legacy/js/import_action.js:0
 #, python-format
 msgid "Loading file..."
-msgstr ""
+msgstr "טוען קובץ..."
 
 #. module: base_import
 #. openerp-web
@@ -653,7 +658,7 @@ msgstr "דגם"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Multiple errors occurred"
-msgstr ""
+msgstr "ארעו שגיאות רבות"
 
 #. module: base_import
 #. openerp-web
@@ -683,21 +688,21 @@ msgstr "אין מפריד"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "No matching records found for"
-msgstr ""
+msgstr "אין רשומות תואמות ל"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "No matching records found for the following"
-msgstr ""
+msgstr "לא נמצאו רשומות תואמות לאלו"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Odoo Field"
-msgstr ""
+msgstr "שדה Odoo"
 
 #. module: base_import
 #: model:ir.model.fields,field_description:base_import.field_base_import_tests_models_preview__othervalue
@@ -747,7 +752,7 @@ msgstr "המשך"
 #: code:addons/base_import/static/src/legacy/js/import_action.js:0
 #, python-format
 msgid "Search for a field..."
-msgstr ""
+msgstr "חיפוש שדה..."
 
 #. module: base_import
 #. openerp-web
@@ -783,21 +788,21 @@ msgstr "מפריד:"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Set to:"
-msgstr ""
+msgstr "הגדר כ:"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Set to: False"
-msgstr ""
+msgstr "הגדר כ: לא נכון"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Set to: True"
-msgstr ""
+msgstr "הגדרה כ: נכון"
 
 #. module: base_import
 #. openerp-web
@@ -811,7 +816,7 @@ msgstr "קבע ערכים כשדה ריק"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Sheet:"
-msgstr ""
+msgstr "גליון"
 
 #. module: base_import
 #. openerp-web
@@ -837,7 +842,7 @@ msgstr "רווח"
 #: code:addons/base_import/static/src/legacy/js/import_action.js:0
 #, python-format
 msgid "Standard Fields"
-msgstr ""
+msgstr "שדות סטנדרטים"
 
 #. module: base_import
 #. openerp-web
@@ -851,14 +856,14 @@ msgstr "התחל בשורה"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Stop Import"
-msgstr ""
+msgstr "הפסקת ייבוא"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/js/import_action.js:0
 #, python-format
 msgid "Suggested Fields"
-msgstr ""
+msgstr "שדות מוצעים"
 
 #. module: base_import
 #. openerp-web
@@ -968,28 +973,28 @@ msgstr "מפריד טקסט:"
 #: code:addons/base_import/static/src/legacy/js/import_action.js:0
 #, python-format
 msgid "The file contains blocking errors (see below)"
-msgstr ""
+msgstr "הקובץ מכיל שגיאות חסימה (ראה להלן)"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/js/import_action.js:0
 #, python-format
 msgid "The file contains non-blocking warnings (see below)"
-msgstr ""
+msgstr "הקובץ מכיל אזהרות שאינן חוסמות (ראה להלן)"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "The file will be imported by batches"
-msgstr ""
+msgstr "הקובץ ייובא לפי סבבים"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "This column will be concatenated in field"
-msgstr ""
+msgstr "עמודה זו תהיה מחוברת לשדה"
 
 #. module: base_import
 #. openerp-web
@@ -1010,14 +1015,14 @@ msgstr "מפריד אלפים:"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "To import multiple values, separate them by a comma"
-msgstr ""
+msgstr "לייבוא נתונים רבים, הפרידו ביניהם עם פסיק"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/js/import_action.js:0
 #, python-format
 msgid "To import, select a field..."
-msgstr ""
+msgstr "לייבוא, בחרו שדה..."
 
 #. module: base_import
 #. openerp-web
@@ -1072,7 +1077,7 @@ msgstr "העלה קובץ אקסל או CSV לייבוא"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "Use first row as header"
-msgstr ""
+msgstr "שימוש בשורה הראשונה ככותרת"
 
 #. module: base_import
 #: model:ir.model,name:base_import.model_res_users
@@ -1108,14 +1113,14 @@ msgstr "ערך2"
 msgid ""
 "Warning: ignores the labels line, empty lines and lines composed only of "
 "empty cells"
-msgstr ""
+msgstr "התראה: יתעלם משורות הכותרת, שורות ריקות ושורות עם תאים ריקים"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "When a value cannot be matched:"
-msgstr ""
+msgstr "כשלערך אין התאמה"
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:0
@@ -1159,7 +1164,7 @@ msgstr "בשורה"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "batch"
-msgstr ""
+msgstr "סבב"
 
 #. module: base_import
 #. openerp-web
@@ -1167,7 +1172,7 @@ msgstr ""
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "in field"
-msgstr ""
+msgstr "בשדה"
 
 #. module: base_import
 #. openerp-web
@@ -1181,14 +1186,14 @@ msgstr "דקות"
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "more)"
-msgstr ""
+msgstr "עוד)"
 
 #. module: base_import
 #. openerp-web
 #: code:addons/base_import/static/src/legacy/xml/base_import.xml:0
 #, python-format
 msgid "out of"
-msgstr ""
+msgstr "מחוץ ל"
 
 #. module: base_import
 #: code:addons/base_import/models/base_import.py:0

@@ -120,7 +120,7 @@ registerModel({
          *     -> enable the input and let the user type
          *
          * - Otherwise
-         *   - if the the step is of type 'question_selection' and we are still waiting for the user to
+         *   - if the step is of type 'question_selection' and we are still waiting for the user to
          *     select one of the options
          *     -> don't do anything, wait for the user to click one of the options
          *   - otherwise
@@ -238,9 +238,10 @@ registerModel({
                         }
                         this.messaging.publicLivechatGlobal.chatWindow.widget.$('.o_mail_thread_content').append(
                             $(qweb.render('im_livechat.legacy.chatbot.is_typing_message', {
-                                'chatbotImageSrc': `/im_livechat/operator/${
+                                'chatbotImageSrc': this.messaging.publicLivechatGlobal.serverUrl + `/im_livechat/operator/${
                                     this.messaging.publicLivechatGlobal.publicLivechat.operator.id
                                 }/avatar`,
+                                'chatbotIsTypingImageSrc': this.messaging.publicLivechatGlobal.serverUrl + '/im_livechat/static/src/img/chatbot_is_typing.gif',
                                 'chatbotName': this.name,
                                 'isWelcomeMessage': isWelcomeMessage,
                             }))
@@ -404,6 +405,13 @@ registerModel({
              * display that restart button.
              */
             compute() {
+                const { publicLivechat } = this.messaging.publicLivechatGlobal;
+                if (publicLivechat && !publicLivechat.operator) {
+                    return false;
+                }
+                if (publicLivechat && !publicLivechat.data.chatbot_script_id) {
+                    return false;
+                }
                 return Boolean(
                     !this.currentStep ||
                     (

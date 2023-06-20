@@ -14,7 +14,7 @@ msgstr ""
 "POT-Creation-Date: 2022-10-04 09:24+0000\n"
 "PO-Revision-Date: 2022-09-22 05:46+0000\n"
 "Last-Translator: Jeffery CHEN <jeffery9@gmail.com>, 2022\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -150,7 +150,7 @@ msgstr "管理员"
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_6
 msgid "Air Filter Replacement"
-msgstr "更换空气过滤器"
+msgstr "空气滤芯"
 
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_search
@@ -193,7 +193,7 @@ msgstr "协助"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_attachment_count
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__message_attachment_count
 msgid "Attachment Count"
-msgstr "附件数量"
+msgstr "附件计数"
 
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_view_kanban
@@ -768,7 +768,7 @@ msgstr "驾驶历史"
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__history_count
 msgid "Drivers History Count"
-msgstr "历史驾驶员数量"
+msgstr "历史驾驶员计数"
 
 #. module: fleet
 #: model:ir.model,name:fleet.model_fleet_vehicle_assignation_log
@@ -1155,7 +1155,7 @@ msgstr "包括服务"
 #: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle__contract_state__futur
 #: model:ir.model.fields.selection,name:fleet.selection__fleet_vehicle_log_contract__state__futur
 msgid "Incoming"
-msgstr "入库"
+msgstr "进"
 
 #. module: fleet
 #: model_terms:ir.ui.view,arch_db:fleet.fleet_vehicle_model_view_form
@@ -1614,7 +1614,7 @@ msgstr "里程表"
 #. module: fleet
 #: model:res.groups,name:fleet.fleet_group_user
 msgid "Officer : Manage all vehicles"
-msgstr "官员：管理所有车辆"
+msgstr "主管：管理所有车辆"
 
 #. module: fleet
 #: model:fleet.service.type,name:fleet.type_service_31
@@ -1840,7 +1840,7 @@ msgstr "运行中"
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_contract__message_has_sms_error
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_log_services__message_has_sms_error
 msgid "SMS Delivery error"
-msgstr "短信发送错误"
+msgstr "短信息发送错误"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__seats
@@ -2207,7 +2207,7 @@ msgstr "车辆合同"
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle_model__vehicle_count
 msgid "Vehicle Count"
-msgstr "车辆数量"
+msgstr "车辆计数"
 
 #. module: fleet
 #: model:ir.model.fields,field_description:fleet.field_fleet_vehicle__description

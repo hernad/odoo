@@ -2,10 +2,9 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 import base64
-import werkzeug
 
 from odoo import _, exceptions, http, tools
-from odoo.http import request
+from odoo.http import request, Response
 from odoo.tools import consteq
 from werkzeug.exceptions import BadRequest, NotFound
 
@@ -107,7 +106,7 @@ class MassMailController(http.Controller):
     @http.route(['/unsubscribe_from_list'], type='http', website=True, multilang=False, auth='public', sitemap=False)
     def unsubscribe_placeholder_link(self, **post):
         """Dummy route so placeholder is not prefixed by language, MUST have multilang=False"""
-        raise werkzeug.exceptions.NotFound()
+        raise NotFound()
 
     # ------------------------------------------------------------
     # TRACKING
@@ -120,7 +119,7 @@ class MassMailController(http.Controller):
             raise BadRequest()
 
         request.env['mailing.trace'].sudo().set_opened(domain=[('mail_mail_id_int', 'in', [mail_id])])
-        response = werkzeug.wrappers.Response()
+        response = Response()
         response.mimetype = 'image/gif'
         response.data = base64.b64decode(b'R0lGODlhAQABAIAAANvf7wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==')
 
@@ -138,7 +137,10 @@ class MassMailController(http.Controller):
             country_code=country_code,
             mailing_trace_id=mailing_trace_id
         )
-        return request.redirect(request.env['link.tracker'].get_url_from_code(code), code=301, local=False)
+        redirect_url = request.env['link.tracker'].get_url_from_code(code)
+        if not redirect_url:
+            raise NotFound()
+        return request.redirect(redirect_url, code=301, local=False)
 
     # ------------------------------------------------------------
     # MAILING MANAGEMENT
@@ -147,7 +149,7 @@ class MassMailController(http.Controller):
     @http.route('/mailing/report/unsubscribe', type='http', website=True, auth='public')
     def turn_off_mailing_reports(self, token, user_id):
         if not token or not user_id:
-            raise werkzeug.exceptions.NotFound()
+            raise NotFound()
         user_id = int(user_id)
         correct_token = consteq(token, request.env['mailing.mailing']._get_unsubscribe_token(user_id))
         user = request.env['res.users'].sudo().browse(user_id)
@@ -157,7 +159,7 @@ class MassMailController(http.Controller):
                 menu_id = request.env.ref('mass_mailing.menu_mass_mailing_global_settings').id
                 return request.render('mass_mailing.mailing_report_deactivated', {'menu_id': menu_id})
             return request.render('mass_mailing.mailing_report_deactivated')
-        raise werkzeug.exceptions.NotFound()
+        raise NotFound()
 
     @http.route(['/mailing/<int:mailing_id>/view'], type='http', website=True, auth='public')
     def view(self, mailing_id, email=None, res_id=None, token=""):

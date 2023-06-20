@@ -4,6 +4,7 @@
 import pytz
 from dateutil.parser import parse
 from dateutil.relativedelta import relativedelta
+from uuid import uuid4
 
 from odoo import api, fields, models, tools, _
 
@@ -133,7 +134,7 @@ class Meeting(models.Model):
             user = google_event.owner(self.env)
             google_attendees += [{
                 'email': user.partner_id.email,
-                'responseStatus': 'needsAction',
+                'responseStatus': 'accepted',
             }]
         emails = [a.get('email') for a in google_attendees]
         existing_attendees = self.env['calendar.attendee']
@@ -221,9 +222,6 @@ class Meeting(models.Model):
         } for alarm in self.alarm_ids]
 
         attendees = self.attendee_ids
-        if self.user_id and self.user_id != self.env.user and bool(self.user_id.sudo().google_calendar_token):
-            # We avoid updating the other attendee status if we are not the organizer
-            attendees = self.attendee_ids.filtered(lambda att: att.partner_id == self.env.user.partner_id)
         attendee_values = [{
             'email': attendee.partner_id.email_normalized,
             'responseStatus': attendee.state or 'needsAction',
@@ -235,7 +233,7 @@ class Meeting(models.Model):
             'start': start,
             'end': end,
             'summary': self.name,
-            'description': tools.html2plaintext(self.description) if not tools.is_html_empty(self.description) else '',
+            'description': tools.html_sanitize(self.description) if not tools.is_html_empty(self.description) else '',
             'location': self.location or '',
             'guestsCanModify': True,
             'organizer': {'email': self.user_id.email, 'self': self.user_id == self.env.user},
@@ -250,6 +248,8 @@ class Meeting(models.Model):
                 'useDefault': False,
             }
         }
+        if not self.google_id and not self.videocall_location:
+            values['conferenceData'] = {'createRequest': {'requestId': uuid4().hex}}
         if self.privacy:
             values['visibility'] = self.privacy
         if not self.active:
@@ -280,3 +280,9 @@ class Meeting(models.Model):
         super(Meeting, my_cancelled_records)._cancel()
         attendees = (self - my_cancelled_records).attendee_ids.filtered(lambda a: a.partner_id == user.partner_id)
         attendees.state = 'declined'
+
+    def _get_event_user(self):
+        self.ensure_one()
+        if self.user_id and self.user_id.sudo().google_calendar_token:
+            return self.user_id
+        return self.env.user

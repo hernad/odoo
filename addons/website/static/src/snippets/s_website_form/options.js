@@ -102,6 +102,18 @@ const FormEditor = options.Class.extend({
         return this.$target[0].dataset.mark;
     },
     /**
+     * Replace all `"` character by `&quot;`, all `'` character by `&apos;` and
+     * all "`" character by `&lsquo;`. This is needed in order to be able to
+     * perform querySelector of this type: `querySelector(`[name="${name}"]`)`.
+     *
+     * @param {string} name
+     */
+    _getQuotesEncodedName(name) {
+        return name.replaceAll(/"/g, character => `&quot;`)
+                   .replaceAll(/'/g, character => `&apos;`)
+                   .replaceAll(/`/g, character => `&lsquo;`);
+    },
+    /**
      * @private
      * @returns {boolean}
      */
@@ -130,6 +142,12 @@ const FormEditor = options.Class.extend({
             $(template.content.querySelector('.s_website_form_field_description')).replaceWith(field.description);
         }
         template.content.querySelectorAll('input.datetimepicker-input').forEach(el => el.value = field.propertyValue);
+        template.content.querySelectorAll("[name]").forEach(el => {
+            el.name = this._getQuotesEncodedName(el.name);
+        });
+        template.content.querySelectorAll("[data-name]").forEach(el => {
+            el.dataset.name = this._getQuotesEncodedName(el.dataset.name);
+        });
         return template.content.firstElementChild;
     },
 });
@@ -164,6 +182,7 @@ const FieldEditor = FormEditor.extend({
         } else {
             field = Object.assign({}, this.fields[this._getFieldName()]);
             field.string = labelText;
+            field.type = this._getFieldType();
         }
         if (!noRecords) {
             field.records = this._getListItems();
@@ -305,12 +324,8 @@ options.registry.WebsiteFormEditor = FormEditor.extend({
 
         // Get list of website_form compatible models.
         this.models = await this._rpc({
-            model: "ir.model",
-            method: "search_read",
-            args: [
-                [['website_form_access', '=', true]],
-                ['id', 'model', 'name', 'website_form_label', 'website_form_key']
-            ],
+            model: 'ir.model',
+            method: 'get_compatible_form_models',
         });
 
         const targetModelName = this.$target[0].dataset.model_name || 'mail.mail';
@@ -774,7 +789,7 @@ options.registry.WebsiteFormEditor = FormEditor.extend({
      * @param {string} action
      */
     _redirectToAction: function (action) {
-        window.location.replace(`/web#action=${action}`);
+        window.location.replace(`/web#action=${encodeURIComponent(action)}`);
     },
 
     //--------------------------------------------------------------------------
@@ -955,6 +970,7 @@ options.registry.WebsiteFieldEditor = FieldEditor.extend({
     setLabelText: function (previewMode, value, params) {
         this.$target.find('.s_website_form_label_content').text(value);
         if (this._isFieldCustom()) {
+            value = this._getQuotesEncodedName(value);
             const multiple = this.$target[0].querySelector('.s_website_form_multiple');
             if (multiple) {
                 multiple.dataset.name = value;
@@ -1237,7 +1253,7 @@ options.registry.WebsiteFieldEditor = FieldEditor.extend({
                 if (dependencyEl.nodeName === 'SELECT') {
                     for (const option of dependencyEl.querySelectorAll('option')) {
                         const button = document.createElement('we-button');
-                        button.textContent = option.value;
+                        button.textContent = option.value || `<${_t("no value")}>`;
                         button.dataset.selectDataAttribute = option.value;
                         selectOptEl.append(button);
                     }
@@ -1303,8 +1319,7 @@ options.registry.WebsiteFieldEditor = FieldEditor.extend({
 
         list.dataset.hasDefault = ['one2many', 'many2many'].includes(type) ? 'multiple' : 'unique';
         const defaults = [...this.$target[0].querySelectorAll('[checked], [selected]')].map(el => {
-            const idInt = parseInt(el.value);
-            return isNaN(idInt) ? el.value : idInt;
+            return /^-?[0-9]{1,15}$/.test(el.value) ? parseInt(el.value) : el.value;
         });
         list.dataset.defaults = JSON.stringify(defaults);
 
@@ -1391,10 +1406,9 @@ options.registry.WebsiteFieldEditor = FieldEditor.extend({
             options = [...multipleInputs.querySelectorAll('.checkbox input, .radio input')];
         }
         return options.map(opt => {
-            const id = parseInt(opt.value);
             const name = select ? opt : opt.nextElementSibling;
             return {
-                id: isNaN(id) ? opt.value : id,
+                id: /^-?[0-9]{1,15}$/.test(opt.value) ? parseInt(opt.value) : opt.value,
                 display_name: name.textContent.trim(),
                 selected: select ? opt.selected : opt.checked,
             };
@@ -1467,6 +1481,7 @@ const DisableOverlayButtonOption = options.Class.extend({
         this.$overlay.add(this.$overlay.data('$optionsSection')).on('click', '.' + className, this.preventButton);
         const $button = this.$overlay.add(this.$overlay.data('$optionsSection')).find('.' + className);
         $button.attr('title', message).tooltip({delay: 0});
+        // TODO In master: add `o_disabled` but keep actual class.
         $button.removeClass(className); // Disable the functionnality
     },
 

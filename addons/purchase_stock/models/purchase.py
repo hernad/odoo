@@ -50,7 +50,7 @@ class PurchaseOrder(models.Model):
     @api.depends('picking_ids.date_done')
     def _compute_effective_date(self):
         for order in self:
-            pickings = order.picking_ids.filtered(lambda x: x.state == 'done' and x.location_dest_id.usage == 'internal' and x.date_done)
+            pickings = order.picking_ids.filtered(lambda x: x.state == 'done' and x.location_dest_id.usage != 'supplier' and x.date_done)
             order.effective_date = min(pickings.mapped('date_done'), default=False)
 
     @api.depends('picking_ids', 'picking_ids.state')
@@ -189,7 +189,7 @@ class PurchaseOrder(models.Model):
         filtered_documents = {}
         for (parent, responsible), rendering_context in documents.items():
             if parent._name == 'stock.picking':
-                if parent.state == 'cancel':
+                if parent.state in ['cancel', 'done']:
                     continue
             filtered_documents[(parent, responsible)] = rendering_context
         self.env['stock.picking']._log_activity(_render_note_exception_quantity_po, filtered_documents)
@@ -288,7 +288,20 @@ class PurchaseOrder(models.Model):
 class PurchaseOrderLine(models.Model):
     _inherit = 'purchase.order.line'
 
-    qty_received_method = fields.Selection(selection_add=[('stock_moves', 'Stock Moves')])
+    def _ondelete_stock_moves(self):
+        modified_fields = ['qty_received_manual', 'qty_received_method']
+        self.flush_recordset(fnames=['qty_received', *modified_fields])
+        self.invalidate_recordset(fnames=modified_fields, flush=False)
+        query = f'''
+            UPDATE {self._table}
+            SET qty_received_manual = qty_received, qty_received_method = 'manual'
+            WHERE id IN %(ids)s
+        '''
+        self.env.cr.execute(query, {'ids': self._ids or (None,)})
+        self.modified(modified_fields)
+
+    qty_received_method = fields.Selection(selection_add=[('stock_moves', 'Stock Moves')],
+                                           ondelete={'stock_moves': _ondelete_stock_moves})
 
     move_ids = fields.One2many('stock.move', 'purchase_line_id', string='Reservation', readonly=True, copy=False)
     orderpoint_id = fields.Many2one('stock.warehouse.orderpoint', 'Orderpoint', copy=False, index='btree_not_null')
@@ -307,7 +320,7 @@ class PurchaseOrderLine(models.Model):
         self.ensure_one()
         moves = self.move_ids.filtered(lambda m: m.product_id == self.product_id)
         if self._context.get('accrual_entry_date'):
-            moves = moves.filtered(lambda r: fields.Date.to_date(r.date) <= self._context['accrual_entry_date'])
+            moves = moves.filtered(lambda r: fields.Date.context_today(r, r.date) <= self._context['accrual_entry_date'])
         return moves
 
     @api.depends('move_ids.state', 'move_ids.product_uom_qty', 'move_ids.product_uom')
@@ -358,15 +371,23 @@ class PurchaseOrderLine(models.Model):
             new_date = fields.Datetime.to_datetime(values['date_planned'])
             self.filtered(lambda l: not l.display_type)._update_move_date_deadline(new_date)
         lines = self.filtered(lambda l: l.order_id.state == 'purchase')
-        previous_product_qty = {line.id: line.product_uom_qty for line in lines}
+
+        if 'product_packaging_id' in values:
+            self.move_ids.filtered(
+                lambda m: m.state not in ['cancel', 'done']
+            ).product_packaging_id = values['product_packaging_id']
+
+        previous_product_uom_qty = {line.id: line.product_uom_qty for line in lines}
+        previous_product_qty = {line.id: line.product_qty for line in lines}
         result = super(PurchaseOrderLine, self).write(values)
         if 'price_unit' in values:
             for line in lines:
                 # Avoid updating kit components' stock.move
                 moves = line.move_ids.filtered(lambda s: s.state not in ('cancel', 'done') and s.product_id == line.product_id)
-                moves.write({'price_unit': line.price_unit})
+                moves.write({'price_unit': line._get_stock_move_price_unit()})
         if 'product_qty' in values:
-            lines.with_context(previous_product_qty=previous_product_qty)._create_or_update_picking()
+            lines = lines.filtered(lambda l: float_compare(previous_product_qty[l.id], l.product_qty, precision_rounding=l.product_uom.rounding) != 0)
+            lines.with_context(previous_product_qty=previous_product_uom_qty)._create_or_update_picking()
         return result
 
     def action_product_forecast_report(self):

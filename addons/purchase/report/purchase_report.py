@@ -7,7 +7,7 @@
 
 import re
 
-from odoo import api, fields, models, tools
+from odoo import api, fields, models, _
 from odoo.exceptions import UserError
 from odoo.osv.expression import AND, expression
 
@@ -61,7 +61,7 @@ class PurchaseReport(models.Model):
     @property
     def _table_query(self):
         ''' Report needs to be dynamic to take into account multi-company selected + multi-currency rates '''
-        return '%s %s %s' % (self._select(), self._from(), self._group_by())
+        return '%s %s %s %s' % (self._select(), self._from(), self._where(), self._group_by())
 
     def _select(self):
         select_str = """
@@ -117,6 +117,12 @@ class PurchaseReport(models.Model):
         )
         return from_str
 
+    def _where(self):
+        return """
+            WHERE
+                l.display_type IS NULL
+        """
+
     def _group_by(self):
         group_by_str = """
             GROUP BY
@@ -162,7 +168,7 @@ class PurchaseReport(models.Model):
         if avg_days_to_purchase:
             fields.remove(avg_days_to_purchase)
             if any(field.split(':')[1].split('(')[0] != 'avg' for field in [avg_days_to_purchase] if field):
-                raise UserError("Value: 'avg_days_to_purchase' should only be used to show an average. If you are seeing this message then it is being accessed incorrectly.")
+                raise UserError(_("Value: 'avg_days_to_purchase' should only be used to show an average. If you are seeing this message then it is being accessed incorrectly."))
 
         res = []
         if fields:

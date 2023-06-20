@@ -18,7 +18,7 @@ import { useSetupView } from "@web/views/view_hook";
 import { hasTouch } from "@web/core/browser/feature_detection";
 import { FormStatusIndicator } from "./form_status_indicator/form_status_indicator";
 
-import { Component, onWillStart, useEffect, useRef, onRendered, useState, toRaw } from "@odoo/owl";
+import { Component, onWillStart, useEffect, useRef, onRendered, useState } from "@odoo/owl";
 
 const viewRegistry = registry.category("views");
 
@@ -98,6 +98,7 @@ export class FormController extends Component {
         this.ui = useService("ui");
         this.state = useState({
             isDisabled: false,
+            fieldIsDirty: false,
         });
         useBus(this.ui.bus, "resize", this.render);
 
@@ -153,14 +154,14 @@ export class FormController extends Component {
         // enable the archive feature in Actions menu only if the active field is in the view
         this.archiveEnabled =
             "active" in activeFields
-                ? !activeFields.active.readonly
+                ? !this.props.fields.active.readonly
                 : "x_active" in activeFields
-                ? !activeFields.x_active.readonly
+                ? !this.props.fields.x_active.readonly
                 : false;
 
         // select footers that are not in subviews and move them to another arch
         // that will be moved to the dialog's footer (if we are in a dialog)
-        const footers = [...this.archInfo.xmlDoc.querySelectorAll("footer:not(field footer")];
+        const footers = [...this.archInfo.xmlDoc.querySelectorAll("footer:not(field footer)")];
         if (footers.length) {
             this.footerArchInfo = Object.assign({}, this.archInfo);
             this.footerArchInfo.xmlDoc = createElement("t");
@@ -176,31 +177,22 @@ export class FormController extends Component {
         });
 
         const state = this.props.state || {};
-        const { fieldsToTranslate } = state;
-        this.fieldsToTranslate = useState(fieldsToTranslate || {});
         const activeNotebookPages = { ...state.activeNotebookPages };
         this.onNotebookPageChange = (notebookId, page) => {
-            activeNotebookPages[notebookId] = page;
+            if (page) {
+                activeNotebookPages[notebookId] = page;
+            }
         };
 
         useSetupView({
             rootRef,
-            beforeLeave: () => {
-                if (this.model.root.isDirty) {
-                    return this.model.root.save({
-                        noReload: true,
-                        stayInEdition: true,
-                        useSaveErrorDialog: true,
-                    });
-                }
-            },
+            beforeLeave: () => this.beforeLeave(),
             beforeUnload: (ev) => this.beforeUnload(ev),
             getLocalState: () => {
                 // TODO: export the whole model?
                 return {
                     activeNotebookPages: !this.model.root.isNew && activeNotebookPages,
                     resId: this.model.root.resId,
-                    fieldsToTranslate: toRaw(this.fieldsToTranslate),
                 };
             },
         });
@@ -274,6 +266,16 @@ export class FormController extends Component {
         }
     }
 
+    async beforeLeave() {
+        if (this.model.root.isDirty) {
+            return this.model.root.save({
+                noReload: true,
+                stayInEdition: true,
+                useSaveErrorDialog: true,
+            });
+        }
+    }
+
     async beforeUnload(ev) {
         const isValid = await this.model.root.urgentSave();
         if (!isValid) {
@@ -296,8 +298,9 @@ export class FormController extends Component {
                     callback: () => {
                         const dialogProps = {
                             body: this.env._t(
-                                "Are you sure that you want to archive all this record?"
+                                "Are you sure that you want to archive this record?"
                             ),
+                            confirmLabel: this.env._t("Archive"),
                             confirm: () => this.model.root.archive(),
                             cancel: () => {},
                         };
@@ -341,8 +344,8 @@ export class FormController extends Component {
         await this.model.root.duplicate();
     }
 
-    async deleteRecord() {
-        const dialogProps = {
+    get deleteConfirmationDialogProps() {
+        return {
             body: this.env._t("Are you sure you want to delete this record?"),
             confirm: async () => {
                 await this.model.root.delete();
@@ -352,7 +355,10 @@ export class FormController extends Component {
             },
             cancel: () => {},
         };
-        this.dialogService.add(ConfirmationDialog, dialogProps);
+    }
+
+    async deleteRecord() {
+        this.dialogService.add(ConfirmationDialog, this.deleteConfirmationDialogProps);
     }
 
     disableButtons() {
@@ -361,6 +367,10 @@ export class FormController extends Component {
 
     enableButtons() {
         this.state.isDisabled = false;
+    }
+
+    setFieldAsDirty(dirty) {
+        this.state.fieldIsDirty = dirty;
     }
 
     async beforeExecuteActionButton(clickParams) {
@@ -405,15 +415,6 @@ export class FormController extends Component {
         const record = this.model.root;
         let saved = false;
 
-        // Before we save, we gather dirty translate fields data. It needs to be done before the
-        // save as nothing will be dirty after. It is why there is a compute part and a show part.
-        if (record.dirtyTranslatableFields.length) {
-            const { resId } = record;
-            this.fieldsToTranslate[resId] = new Set([
-                ...toRaw(this.fieldsToTranslate[resId] || []),
-                ...record.dirtyTranslatableFields,
-            ]);
-        }
         if (this.props.saveRecord) {
             saved = await this.props.saveRecord(record, params);
         } else {
@@ -424,13 +425,7 @@ export class FormController extends Component {
             this.props.onSave(record, params);
         }
 
-        // After we saved, we show the previously computed data in the alert (if there is any).
-        // It needs to be done after the save because if we were in record creation, the resId
-        // changed from false to a number. So it first needs to update the computed data to the new id.
-        if (this.fieldsToTranslate.false) {
-            this.fieldsToTranslate[record.resId] = this.fieldsToTranslate.false;
-            delete this.fieldsToTranslate.false;
-        }
+        return saved;
     }
 
     async discard() {
@@ -445,20 +440,6 @@ export class FormController extends Component {
         if (this.model.root.isVirtual || this.env.inDialog) {
             this.env.config.historyBack();
         }
-    }
-
-    get translateAlert() {
-        const { resId } = this.model.root;
-        if (!this.fieldsToTranslate[resId]) {
-            return null;
-        }
-
-        return {
-            fields: this.fieldsToTranslate[resId],
-            close: () => {
-                delete this.fieldsToTranslate[resId];
-            },
-        };
     }
 
     get className() {
