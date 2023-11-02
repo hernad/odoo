@@ -48,10 +48,11 @@ class PosOrder(models.Model):
     def create_from_ui(self, orders, draft=False):
         order_ids = super(PosOrder, self).create_from_ui(orders, draft)
         for order in self.sudo().browse([o['id'] for o in order_ids]):
-            for line in order.lines.filtered(lambda l: l.product_id == order.config_id.down_payment_product_id and l.qty > 0 and l.sale_order_origin_id):
-                sale_lines = line.sale_order_origin_id.order_line
+            for line in order.lines.filtered(lambda l: l.product_id == order.config_id.down_payment_product_id and l.qty != 0 and (l.sale_order_origin_id or l.refunded_orderline_id.sale_order_origin_id)):
+                sale_lines = line.sale_order_origin_id.order_line or line.refunded_orderline_id.sale_order_origin_id.order_line
+                sale_order_origin = line.sale_order_origin_id or line.refunded_orderline_id.sale_order_origin_id
                 sale_line = self.env['sale.order.line'].create({
-                    'order_id': line.sale_order_origin_id.id,
+                    'order_id': sale_order_origin.id,
                     'product_id': line.product_id.id,
                     'price_unit': line.price_unit,
                     'product_uom_qty': 0,
@@ -88,6 +89,7 @@ class PosOrder(models.Model):
                     #If the product is delivered with more than one step, we need to update the quantity of the other steps
                     for move in so_line_stock_move_ids.filtered(lambda m: m.state in ['waiting', 'confirmed'] and m.product_id == stock_move.product_id):
                         move.product_uom_qty = stock_move.product_uom_qty
+                        waiting_picking_ids.add(move.picking_id.id)
                     waiting_picking_ids.add(picking.id)
 
             def is_product_uom_qty_zero(move):
@@ -126,7 +128,7 @@ class PosOrderLine(models.Model):
         result['sale_order_origin_id'] = bool(orderline.sale_order_origin_id) and orderline.sale_order_origin_id.read(fields=['name'])[0]
         return result
 
-    def _order_line_fields(self, line, session_id):
+    def _order_line_fields(self, line, session_id=None):
         result = super()._order_line_fields(line, session_id)
         vals = result[2]
         if vals.get('sale_order_origin_id', False):

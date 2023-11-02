@@ -129,7 +129,7 @@ msgstr "<span class=\"small me-1 navbar-text\">Filter op:</span>"
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
 msgid "<span class=\"small me-1 navbar-text\">Group By:</span>"
-msgstr "<span class=\"small me-1 navbar-text\">Groepeer op:</span>"
+msgstr "<span class=\"small me-1 navbar-text\">Groeperen op:</span>"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_searchbar
@@ -396,7 +396,7 @@ msgstr "Annuleren"
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_my_security
 msgid "Change Password"
-msgstr "Wijzig wachtwoord"
+msgstr "Wachtwoord wijzigen"
 
 #. module: portal
 #. odoo-python
@@ -503,7 +503,7 @@ msgstr "Contacten"
 #: code:addons/portal/static/src/js/portal_composer.js:0
 #, python-format
 msgid "Could not save file <strong>%s</strong>"
-msgstr "Kon bestand <strong>%s</strong> niet opslaan"
+msgstr "Het was niet mogelijk bestand <strong>%s</strong> op te slaan"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_my_details_fields
@@ -554,7 +554,7 @@ msgstr "Klant API Keys"
 #. module: portal
 #: model:ir.model.fields,help:portal.field_portal_mixin__access_url
 msgid "Customer Portal URL"
-msgstr "Klant portaal URL"
+msgstr "Klantenportaal URL"
 
 #. module: portal
 #: model_terms:ir.ui.view,arch_db:portal.portal_share_template
@@ -682,13 +682,13 @@ msgstr "Toegang verlenen"
 #. module: portal
 #: model:ir.model,name:portal.model_portal_wizard
 msgid "Grant Portal Access"
-msgstr "Geef portaal toegang"
+msgstr "Portaaltoegang verlenen"
 
 #. module: portal
 #: model:ir.actions.act_window,name:portal.partner_wizard_action
 #: model:ir.actions.server,name:portal.partner_wizard_action_create_and_open
 msgid "Grant portal access"
-msgstr "Geef portaal toegang"
+msgstr "Portaaltoegang verlenen"
 
 #. module: portal
 #: model:ir.model,name:portal.model_ir_http

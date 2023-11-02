@@ -20,9 +20,6 @@ class IrActionsReport(models.Model):
             return super()._render_qweb_pdf_prepare_streams(report_ref, data, res_ids=res_ids)
 
         invoices = self.env['account.move'].browse(res_ids)
-        if any(not x.is_purchase_document(include_receipts=True) for x in invoices):
-            raise UserError(_("You can only print the original document for purchase documents."))
-
         original_attachments = invoices.message_main_attachment_id
         if not original_attachments:
             raise UserError(_("No original purchase document could be found for any of the selected purchase documents."))
@@ -36,7 +33,7 @@ class IrActionsReport(models.Model):
                     record = self.env[attachment.res_model].browse(attachment.res_id)
                     try:
                         stream = pdf.add_banner(stream, record.name, logo=True)
-                    except (ValueError, PdfStreamError, PdfReadError, TypeError, zlib_error):
+                    except (ValueError, PdfStreamError, PdfReadError, TypeError, zlib_error, NotImplementedError):
                         record._message_log(body=_(
                             "There was an error when trying to add the banner to the original PDF.\n"
                             "Please make sure the source file is valid."

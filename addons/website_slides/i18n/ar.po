@@ -7,6 +7,8 @@
 # Shaima Safar <shaima.safar@open-inside.com>, 2022
 # Mustafa J. Kadhem <safi2266@gmail.com>, 2022
 # Martin Trigaux, 2022
+# Niyas Raphy, 2023
+# Wil Odoo, 2023
 # Malaz Abuidris <msea@odoo.com>, 2023
 # 
 msgid ""
@@ -3361,6 +3363,19 @@ msgid ""
 "Impossible to send emails. Select a \"Channel Share Template\" for courses "
 "%(course_names)s first"
 msgstr ""
+"لا يمكن إرسال رسائل البريد الإلكتروني. قم أولاً بتحديد \"قالب مشاركة "
+"القناة\" للدورات %(course_names)s "
+
+#. module: website_slides
+#. odoo-python
+#: code:addons/website_slides/models/slide_slide.py:0
+#, python-format
+msgid ""
+"Impossible to send emails. Select a \"Share Template\" for courses "
+"%(course_names)s first"
+msgstr ""
+"لا يمكن إرسال رسائل البريد الإلكتروني. قم أولاً بتحديد \"قالب المشاركة\" "
+"للدورات %(course_names)s "
 
 #. module: website_slides
 #: model:slide.answer,comment:website_slides.slide_slide_demo_1_4_question_0_1
@@ -4277,8 +4292,8 @@ msgstr "عدد الأخطاء "
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel__message_needaction_counter
 #: model:ir.model.fields,help:website_slides.field_slide_slide__message_needaction_counter
-msgid "Number of messages which requires an action"
-msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء "
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
 
 #. module: website_slides
 #: model:ir.model.fields,help:website_slides.field_slide_channel__message_has_error_counter
@@ -5676,6 +5691,17 @@ msgstr "يجب أن يكون التصويت 1، 0، أو -1. "
 #. odoo-javascript
 #: code:addons/website_slides/static/src/xml/website_slides_upload.xml:0
 #, python-format
+msgid ""
+"The video link to input here can be obtained by using the 'Share link' "
+"button in the Vimeo interface."
+msgstr ""
+"يمكن الحصول على رابط الفيديو لإدخاله هنا عن طريق استخدام زر 'مشاركة الرايط' "
+"في واجهة Vimeo. "
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides_upload.xml:0
+#, python-format
 msgid "Then, go into the file permissions and set it as \"Anyone with the link\"."
 msgstr "ثم اذهب إلى أذونات الملف وقم بتعيينها إلى \"أي شخص لديه الرابط\". "
 
@@ -5931,6 +5957,20 @@ msgstr "خطأ غير معروف"
 #, python-format
 msgid "Unknown error, try again."
 msgstr "خطأ غير معروف، حاول مجدداً. "
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides_upload.xml:0
+#, python-format
+msgid "Unlisted"
+msgstr "غير مدرج "
+
+#. module: website_slides
+#. openerp-web
+#: code:addons/website_slides/static/src/xml/website_slides_upload.xml:0
+#, python-format
+msgid "Unlisted (paid account)"
+msgstr "غير مدرج (حساب مدفوع) "
 
 #. module: website_slides
 #: model_terms:ir.ui.view,arch_db:website_slides.course_card
@@ -6357,6 +6397,8 @@ msgid ""
 "You are not allowed to add members to this course. Please contact the course"
 " responsible or an administrator."
 msgstr ""
+"لا يُسمح لك بإضافة الأعضاء إلى هذه الدورة. يرجى التواصل مع مسؤول الدورة أو "
+"مع أحد المدراء. "
 
 #. module: website_slides
 #. odoo-javascript
@@ -6429,6 +6471,8 @@ msgid ""
 "You cannot mark a slide quiz as completed if you are not among its members "
 "or it is unpublished."
 msgstr ""
+"لا يمكنك تحديد الاختبار القصير لشريحة كمكتمل إذا لم تكن أحد الأعضاء أو إذا "
+"كان غير منشور. "
 
 #. module: website_slides
 #. odoo-python
@@ -6438,6 +6482,8 @@ msgid ""
 "You cannot mark a slide quiz as not completed if you are not among its "
 "members or it is unpublished."
 msgstr ""
+"لا يمكنك تحديد الاختبار القصير لشريحة كغير مكتمل إذا لم تكن أحد الأعضاء أو "
+"إذا كان غير منشور. "
 
 #. module: website_slides
 #. odoo-python
@@ -6804,6 +6850,17 @@ msgstr ""
 
 #. module: website_slides
 #. odoo-javascript
+#: code:addons/website_slides/static/src/xml/website_slides_upload.xml:0
+#, python-format
+msgid ""
+"mean? The Vimeo \"Unlisted\" privacy setting means it is a video which can be viewed only by the users with the link to it.\n"
+"                                    Your video will never come up in the search results nor on your channel."
+msgstr ""
+"؟ يعني إعداد الخصوصية \"غير مدرج\" في Vimeo أنه مقطع فيديو يمكن عرضه فقط من قِبَل المستخدمين الذين يملكون الرابط.\n"
+"                                    لن يظهر مقطع الفيديو ضمن نتائج البحث أو في قناتك. "
+
+#. module: website_slides
+#. openerp-web
 #: code:addons/website_slides/static/src/xml/website_slides_upload.xml:0
 #, python-format
 msgid ""

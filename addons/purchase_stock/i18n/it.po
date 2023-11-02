@@ -254,12 +254,12 @@ msgstr "Movimenti a valle"
 #. module: purchase_stock
 #: model:ir.model.fields,field_description:purchase_stock.field_purchase_order__dest_address_id
 msgid "Dropship Address"
-msgstr "Indirizzo Spedizione diretta"
+msgstr "Indirizzo dropshipping"
 
 #. module: purchase_stock
 #: model:ir.model.fields,field_description:purchase_stock.field_res_config_settings__module_stock_dropshipping
 msgid "Dropshipping"
-msgstr "Spedizione diretta"
+msgstr "Dropshipping"
 
 #. module: purchase_stock
 #: model:ir.model.fields,field_description:purchase_stock.field_purchase_report__effective_date
@@ -422,7 +422,7 @@ msgstr "Regola di giacenza minima di magazzino"
 #. module: purchase_stock
 #: model_terms:ir.ui.view,arch_db:purchase_stock.res_config_settings_view_form_stock
 msgid "Move forward expected request creation date by"
-msgstr ""
+msgstr "Anticipare la data prevista per la creazione della richiesta al"
 
 #. module: purchase_stock
 #: model_terms:ir.ui.view,arch_db:purchase_stock.exception_on_po
@@ -672,7 +672,7 @@ msgstr "Imposta come fornitore"
 #. module: purchase_stock
 #: model:ir.model.fields,field_description:purchase_stock.field_product_supplierinfo__show_set_supplier_button
 msgid "Show Set Supplier Button"
-msgstr ""
+msgstr "Mostra pulsante Definisci fornitore"
 
 #. module: purchase_stock
 #: model:ir.model.fields,field_description:purchase_stock.field_stock_warehouse_orderpoint__show_supplier
@@ -708,7 +708,7 @@ msgstr "Resoconto regola di giacenza"
 #. module: purchase_stock
 #: model:ir.model,name:purchase_stock.model_stock_replenishment_info
 msgid "Stock supplier replenishment information"
-msgstr ""
+msgstr "Informazioni sul rifornimento dei fornitori"
 
 #. module: purchase_stock
 #: model:ir.model,name:purchase_stock.model_product_supplierinfo
@@ -723,8 +723,7 @@ msgstr "Info fornitori"
 #. module: purchase_stock
 #: model:ir.model.fields,help:purchase_stock.field_purchase_order__default_location_dest_id_usage
 msgid "Technical field used to display the Drop Ship Address"
-msgstr ""
-"Campo tecnico utilizzato per visualizzare l'indirizzo di Spedizione diretta"
+msgstr "Campo tecnico utilizzato per visualizzare l'indirizzo di dropshipping"
 
 #. module: purchase_stock
 #. odoo-python
@@ -767,11 +766,11 @@ msgid ""
 "on-demand flow. The requested delivery address will be the customer delivery"
 " address and not your warehouse."
 msgstr ""
-"Aggiunge un percorso di Spedizione diretta da applicare ai prodotti, per "
-"richiedere ai fornitori di consegnare ai clienti. Un prodotto a Spedizione "
-"diretta genera una richiesta di preventivo per l'acquisto dopo la conferma "
-"dell'ordine di vendita. L'indirizzo di consegna richiesto corrisponde a "
-"quello del cliente e non al magazzino."
+"Aggiunge un percorso di dropshipping da applicare ai prodotti, per "
+"richiedere ai fornitori di consegnare ai clienti. Un prodotto per il "
+"dropshipping genera una richiesta di preventivo per l'acquisto dopo la "
+"conferma dell'ordine di vendita. L'indirizzo di consegna richiesto "
+"corrisponde a quello del cliente e non al magazzino."
 
 #. module: purchase_stock
 #: model:ir.model.fields,help:purchase_stock.field_purchase_order__picking_type_id
@@ -856,7 +855,7 @@ msgstr "Fornitori"
 #. module: purchase_stock
 #: model:ir.model.fields,help:purchase_stock.field_stock_warehouse_orderpoint__purchase_visibility_days
 msgid "Visibility Days applied on the purchase routes."
-msgstr ""
+msgstr "Giorni visibilità applicati ai percorsi di acquisto."
 
 #. module: purchase_stock
 #: model:ir.model,name:purchase_stock.model_stock_warehouse

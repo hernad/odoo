@@ -6,6 +6,7 @@
 # Kevin Harrings <kha@odoo.com>, 2022
 # Éder Brito <britoederr@gmail.com>, 2022
 # Martin Trigaux, 2022
+# Diego Sayron, 2023
 # Kevilyn Rosa, 2023
 # Layna Nascimento, 2023
 # 
@@ -47,10 +48,10 @@ msgid ""
 "</div>"
 msgstr ""
 "<div style=\"margin: 0px; padding: 0px;\">\n"
-"    Prazado(a),</p>\n"
+"    <p>Prezado(a),</p>\n"
 "    <p>Não há mais créditos na sua conta IAP de geração de leads.<br>\n"
 "    Você pode recarregar a sua conta de geração de leads nas definições do aplicativo de CRM.<br></p>\n"
-"    <p>Atenciosamente,</p>\n"
+"   <p> Atenciosamente,</p>\n"
 "    <p>Odoo S.A.</p>\n"
 "</div>"
 
@@ -240,7 +241,7 @@ msgstr "Concluído"
 #: model:ir.model.fields.selection,name:crm_iap_mine.selection__crm_iap_lead_mining_request__state__draft
 #: model_terms:ir.ui.view,arch_db:crm_iap_mine.crm_iap_lead_mining_request_view_search
 msgid "Draft"
-msgstr "Provisório"
+msgstr "Rascunho"
 
 #. module: crm_iap_mine
 #: model_terms:ir.ui.view,arch_db:crm_iap_mine.enrich_company
@@ -417,7 +418,7 @@ msgstr "Solicitações de Mineração de Lead"
 #. module: crm_iap_mine
 #: model:ir.model.fields,field_description:crm_iap_mine.field_crm_iap_lead_mining_request__lead_total_credits
 msgid "Lead Total Credits"
-msgstr "Total de Créditos do Lead"
+msgstr "Total de créditos do lead"
 
 #. module: crm_iap_mine
 #: model:ir.model,name:crm_iap_mine.model_crm_lead
@@ -437,6 +438,8 @@ msgstr "Leads"
 msgid ""
 "Looking for more opportunities ?<br>Try the <b>Lead Generation</b> tool."
 msgstr ""
+"Procurando por mais oportunidades?<br>Experimente a ferramenta de <b>Geração"
+" de Leads</b>."
 
 #. module: crm_iap_mine
 #: model:crm.iap.lead.industry,name:crm_iap_mine.crm_iap_mine_industry_148
@@ -518,7 +521,7 @@ msgstr "Outras Funções"
 #. module: crm_iap_mine
 #: model:ir.model,name:crm_iap_mine.model_crm_iap_lead_role
 msgid "People Role"
-msgstr "Função das Pessoas"
+msgstr "Função das pessoas"
 
 #. module: crm_iap_mine
 #: model:ir.model,name:crm_iap_mine.model_crm_iap_lead_seniority
@@ -548,7 +551,7 @@ msgstr "Imobiliária"
 #. module: crm_iap_mine
 #: model:ir.model.fields,field_description:crm_iap_mine.field_crm_iap_lead_mining_request__name
 msgid "Request Number"
-msgstr "Número do Pedido"
+msgstr "Número do pedido"
 
 #. module: crm_iap_mine
 #: model:crm.iap.lead.industry,name:crm_iap_mine.crm_iap_mine_industry_152
@@ -618,7 +621,7 @@ msgstr "Software & Serviços"
 #. module: crm_iap_mine
 #: model:ir.model.fields,field_description:crm_iap_mine.field_crm_iap_lead_mining_request__state_ids
 msgid "States"
-msgstr "Situações"
+msgstr "Estados"
 
 #. module: crm_iap_mine
 #: model:ir.model.fields,field_description:crm_iap_mine.field_crm_iap_lead_mining_request__state

@@ -5,11 +5,13 @@
 # Translators:
 # Lucia Pacheco, 2022
 # Martin Trigaux, 2022
-# Fernando S, 2023
+# Fernando, 2023
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
 # Antoine Demany, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Aimée Mendoza Sánchez, 2023
+# Wil Odoo, 2023
+# Iran Villalobos López, 2023
 # Fernanda Alvarez, 2023
 # 
 msgid ""
@@ -1080,6 +1082,13 @@ msgstr "Puede publicar"
 #. odoo-python
 #: code:addons/website_sale/controllers/main.py:0
 #, python-format
+msgid "Can not resequence a video at first position."
+msgstr "No se puede resecuenciar un video en primera posición. "
+
+#. module: website_sale
+#. odoo-python
+#: code:addons/website_sale/controllers/main.py:0
+#, python-format
 msgid "Can not resequence embedded image/video with a non compatible image."
 msgstr ""
 "No se puede volver a secuenciar una imagen o video secuenciado con una "
@@ -1215,7 +1224,18 @@ msgid ""
 "account. Please contact us directly for this operation."
 msgstr ""
 "No está permitido cambiar su nombre una vez que se hayan emitido facturas "
-"para su cuenta. Por favor, contáctenos directamente para esta operación."
+"para su cuenta, contáctenos para realizar esta operación."
+
+#. module: website_sale
+#. odoo-python
+#: code:addons/website_sale/controllers/main.py:0
+#, python-format
+msgid ""
+"Changing your name is not allowed once documents have been issued for your "
+"account. Please contact us directly for this operation."
+msgstr ""
+"No está permitido cambiar su nombre una vez que se hayan emitido documentos "
+"para su cuenta, contáctenos para realizar esta operación."
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -1306,7 +1326,10 @@ msgid "Companies"
 msgstr "Empresas"
 
 #. module: website_sale
+#. odoo-javascript
+#: code:addons/website_sale/static/src/js/website_sale_form_editor.js:0
 #: model_terms:ir.ui.view,arch_db:website_sale.address
+#, python-format
 msgid "Company Name"
 msgstr "Nombre de la empresa"
 
@@ -1557,7 +1580,7 @@ msgstr "Personalizar plantillas de correo"
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.res_config_settings_view_form
 msgid "DHL Express Connector"
-msgstr "Conector DHL Express"
+msgstr "Conector de DHL Express"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -1956,7 +1979,8 @@ msgstr "Generar una factura a partir de las órdenes listas para facturar."
 msgid ""
 "Generate the invoice automatically when the online payment is confirmed"
 msgstr ""
-"Genera la factura automáticamente una vez que se confirma el pago en línea"
+"Genera la factura de forma automática una vez que se confirma el pago en "
+"línea"
 
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_product_public_category__sequence
@@ -2111,6 +2135,19 @@ msgstr "Pago instantáneo en lugar de agregar al carrito"
 
 #. module: website_sale
 #. odoo-python
+#: code:addons/website_sale/controllers/main.py:0
+#, python-format
+msgid ""
+"If you are ordering for an external person, please place your order via the "
+"backend. If you wish to change your name or email address, please do so in "
+"the account settings or contact your administrator."
+msgstr ""
+"Si está ordenando para una persona externa, haga su pedido a través del "
+"backend. Si desea cambiar su nombre o dirección de correo electrónico, "
+"hágalo en los ajustes de la cuenta o póngase en contacto con su "
+"administrador."
+
+#. module: website_sale
 #: code:addons/website_sale/controllers/main.py:0
 #, python-format
 msgid "Invalid Email! Please enter a valid email address."
@@ -2336,7 +2373,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:website_sale.selection__res_config_settings__account_on_checkout__mandatory
 #: model:ir.model.fields.selection,name:website_sale.selection__website__account_on_checkout__mandatory
 msgid "Mandatory (no guest checkout)"
-msgstr "Obligatorio (no se puede pagar como inivitado)"
+msgstr "Obligatorio (no se puede pagar como invitado)"
 
 #. module: website_sale
 #. odoo-javascript
@@ -2755,6 +2792,13 @@ msgstr "Sistema de apertura mediante pedales"
 #: model_terms:ir.ui.view,arch_db:website_sale.address
 msgid "Phone"
 msgstr "Teléfono"
+
+#. module: website_sale
+#. odoo-javascript
+#: code:addons/website_sale/static/src/js/website_sale_form_editor.js:0
+#, python-format
+msgid "Phone Number"
+msgstr "Número de teléfono"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -3227,7 +3271,7 @@ msgstr "Texto de la valoración"
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_template__rating_count
 msgid "Rating count"
-msgstr "Número de valoración "
+msgstr "Número de calificaciones"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -3785,8 +3829,8 @@ msgstr "Accesorios sugeridos en el carrito de comercio electrónico"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
-msgid "TIN / VAT"
-msgstr "RFC"
+msgid "VAT"
+msgstr "NIF"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -3833,7 +3877,7 @@ msgstr "El #1"
 #: code:addons/website_sale/controllers/main.py:0
 #, python-format
 msgid "The access token is invalid."
-msgstr "El token de acceso es inválido."
+msgstr "El token de acceso no es válido."
 
 #. module: website_sale
 #: model:ir.model.fields,help:website_sale.field_product_product__compare_list_price
@@ -4451,6 +4495,20 @@ msgid ""
 msgstr ""
 "Su snippet dinámico se mostrará aquí...\n"
 "                                Este mensaje se muestra ya que no bindí ni un filtro ni una plantilla para usar."
+
+#. module: website_sale
+#. odoo-javascript
+#: code:addons/website_sale/static/src/js/website_sale_form_editor.js:0
+#, python-format
+msgid "Your Email"
+msgstr "Su correo electrónico"
+
+#. module: website_sale
+#. odoo-javascript
+#: code:addons/website_sale/static/src/js/website_sale_form_editor.js:0
+#, python-format
+msgid "Your Name"
+msgstr "Su nombre"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.cart_lines

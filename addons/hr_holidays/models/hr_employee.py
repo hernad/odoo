@@ -8,7 +8,7 @@ from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 from odoo.tools.float_utils import float_round
 from odoo.addons.resource.models.resource import HOURS_PER_DAY
-
+import pytz
 
 class HrEmployeeBase(models.AbstractModel):
     _inherit = "hr.employee.base"
@@ -88,6 +88,8 @@ class HrEmployeeBase(models.AbstractModel):
             ('holiday_status_id.requires_allocation', '=', 'yes'),
             ('state', '=', 'validate'),
             ('date_from', '<=', current_date),
+            '|',
+            ('date_to', '=', False),
             ('date_to', '>=', current_date),
         ], ['number_of_days:sum', 'employee_id'], ['employee_id'])
         rg_results = dict((d['employee_id'][0], {"employee_id_count": d['employee_id_count'], "number_of_days": d['number_of_days']}) for d in data)
@@ -300,14 +302,15 @@ class HrEmployee(models.Model):
     @api.model
     def get_public_holidays_data(self, date_start, date_end):
         self = self._get_contextual_employee()
+        employee_tz = pytz.timezone(self._get_tz() if self else self.env.user.tz or 'utc')
         public_holidays = self._get_public_holidays(date_start, date_end).sorted('date_from')
         return list(map(lambda bh: {
             'id': -bh.id,
             'colorIndex': 0,
-            'end': datetime.datetime.combine(bh.date_to, datetime.datetime.max.time()).isoformat(),
+            'end': datetime.datetime.combine(bh.date_to.astimezone(employee_tz), datetime.datetime.max.time()).isoformat(),
             'endType': "datetime",
             'isAllDay': True,
-            'start': datetime.datetime.combine(bh.date_from, datetime.datetime.min.time()).isoformat(),
+            'start': datetime.datetime.combine(bh.date_from.astimezone(employee_tz), datetime.datetime.min.time()).isoformat(),
             'startType': "datetime",
             'title': bh.name,
         }, public_holidays))
@@ -315,7 +318,7 @@ class HrEmployee(models.Model):
     def _get_public_holidays(self, date_start, date_end):
         domain = [
             ('resource_id', '=', False),
-            ('company_id', 'in', (self.company_id.id, False)),
+            ('company_id', 'in', self.env.companies.ids),
             ('date_from', '<=', date_end),
             ('date_to', '>=', date_start),
         ]

@@ -543,6 +543,9 @@ table.table_desc tr td {
     }
     // Content
     .carousel-inner {
+        // Create a new stacking context to ensure that elements like indicators
+        // and arrows will always appear on top of the carousel content.
+        isolation: isolate;
         overflow: hidden;
         height: 100%;
         .carousel-item {
@@ -1282,7 +1285,7 @@ header {
 }
 
 #wrapwrap.o_header_overlay {
-    > header:not(.o_header_affixed):not(.o_top_menu_collapse_shown) {
+    > header:not(.o_header_affixed):not(.o_top_menu_collapse_shown):not(.o_header_sidebar) {
         @include o-position-absolute(0, 0, auto, 0);
         z-index: 1000;
 

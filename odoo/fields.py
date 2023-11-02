@@ -1533,8 +1533,6 @@ class Float(Field):
     def convert_to_cache(self, value, record, validate=True):
         # apply rounding here, otherwise value in cache may be wrong!
         value = float(value or 0.0)
-        if not validate:
-            return value
         digits = self.get_digits(record.env)
         return float_round(value, precision_digits=digits[1]) if digits else value
 
@@ -1706,10 +1704,14 @@ class _String(Field):
         if value is None:
             return False
         if callable(self.translate) and record.env.context.get('edit_translations'):
-            value_en = record.with_context(edit_translations=None, lang='en_US')[self.name]
-            terms_en = self.get_trans_terms(value_en)
             terms = self.get_trans_terms(value)
-            term_to_state = {term: "translated" if term_en != term else "to_translate" for term, term_en in zip(terms, terms_en)}
+            base_lang = record._get_base_lang()
+            if base_lang != (record.env.lang or 'en_US'):
+                base_value = record.with_context(edit_translations=None, lang=base_lang)[self.name]
+                base_terms = self.get_trans_terms(base_value)
+                term_to_state = {term: "translated" if base_term != term else "to_translate" for term, base_term in zip(terms, base_terms)}
+            else:
+                term_to_state = defaultdict(lambda: 'translated')
             # use a wrapper to let the frontend js code identify each term and its metadata in the 'edit_translations' context
             # pylint: disable=not-callable
             value = self.translate(

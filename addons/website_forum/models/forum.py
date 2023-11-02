@@ -499,7 +499,7 @@ class Post(models.Model):
             post.can_downvote = is_admin or user.karma >= post.forum_id.karma_downvote or post.user_vote == 1
             post.can_comment = is_admin or user.karma >= post.karma_comment
             post.can_comment_convert = is_admin or user.karma >= post.karma_comment_convert
-            post.can_view = is_admin or user.karma >= post.karma_close or (post_sudo.create_uid.karma > 0 and (post_sudo.active or post_sudo.create_uid == user))
+            post.can_view = post.can_close or post_sudo.active and (post_sudo.create_uid.karma > 0 or post_sudo.create_uid == user)
             post.can_display_biography = is_admin or post_sudo.create_uid.karma >= post.forum_id.karma_user_bio
             post.can_post = is_admin or user.karma >= post.forum_id.karma_post
             post.can_flag = is_admin or user.karma >= post.forum_id.karma_flag
@@ -1164,10 +1164,10 @@ class Tags(models.Model):
         ('name_uniq', 'unique (name, forum_id)', "Tag name already exists !"),
     ]
 
-    @api.depends("post_ids.tag_ids", "post_ids.state")
+    @api.depends("post_ids", "post_ids.tag_ids", "post_ids.state", "post_ids.active")
     def _get_posts_count(self):
         for tag in self:
-            tag.posts_count = len(tag.post_ids)
+            tag.posts_count = len(tag.post_ids)  # state filter is in field domain
 
     @api.model_create_multi
     def create(self, vals_list):

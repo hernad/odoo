@@ -185,8 +185,9 @@ class Job(models.Model):
                     ON s.job_id = a.job_id
                    AND a.stage_id = s.stage_id
                    AND a.active IS TRUE
+                   WHERE a.company_id in %s
               GROUP BY s.job_id
-            """, [tuple(self.ids), ]
+            """, [tuple(self.ids), tuple(self.env.companies.ids)]
         )
 
         new_applicant_count = dict(self.env.cr.fetchall())
@@ -225,6 +226,8 @@ class Job(models.Model):
     def create(self, vals_list):
         for vals in vals_list:
             vals['favorite_user_ids'] = vals.get('favorite_user_ids', []) + [(4, self.env.uid)]
+            if vals.get('alias_name'):
+                vals['alias_user_id'] = False
         jobs = super().create(vals_list)
         utm_linkedin = self.env.ref("utm.utm_source_linkedin", raise_if_not_found=False)
         if utm_linkedin:

@@ -3,9 +3,9 @@
 # 	* base
 # 
 # Translators:
-# Niyas Raphy, 2022
 # Mustafa J. Kadhem <safi2266@gmail.com>, 2023
 # Martin Trigaux, 2023
+# Niyas Raphy, 2023
 # Malaz Abuidris <msea@odoo.com>, 2023
 # 
 msgid ""
@@ -584,6 +584,12 @@ msgid ""
 "and configs.\n"
 "\n"
 msgstr ""
+"\n"
+"\n"
+"يتيح هذا التطبيق لأمين الصندوق طباعة تقرير مبيعات X و Z\n"
+"لجلسة محددة أو تفاصيل المبيعات لعدة جلسات\n"
+"وتهيئة الإعدادات.\n"
+"\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_pos_epson_printer_restaurant
@@ -750,6 +756,17 @@ msgid ""
 "        co-author is Chick.Farm (visit for more information https://www.myacc.cloud)\n"
 "    "
 msgstr ""
+"\n"
+"        Chart of Accounts (COA) Template for Latvia's Accounting.\n"
+"        This module also includes:\n"
+"        * Tax groups,\n"
+"        * Most common Latvian Taxes,\n"
+"        * Fiscal positions,\n"
+"        * Latvian bank list.\n"
+"\n"
+"        author is Allegro IT (visit for more information https://www.allegro.lv)\n"
+"        co-author is Chick.Farm (visit for more information https://www.myacc.cloud)\n"
+"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_lt
@@ -1268,6 +1285,11 @@ msgid ""
 "    the account.move form view. If this field is set, it is then read when exporting electronic invoicing formats.\n"
 "    "
 msgstr ""
+"\n"
+"    Some Luxembourg public institutions do not have a VAT number but have been assigned an arbitrary number \n"
+"    (see: https://pch.gouvernement.lu/fr/peppol.html). Thus, this module adds the Peppol Identifier field on \n"
+"    the account.move form view. If this field is set, it is then read when exporting electronic invoicing formats.\n"
+"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ie
@@ -4838,6 +4860,9 @@ msgid ""
 "This is the base module to manage the accounting chart for Estonia in Odoo.\n"
 "    "
 msgstr ""
+"\n"
+"This is the base module to manage the accounting chart for Estonia in Odoo.\n"
+"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_gr
@@ -6014,6 +6039,19 @@ msgid ""
 "project.\n"
 "        "
 msgstr ""
+"\n"
+"دمج Transifex\n"
+"=====================\n"
+"سيضيف هذا التطبيق رابطاً إلى مشروع Transifex في نافذة عرض الترجمة.\n"
+"الغرض من هذا التطبيق هو تسريع عملية الترجمة للتطبيقات الرئيسية.\n"
+"\n"
+"حتى يعمل، يستخدم أودو ملفات تهيئة Transifex `.tx/config` لرصد\n"
+"مصدر المشروع. لن تتم ترجمة التطبيقات المخصصة (التطبيقات غير المنشورة على\n"
+"مشروع Transifex الرئيسي).\n"
+"\n"
+"يجب تفعيل اللغة التي يحاول المستخدم ترجمتها في مشروع\n"
+"Transifex.\n"
+"        "
 
 #. module: base
 #: model:ir.module.module,description:base.module_auth_totp
@@ -7795,6 +7833,8 @@ msgid ""
 "three departments (aeronautics and aerospace, environmental and applied "
 "fluid dynamics, and turbomachinery and propulsion)."
 msgstr ""
+"منظمة عالمية تعليمية وعلمية غير ربحية تضم ثلاث أقسام (علم الطيران وعلم "
+"الفضاء، البيئة وديناميكية الموائع التطبيقية، المعدات الطوربينية والدفع). "
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
@@ -8157,7 +8197,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_account_accountant
 msgid "Accounting, Taxes, Budgets, Assets..."
-msgstr ""
+msgstr "المحاسبة، الضرائب، الميزانيات، الأصول... "
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_fleet
@@ -9023,7 +9063,7 @@ msgstr "أندورا"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_web_mobile
 msgid "Android & iPhone"
-msgstr ""
+msgstr "Android & iPhone"
 
 #. module: base
 #: model:res.country,name:base.ao
@@ -9379,7 +9419,7 @@ msgstr "أستراليا "
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_au
 msgid "Australia - Accounting"
-msgstr ""
+msgstr "Australia - Accounting"
 
 #. module: base
 #: model:res.country,name:base.at
@@ -9714,7 +9754,7 @@ msgstr "الباركود - تسمية GS1 "
 #. module: base
 #: model:ir.module.module,summary:base.module_stock_barcode
 msgid "Barcode scanner for warehouses"
-msgstr ""
+msgstr "ماسح الباركود للمستودعات"
 
 #. module: base
 #. odoo-python
@@ -10207,7 +10247,7 @@ msgstr "اتصال في"
 #. module: base
 #: model:ir.module.module,summary:base.module_voip
 msgid "Call using VoIP"
-msgstr ""
+msgstr "المكالمة باستخدام VoIP "
 
 #. module: base
 #: model:res.country,name:base.kh
@@ -10532,7 +10572,7 @@ msgstr "قم بتحديد هذا المربع إذا كانت جهة الاتص�
 #. module: base
 #: model:ir.module.module,summary:base.module_payment_sepa_direct_debit
 msgid "Checkout with SEPA Direct Debit"
-msgstr ""
+msgstr "الدفع والخروج باستخدام خصم SEPA المباشر "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_latam_check
@@ -10977,6 +11017,13 @@ msgstr "الاسم الكامل"
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__compute
 msgid "Compute"
 msgstr "احتساب "
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/ir_model.py:0
+#, python-format
+msgid "Compute method cannot depend on field 'id'"
+msgstr "لا يمكن أن تعتمد طريقة الاحتساب على حقل 'المعرف' "
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_model_form
@@ -11500,7 +11547,7 @@ msgstr "إنشاء مجال عمل "
 #. module: base
 #: model:ir.module.module,summary:base.module_web_studio
 msgid "Create and Customize Applications"
-msgstr ""
+msgstr "إنشاء وتخصيص التطبيقات "
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_res_company_form
@@ -12005,7 +12052,7 @@ msgstr "DLE 26 110 x 220 مم"
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_daily_sales_reports
 msgid "Daily X and Z sales reports of a Point of Sale session"
-msgstr ""
+msgstr "تقارير مبيعات X و Z يومية في جلسة نقطة البيع "
 
 #. module: base
 #. odoo-python
@@ -12229,6 +12276,8 @@ msgid ""
 "processes in order to make our customers more productive, responsive and "
 "profitable."
 msgstr ""
+"تقوم Deco Addict بتصميم وتطوير ودمج ودعم الموارد البشرية وعمليات سلاسل "
+"التوريد في سبيل جعل العملاء أكثر إنتاجية وأكثر استجابة وأكثر ربحية. "
 
 #. module: base
 #: model_terms:res.partner,website_description:base.res_partner_2
@@ -13217,6 +13266,19 @@ msgstr "رسالة خطأ تظهر عندما يتم اختراق القيود. 
 
 #. module: base
 #. odoo-python
+#: code:addons/translate.py:0
+#, python-format
+msgid ""
+"Error while parsing view:\n"
+"\n"
+"%s"
+msgstr ""
+"حدث خطأ أثناء تحليل نافذة العرض:\n"
+"\n"
+"%s "
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid ""
@@ -13258,7 +13320,7 @@ msgstr "استونيا"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ee
 msgid "Estonia - Accounting"
-msgstr ""
+msgstr "Estonia - Accounting"
 
 #. module: base
 #: model:res.country,name:base.sz
@@ -13975,7 +14037,7 @@ msgid ""
 "Technical Details:\n"
 "%s"
 msgstr ""
-"تعذر استيراد الملف %r لعدم تطابق الصيغة أو لأنه لم يتم تكوين الملف بشكل صحيح. (الصيغ الصالحة هي are .csv, .po, .pot)\n"
+"تعذر استيراد الملف %r لعدم تطابق الصيغة أو لأنه لم يتم تكوين الملف بشكل صحيح. (الصيغ الصالحة هي .csv, .po, .pot)\n"
 "\n"
 "التفاصيل التقنية:\n"
 "%s"
@@ -16014,7 +16076,7 @@ msgstr "التفاعل بين القواعد "
 #. module: base
 #: model:ir.module.module,summary:base.module_website_twitter_wall
 msgid "Interactive twitter wall for events"
-msgstr ""
+msgstr "حائط تويتر التفاعلي للفعاليات "
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_groups_search
@@ -16076,7 +16138,18 @@ msgid "Invalid 'group by' parameter"
 msgstr "معامل 'تجميع حسب' غير صالح"
 
 #. module: base
-#. odoo-python
+#: code:addons/template_inheritance.py:0
+#, python-format
+msgid "Invalid Expression while parsing xpath %r"
+msgstr ""
+
+#. module: base
+#: code:addons/base/models/ir_default.py:0
+#, python-format
+msgid "Invalid JSON format in Default Value field."
+msgstr "تنسيق JSON غير صالح في حقل القيمة الافتراضية. "
+
+#. module: base
 #: code:addons/models.py:0
 #, python-format
 msgid "Invalid aggregation function %r."
@@ -16974,7 +17047,7 @@ msgstr "لاتفيا"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lv
 msgid "Latvia - Accounting"
-msgstr ""
+msgstr "Latvia - Accounting"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.config_wizard_step_view_form
@@ -17288,7 +17361,7 @@ msgstr "لوكسمبورغ - المحاسبة "
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lu_peppol_id
 msgid "Luxembourg - Peppol Identifier"
-msgstr ""
+msgstr "Luxembourg - Peppol Identifier"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_M
@@ -17314,6 +17387,7 @@ msgstr "التعاقد من الباطن بشأن تخطيط متطلبات ال
 #: model:ir.module.module,summary:base.module_sale_subscription
 msgid "MRR, Churn, Recurring payments"
 msgstr ""
+"الإيرادات الشهرية المتكررة، التوقف عن استخدام الخدمات، المدفوعات المتكررة "
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_purchase_stock
@@ -18434,7 +18508,7 @@ msgstr "موزامبيق"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_mz
 msgid "Mozambique - Accounting"
-msgstr ""
+msgstr "Mozambique - Accounting"
 
 #. module: base
 #: model:res.partner.title,shortcut:base.res_partner_title_mister
@@ -21129,7 +21203,7 @@ msgstr "تسليم المهام عبر الإنترنت "
 #. module: base
 #: model:ir.module.module,summary:base.module_appointment
 msgid "Online appointments scheduler"
-msgstr ""
+msgstr "أداة جدولة المواعيد عبر الإنترنت "
 
 #. module: base
 #. odoo-python
@@ -21819,7 +21893,7 @@ msgstr "PDF "
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_plm
 msgid "PLM, ECOs, Versions"
-msgstr ""
+msgstr "إدارة دورة حياة المنتج، أوامر التغيير الهندسي، النُّسخ "
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__base_language_export__format__po
@@ -22138,7 +22212,7 @@ msgstr "الدفعات - الحساب"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_payment_invoice_online_payment_patch
 msgid "Payment - Account / Invoice Online Payment Patch"
-msgstr ""
+msgstr "الدفع - الحساب / تصحيح فواتير الدفع عبر الإنترنت "
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_payment
@@ -22296,7 +22370,7 @@ msgstr "رقم الهاتف"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_phone_validation
 msgid "Phone Numbers Validation"
-msgstr "اعتماد أرقام الهواتف"
+msgstr "التحقق من أرقام الهواتف "
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
@@ -22398,7 +22472,7 @@ msgstr "نقطة البيع - الكوبونات والولاء "
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_daily_sales_reports
 msgid "Point of Sale Daily Sales Reports"
-msgstr ""
+msgstr "تقارير المبيعات اليومية لنقطة البيع "
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_discount
@@ -23051,7 +23125,7 @@ msgstr "الجودة "
 #. module: base
 #: model:ir.module.module,summary:base.module_quality_control
 msgid "Quality Alerts, Control Points"
-msgstr ""
+msgstr "تنبيهات الجودة، نقاط التحكم "
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__sql_count
@@ -23225,7 +23299,7 @@ msgstr "ضرائب مستخدمي الطرق "
 #. module: base
 #: model:res.country,vat_label:base.cl
 msgid "RUT"
-msgstr ""
+msgstr "RUT"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_company__font__raleway
@@ -24360,7 +24434,7 @@ msgstr "بيع تذاكر الفعاليات عبر الإنترنت "
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_ebay
 msgid "Sell on eBay easily"
-msgstr ""
+msgstr "تمكن من البيع على eBay بكل سهولة "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_sale_slides
@@ -24395,7 +24469,7 @@ msgstr "إرسال رسالة نصية قصيرة إلى الزائر مع مع�
 #. module: base
 #: model:ir.module.module,summary:base.module_sign
 msgid "Send documents to sign online"
-msgstr ""
+msgstr "قم بإرسال المستندات للتوقيع عبر الإنترنت "
 
 #. module: base
 #: model:ir.module.module,description:base.module_calendar_sms
@@ -24658,7 +24732,7 @@ msgstr "قصير "
 #. module: base
 #: model:ir.model,name:base.model_res_users_apikeys_show
 msgid "Show API Key"
-msgstr "إظهار مفتاح API"
+msgstr "إظهار مفتاح الواجهة البرمجية "
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_module_uninstall__show_all
@@ -25101,7 +25175,6 @@ msgstr "بدء التهيئة "
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
 #: model_terms:ir.ui.view,arch_db:base.view_country_state_form
 #: model_terms:ir.ui.view,arch_db:base.view_country_state_tree
-#: model_terms:ir.ui.view,arch_db:base.view_module_filter
 #: model_terms:ir.ui.view,arch_db:base.view_partner_address_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_res_bank_form
@@ -25144,6 +25217,7 @@ msgstr "الولايات "
 #: model:ir.model.fields,field_description:base.field_ir_module_module__state
 #: model:ir.model.fields,field_description:base.field_ir_module_module_dependency__state
 #: model:ir.model.fields,field_description:base.field_ir_module_module_exclusion__state
+#: model_terms:ir.ui.view,arch_db:base.view_module_filter
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "Status"
 msgstr "الحالة"
@@ -25279,7 +25353,7 @@ msgstr "الوسيطات التكميلية "
 #. module: base
 #: model:ir.module.module,summary:base.module_web_mobile
 msgid "Support for Android & iOS Apps"
-msgstr ""
+msgstr "الدعم لتطبيقات Android و iOS "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_event_track_live
@@ -25579,7 +25653,7 @@ msgstr "Test Action Bindings"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_mail_server_form
 msgid "Test Connection"
-msgstr "اختبار اتصال"
+msgstr "اختبار الاتصال "
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_discuss_full
@@ -25988,7 +26062,7 @@ msgstr ""
 #: code:addons/models.py:0
 #, python-format
 msgid "The following languages are not activated: %(missing_names)s"
-msgstr ""
+msgstr "اللغات التالية غير مفعلة: %(missing_names)s"
 
 #. module: base
 #. odoo-python
@@ -26937,7 +27011,7 @@ msgstr "To return an action, assign: <code>action = {...}</code>"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_actions_todo_tree
 msgid "Todo"
-msgstr "المطلوب تنفيذه"
+msgstr "قائمة المهام "
 
 #. module: base
 #: model:res.country,name:base.tg
@@ -27032,12 +27106,12 @@ msgstr "تتبع العملاء المهتمين وإغلاق الفرص "
 #. module: base
 #: model:ir.module.module,summary:base.module_helpdesk
 msgid "Track support tickets"
-msgstr ""
+msgstr "تتبع تذاكر الدعم "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_timesheet_grid
 msgid "Track time & costs"
-msgstr ""
+msgstr "تتبع الوقت والتكاليف "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_hr_recruitment
@@ -27100,7 +27174,7 @@ msgstr "الترجمات"
 #, python-format
 msgid ""
 "Translations for model translated fields only accept falsy values and str"
-msgstr ""
+msgstr "الترجمات للحقول المترجمة في النموذج تقبل فقط قيم falsy و str "
 
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_H
@@ -27328,6 +27402,13 @@ msgstr "تعذّر إيجاد Wkhtmltopdf في نظامك. لا يمكن إنش�
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_fields.py:0
+#, python-format
+msgid "Unable to import field type '%s'  "
+msgstr "تعذر استيراد نوع الحقل '%s' "
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/ir_module.py:0
 #, python-format
 msgid ""
@@ -27418,7 +27499,7 @@ msgstr "الإمارات العربية المتحدة"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ae
 msgid "United Arab Emirates - Accounting"
-msgstr "الإمارات العربية المتحدة - محاسبة"
+msgstr "الإمارات العربية المتحدة - المحاسبة "
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ae_pos
@@ -27520,7 +27601,7 @@ msgstr "اسم الحقل '%s' غير معروف للحقل المرتبط به 
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "Unknown model name '%s' in Related Model"
-msgstr ""
+msgstr "اسم النموذج '%s' غير معروف للنموذج المرتبط به "
 
 #. module: base
 #. odoo-python
@@ -28602,7 +28683,7 @@ msgstr "قيود العمل - العقد "
 #. module: base
 #: model:ir.module.module,summary:base.module_mrp_workorder
 msgid "Work Orders, Planning, Routing"
-msgstr ""
+msgstr "أوامر العمل، التخطيط، المسارات "
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_access__perm_write
@@ -28722,6 +28803,17 @@ msgstr "يمكنك أن ترفع ملفًا من جهازك أو تنسخ وتل
 #, python-format
 msgid "You can not create recursive tags."
 msgstr "لا يمكنك إنشاء علامات تصنيف متداخلة. "
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"Deleting the template users is not allowed. Deleting this profile will "
+"compromise critical functionalities."
+msgstr ""
+"لا يُسمح بحذف مستخدمي القالب. سيؤدي حذف هذا الملف التعريفي إلى التأثير سلباً"
+" على الوظائف الأساسية. "
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_users_login_key
@@ -28850,6 +28942,12 @@ msgstr "لا يمكنك تعطيل المستخدم المُسجل منه دخو
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid "You cannot delete a group linked with a settings field."
+msgstr "لا يمكنك حذف مجموعة مرتبطة بحقل إعدادات. "
+
+#. module: base
 #: code:addons/base/models/res_partner.py:0
 #, python-format
 msgid ""
@@ -28880,6 +28978,13 @@ msgstr ""
 "\n"
 "المستخدمون النشطون المرتبطون: \n"
 "%(names)s"
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/ir_config_parameter.py:0
+#, python-format
+msgid "You cannot delete the %s record."
+msgstr "لا يمكنك حذف سجل %s. "
 
 #. module: base
 #. odoo-python
@@ -28914,6 +29019,13 @@ msgid ""
 msgstr ""
 "لا يمكنك تقليل عدد الخانات العشرية لعملة قد تم استخدامها من قبل لإنشاء قيود "
 "محاسبية. "
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/ir_config_parameter.py:0
+#, python-format
+msgid "You cannot rename config parameters with keys %s"
+msgstr "لا يمكنك إعادة تسمية معايير التهيئة مع المفاتيح %s "
 
 #. module: base
 #. odoo-python

@@ -6,6 +6,7 @@
 # Mustafa J. Kadhem <safi2266@gmail.com>, 2022
 # Martin Trigaux, 2022
 # Niyas Raphy, 2022
+# Wil Odoo, 2023
 # Malaz Abuidris <msea@odoo.com>, 2023
 # 
 msgid ""
@@ -1066,6 +1067,13 @@ msgstr "بإمكانه النشر "
 #. odoo-python
 #: code:addons/website_sale/controllers/main.py:0
 #, python-format
+msgid "Can not resequence a video at first position."
+msgstr "لا يمكن إعادة تسلسل فيديو في الوضع الأول. "
+
+#. module: website_sale
+#. odoo-python
+#: code:addons/website_sale/controllers/main.py:0
+#, python-format
 msgid "Can not resequence embedded image/video with a non compatible image."
 msgstr "لا يمكن إعادة تسلسل الصورة/الفيديو المضمن مع صورة غير متوافقة. "
 
@@ -1200,6 +1208,17 @@ msgstr ""
 "لإتمام هذه العملية."
 
 #. module: website_sale
+#. odoo-python
+#: code:addons/website_sale/controllers/main.py:0
+#, python-format
+msgid ""
+"Changing your name is not allowed once documents have been issued for your "
+"account. Please contact us directly for this operation."
+msgstr ""
+"لا يسمح بتغيير اسمك بمجرد أن يتم إصدار مستندات لحسابك. يرجى التواصل معنا "
+"مباشرة لإتمام هذه العملية. "
+
+#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Checkout Pages"
 msgstr "صفحات الدفع والخروج "
@@ -1287,7 +1306,10 @@ msgid "Companies"
 msgstr "الشركات "
 
 #. module: website_sale
+#. odoo-javascript
+#: code:addons/website_sale/static/src/js/website_sale_form_editor.js:0
 #: model_terms:ir.ui.view,arch_db:website_sale.address
+#, python-format
 msgid "Company Name"
 msgstr "اسم الشركة "
 
@@ -2078,6 +2100,18 @@ msgstr "الدفع والخروج الفوري، عوضاً عن الإضافة 
 #. odoo-python
 #: code:addons/website_sale/controllers/main.py:0
 #, python-format
+msgid ""
+"If you are ordering for an external person, please place your order via the "
+"backend. If you wish to change your name or email address, please do so in "
+"the account settings or contact your administrator."
+msgstr ""
+"إذا كنت تقوم بالطلب لشخص خارجي، يرجى الطلب من خلال الواجهة الخلفية. إذا أردت"
+" تغيير اسمك أو عنوان بريدك الإلكتروني، يرجى القيام بذلك من خلال إعدادات "
+"الحساب أو التواصل مع المدير. "
+
+#. module: website_sale
+#: code:addons/website_sale/controllers/main.py:0
+#, python-format
 msgid "Invalid Email! Please enter a valid email address."
 msgstr "البريد الإلكتروني غير صالح! يرجى إدخال عنوان بريد إلكتروني صالح. "
 
@@ -2325,22 +2359,22 @@ msgstr "موصل شحن Mondial Relay "
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippets_options_web_editor
 msgid "Move to first"
-msgstr "النقل للأول"
+msgstr "الانتقال إلى الأول "
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippets_options_web_editor
 msgid "Move to last"
-msgstr "النقل للأخير"
+msgstr "الانتقال إلى الأخير "
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippets_options_web_editor
 msgid "Move to next"
-msgstr "النقل للتالي"
+msgstr "الانتقال إلى التالي "
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippets_options_web_editor
 msgid "Move to previous"
-msgstr "النقل للسابق"
+msgstr "الانتقال إلى السابق "
 
 #. module: website_sale
 #: model:product.public.category,name:website_sale.public_category_multimedia
@@ -2716,6 +2750,13 @@ msgid "Phone"
 msgstr "رقم الهاتف"
 
 #. module: website_sale
+#. odoo-javascript
+#: code:addons/website_sale/static/src/js/website_sale_form_editor.js:0
+#, python-format
+msgid "Phone Number"
+msgstr "رقم الهاتف"
+
+#. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Pills"
 msgstr "حبوب "
@@ -2845,7 +2886,7 @@ msgstr "طباعة"
 #: model_terms:ir.actions.act_window,help:website_sale.action_unpaid_orders_ecommerce
 #: model_terms:ir.actions.act_window,help:website_sale.action_view_unpaid_quotation_tree
 msgid "Process the order once the payment is received."
-msgstr "معالجة الطلب بمجرد تسلم المستحقات."
+msgstr "معالجة الطلب بمجرد استلام الدفع. "
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -3145,7 +3186,7 @@ msgstr "الإيرادات بواسطة "
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
 msgid "Radio"
-msgstr "اختيار "
+msgstr "راديو "
 
 #. module: website_sale
 #: model:ir.model.fields,field_description:website_sale.field_product_template__rating_ids
@@ -3738,8 +3779,8 @@ msgstr "الملحقات المقترحة في عربة التجارة الإل�
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.address
-msgid "TIN / VAT"
-msgstr "الرقم التعريفي لدافع الضرائب/ضريبة القيمة المضافة"
+msgid "VAT"
+msgstr "ضريبة القيمة المضافة"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.snippet_options
@@ -4396,6 +4437,20 @@ msgid ""
 msgstr ""
 "سوف يتم عرض قصاصتك الحيوية هنا...\n"
 "                                يتم عرض هذه الرسالة لأنك لم تقم بتحديد التأثير الفني والقالب حتى يتم استخدامه. "
+
+#. module: website_sale
+#. odoo-javascript
+#: code:addons/website_sale/static/src/js/website_sale_form_editor.js:0
+#, python-format
+msgid "Your Email"
+msgstr "بريدك الإلكتروني "
+
+#. module: website_sale
+#. odoo-javascript
+#: code:addons/website_sale/static/src/js/website_sale_form_editor.js:0
+#, python-format
+msgid "Your Name"
+msgstr "اسمك"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.cart_lines

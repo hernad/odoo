@@ -23,9 +23,9 @@
 # Ivan Kropotkin <yelizariev@itpp.dev>, 2022
 # Martin Trigaux, 2022
 # valmasone, 2023
-# Сергей Шебанин <sergey@shebanin.ru>, 2023
 # Alena Vlasova, 2023
 # Elena Da, 2023
+# Сергей Шебанин <sergey@shebanin.ru>, 2023
 # alenafairy, 2023
 # 
 msgid ""
@@ -101,7 +101,7 @@ msgstr ""
 #: code:addons/mail/static/src/models/notification_request_view.js:0
 #, python-format
 msgid "%(odoobotName)s has a request"
-msgstr ""
+msgstr "%(odoobotName)s отправил вам запрос"
 
 #. module: mail
 #. odoo-python
@@ -180,14 +180,14 @@ msgstr "Создана новая запись: %s"
 #: code:addons/mail/static/src/models/activity_list_view_item.js:0
 #, python-format
 msgid "%s days overdue"
-msgstr ""
+msgstr "%s дней просрочено"
 
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/models/activity_view.js:0
 #, python-format
 msgid "%s days overdue:"
-msgstr ""
+msgstr "%s дней просрочено:"
 
 #. module: mail
 #. odoo-javascript
@@ -857,8 +857,8 @@ msgid ""
 "<strong>Internal communication</strong>: Replying will post an internal "
 "note. Followers won't receive any email notification."
 msgstr ""
-"<strong>Внутренняя переписка:</strong> Ответ будет опубликован как заметка. "
-"Подписчики не получат оповещения по электронной почте."
+"<strong>Внутренняя переписка:</strong> Ответ будет опубликован как запись "
+"журнала. Подписчики не получат оповещения по электронной почте."
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.message_activity_done
@@ -1392,6 +1392,13 @@ msgstr ""
 msgid ""
 "An SSL exception occurred. Check SSL/TLS configuration on server port.\n"
 " %s"
+msgstr ""
+
+#. module: mail
+#. odoo-python
+#: code:addons/mail/models/ir_attachment.py:0
+#, python-format
+msgid "An access token must be provided for each attachment."
 msgstr ""
 
 #. module: mail
@@ -3242,14 +3249,14 @@ msgstr "Срок исполнения через"
 #: code:addons/mail/static/src/models/activity_list_view_item.js:0
 #, python-format
 msgid "Due in %s days"
-msgstr ""
+msgstr "Через %s дней"
 
 #. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/models/activity_view.js:0
 #, python-format
 msgid "Due in %s days:"
-msgstr ""
+msgstr "Через %s дней:"
 
 #. module: mail
 #. odoo-javascript
@@ -3735,7 +3742,7 @@ msgstr "Понравилось"
 #: code:addons/mail/static/src/js/activity.js:0
 #, python-format
 msgid "Feedback"
-msgstr "Обратная связь"
+msgstr "Результат"
 
 #. module: mail
 #. odoo-javascript
@@ -4569,7 +4576,7 @@ msgstr ""
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.view_document_file_kanban
 msgid "Image is a link"
-msgstr ""
+msgstr "Изображение - это ссылка"
 
 #. module: mail
 #. odoo-python
@@ -5465,7 +5472,7 @@ msgstr "Добавить"
 #: model_terms:ir.ui.view,arch_db:mail.mail_activity_view_form_popup
 #: model_terms:ir.ui.view,arch_db:mail.view_server_action_form_template
 msgid "Log a note..."
-msgstr "Добавить заметку…"
+msgstr "Записать в журнал…"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.mail_activity_view_form_popup
@@ -5477,12 +5484,12 @@ msgstr "Запишите действие"
 #: code:addons/mail/static/src/models/composer.js:0
 #, python-format
 msgid "Log an internal note..."
-msgstr "Добавьте текст заметки..."
+msgstr "Записать в журнал объекта..."
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_mail_compose_message__is_log
 msgid "Log as Internal Note"
-msgstr ""
+msgstr "Записать в журнал объекта"
 
 #. module: mail
 #. odoo-javascript
@@ -5490,7 +5497,7 @@ msgstr ""
 #: code:addons/mail/static/src/models/composer_view.js:0
 #, python-format
 msgid "Log note"
-msgstr "Добавить заметку"
+msgstr "Записать в журнал"
 
 #. module: mail
 #. odoo-javascript
@@ -6394,7 +6401,7 @@ msgstr ""
 #: code:addons/mail/static/src/components/discuss/discuss.xml:0
 #, python-format
 msgid "No conversation selected."
-msgstr ""
+msgstr "Не выбрано ни одного чата."
 
 #. module: mail
 #. odoo-javascript
@@ -6506,7 +6513,7 @@ msgstr "Не подтверждено"
 #: model:mail.message.subtype,name:mail.mt_note
 #, python-format
 msgid "Note"
-msgstr "Заметка"
+msgstr "Запись журнала"
 
 #. module: mail
 #: model:ir.model.fields,field_description:mail.field_res_users__notification_type
@@ -6601,7 +6608,7 @@ msgstr "Количество ошибок"
 #: model:ir.model.fields,help:mail.field_mail_thread_cc__message_needaction_counter
 #: model:ir.model.fields,help:mail.field_res_partner__message_needaction_counter
 #: model:ir.model.fields,help:mail.field_res_users__message_needaction_counter
-msgid "Number of messages which requires an action"
+msgid "Number of messages requiring action"
 msgstr "Количество сообщений, требующих действия"
 
 #. module: mail
@@ -7306,7 +7313,7 @@ msgstr ""
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__ir_actions_server__mail_post_method__note
 msgid "Post as Note"
-msgstr ""
+msgstr "Записать в журнал"
 
 #. module: mail
 #: model:ir.model.fields.selection,name:mail.selection__mail_compose_message__composition_mode__mass_post
@@ -9047,6 +9054,21 @@ msgid ""
 msgstr ""
 
 #. module: mail
+#. odoo-python
+#: code:addons/mail/models/ir_attachment.py:0
+#, python-format
+msgid ""
+"The attachment %s does not exist or you do not have the rights to access it."
+msgstr ""
+
+#. module: mail
+#. odoo-python
+#: code:addons/mail/models/ir_attachment.py:0
+#, python-format
+msgid "The attachment %s does not exist."
+msgstr ""
+
+#. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/models/blur_manager.js:0
 #, python-format
@@ -9968,6 +9990,14 @@ msgstr ""
 "mycompany.odoo.com)."
 
 #. module: mail
+#: code:addons/mail/models/mail_alias.py:0
+#, python-format
+msgid ""
+"Value for `mail.catchall.domain.allowed` cannot be validated.\n"
+"It should be a comma separated list of domains e.g. example.com,example.org."
+msgstr ""
+
+#. module: mail
 #. odoo-javascript
 #: code:addons/mail/static/src/models_data/emoji_data.js:0
 #, python-format
@@ -10009,7 +10039,7 @@ msgstr "Настройки видео"
 #: model:ir.model,name:mail.model_ir_ui_view
 #, python-format
 msgid "View"
-msgstr "Осмотр"
+msgstr "Смотреть"
 
 #. module: mail
 #. odoo-python
@@ -10171,7 +10201,7 @@ msgstr ""
 #: code:addons/mail/static/src/xml/activity.xml:0
 #, python-format
 msgid "Write Feedback"
-msgstr "написать отзыв"
+msgstr "Опишите результат"
 
 #. module: mail
 #: model_terms:ir.ui.view,arch_db:mail.email_compose_message_wizard_form
@@ -13139,7 +13169,7 @@ msgstr ""
 #: code:addons/mail/static/src/models_data/emoji_data.js:0
 #, python-format
 msgid "business"
-msgstr ""
+msgstr "предприятия"
 
 #. module: mail
 #. odoo-javascript
@@ -25584,7 +25614,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:mail.view_mail_form
 #, python-format
 msgid "on"
-msgstr "на"
+msgstr "в"
 
 #. module: mail
 #. odoo-javascript
@@ -31198,7 +31228,7 @@ msgstr ""
 #: code:addons/mail/static/src/models_data/emoji_data.js:0
 #, python-format
 msgid "split"
-msgstr ""
+msgstr "разделить"
 
 #. module: mail
 #. odoo-javascript
