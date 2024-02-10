@@ -34,6 +34,14 @@ export function useInputField(params) {
     let lastSetValue = null;
 
     /**
+     * Track the fact that there is a change sent to the model that hasn't been acknowledged yet
+     * (e.g. because the onchange is still pending). This is necessary if we must do an urgent save,
+     * as we have to re-send that change for the write that will be done directly.
+     * FIXME: this could/should be handled by the model itself, when it will be rewritten
+     */
+    let pendingUpdate = false;
+
+    /**
      * When a user types, we need to set the field as dirty.
      */
     function onInput(ev) {
@@ -48,29 +56,30 @@ export function useInputField(params) {
      * However, if the field is invalid, the new value will not be committed to the model.
      */
     function onChange(ev) {
-        if (isDirty) {
-            isDirty = false;
-            let isInvalid = false;
-            let val = ev.target.value;
-            if (params.parse) {
-                try {
-                    val = params.parse(val);
-                } catch (_e) {
-                    if (component.props.record) {
-                        component.props.record.setInvalidField(component.props.name);
-                    }
-                    isInvalid = true;
+        isDirty = false;
+        let isInvalid = false;
+        let val = ev.target.value;
+        if (params.parse) {
+            try {
+                val = params.parse(val);
+            } catch (_e) {
+                if (component.props.record) {
+                    component.props.record.setInvalidField(component.props.name);
                 }
+                isInvalid = true;
             }
+        }
 
-            if (!isInvalid) {
-                component.props.update(val);
-                lastSetValue = ev.target.value;
-            }
+        if (!isInvalid) {
+            pendingUpdate = true;
+            Promise.resolve(component.props.update(val)).then(() => {
+                pendingUpdate = false;
+            });
+            lastSetValue = ev.target.value;
+        }
 
-            if (component.props.setDirty) {
-                component.props.setDirty(isDirty);
-            }
+        if (component.props.setDirty) {
+            component.props.setDirty(isDirty);
         }
     }
     function onKeydown(ev) {
@@ -103,7 +112,9 @@ export function useInputField(params) {
      * If it is not such a case, we update the field with the new value.
      */
     useEffect(() => {
-        const isInvalid = component.props.record ? component.props.record.isInvalid(component.props.name) : false;
+        const isInvalid = component.props.record
+            ? component.props.record.isInvalid(component.props.name)
+            : false;
         if (inputRef.el && !isDirty && !isInvalid) {
             inputRef.el.value = params.getValue();
             lastSetValue = inputRef.el.value;
@@ -124,7 +135,7 @@ export function useInputField(params) {
         }
 
         isDirty = inputRef.el.value !== lastSetValue;
-        if (isDirty || urgent) {
+        if (isDirty || (urgent && pendingUpdate)) {
             let isInvalid = false;
             isDirty = false;
             let val = inputRef.el.value;
@@ -145,9 +156,9 @@ export function useInputField(params) {
                 return;
             }
 
-            if (val !== component.props.value) {
-                await component.props.update(val);
+            if ((val || false) !== (component.props.value || false)) {
                 lastSetValue = inputRef.el.value;
+                await component.props.update(val);
                 if (component.props.setDirty) {
                     component.props.setDirty(isDirty);
                 }

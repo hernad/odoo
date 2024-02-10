@@ -341,10 +341,14 @@ class Warehouse(models.Model):
 
         for picking_type, values in data.items():
             if self[picking_type]:
+                self[picking_type].sudo().sequence_id.write(sequence_data[picking_type])
                 self[picking_type].write(values)
             else:
                 data[picking_type].update(create_data[picking_type])
+                existing_sequence = IrSequenceSudo.search_count([('company_id', '=', sequence_data[picking_type]['company_id']), ('name', '=', sequence_data[picking_type]['name'])], limit=1)
                 sequence = IrSequenceSudo.create(sequence_data[picking_type])
+                if existing_sequence:
+                    sequence.name = _("%(name)s (copy)(%(id)s)", name=sequence.name, id=str(sequence.id))
                 values.update(warehouse_id=self.id, color=color, sequence_id=sequence.id)
                 warehouse_data[picking_type] = PickingType.create(values).id
 
@@ -407,6 +411,7 @@ class Warehouse(models.Model):
                     'company_id': self.company_id.id,
                     'action': 'pull',
                     'auto': 'manual',
+                    'propagate_carrier': True,
                     'route_id': self._find_global_route('stock.route_warehouse0_mto', _('Make To Order')).id
                 },
                 'update_values': {

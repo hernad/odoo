@@ -64,7 +64,10 @@ options.registry.mass_mailing_sizing_x = options.Class.extend({
                     self.change_width(event, self.$target.prev(), sib_width, sib_offset, true);
                 }
                 if (compass === 'image') {
-                    self.change_width(event, self.$target, target_width, offset, true);
+                    const maxWidth = self.$target.closest("div").width();
+                    // Equivalent to `self.change_width` but ensuring `maxWidth` is the maximum:
+                    self.$target.css("width", Math.min(maxWidth, Math.round(event.pageX - offset)));
+                    self.trigger_up('cover_update');
                 }
             });
             $body.one("mouseup", function () {
@@ -296,6 +299,9 @@ options.registry.DesignTab = options.Class.extend({
             cssTexts.push(rule.cssText);
         }
         this.styleElement.textContent = cssTexts.join('\n');
+        // Flush the rules cache for convert_inline, to make sure they are
+        // recomputed to account for the change.
+        this.options.wysiwyg._rulesCache = undefined;
     },
     /**
      * @override

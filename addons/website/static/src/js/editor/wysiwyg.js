@@ -4,6 +4,7 @@ odoo.define('website.wysiwyg', function (require) {
 var Wysiwyg = require('web_editor.wysiwyg');
 var snippetsEditor = require('website.snippet.editor');
 let socialMediaOptions = require('@website/snippets/s_social_media/options')[Symbol.for("default")];
+const { cloneContentEls } = require("website.utils");
 
 /**
  * Show/hide the dropdowns associated to the given toggles and allows to wait
@@ -18,7 +19,9 @@ let socialMediaOptions = require('@website/snippets/s_social_media/options')[Sym
  */
 function toggleDropdown($toggles, show) {
     return Promise.all(_.map($toggles, toggle => {
-        const $toggle = $(toggle);
+        // We must select the element via the iframe so that the event handlers
+        // declared on the iframe are triggered.
+        const $toggle = toggle.ownerDocument.defaultView.$(toggle);
         const shown = toggle.classList.contains('show');
         if (shown === show) {
             return;
@@ -75,6 +78,8 @@ const WebsiteWysiwyg = Wysiwyg.extend({
                         this._toggleMegaMenu($toggle[0]);
                     }
                 })
+                // FIXME this is not right, the observer should not be inactive
+                // for async periods of time.
                 .then(() => this.odooEditor.observerActive());
         });
 
@@ -203,11 +208,27 @@ const WebsiteWysiwyg = Wysiwyg.extend({
     /**
      * @override
      */
-    _saveElement: async function ($el, context, withLang) {
+    async _saveElement($el, context, withLang, ...rest) {
         var promises = [];
 
-        // Saving a view content
-        await this._super.apply(this, arguments);
+        // Saving Embed Code snippets with <script> in the database, as these
+        // elements are removed in edit mode.
+        if ($el[0].querySelector(".s_embed_code")) {
+            // Copied so as not to impact the actual DOM and prevent scripts
+            // from loading.
+            const $clonedEl = $el.clone(true, true);
+            for (const embedCodeEl of $clonedEl[0].querySelectorAll(".s_embed_code")) {
+                const embedTemplateEl = embedCodeEl.querySelector(".s_embed_code_saved");
+                if (embedTemplateEl) {
+                    embedCodeEl.querySelector(".s_embed_code_embedded")
+                        .replaceChildren(cloneContentEls(embedTemplateEl.content, true));
+                }
+            }
+            await this._super($clonedEl, context, withLang, ...rest);
+        } else {
+            // Saving a view content
+            await this._super.apply(this, arguments);
+        }
 
         // Saving mega menu options
         if ($el.data('oe-field') === 'mega_menu_content') {
@@ -251,6 +272,18 @@ const WebsiteWysiwyg = Wysiwyg.extend({
             .dropdown({});
         return toggleDropdown($megaMenuToggles, false);
     },
+    /**
+     * @override
+     */
+    _getRecordInfo: function (editable) {
+        const $editable = $(editable);
+        return {
+            resModel: $editable.data('oe-model'),
+            resId: $editable.data('oe-id'),
+            field: $editable.data('oe-field'),
+            type: $editable.data('oe-type'),
+        }
+      },
     /**
      * Toggles the mega menu.
      *
@@ -299,6 +332,40 @@ snippetsEditor.SnippetsMenu.include({
     },
 
     //--------------------------------------------------------------------------
+    // Public
+    //--------------------------------------------------------------------------
+
+    /**
+     * @override
+     */
+    async cleanForSave() {
+        const getFromEditable = selector => this.options.editable[0].querySelectorAll(selector);
+        // Clean unstyled translations
+        return this._super(...arguments).then(() => {
+            for (const el of getFromEditable('.o_translation_without_style')) {
+                el.classList.remove('o_translation_without_style');
+                if (el.dataset.oeTranslationSaveSha) {
+                    el.dataset.oeTranslationInitialSha = el.dataset.oeTranslationSaveSha;
+                    delete el.dataset.oeTranslationSaveSha;
+                }
+            }
+            // Adapt translation values for `select` > `options`s and remove all
+            // temporary `.o_translation_select` elements.
+            for (const optionsEl of getFromEditable('.o_translation_select')) {
+                const selectEl = optionsEl.nextElementSibling;
+                const translatedOptions = optionsEl.children;
+                const selectOptions = selectEl.tagName === 'SELECT' ? [...selectEl.options] : [];
+                if (selectOptions.length === translatedOptions.length) {
+                    selectOptions.map((option, i) => {
+                        option.text = translatedOptions[i].textContent;
+                    });
+                }
+                optionsEl.remove();
+            }
+        });
+    },
+
+    //--------------------------------------------------------------------------
     // Private
     //--------------------------------------------------------------------------
 
@@ -308,6 +375,7 @@ snippetsEditor.SnippetsMenu.include({
     _insertDropzone: function ($hook) {
         var $hookParent = $hook.parent();
         var $dropzone = this._super(...arguments);
+        $dropzone.attr('data-editor-message-default', $hookParent.attr('data-editor-message-default'));
         $dropzone.attr('data-editor-message', $hookParent.attr('data-editor-message'));
         $dropzone.attr('data-editor-sub-message', $hookParent.attr('data-editor-sub-message'));
         return $dropzone;

@@ -137,17 +137,22 @@
             'website/static/src/xml/website.xml',
             'website/static/src/xml/website.background.video.xml',
             'website/static/src/xml/website.share.xml',
+            # Stable fix, will be replaced by an `ir.asset` in master to be able
+            # to clean `<script>` tags in embed code snippets in edit mode.
+            'website/static/src/snippets/s_embed_code/000.js',
         ],
         'web.assets_frontend_minimal': [
             'website/static/src/js/content/inject_dom.js',
             'website/static/src/js/content/auto_hide_menu.js',
             'website/static/src/js/content/redirect.js',
+            'website/static/src/js/content/adapt_content.js',
         ],
         'web.assets_frontend_lazy': [
             # Remove assets_frontend_minimal
             ('remove', 'website/static/src/js/content/inject_dom.js'),
             ('remove', 'website/static/src/js/content/auto_hide_menu.js'),
             ('remove', 'website/static/src/js/content/redirect.js'),
+            ('remove', 'website/static/src/js/content/adapt_content.js'),
         ],
         'web._assets_primary_variables': [
             'website/static/src/scss/primary_variables.scss',
@@ -160,6 +165,7 @@
             ('prepend', 'website/static/src/scss/secondary_variables.scss'),
         ],
         'web.assets_tests': [
+            'website/static/tests/tour_utils/widget_lifecycle_dep_widget.js',
             'website/static/tests/tours/**/*',
             'website/static/src/client_actions/website_preview/website_preview_test_mode.js',
         ],
@@ -182,6 +188,7 @@
             'website/static/src/components/views/*',
             'website/static/src/services/website_service.js',
             'website/static/src/js/utils.js',
+            'website/static/src/xml/website.xml',
 
             # Don't include dark mode files in light mode
             ('remove', 'website/static/src/client_actions/*/*.dark.scss'),

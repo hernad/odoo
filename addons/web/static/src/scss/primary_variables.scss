@@ -3,6 +3,9 @@
 /// They are available in every asset bundle.
 ///
 
+// Contrast ratio
+$o-frontend-min-contrast-ratio: 2.9 !default;
+
 // Color-scheme
 $o-webclient-color-scheme: bright !default;
 
@@ -162,6 +165,8 @@ $o-base-settings-mobile-tabs-height: 40px !default;
 $o-base-settings-mobile-tabs-overflow-gap: 3% !default;
 
 $o-cp-breadcrumb-height: 30px !default;
+
+$o-cp-button-sm-no-border-padding: 0.4rem;
 
 $o-datepicker-week-color: #8f8f8f !default;
 

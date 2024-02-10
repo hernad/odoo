@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from odoo import api, fields, models, _
+from odoo.exceptions import ValidationError
 from odoo.tools import format_amount
 
 ACCOUNT_DOMAIN = "['&', '&', '&', ('deprecated', '=', False), ('account_type', 'not in', ('asset_receivable','liability_payable','asset_cash','liability_credit_card')), ('company_id', '=', current_company_id), ('is_off_balance', '=', False)]"
@@ -81,6 +82,29 @@ class ProductTemplate(models.Model):
             tax_string = " "
         return tax_string
 
+    @api.constrains('uom_id')
+    def _check_uom_not_in_invoice(self):
+        self.env['product.template'].flush_model(['uom_id'])
+        self._cr.execute("""
+            SELECT prod_template.id
+              FROM account_move_line line
+              JOIN product_product prod_variant ON line.product_id = prod_variant.id
+              JOIN product_template prod_template ON prod_variant.product_tmpl_id = prod_template.id
+              JOIN uom_uom template_uom ON prod_template.uom_id = template_uom.id
+              JOIN uom_category template_uom_cat ON template_uom.category_id = template_uom_cat.id
+              JOIN uom_uom line_uom ON line.product_uom_id = line_uom.id
+              JOIN uom_category line_uom_cat ON line_uom.category_id = line_uom_cat.id
+             WHERE prod_template.id IN %s
+               AND line.parent_state = 'posted'
+               AND template_uom_cat.id != line_uom_cat.id
+             LIMIT 1
+        """, [tuple(self.ids)])
+        if self._cr.fetchall():
+            raise ValidationError(_(
+                "This product is already being used in posted Journal Entries.\n"
+                "If you want to change its Unit of Measure, please archive this product and create a new one."
+            ))
+
 
 class ProductProduct(models.Model):
     _inherit = "product.product"
@@ -134,7 +158,7 @@ class ProductProduct(models.Model):
             taxes_before_included = all(tax.price_include for tax in flattened_taxes_before_fp)
 
             if set(product_taxes.ids) != set(product_taxes_after_fp.ids) and taxes_before_included:
-                taxes_res = flattened_taxes_before_fp.compute_all(
+                taxes_res = flattened_taxes_before_fp.with_context(round=False, round_base=False).compute_all(
                     product_price_unit,
                     quantity=1.0,
                     currency=currency,
@@ -144,7 +168,7 @@ class ProductProduct(models.Model):
                 product_price_unit = taxes_res['total_excluded']
 
                 if any(tax.price_include for tax in flattened_taxes_after_fp):
-                    taxes_res = flattened_taxes_after_fp.compute_all(
+                    taxes_res = flattened_taxes_after_fp.with_context(round=False, round_base=False).compute_all(
                         product_price_unit,
                         quantity=1.0,
                         currency=currency,
@@ -159,7 +183,7 @@ class ProductProduct(models.Model):
 
         # Apply currency rate.
         if currency != product_currency:
-            product_price_unit = product_currency._convert(product_price_unit, currency, company, document_date)
+            product_price_unit = product_currency._convert(product_price_unit, currency, company, document_date, round=False)
 
         return product_price_unit
 

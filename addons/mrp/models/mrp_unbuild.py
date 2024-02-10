@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 from odoo import api, fields, models, _
-from odoo.exceptions import AccessError, UserError
+from odoo.exceptions import UserError, ValidationError
 from odoo.tools import float_compare, float_round
 from odoo.osv import expression
 
@@ -53,8 +53,7 @@ class MrpUnbuild(models.Model):
     mo_bom_id = fields.Many2one('mrp.bom', 'Bill of Material used on the Production Order', related='mo_id.bom_id')
     lot_id = fields.Many2one(
         'stock.lot', 'Lot/Serial Number',
-        domain="[('product_id', '=', product_id), ('company_id', '=', company_id)]", check_company=True,
-        states={'done': [('readonly', True)]})
+        domain="[('product_id', '=', product_id), ('company_id', '=', company_id)]", check_company=True)
     has_tracking=fields.Selection(related='product_id.tracking', readonly=True)
     location_id = fields.Many2one(
         'stock.location', 'Source Location',
@@ -102,23 +101,12 @@ class MrpUnbuild(models.Model):
             self.product_id = self.mo_id.product_id.id
             self.bom_id = self.mo_id.bom_id
             self.product_uom_id = self.mo_id.product_uom_id
+            self.lot_id = self.mo_id.lot_producing_id
             if self.has_tracking == 'serial':
                 self.product_qty = 1
             else:
-                self.product_qty = self.mo_id.product_qty
-            if self.lot_id and self.lot_id not in self.mo_id.move_finished_ids.move_line_ids.lot_id:
-                return {'warning': {
-                    'title': _("Warning"),
-                    'message': _("The selected serial number does not correspond to the one used in the manufacturing order, please select another one.")
-                }}
+                self.product_qty = self.mo_id.qty_produced
 
-    @api.onchange('lot_id')
-    def _onchange_lot_id(self):
-        if self.mo_id and self.lot_id and self.lot_id not in self.mo_id.move_finished_ids.move_line_ids.lot_id:
-            return {'warning': {
-                'title': _("Warning"),
-                'message': _("The selected serial number does not correspond to the one used in the manufacturing order, please select another one.")
-            }}
 
     @api.onchange('product_id')
     def _onchange_product_id(self):
@@ -130,7 +118,7 @@ class MrpUnbuild(models.Model):
     def _check_qty(self):
         for unbuild in self:
             if unbuild.product_qty <= 0:
-                raise ValueError(_('Unbuild Order product quantity has to be strictly positive.'))
+                raise ValidationError(_('Unbuild Order product quantity has to be strictly positive.'))
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -157,7 +145,7 @@ class MrpUnbuild(models.Model):
         consume_moves = self._generate_consume_moves()
         consume_moves._action_confirm()
         produce_moves = self._generate_produce_moves()
-        produce_moves._action_confirm()
+        produce_moves.with_context(default_lot_id=False)._action_confirm()
 
         finished_moves = consume_moves.filtered(lambda m: m.product_id == self.product_id)
         consume_moves -= finished_moves
@@ -173,14 +161,14 @@ class MrpUnbuild(models.Model):
                 self.env['stock.move.line'].create({
                     'move_id': finished_move.id,
                     'lot_id': self.lot_id.id,
-                    'qty_done': finished_move.product_uom_qty,
+                    'qty_done': self.product_qty,
                     'product_id': finished_move.product_id.id,
                     'product_uom_id': finished_move.product_uom.id,
                     'location_id': finished_move.location_id.id,
                     'location_dest_id': finished_move.location_dest_id.id,
                 })
             else:
-                finished_move.quantity_done = finished_move.product_uom_qty
+                finished_move.quantity_done = self.product_qty
 
         # TODO: Will fail if user do more than one unbuild with lot on the same MO. Need to check what other unbuild has aready took
         qty_already_used = defaultdict(float)
@@ -250,7 +238,7 @@ class MrpUnbuild(models.Model):
         for unbuild in self:
             if unbuild.mo_id:
                 raw_moves = unbuild.mo_id.move_raw_ids.filtered(lambda move: move.state == 'done')
-                factor = unbuild.product_qty / unbuild.mo_id.product_uom_id._compute_quantity(unbuild.mo_id.product_qty, unbuild.product_uom_id)
+                factor = unbuild.product_qty / unbuild.mo_id.product_uom_id._compute_quantity(unbuild.mo_id.qty_produced, unbuild.product_uom_id)
                 for raw_move in raw_moves:
                     moves += unbuild._generate_move_from_existing_move(raw_move, factor, raw_move.location_dest_id, self.location_dest_id)
             else:
@@ -273,6 +261,7 @@ class MrpUnbuild(models.Model):
             'warehouse_id': location_dest_id.warehouse_id.id,
             'unbuild_id': self.id,
             'company_id': move.company_id.id,
+            'origin_returned_move_id': move.id,
         })
 
     def _generate_move_from_bom_line(self, product, product_uom, quantity, bom_line_id=False, byproduct_id=False):

@@ -12,12 +12,12 @@ import logging
 import os
 import time
 from collections import defaultdict
+from functools import wraps
 from hashlib import sha256
 from itertools import chain, repeat
 from markupsafe import Markup
 
 import babel.core
-import decorator
 import pytz
 from lxml import etree
 from lxml.builder import E
@@ -36,7 +36,7 @@ _logger = logging.getLogger(__name__)
 
 # Only users who can modify the user (incl. the user herself) see the real contents of these fields
 USER_PRIVATE_FIELDS = []
-MIN_ROUNDS = 350000
+MIN_ROUNDS = 600_000
 concat = chain.from_iterable
 
 #
@@ -83,8 +83,7 @@ def _jsonable(o):
     except TypeError: return False
     else: return True
 
-@decorator.decorator
-def check_identity(fn, self):
+def check_identity(fn):
     """ Wrapped method should be an *action method* (called from a button
     type=object), and requires extra security to be executed. This decorator
     checks if the identity (password) has been checked in the last 10mn, and
@@ -92,32 +91,36 @@ def check_identity(fn, self):
 
     Prevents access outside of interactive contexts (aka with a request)
     """
-    if not request:
-        raise UserError(_("This method can only be accessed over HTTP"))
+    @wraps(fn)
+    def wrapped(self):
+        if not request:
+            raise UserError(_("This method can only be accessed over HTTP"))
 
-    if request.session.get('identity-check-last', 0) > time.time() - 10 * 60:
-        # update identity-check-last like github?
-        return fn(self)
+        if request.session.get('identity-check-last', 0) > time.time() - 10 * 60:
+            # update identity-check-last like github?
+            return fn(self)
 
-    w = self.sudo().env['res.users.identitycheck'].create({
-        'request': json.dumps([
-            { # strip non-jsonable keys (e.g. mapped to recordsets like binary_field_real_user)
-                k: v for k, v in self.env.context.items()
-                if _jsonable(v)
-            },
-            self._name,
-            self.ids,
-            fn.__name__
-        ])
-    })
-    return {
-        'type': 'ir.actions.act_window',
-        'res_model': 'res.users.identitycheck',
-        'res_id': w.id,
-        'name': _("Security Control"),
-        'target': 'new',
-        'views': [(False, 'form')],
-    }
+        w = self.sudo().env['res.users.identitycheck'].create({
+            'request': json.dumps([
+                { # strip non-jsonable keys (e.g. mapped to recordsets like binary_field_real_user)
+                    k: v for k, v in self.env.context.items()
+                    if _jsonable(v)
+                },
+                self._name,
+                self.ids,
+                fn.__name__
+            ])
+        })
+        return {
+            'type': 'ir.actions.act_window',
+            'res_model': 'res.users.identitycheck',
+            'res_id': w.id,
+            'name': _("Security Control"),
+            'target': 'new',
+            'views': [(False, 'form')],
+        }
+    wrapped.__has_check_identity = True
+    return wrapped
 
 #----------------------------------------------------------
 # Basic res.groups and res.users
@@ -128,12 +131,13 @@ class Groups(models.Model):
     _description = "Access Groups"
     _rec_name = 'full_name'
     _order = 'name'
+    _allow_sudo_commands = False
 
     name = fields.Char(required=True, translate=True)
     users = fields.Many2many('res.users', 'res_groups_users_rel', 'gid', 'uid')
     model_access = fields.One2many('ir.model.access', 'group_id', string='Access Controls', copy=True)
     rule_groups = fields.Many2many('ir.rule', 'rule_group_rel',
-        'group_id', 'rule_group_id', string='Rules', domain=[('global', '=', False)])
+        'group_id', 'rule_group_id', string='Rules', domain="[('global', '=', False)]")
     menu_access = fields.Many2many('ir.ui.menu', 'ir_ui_menu_group_rel', 'gid', 'menu_id', string='Access Menu')
     view_access = fields.Many2many('ir.ui.view', 'ir_ui_view_group_rel', 'group_id', 'view_id', string='Views')
     comment = fields.Text(translate=True)
@@ -150,6 +154,13 @@ class Groups(models.Model):
     def _check_one_user_type(self):
         self.users._check_one_user_type()
 
+    @api.ondelete(at_uninstall=False)
+    def _unlink_except_settings_group(self):
+        classified = self.env['res.config.settings']._get_classified_fields()
+        for _name, _groups, implied_group in classified['group']:
+            if implied_group.id in self.ids:
+                raise ValidationError(_('You cannot delete a group linked with a settings field.'))
+
     @api.depends('category_id.name', 'name')
     def _compute_full_name(self):
         # Important: value must be stored in environment of group, not group1!
@@ -162,7 +173,7 @@ class Groups(models.Model):
     def _search_full_name(self, operator, operand):
         lst = True
         if isinstance(operand, bool):
-            return [[('name', operator, operand)]]
+            return [('name', operator, operand)]
         if isinstance(operand, str):
             lst = False
             operand = [operand]
@@ -220,7 +231,7 @@ class Groups(models.Model):
         result = self.get_external_id()
         missings = {group_id: f'__custom__.group_{group_id}' for group_id, ext_id in result.items() if not ext_id}
         if missings:
-            self.env['ir.model.data'].create(
+            self.env['ir.model.data'].sudo().create(
                 [
                     {
                         'name': name.split('.')[1],
@@ -267,6 +278,7 @@ class Users(models.Model):
     _description = 'User'
     _inherits = {'res.partner': 'partner_id'}
     _order = 'name, login'
+    _allow_sudo_commands = False
 
     @property
     def SELF_READABLE_FIELDS(self):
@@ -488,6 +500,14 @@ class Users(models.Model):
         action_open_website = self.env.ref('base.action_open_website', raise_if_not_found=False)
         if action_open_website and any(user.action_id.id == action_open_website.id for user in self):
             raise ValidationError(_('The "App Switcher" action cannot be selected as home action.'))
+        # Prevent using reload actions.
+        # We use sudo() because  "Access rights" admins can't read action models
+        for user in self.sudo():
+            if user.action_id.type == "ir.actions.client":
+                action = self.env["ir.actions.client"].browse(user.action_id.id)  # magic
+                if action.tag == "reload":
+                    raise ValidationError(_('The "%s" action cannot be selected as home action.', action.name))
+
 
     @api.constrains('groups_id')
     def _check_one_user_type(self):
@@ -638,10 +658,14 @@ class Users(models.Model):
         return res
 
     @api.ondelete(at_uninstall=True)
-    def _unlink_except_superuser(self):
+    def _unlink_except_master_data(self):
+        portal_user_template = self.env.ref('base.template_portal_user_id', False)
+        default_user_template = self.env.ref('base.default_user', False)
         if SUPERUSER_ID in self.ids:
             raise UserError(_('You can not remove the admin user as it is used internally for resources created by Odoo (updates, module installation, ...)'))
         self.clear_caches()
+        if (portal_user_template and portal_user_template in self) or (default_user_template and default_user_template in self):
+            raise UserError(_('Deleting the template users is not allowed. Deleting this profile will compromise critical functionalities.'))
 
     @api.model
     def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
@@ -685,12 +709,19 @@ class Users(models.Model):
             for name, key in name_to_key.items()
         }
 
-        # ensure the language is set and is compatible with the web client
-        lang = context.get('lang') or (request and request.default_lang()) or DEFAULT_LANG
-        if lang == 'ar_AR':
-            context['lang'] = 'ar'
-        if lang in babel.core.LOCALE_ALIASES:
-            context['lang'] = babel.core.LOCALE_ALIASES[lang]
+        # ensure lang is set and available
+        # context > request > company > english > any lang installed
+        langs = [code for code, _ in self.env['res.lang'].get_installed()]
+        lang = context.get('lang')
+        if lang not in langs:
+            lang = request.best_lang if request else None
+            if lang not in langs:
+                lang = self.env.user.company_id.partner_id.lang
+                if lang not in langs:
+                    lang = DEFAULT_LANG
+                    if lang not in langs:
+                        lang = langs[0] if langs else DEFAULT_LANG
+        context['lang'] = lang
 
         # ensure uid is set
         context['uid'] = self.env.uid
@@ -727,6 +758,10 @@ class Users(models.Model):
     @api.model
     def _get_login_domain(self, login):
         return [('login', '=', login)]
+
+    @api.model
+    def _get_email_domain(self, email):
+        return [('email', '=', email)]
 
     @api.model
     def _get_login_order(self):
@@ -892,8 +927,8 @@ class Users(models.Model):
             user.write({
                 'login': f'__deleted_user_{user.id}_{time.time()}',
                 'password': '',
-                'api_key_ids': Command.clear(),
             })
+            user.api_key_ids._remove()
 
             res_users_deletion_values.append({
                 'user_id': user.id,
@@ -1243,8 +1278,17 @@ class GroupsImplied(models.Model):
         groups = self.filtered(lambda g: implied_group in g.implied_ids)
         if groups:
             groups.write({'implied_ids': [Command.unlink(implied_group.id)]})
-            if groups.users:
-                implied_group.write({'users': [Command.unlink(user.id) for user in groups.users]})
+            # if user belongs to implied_group thanks to another group, don't remove him
+            # this avoids readding the template user and triggering the mechanism at 121cd0d6084cb28
+            users_to_unlink = [
+                user
+                for user in groups.with_context(active_test=False).users
+                if implied_group not in (user.groups_id - implied_group).trans_implied_ids
+            ]
+            if users_to_unlink:
+                # do not remove inactive users (e.g. default)
+                implied_group.with_context(active_test=False).write(
+                    {'users': [Command.unlink(user.id) for user in users_to_unlink]})
 
 class UsersImplied(models.Model):
     _inherit = 'res.users'
@@ -1257,7 +1301,7 @@ class UsersImplied(models.Model):
                 user = self.new(values)
                 gs = user.groups_id._origin
                 gs = gs | gs.trans_implied_ids
-                values['groups_id'] = type(self).groups_id.convert_to_write(gs, user)
+                values['groups_id'] = self._fields['groups_id'].convert_to_write(gs, user)
         return super(UsersImplied, self).create(vals_list)
 
     def write(self, values):
@@ -1399,6 +1443,9 @@ class GroupsView(models.Model):
                         xml_by_category[category_name].append(E.newline())
                     xml_by_category[category_name].append(E.field(name=field_name, **attrs))
                     xml_by_category[category_name].append(E.newline())
+                    # add duplicate invisible field so default values are saved on create
+                    if attrs.get('groups') == 'base.group_no_one':
+                        xml0.append(E.field(name=field_name, **dict(attrs, invisible="1", groups='!base.group_no_one')))
 
                 else:
                     # application separator with boolean fields
@@ -1416,6 +1463,8 @@ class GroupsView(models.Model):
                             dest_group.append(E.field(name=field_name, invisible="1", **attrs))
                         else:
                             dest_group.append(E.field(name=field_name, **attrs))
+                        # add duplicate invisible field so default values are saved on create
+                        xml0.append(E.field(name=field_name, **dict(attrs, invisible="1", groups='!base.group_no_one')))
                         group_count += 1
                     xml4.append(E.group(*left_group))
                     xml4.append(E.group(*right_group))
@@ -1614,16 +1663,17 @@ class UsersView(models.Model):
             missing_implied_groups = missing_implied_groups.filtered(
                 lambda g:
                 g.category_id not in (group.category_id | categories_to_ignore) and
-                g not in current_groups_by_category[g.category_id]
+                g not in current_groups_by_category[g.category_id] and
+                (self.user_has_groups('base.group_no_one') or g.category_id)
             )
             if missing_implied_groups:
                 # prepare missing group message, by categories
-                missing_groups[group] = ", ".join(f'"{missing_group.category_id.name}: {missing_group.name}"'
+                missing_groups[group] = ", ".join(f'"{missing_group.category_id.name or _("Other")}: {missing_group.name}"'
                                                   for missing_group in missing_implied_groups)
         return "\n".join(
             _('Since %(user)s is a/an "%(category)s: %(group)s", they will at least obtain the right %(missing_group_message)s',
               user=user.name,
-              category=group.category_id.name,
+              category=group.category_id.name or _('Other'),
               group=group.name,
               missing_group_message=missing_group_message
              ) for group, missing_group_message in missing_groups.items()
@@ -1645,9 +1695,13 @@ class UsersView(models.Model):
                 values1[key] = val
 
         if 'groups_id' not in values and (add or rem):
+            added = self.env['res.groups'].sudo().browse(add)
+            added |= added.mapped('trans_implied_ids')
+            added_ids = added._ids
             # remove group ids in `rem` and add group ids in `add`
+            # do not remove groups that are added by implied
             values1['groups_id'] = list(itertools.chain(
-                zip(repeat(3), rem),
+                zip(repeat(3), [gid for gid in rem if gid not in added_ids]),
                 zip(repeat(4), add)
             ))
 
@@ -1813,7 +1867,9 @@ class CheckIdentity(models.TransientModel):
 
         request.session['identity-check-last'] = time.time()
         ctx, model, ids, method = json.loads(self.sudo().request)
-        return getattr(self.env(context=ctx)[model].browse(ids), method)()
+        method = getattr(self.env(context=ctx)[model].browse(ids), method)
+        assert getattr(method, '__has_check_identity', False)
+        return method()
 
 #----------------------------------------------------------
 # change password wizard
@@ -1943,6 +1999,7 @@ class APIKeys(models.Model):
     _name = 'res.users.apikeys'
     _description = 'Users API Keys'
     _auto = False # so we can have a secret column
+    _allow_sudo_commands = False
 
     name = fields.Char("Description", required=True, readonly=True)
     user_id = fields.Many2one('res.users', index=True, required=True, readonly=True, ondelete="cascade")
@@ -2046,7 +2103,7 @@ class APIKeyDescription(models.TransientModel):
         return {
             'type': 'ir.actions.act_window',
             'res_model': 'res.users.apikeys.show',
-            'name': 'API Key Ready',
+            'name': _('API Key Ready'),
             'views': [(False, 'form')],
             'target': 'new',
             'context': {
