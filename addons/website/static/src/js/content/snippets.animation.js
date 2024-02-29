@@ -454,10 +454,10 @@ registry.slider = publicWidget.Widget.extend({
         $(window).on('resize.slider', _.debounce(() => this._computeHeights(), 250));
         if (this.editableMode) {
             // Prevent carousel slide to be an history step.
-            this.$target.on('slide.bs.carousel', () => {
+            this.$target.on('slide.bs.carousel.slider', () => {
                 this.options.wysiwyg.odooEditor.observerUnactive();
             });
-            this.$target.on('slid.bs.carousel', () => {
+            this.$target.on('slid.bs.carousel.slider', () => {
                 this.options.wysiwyg.odooEditor.observerActive();
             });
         }
@@ -475,7 +475,7 @@ registry.slider = publicWidget.Widget.extend({
             $(el).css('min-height', '');
         });
         $(window).off('.slider');
-        this.$target.off('.carousel');
+        this.$target.off('.slider');
     },
 
     //--------------------------------------------------------------------------
@@ -871,13 +871,13 @@ registry.backgroundVideo = publicWidget.Widget.extend(MobileYoutubeAutoplayMixin
         if (relativeRatio >= 1.0) {
             style['width'] = '100%';
             style['height'] = (relativeRatio * 100) + '%';
-            style['left'] = '0';
-            style['top'] = (-(relativeRatio - 1.0) / 2 * 100) + '%';
+            style['inset-inline-start'] = '0';
+            style['inset-block-start'] = (-(relativeRatio - 1.0) / 2 * 100) + '%';
         } else {
             style['width'] = ((1 / relativeRatio) * 100) + '%';
             style['height'] = '100%';
-            style['left'] = (-((1 / relativeRatio) - 1.0) / 2 * 100) + '%';
-            style['top'] = '0';
+            style['inset-inline-start'] = (-((1 / relativeRatio) - 1.0) / 2 * 100) + '%';
+            style['inset-block-start'] = '0';
         }
         this.$iframe.css(style);
 
