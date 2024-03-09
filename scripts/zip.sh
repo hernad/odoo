@@ -3,7 +3,7 @@
 rm odoo-16-hernad.zip
 
 
-echo date > odoo-16-hernad/date.txt
+echo $(date) > odoo-16-hernad/date.txt
 
 zip -r odoo-16-hernad.zip --exclude="./.git/*/*"  \
    --exclude="*/__pycache__/*" \
