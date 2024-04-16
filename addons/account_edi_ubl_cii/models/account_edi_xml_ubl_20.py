@@ -6,11 +6,20 @@ from collections import defaultdict
 from odoo import models, _
 from odoo.tools import html2plaintext, cleanup_xml_node
 
+UBL_NAMESPACES = {
+    'cbc': "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
+    'cac': "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
+}
+
 
 class AccountEdiXmlUBL20(models.AbstractModel):
     _name = "account.edi.xml.ubl_20"
     _inherit = 'account.edi.common'
     _description = "UBL 2.0"
+
+    def _find_value(self, xpath, tree, nsmap=False):
+        # EXTENDS account.edi.common
+        return super()._find_value(xpath, tree, UBL_NAMESPACES)
 
     # -------------------------------------------------------------------------
     # EXPORT
@@ -57,14 +66,11 @@ class AccountEdiXmlUBL20(models.AbstractModel):
         }]
 
     def _get_partner_party_legal_entity_vals_list(self, partner):
-        commercial_partner = partner.commercial_partner_id
-
         return [{
-            'commercial_partner': commercial_partner,
-
-            'registration_name': commercial_partner.name,
-            'company_id': commercial_partner.vat,
-            'registration_address_vals': self._get_partner_address_vals(commercial_partner),
+            'commercial_partner': partner,
+            'registration_name': partner.name,
+            'company_id': partner.vat,
+            'registration_address_vals': self._get_partner_address_vals(partner),
         }]
 
     def _get_partner_contact_vals(self, partner):
@@ -78,11 +84,11 @@ class AccountEdiXmlUBL20(models.AbstractModel):
     def _get_partner_party_vals(self, partner, role):
         return {
             'partner': partner,
-            'party_identification_vals': self._get_partner_party_identification_vals_list(partner),
-            'party_name_vals': [{'name': partner.name}],
+            'party_identification_vals': self._get_partner_party_identification_vals_list(partner.commercial_partner_id),
+            'party_name_vals': [{'name': partner.display_name}],
             'postal_address_vals': self._get_partner_address_vals(partner),
-            'party_tax_scheme_vals': self._get_partner_party_tax_scheme_vals_list(partner, role),
-            'party_legal_entity_vals': self._get_partner_party_legal_entity_vals_list(partner),
+            'party_tax_scheme_vals': self._get_partner_party_tax_scheme_vals_list(partner.commercial_partner_id, role),
+            'party_legal_entity_vals': self._get_partner_party_legal_entity_vals_list(partner.commercial_partner_id),
             'contact_vals': self._get_partner_contact_vals(partner),
         }
 
@@ -364,7 +370,7 @@ class AccountEdiXmlUBL20(models.AbstractModel):
         total_fixed_tax_amount = sum(
             vals['amount']
             for vals in allowance_charge_vals_list
-            if vals['allowance_charge_reason_code'] == 'AEO'
+            if vals.get('charge_indicator') == 'true'
         )
         return {
             'currency': line.currency_id,
@@ -465,7 +471,7 @@ class AccountEdiXmlUBL20(models.AbstractModel):
                 charge_total_amount += allowance_charge_vals['amount']
 
         supplier = invoice.company_id.partner_id.commercial_partner_id
-        customer = invoice.commercial_partner_id
+        customer = invoice.partner_id
 
         # OrderReference/SalesOrderID (sales_order_id) is optional
         sales_order_id = 'sale_line_ids' in invoice.invoice_line_ids._fields \
@@ -550,7 +556,7 @@ class AccountEdiXmlUBL20(models.AbstractModel):
         return constraints
 
     def _export_invoice(self, invoice):
-        vals = self._export_invoice_vals(invoice)
+        vals = self._export_invoice_vals(invoice.with_context(lang=invoice.partner_id.lang))
         errors = [constraint for constraint in self._export_invoice_constraints(invoice, vals).values() if constraint]
         xml_content = self.env['ir.qweb']._render(vals['main_template'], vals)
         return etree.tostring(cleanup_xml_node(xml_content), xml_declaration=True, encoding='UTF-8'), set(errors)
@@ -568,11 +574,11 @@ class AccountEdiXmlUBL20(models.AbstractModel):
         # ==== partner_id ====
 
         role = "Customer" if invoice.journal_id.type == 'sale' else "Supplier"
-        vat = self._find_value(f'//cac:Accounting{role}Party/cac:Party//cbc:CompanyID[string-length(text()) > 5]', tree)
-        phone = self._find_value(f'//cac:Accounting{role}Party/cac:Party//cbc:Telephone', tree)
-        mail = self._find_value(f'//cac:Accounting{role}Party/cac:Party//cbc:ElectronicMail', tree)
-        name = self._find_value(f'//cac:Accounting{role}Party/cac:Party//cbc:Name', tree)
-        country_code = self._find_value(f'//cac:Accounting{role}Party/cac:Party//cac:Country//cbc:IdentificationCode', tree)
+        vat = self._find_value(f'.//cac:Accounting{role}Party/cac:Party//cbc:CompanyID[string-length(text()) > 5]', tree)
+        phone = self._find_value(f'.//cac:Accounting{role}Party/cac:Party//cbc:Telephone', tree)
+        mail = self._find_value(f'.//cac:Accounting{role}Party/cac:Party//cbc:ElectronicMail', tree)
+        name = self._find_value(f'.//cac:Accounting{role}Party/cac:Party//cbc:Name', tree)
+        country_code = self._find_value(f'.//cac:Accounting{role}Party/cac:Party//cac:Country//cbc:IdentificationCode', tree)
         self._import_retrieve_and_fill_partner(invoice, name=name, phone=phone, mail=mail, vat=vat, country_code=country_code)
 
         # ==== currency_id ====

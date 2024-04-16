@@ -2915,7 +2915,7 @@ msgstr ""
 "    Sử dụng bộ lọc hoặc sắp xếp, chọn các khoản thanh toán cần thiết. \n"
 "    **Hành động* chọn *Tạo thanh toán hàng loạt*.\n"
 "\n"
-"- *Nhà cung cấp > Thanh toán Hàng loạt*\n"
+"- *Nhà cung cấp > Thanh toán hàng loạt*\n"
 "\n"
 "    Khi xác thực thanh toán hàng loạt, tệp ABA sẽ được tạo. Tệp này có thể \n"
 "    được tái tạo. Sau đó, bạn có thể tải tệp lên ngân hàng.\n"
@@ -5895,7 +5895,7 @@ msgstr ""
 "\n"
 "* wsfev1 - \"Factura Electrónica\" (Hóa đơn Điện tử)\n"
 "* wsbfev1 - \"Bono Fiscal Electrónico\" (Trái phiếu Tài chính Điện tử)\n"
-"* wsfexv1 - \"Factura de Exportación Electrónica\" (Hóa Đơn Xuất Khẩu Điện Tử  - giống như Phiếu Xuất Khẩu)\n"
+"* wsfexv1 - \"Factura de Exportación Electrónica\" (Hóa Đơn Xuất Khẩu Điện Tử  - giống như Phiếu xuất Khẩu)\n"
 "* wscdc - \"Constatación de Comprobantes\" (Xác minh Hóa đơn)\n"
 "\n"
 "Để tìm hiểu thông tin về Phát triển, hãy truy cập http://www.afip.gob.ar/fe/documentos/WSBFEv1%20-%20Manual%20para%20el%20desarrollador.pdf\n"
@@ -6015,13 +6015,13 @@ msgstr ""
 "\n"
 "Thực hiện theo các bước cấu hình tiếp theo cho Production:\n"
 "\n"
-"1. Đi đến công ty của bạn và cấu hình số VAT và Loại hình Trách nhiệm AFIP \n"
-"2. Đi đến Kế toán/Cài đặt và thiết lập Sơ đồ Tài khoản mà bạn muốn sử dụng.\n"
+"1. Đi đến công ty của bạn và cấu hình mã số thuế GTGT và Loại hình Trách nhiệm AFIP \n"
+"2. Đi đến Kế toán/Cài đặt và thiết lập Hệ thống tài khoản mà bạn muốn sử dụng.\n"
 "3. Tạo nhật ký Bán hàng của bạn theo thông tin AFIP POS.\n"
 "\n"
 "Dữ liệu demo để kiểm thử:\n"
 "\n"
-"* 3 công ty đã được tạo, một công ty cho mỗi loại trách nhiệm AFIP kèm Sơ đồ tài khoản tương ứng được thiết lập. Chọn công ty phù hợp để kiểm thử:\n"
+"* 3 công ty đã được tạo, một công ty cho mỗi loại trách nhiệm AFIP kèm Hệ thống tài khoản tương ứng được thiết lập. Chọn công ty phù hợp để kiểm thử:\n"
 "\n"
 "* (AR) Responsable Inscripto\n"
 "* (AR) Exento\n"
@@ -6040,8 +6040,8 @@ msgstr ""
 "\n"
 "Điểm nổi bật:\n"
 "\n"
-"* Sơ đồ tài khoản sẽ không được cài đặt tự động, mỗi Mẫu Sơ đồ Tài khoản phụ thuộc vào Trách nhiệm AFIP của công ty, bạn sẽ cần cài đặt Sơ đồ tài khoản cho phù hợp với nhu cầu của mình.\n"
-"* Nhật ký bán hàng không được tạo khi cài đặt Sơ đồ tài khoản, bạn sẽ cần cấu hình nhật ký theo cách thủ công.\n"
+"* Hệ thống tài khoản sẽ không được cài đặt tự động, mỗi Mẫu Hệ thống tài khoản phụ thuộc vào Trách nhiệm AFIP của công ty, bạn sẽ cần cài đặt Hệ thống tài khoản cho phù hợp với nhu cầu của mình.\n"
+"* Nhật ký bán hàng không được tạo khi cài đặt Hệ thống tài khoản, bạn sẽ cần cấu hình nhật ký theo cách thủ công.\n"
 "* Loại Chứng từ sẽ được chọn trước một cách chính xác khi tạo hóa đơn tùy thuộc vào trách nhiệm tài chính của bên phát hành và bên nhận chứng từ cũng như nhật ký liên quan.\n"
 "* Đã bổ sung một loại tài khoản CBU và cả Xác thực CBU\n"
 "\n"
@@ -6051,20 +6051,20 @@ msgstr ""
 "\n"
 "Phân hệ này thêm cả mô hình và trường cuối cùng sẽ được dùng cho phân hệ hóa đơn điện tử. Dưới đây là tóm tắt các tính năng chính:\n"
 "\n"
-"Dữ liệu Chủ:\n"
+"Dữ liệu chủ:\n"
 "\n"
-"* Sơ đồ tài khoản: một cho mỗi trách nhiệm AFIP có liên quan đến một pháp nhân:\n"
+"* Hệ thống tài khoản: một cho mỗi trách nhiệm AFIP có liên quan đến một pháp nhân:\n"
 "\n"
 "* Responsable Inscripto (RI)\n"
 "* Exento (EX)\n"
 "* Monotributo (Mono)\n"
 "\n"
-"* Thuế Argentina và Nhóm Thuế Tài khoản (thuế VAT với các phần hiện có và các loại khác)\n"
+"* Thuế Argentina và Nhóm thuế tài khoản (thuế GTGT với các phần hiện có và các loại khác)\n"
 "* Các loại trách nhiệm AFIP\n"
 "* Vị trí tài chính (để liên kết thuế)\n"
 "* Các loại văn bản pháp luật ở Argentina\n"
 "* Các loại định danh hợp lệ ở Argentina.\n"
-"* Mã AFIP quốc gia và mã VAT quốc gia cho các pháp nhân, thể nhân và những người khác\n"
+"* Mã AFIP quốc gia và mã thuế GTGT quốc gia cho các pháp nhân, thể nhân và những người khác\n"
 "* Mã tiền tệ AFIP\n"
 "* Mã đơn vị tính AFIP\n"
 "* Đối tác: Consumidor Final và AFIP\n"
@@ -19253,7 +19253,7 @@ msgstr "Ecuador"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec_reports_ats
 msgid "Ecuador - ATS Report"
-msgstr ""
+msgstr "Ecuador - Báo cáo ATS"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec
@@ -20273,7 +20273,7 @@ msgstr "Quần đảo Faroe"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_it_edi_website_sale
 msgid "Features for Italian eCommerce eInvoicing"
-msgstr ""
+msgstr "Các tính năng cho hóa đơn điện tử thương mại điện tử của Ý"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_bank__state
@@ -23231,7 +23231,7 @@ msgstr "Định dạng miền %(expr)s không hợp lệ trong %(use)s"
 #: code:addons/base/models/ir_rule.py:0
 #, python-format
 msgid "Invalid domain: %s"
-msgstr ""
+msgstr "Miền không hợp lệ: %s"
 
 #. module: base
 #. odoo-python
@@ -23565,7 +23565,7 @@ msgstr "Ý - Hóa đơn điện tử (Khấu trừ)"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_edi_website_sale
 msgid "Italy eCommerce eInvoicing"
-msgstr ""
+msgstr "Hóa đơn điện tử thương mại điện tử của Ý"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_J
@@ -24379,7 +24379,7 @@ msgstr "Phân hệ liên kết giữa pos_hr và pos_restaurant"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_be_pos_sale
 msgid "Link module between pos_sale and l10n_be"
-msgstr ""
+msgstr "Phân hệ liên kết giữa pos_sale và l10n_be"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale_loyalty
@@ -24421,7 +24421,7 @@ msgstr "Lithuania - Báo cáo kế toán"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_intrastat
 msgid "Lithuanian Intrastat Declaration"
-msgstr ""
+msgstr "Kê khai Intrastat của Lithuania"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_saft
@@ -29143,7 +29143,7 @@ msgstr ""
 "Khiến Sự kiện của bạn Rõ ràng hơn\n"
 "----------------------------\n"
 "\n"
-"### Công cụ SEO trên đầu ngón tay của bạn\n"
+"### Công cụ SEO sẵn sàng sử dụng\n"
 "\n"
 "Các công cụ SEO đã sẵn sàng để sử dụng mà không cần cấu hình. Odoo đề xuất từ khóa cho tiêu đề theo cụm từ được tìm kiếm nhiều nhất trên Google, Google Analytics theo dõi sự kiện giỏ hàng và sơ đồ trang web được tạo tự động\n"
 "\n"
@@ -31720,7 +31720,7 @@ msgstr "Kế toán Romania"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ro_saft
 msgid "Romanian SAF-T Export"
-msgstr ""
+msgstr "Xuất SAF-T của Romania"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_currency__rounding
@@ -31776,7 +31776,7 @@ msgstr "Chạy"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_cron_view_form
 msgid "Run Manually"
-msgstr "Chạy bằng tay"
+msgstr "Chạy thủ công"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_server_action_form
@@ -31806,7 +31806,7 @@ msgstr "S - CÁC HOẠT ĐỘNG DỊCH VỤ KHÁC"
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_localizations_sbr
 msgid "SBR"
-msgstr ""
+msgstr "SBR"
 
 #. module: base
 #: model:res.country.group,name:base.sepa_zone
@@ -32215,7 +32215,7 @@ msgstr "Ả Rập Xê Út - Kế toán"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_sa_edi
 msgid "Saudi Arabia - E-invoicing"
-msgstr ""
+msgstr "Ả Rập Xê Út - Hoá đơn điện tử"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_sa_edi_pos
@@ -32300,6 +32300,12 @@ msgstr "Hoạt động định kỳ"
 #: model:ir.ui.menu,name:base.ir_cron_trigger_menu
 msgid "Scheduled Actions Triggers"
 msgstr "Trình kích hoạt hành động đã lên lịch"
+
+#. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid "Scheduled action disabled"
+msgstr "Hành động đã lên lịch bị tắt"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__user_id
@@ -32638,7 +32644,7 @@ msgstr "Gửi bưu kiện của bạn qua Easypost và theo dõi chúng online"
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_shiprocket
 msgid "Send your parcels through shiprocket and track them online"
-msgstr ""
+msgstr "Gửi bưu kiện của bạn qua shiprocket và theo dõi chúng online"
 
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_dhl
@@ -32908,7 +32914,7 @@ msgstr "Tích hợp vận chuyển với nền tảng Sendcloud"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_shiprocket
 msgid "Shiprocket Shipping"
-msgstr ""
+msgstr "Shiprocket Shipping"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_sale_wishlist
@@ -33300,7 +33306,7 @@ msgstr "Tây Ban Nha - SII EDI Suministro de Libros"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_es_edi_tbai
 msgid "Spain - TicketBAI"
-msgstr ""
+msgstr "Tây Ban Nha - TicketBAI"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_sparse_field
@@ -33545,7 +33551,7 @@ msgstr "Bảng điều khiển bảng tính cho các tờ thời gian"
 #: model:ir.module.module,shortdesc:base.module_l10n_in_reports_gstr_spreadsheet
 #: model:ir.module.module,summary:base.module_l10n_in_reports_gstr_spreadsheet
 msgid "Spreadsheet document for GSTR1 Report"
-msgstr ""
+msgstr "Tài liệu bảng tính cho báo cáo GSTR1"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__sql
@@ -33892,7 +33898,7 @@ msgstr "Báo cáo kế toán Thụy sĩ"
 #. module: base
 #: model:res.country.group,name:base.ch_and_li
 msgid "Switzerland and Liechtenstein"
-msgstr ""
+msgstr "Thụy Sĩ và Liechtenstein"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_currency__symbol
@@ -34006,7 +34012,7 @@ msgstr "Đài Loan - Kế toán"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tw_reports
 msgid "Taiwan - Accounting Reports"
-msgstr ""
+msgstr "Đài Loan - Báo cáo kế toán"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_company__font__tajawal
@@ -34337,14 +34343,14 @@ msgstr "Thái Lan - Kế toán"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_th_reports
 msgid "Thailand - Accounting Reports"
-msgstr ""
+msgstr "Thái Lan - Báo cáo kế toán"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/res_users.py:0
 #, python-format
 msgid "The \"%s\" action cannot be selected as home action."
-msgstr ""
+msgstr "Không thể chọn hành động \"%s\" làm hành động trang chủ."
 
 #. module: base
 #. odoo-python
@@ -34616,13 +34622,16 @@ msgid ""
 "previously modified it, and you are therefore not able to modify it yourself"
 " while preserving the content."
 msgstr ""
+"Giá trị trường bạn đang lưu (%s %s) bao gồm nội dung bị hạn chế vì lý do bảo"
+" mật. Có thể có người có đặc quyền cao hơn đã sửa đổi giá trị này trước đó, "
+"nên bạn không thể tự mình sửa đổi nó trong khi vẫn giữ nội dung."
 
 #. module: base
 #. odoo-python
 #: code:addons/models.py:0
 #, python-format
 msgid "The following languages are not activated: %(missing_names)s"
-msgstr ""
+msgstr "Các ngôn ngữ sau chưa được kích hoạt: %(missing_names)s"
 
 #. module: base
 #. odoo-python
@@ -34748,6 +34757,8 @@ msgid ""
 "The name for the current rate is empty.\n"
 "Please set it."
 msgstr ""
+"Tên tỷ giá hiện tại đang trống.\n"
+"Vui lòng đặt tên."
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_country_name_uniq
@@ -34954,6 +34965,11 @@ msgid ""
 "For example, __import__, resulting in the external id "
 "__import__.%(record_id)s."
 msgstr ""
+"Tập dữ liệu %(xml_id)s có tiền tố phân hệ %(module_name)s. Đây là phần trước"
+" dấu '.' trong id bên ngoài. Vì tiền tố này liên quan đến một phân hệ hiện "
+"có, nên tập dữ liệu sẽ bị xóa khi phân hệ được nâng cấp. Không sử dụng tiền "
+"tố và dấu chấm hoặc sử dụng một tiền tố không phải là một phân hệ hiện có. "
+"Ví dụ, __import__, dẫn đến id bên ngoài __import__.%(record_id)s."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_company__company_registry
@@ -35206,6 +35222,8 @@ msgstr "Cột này chứa dữ liệu mô-đun và không thể bị xóa!"
 #, python-format
 msgid "This currency is set on a company and therefore cannot be deactivated."
 msgstr ""
+"Không thể vô hiệu hóa đơn vị tiền tệ này vì nó được thiết lập trên một công "
+"ty."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_company__favicon
@@ -35311,6 +35329,9 @@ msgid ""
 "         Please install the new \"UPS Shipping\" module and uninstall this "
 "one as soon as possible. This integration will stop working in 2024."
 msgstr ""
+"Đây là tích hợp kế thừa với UPS không còn được hỗ trợ. Vui lòng cài đặt phân"
+" hệ \"Vận chuyển UPS\" mới và gỡ bỏ phân hệ này càng sớm càng tốt. Tích hợp "
+"này sẽ ngừng hoạt động vào năm 2024."
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_no
@@ -35643,7 +35664,17 @@ msgstr ""
 #: code:addons/base/models/ir_module.py:0
 #, python-format
 msgid "Those modules cannot be uninstalled: %s"
+msgstr "Không thể gỡ cài đặt các module này: %s"
+
+#. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid ""
+"This scheduled action has been disabled because its interval number is not a"
+" strictly positive value."
 msgstr ""
+"Hành động được lên lịch này đã bị vô hiệu hóa vì chu kỳ của hoạt động đó "
+"không phải là một giá trị hoàn toàn dương."
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
@@ -35983,6 +36014,7 @@ msgstr "Dịch thuật"
 msgid ""
 "Translations for model translated fields only accept falsy values and str"
 msgstr ""
+"Bản dịch cho các trường mô hình được dịch chỉ chấp nhận giá trị sai và str"
 
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_H
@@ -36164,7 +36196,7 @@ msgstr "Báo cáo kế toán Anh"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_bacs
 msgid "UK BACS Payment Files"
-msgstr ""
+msgstr "Tệp thanh toán BACS UK"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_product_unspsc
@@ -36180,7 +36212,7 @@ msgstr "Giao hàng UPS"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_delivery_ups
 msgid "UPS Shipping (Legacy)"
-msgstr ""
+msgstr "Vận chuyển UPS (Cũ)"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_delivery_ups
@@ -36286,7 +36318,7 @@ msgstr "Không thể tìm thấy Wkhtmltopdf trên hệ thống này. Không th�
 #: code:addons/base/models/ir_fields.py:0
 #, python-format
 msgid "Unable to import field type '%s'  "
-msgstr ""
+msgstr "Không thể nhập loại trường '%s'"
 
 #. module: base
 #. odoo-python
@@ -36495,7 +36527,7 @@ msgstr "Tên trường không xác định '%s' trong trường liên quan '%s'"
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "Unknown model name '%s' in Related Model"
-msgstr ""
+msgstr "Tên mô hình không xác định '%s' trong Mô hình liên quan"
 
 #. module: base
 #. odoo-python
@@ -37250,7 +37282,7 @@ msgstr "Kế toán kho"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_data_merge_stock_account
 msgid "WMS Accounting Merge"
-msgstr ""
+msgstr "Hợp nhất kế toán WMS"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_stock_landed_costs
@@ -37271,7 +37303,7 @@ msgstr "Quản lý kho: Chuyển hàng loạt"
 #: model:ir.module.module,description:base.module_data_merge_stock_account
 #: model:ir.module.module,summary:base.module_data_merge_stock_account
 msgid "Warn user in case of products merging"
-msgstr ""
+msgstr "Cảnh báo người dùng trong trường hợp hợp nhất sản phẩm"
 
 #. module: base
 #. odoo-python
@@ -37983,6 +38015,8 @@ msgid ""
 "You cannot archive the language in which Odoo was setup as it is used by "
 "automated processes."
 msgstr ""
+"Bạn không thể lưu trữ ngôn ngữ dùng để thiết lập Odoo vì ngôn ngữ này được "
+"sử dụng cho các quy trình tự động."
 
 #. module: base
 #. odoo-python
@@ -38039,7 +38073,7 @@ msgstr "Bạn không thể vô hiệu tài khoản mà bạn hiện tại đang 
 #: code:addons/base/models/res_users.py:0
 #, python-format
 msgid "You cannot delete a group linked with a settings field."
-msgstr ""
+msgstr "Bạn không thể xóa nhóm liên kết với một trường cài đặt."
 
 #. module: base
 #. odoo-python
@@ -38078,7 +38112,19 @@ msgstr ""
 #: code:addons/base/models/ir_config_parameter.py:0
 #, python-format
 msgid "You cannot delete the %s record."
+msgstr "Bạn không thể xóa tập dữ liệu %s."
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"You cannot delete the admin user because it is utilized in various places "
+"(such as security configurations,...). Instead, archive it."
 msgstr ""
+"Bạn không thể xóa người dùng có vai trò quản trị viên vì người dùng này được"
+" sử dụng ở nhiều nơi (chẳng hạn như cấu hình bảo mật,...). Thay vào đó, hãy "
+"lưu trữ."
 
 #. module: base
 #. odoo-python
@@ -38119,7 +38165,7 @@ msgstr ""
 #: code:addons/base/models/ir_config_parameter.py:0
 #, python-format
 msgid "You cannot rename config parameters with keys %s"
-msgstr ""
+msgstr "Bạn không thể đổi tên các tham số cấu hình với khóa %s"
 
 #. module: base
 #. odoo-python
@@ -38645,7 +38691,7 @@ msgstr "json"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_pos_sale
 msgid "l10n_be_pos_sale"
-msgstr ""
+msgstr "l10n_be_pos_sale"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_stock_ddt
@@ -38770,7 +38816,7 @@ msgstr "pos_hr"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_mrp
 msgid "pos_mrp"
-msgstr ""
+msgstr "pos_mrp"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_pos_sale
