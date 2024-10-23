@@ -29,12 +29,12 @@
 # Veikko Väätäjä <veikko.vaataja@gmail.com>, 2022
 # Eino Mäkitalo <eino.makitalo@netitbe.fi>, 2022
 # Heikki Katajisto <heikki.katajisto@myyntivoima.fi>, 2022
-# Martin Trigaux, 2022
 # Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2022
 # Tuomo Aura <tuomo.aura@web-veistamo.fi>, 2022
 # Richard Mouthier <rmo@odoo.com>, 2022
 # Karoliina Nisula <karoliina.nisula@tawasta.fi>, 2023
 # Kim Asplund <kim.asplund@gmail.com>, 2023
+# Martin Trigaux, 2024
 # Ossi Mantylahti <ossi.mantylahti@obs-solutions.fi>, 2024
 # 
 msgid ""
@@ -2655,6 +2655,10 @@ msgid ""
 "click the <i class=\"fa fa-cloud-upload fa-fw\"></i> button now to ensure "
 "your work is saved before you exit this tab."
 msgstr ""
+"Varoitus! Viimeisimmät muutokset ovat liian suuria tallennettavaksi "
+"automaattisesti. Napsauta nyt <i class=\"fa fa-cloud-upload fa-fw\"></i> "
+"-painiketta varmistaaksesi, että työsi on tallennettu, ennen kuin poistut "
+"tältä välilehdeltä."
 
 #. module: web
 #. odoo-javascript
@@ -4920,6 +4924,13 @@ msgstr "Valitse kaikki"
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/legacy/xml/base.xml:0
+#, python-format
+msgid "Select all records matching the search"
+msgstr ""
+
+#. module: web
+#. openerp-web
+#: code:addons/web/static/src/legacy/xml/base.xml:0
 #: code:addons/web/static/src/views/view_dialogs/export_data_dialog.xml:0
 #, python-format
 msgid "Select field"
@@ -5211,6 +5222,7 @@ msgstr "Syntaksivirhe"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/core/commands/command_items.xml:0
 #: code:addons/web/static/src/webclient/user_menu/user_menu_items.xml:0
 #, python-format
 msgid "TIP"
@@ -5945,6 +5957,7 @@ msgstr "Näkymän vaihtaminen"
 #: code:addons/web/static/src/legacy/js/views/list/list_controller.js:0
 #: code:addons/web/static/src/legacy/xml/base.xml:0
 #: code:addons/web/static/src/legacy/xml/base.xml:0
+#: code:addons/web/static/src/legacy/xml/control_panel.xml:0
 #: code:addons/web/static/src/search/favorite_menu/favorite_menu.js:0
 #: code:addons/web/static/src/views/fields/domain/domain_field.xml:0
 #: code:addons/web/static/src/views/fields/domain/domain_field.xml:0
@@ -6256,6 +6269,13 @@ msgstr "kaikki"
 #, python-format
 msgid "all records"
 msgstr "kaikki tietueet"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/commands/command_items.xml:0
+#, python-format
+msgid "and"
+msgstr "ja"
 
 #. module: web
 #. odoo-javascript
@@ -6857,3 +6877,10 @@ msgstr "kirjoita oletusteksti tai paina ENTER"
 #, python-format
 msgid "— press"
 msgstr "- lehdistö"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/commands/command_items.xml:0
+#, python-format
+msgid "— search for"
+msgstr "- etsi"

@@ -7,7 +7,7 @@
 # Thin Tran <trvathin@gmail.com>, 2022
 # Duy BQ <duybq86@gmail.com>, 2022
 # Martin Trigaux, 2023
-# Thi Huong Nguyen, 2023
+# Thi Huong Nguyen, 2024
 # 
 msgid ""
 msgstr ""
@@ -15,7 +15,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:32+0000\n"
 "PO-Revision-Date: 2022-09-22 05:55+0000\n"
-"Last-Translator: Thi Huong Nguyen, 2023\n"
+"Last-Translator: Thi Huong Nguyen, 2024\n"
 "Language-Team: Vietnamese (https://app.transifex.com/odoo/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -267,7 +267,7 @@ msgstr "Thêm cột"
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
 msgid "Add Row"
-msgstr "Thêm dòng"
+msgstr "Thêm hàng"
 
 #. module: web_editor
 #. odoo-javascript
@@ -522,7 +522,7 @@ msgstr "Các khối cơ bản"
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options
 msgid "Basics"
-msgstr ""
+msgstr "Cơ sở"
 
 #. module: web_editor
 #. odoo-javascript
@@ -659,7 +659,7 @@ msgstr "Checklist"
 #: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
 #, python-format
 msgid "Choose a record..."
-msgstr "Chọn một tập dữ liệu..."
+msgstr "Chọn một bản ghi..."
 
 #. module: web_editor
 #. odoo-javascript
@@ -784,7 +784,11 @@ msgid "Could not install module <strong>%s</strong>"
 msgstr "Không thể cài đặt module <strong>%s</strong>"
 
 #. module: web_editor
+#. odoo-javascript
+#. module: web_editor
+#: code:addons/web_editor/static/src/components/upload_progress_toast/upload_service.js:0
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_background_options
+#, python-format
 msgid "Cover"
 msgstr "Ảnh bìa"
 
@@ -940,7 +944,7 @@ msgstr "Huỷ bỏ"
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippets
 msgid "Discard record"
-msgstr "Hủy tập dữ liệu"
+msgstr "Hủy bản ghi"
 
 #. module: web_editor
 #: model:ir.model.fields,field_description:web_editor.field_web_editor_converter_test_sub__display_name
@@ -1019,7 +1023,7 @@ msgstr "EarlyBird"
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Edit Link"
-msgstr ""
+msgstr "Chỉnh sửa liên kết"
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options_background_options
@@ -1623,7 +1627,7 @@ msgstr "Chèn bên phải"
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
 msgid "Insert table"
-msgstr ""
+msgstr "Chèn bảng"
 
 #. module: web_editor
 #. odoo-javascript
@@ -1922,7 +1926,7 @@ msgstr "Không có điểm để thả vào"
 #: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
 #, python-format
 msgid "No more records"
-msgstr "Không có thêm tập dữ liệu nào"
+msgstr "Không có thêm bản ghi nào"
 
 #. module: web_editor
 #. odoo-javascript
@@ -2239,7 +2243,7 @@ msgstr "Gỡ"
 #: code:addons/web_editor/static/src/xml/wysiwyg.xml:0
 #, python-format
 msgid "Remove Link"
-msgstr ""
+msgstr "Xoá liên kết"
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.colorpicker
@@ -2332,7 +2336,7 @@ msgstr "Đặt lại ảnh"
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
 msgid "Reset Size"
-msgstr ""
+msgstr "Đặt lại kích thước"
 
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippet_options
@@ -2410,7 +2414,7 @@ msgstr "Xoay phải"
 #: code:addons/web_editor/static/src/xml/editor.xml:0
 #, python-format
 msgid "Row"
-msgstr "Dòng"
+msgstr "Hàng"
 
 #. module: web_editor
 #. odoo-javascript
@@ -2457,7 +2461,7 @@ msgstr "Lưu và tải lại"
 #. module: web_editor
 #: model_terms:ir.ui.view,arch_db:web_editor.snippets
 msgid "Save record"
-msgstr "Lưu tập dữ liệu"
+msgstr "Lưu bản ghi"
 
 #. module: web_editor
 #. odoo-javascript
@@ -2490,7 +2494,7 @@ msgstr "Tìm kiếm một khối (VD: số, tường hình ảnh, ...)"
 #: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
 #, python-format
 msgid "Search for records..."
-msgstr "Tìm kiếm tập dữ liệu..."
+msgstr "Tìm kiếm bản ghi..."
 
 #. module: web_editor
 #. odoo-javascript
@@ -2504,7 +2508,7 @@ msgstr "Search more..."
 #: code:addons/web_editor/static/src/js/editor/snippets.options.js:0
 #, python-format
 msgid "Search to show more records"
-msgstr "Tìm kiếm để hiển thị thêm tập dữ liệu"
+msgstr "Tìm kiếm để hiển thị thêm bản ghi"
 
 #. module: web_editor
 #. odoo-javascript

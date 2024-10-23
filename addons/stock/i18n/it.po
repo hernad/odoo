@@ -671,7 +671,7 @@ msgstr "<strong>Ordine:</strong>"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
 msgid "<strong>Ordered</strong>"
-msgstr "<strong>Ordinare</strong>"
+msgstr "<strong>Ordinate</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_package_barcode
@@ -1831,6 +1831,11 @@ msgstr ""
 "Le conversioni tra unità di misura possono avvenire solo se appartengono "
 "alla stessa categoria. La conversione verrà effettuata in base alle "
 "proporzioni."
+
+#. module: stock
+#: model:ir.actions.server,name:stock.stock_quant_stock_move_line_desynchronization
+msgid "Correct inconsistencies for reservation"
+msgstr "Correggi incongruenze per la prenotazione"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_location__posx
@@ -3005,6 +3010,13 @@ msgid "First SN"
 msgstr "Primo S/N"
 
 #. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_quant.py:0
+#, python-format
+msgid "Fix discrepancies"
+msgstr "Sistema discrepanze"
+
+#. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_rule__group_propagation_option__fixed
 msgid "Fixed"
 msgstr "Fisso"
@@ -4086,6 +4098,7 @@ msgstr ""
 "Se l'errore persiste o se vedi questo messaggio, invia un ticket di supporto tramite la pagina https://www.odoo.com/help"
 
 #. module: stock
+#. odoo-python
 #: code:addons/stock/models/stock_quant.py:0
 #, python-format
 msgid ""
@@ -4523,6 +4536,13 @@ msgstr "Ubicazione: quando arriva in"
 #, python-format
 msgid "Locations"
 msgstr "Ubicazioni"
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_picking.py:0
+#, python-format
+msgid "Locations to update"
+msgstr "Ubicazioni da aggiornare"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_form
@@ -8118,7 +8138,7 @@ msgid ""
 "Storable products are physical items for which you manage the inventory "
 "level."
 msgstr ""
-"I prodotti immagazzinabili sono articoli fisici per i quali si gestisce il "
+"I prodotti stoccabili sono articoli fisici per i quali si gestisce il "
 "livello di inventario."
 
 #. module: stock
@@ -9939,6 +9959,16 @@ msgstr "Impossibile cambiare la tipologia di un prodotto già utilizzato."
 
 #. module: stock
 #. odoo-python
+#: code:addons/stock/models/stock_orderpoint.py:0
+#, python-format
+msgid ""
+"You can not create a snoozed orderpoint that is not manually triggered."
+msgstr ""
+"Non è possibile creare un punto d'ordine sospeso che non venga attivato "
+"manualmente."
+
+#. module: stock
+#. odoo-python
 #: code:addons/stock/models/stock_move_line.py:0
 #, python-format
 msgid ""
@@ -9977,6 +10007,17 @@ msgid "You can only process 1.0 %s of products with unique serial number."
 msgstr ""
 "Con un numero di serie univoco è possibile elaborare solo 1,0 %s di "
 "prodotto."
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_orderpoint.py:0
+#, python-format
+msgid ""
+"You can only snooze manual orderpoints. You should rather archive 'auto-"
+"trigger' orderpoints if you do not want them to be triggered."
+msgstr ""
+"È possibile mettere in pausa solo punti d'ordine manuali. È necessario "
+"archiviare punti d'ordine 'auto-trigger' se non vuoi attivarli."
 
 #. module: stock
 #. odoo-python
@@ -10095,6 +10136,28 @@ msgid ""
 msgstr ""
 "Impossibile movimentare più di una volta il contenuto del collo nello stesso"
 " trasferimento o suddividere il collo in due ubicazioni."
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You cannot pack products into the same package when they are from both "
+"immediate and planned transfers."
+msgstr ""
+"Non è possibile confezionare i prodotti nello stesso pacco se provengono sia"
+" da trasferimenti immediati che pianificati."
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You cannot pack products into the same package when they are from different "
+"transfers with different operation types."
+msgstr ""
+"Non è possibile confezionare prodotti nello stesso pacco se provengono da "
+"trasferimenti differenti con diversi tipi di operazione."
 
 #. module: stock
 #. odoo-python

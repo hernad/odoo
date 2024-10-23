@@ -846,12 +846,9 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"        Accounting reports for Turkey\n"
+"        Accounting reports for Türkiye\n"
 "    "
 msgstr ""
-"\n"
-"        Accounting reports for Turkey\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_uk_reports
@@ -19324,7 +19321,7 @@ msgstr "الإكوادور"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec_reports_ats
 msgid "Ecuador - ATS Report"
-msgstr ""
+msgstr "Ecuador - ATS Report"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec
@@ -20317,7 +20314,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_demo_failure_wizard__failures_count
 msgid "Failures Count"
-msgstr "عدد مرات الفشل"
+msgstr "عدد الأعطال "
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_data_module
@@ -20337,7 +20334,7 @@ msgstr "جزر فارو"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_it_edi_website_sale
 msgid "Features for Italian eCommerce eInvoicing"
-msgstr ""
+msgstr "Features for Italian eCommerce eInvoicing"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_bank__state
@@ -21042,6 +21039,11 @@ msgstr "فرنسا - المحاسبة"
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_reports
 msgid "France - Accounting Reports"
 msgstr "فرنسا - التقارير المحاسبية "
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_fr_invoice_addr
+msgid "France - Adding Mandatory Invoice Mentions (Decree no. 2022-1299)"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_fec
@@ -23272,7 +23274,7 @@ msgstr "صيغة النطاق غير صالحة %(expr)s في %(use)s "
 #: code:addons/base/models/ir_rule.py:0
 #, python-format
 msgid "Invalid domain: %s"
-msgstr ""
+msgstr "النطاق غير صالح: %s "
 
 #. module: base
 #. odoo-python
@@ -23606,7 +23608,7 @@ msgstr "Italy - E-invoicing (Withholding)"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_edi_website_sale
 msgid "Italy eCommerce eInvoicing"
-msgstr ""
+msgstr "Italy eCommerce eInvoicing"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_J
@@ -24417,7 +24419,7 @@ msgstr "تطبيق يربط بين pos_hr و pos_restaurant "
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_be_pos_sale
 msgid "Link module between pos_sale and l10n_be"
-msgstr ""
+msgstr "تطبيق يربط بين pos_sale و l10n_be "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale_loyalty
@@ -24459,7 +24461,7 @@ msgstr "Lithuania - Accounting Reports"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_intrastat
 msgid "Lithuanian Intrastat Declaration"
-msgstr ""
+msgstr "Lithuanian Intrastat Declaration"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_saft
@@ -24609,7 +24611,7 @@ msgstr "نظام تخطيط متطلبات المواد 2 - انتهاء الص�
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_project_mrp
 msgid "MRP Project"
-msgstr "مشروع تخطيط متطلبات المواد "
+msgstr "مشروع التصنيع "
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_subcontracting_enterprise
@@ -28589,6 +28591,16 @@ msgid "Odoo is unable to merge the generated PDFs."
 msgstr "لم يتمكن أودو من دمج ملفات PDF التي تم إنشاؤها. "
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
+msgstr ""
+"لم يتمكن أودو من دمج ملفات PDF التي تم إنشاؤها بسبب {num_errors} ملفات تالفة"
+" "
+
+#. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
 msgid ""
 "Odoo will automatically adds some '0' on the left of the 'Next Number' to "
@@ -32322,6 +32334,12 @@ msgid "Scheduled Actions Triggers"
 msgstr "مشغلات الإجراءات المجدولة "
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid "Scheduled action disabled"
+msgstr "تم تعطيل الإجراء المجدول "
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__user_id
 msgid "Scheduler User"
 msgstr "المستخدم المُجدوِل "
@@ -33548,7 +33566,7 @@ msgstr "لوحة بيانات جداول البيانات للجداول الز�
 #: model:ir.module.module,shortdesc:base.module_l10n_in_reports_gstr_spreadsheet
 #: model:ir.module.module,summary:base.module_l10n_in_reports_gstr_spreadsheet
 msgid "Spreadsheet document for GSTR1 Report"
-msgstr ""
+msgstr "مستند جدول البيانات لتقرير GSTR1 "
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__sql
@@ -35636,6 +35654,16 @@ msgid "Those modules cannot be uninstalled: %s"
 msgstr "لا يمكن تثبيت تلك التطبيقات: %s "
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid ""
+"This scheduled action has been disabled because its interval number is not a"
+" strictly positive value."
+msgstr ""
+"لقد تم تعطيل هذا الإجراء المجدول نظراً لأن قيمة الفترة الزمنية به ليست قيمة "
+"موجبة فقط. "
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
 msgid "Thousands Separator"
 msgstr "فاصل الآلاف"
@@ -36009,18 +36037,18 @@ msgstr "تونس"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "تركيا"
+msgid "Türkiye"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
-msgstr "تركيا - المحاسبة"
+msgid "Türkiye - Accounting"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
-msgstr "Turkey - Accounting Reports"
+msgid "Türkiye - Accounting Reports"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.tm
@@ -37159,6 +37187,12 @@ msgstr "عرض جلسات الدردشة المباشرة للعملاء الم�
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr "عرض السجلات التي تحتوي على مشاكل "
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "View: %s"
@@ -38038,6 +38072,17 @@ msgstr "لا يمكنك حذف سجل %s. "
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"You cannot delete the admin user because it is utilized in various places "
+"(such as security configurations,...). Instead, archive it."
+msgstr ""
+"لا يمكنك حذف المستخدم المدير لأنه مستخدَم في عدة أماكن مختلفة (كتهيئات "
+"الأمان، ...). قم بأرشفته عوضاً عن ذلك. "
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/res_lang.py:0
 #, python-format
 msgid ""
@@ -38599,7 +38644,7 @@ msgstr "json"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_pos_sale
 msgid "l10n_be_pos_sale"
-msgstr ""
+msgstr "l10n_be_pos_sale"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_stock_ddt

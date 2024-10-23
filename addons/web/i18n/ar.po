@@ -5,7 +5,7 @@
 # Translators:
 # Shaima Safar <shaima.safar@open-inside.com>, 2022
 # hoxhe Aits <hoxhe0@gmail.com>, 2022
-# Mustafa Rawi <mustafa@cubexco.com>, 2022
+# Mustafa Rawi <mustafa@mrawi.com>, 2022
 # Mustafa J. Kadhem <safi2266@gmail.com>, 2022
 # Niyas Raphy, 2022
 # Martin Trigaux, 2023
@@ -4889,6 +4889,13 @@ msgstr "تحديد الكل "
 #. module: web
 #. odoo-javascript
 #: code:addons/web/static/src/legacy/xml/base.xml:0
+#, python-format
+msgid "Select all records matching the search"
+msgstr "قم بتحديد كافة السجلات المطابقة للبحث "
+
+#. module: web
+#. openerp-web
+#: code:addons/web/static/src/legacy/xml/base.xml:0
 #: code:addons/web/static/src/views/view_dialogs/export_data_dialog.xml:0
 #, python-format
 msgid "Select field"
@@ -5180,6 +5187,7 @@ msgstr "خطأ في التركيب"
 
 #. module: web
 #. odoo-javascript
+#: code:addons/web/static/src/core/commands/command_items.xml:0
 #: code:addons/web/static/src/webclient/user_menu/user_menu_items.xml:0
 #, python-format
 msgid "TIP"
@@ -5908,6 +5916,7 @@ msgstr "أداة تبديل العرض "
 #: code:addons/web/static/src/legacy/js/views/list/list_controller.js:0
 #: code:addons/web/static/src/legacy/xml/base.xml:0
 #: code:addons/web/static/src/legacy/xml/base.xml:0
+#: code:addons/web/static/src/legacy/xml/control_panel.xml:0
 #: code:addons/web/static/src/search/favorite_menu/favorite_menu.js:0
 #: code:addons/web/static/src/views/fields/domain/domain_field.xml:0
 #: code:addons/web/static/src/views/fields/domain/domain_field.xml:0
@@ -6211,6 +6220,13 @@ msgstr "الكل"
 #, python-format
 msgid "all records"
 msgstr "كافة السجلات"
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/commands/command_items.xml:0
+#, python-format
+msgid "and"
+msgstr "و"
 
 #. module: web
 #. odoo-javascript
@@ -6811,3 +6827,10 @@ msgstr "اكتب نصاً افتراضياً أو اضغط على إدخال "
 #, python-format
 msgid "— press"
 msgstr "— اضغط "
+
+#. module: web
+#. odoo-javascript
+#: code:addons/web/static/src/core/commands/command_items.xml:0
+#, python-format
+msgid "— search for"
+msgstr "— ابحث عن "

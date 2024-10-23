@@ -26,10 +26,10 @@
 # Cheemee Bumtsend <cheemeesun@gmail.com>, 2022
 # Sanjaajamts Badamjunai <b.sanjaajamtsfc@gmail.com>, 2023
 # Munkhbaatar Gombosuren, 2023
-# Baskhuu Lodoikhuu <baskhuujacara@gmail.com>, 2023
-# Bayarkhuu Bataa, 2024
 # Martin Trigaux, 2024
+# Bayarkhuu Bataa, 2024
 # Torbat Jargalsaikhan, 2024
+# Baskhuu Lodoikhuu <baskhuujacara@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
@@ -37,7 +37,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:31+0000\n"
 "PO-Revision-Date: 2022-09-22 05:44+0000\n"
-"Last-Translator: Torbat Jargalsaikhan, 2024\n"
+"Last-Translator: Baskhuu Lodoikhuu <baskhuujacara@gmail.com>, 2024\n"
 "Language-Team: Mongolian (https://app.transifex.com/odoo/teams/41243/mn/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -294,6 +294,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "- A default Customer Invoice / Vendor Bill date will be suggested."
 msgstr ""
+"- Харилцагчийн нэхэмжлэх / Нийлүүлэгчийн нэхэмжлэхийн анхдагч огноо санал "
+"болгоно."
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
@@ -301,11 +303,14 @@ msgid ""
 "- A new field « Total (tax inc.) » to speed up and control the encoding by "
 "automating line creation with the right account &amp; tax."
 msgstr ""
+"- « Нийт (татвар орсон) » шинэ талбар нь мөр үүсгэлийг автоматаар хийх "
+"замаар зөв данс болон татварыг хянаж, кодчилолыг хурдавчлах боломжийг "
+"олгоно."
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "- The document's sequence becomes editable on all documents."
-msgstr ""
+msgstr "- Баримтын дугаарлалтыг бүх баримт дээр засварлах боломжтой болно."
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_move_line_form
@@ -315,7 +320,7 @@ msgstr "-> Хэсэгчлэн тулгагдсан бичилтүүдийг ха
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_partner_property_form
 msgid ". Please make sure that this is a wanted behavior."
-msgstr ""
+msgstr ". Энэ нь зөв тохиргоо эсэхийг шалгана уу."
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
@@ -399,7 +404,15 @@ msgstr ""
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_register_form
-msgid "<b>Early Payment Discount applied.</b>"
+msgid ""
+"<b>Early Payment Discount of %(payment_reference) has been applied.</b>"
+msgstr ""
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid ""
+"<br/>\n"
+"                            on this account:"
 msgstr ""
 
 #. module: account
@@ -815,6 +828,9 @@ msgid ""
 "                                        Balance\n"
 "                                    </span>"
 msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                                        Баланс\n"
+"                                    </span>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_form
@@ -823,6 +839,9 @@ msgid ""
 "                                        Taxes\n"
 "                                    </span>"
 msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                                        Татвар\n"
+"                                    </span>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.partner_view_buttons
@@ -961,7 +980,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.report_payment_receipt_document
 msgid "<span>Amount In Currency</span>"
-msgstr ""
+msgstr "<span>Валютаарх дүн</span>"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.bill_preview
@@ -1195,6 +1214,8 @@ msgid ""
 "                journals. This feature provides an easy way to follow up cash\n"
 "                payments on a daily basis."
 msgstr ""
+"Кассын бүртгэл нь таны кассын журнал дахь бэлэн мөнгөний орлогыг удирдах боломжийг олгодог.\n"
+"Энэ функц нь өдөр бүр бэлэн мөнгөний төлбөрийг хянах хялбар аргыг санал болгодог."
 
 #. module: account
 #. odoo-python
@@ -1210,6 +1231,8 @@ msgid ""
 "                occurring over a given period of time on a bank account. You\n"
 "                should receive this periodically from your bank."
 msgstr ""
+"Банкны тайлан нь тухайн хугацаанд банкны дансанд гарсан бүх санхүүгийн гүйлгээний хураангуй юм. Та \n"
+"үүнийг тодорхой хугацааны давтамжтайгаар банкнаасаа хүлээн авах ёстой."
 
 #. module: account
 #. odoo-python
@@ -1217,6 +1240,8 @@ msgstr ""
 #, python-format
 msgid "A fiscal position with a foreign VAT already exists in this region."
 msgstr ""
+"Гадаад НӨАТ бүхий санхүүгийн харгалзаа уг бүсэд аль хэдийнээ тодорхойлогдсон"
+" байна."
 
 #. module: account
 #: model_terms:ir.actions.act_window,help:account.action_move_journal_line
@@ -1247,6 +1272,8 @@ msgstr ""
 #, python-format
 msgid "A line cannot have both children and a groupby value (line '%s')."
 msgstr ""
+"Мөр нь дэд мөр болон бүлэглэх утгыг хоёуланг нь зэрэг агуулж болохгүй (мөр "
+"'%s')."
 
 #. module: account
 #. odoo-python
@@ -1254,6 +1281,8 @@ msgstr ""
 #, python-format
 msgid "A line of this move is using a deprecated account, you cannot post it."
 msgstr ""
+"Энэ гүйлгээний нэг мөр нь хуучирсан дансыг ашиглаж байна, та үүнийг батлах "
+"боломжгүй."
 
 #. module: account
 #. odoo-python
@@ -1271,6 +1300,8 @@ msgid ""
 "A payment tolerance defined as a percentage should always be between 0 and "
 "100"
 msgstr ""
+"Хувиар тодорхойлсон төлбөрийн хүлцэл нь үргэлж 0-ээс 100-ийн хооронд байх "
+"ёстой."
 
 #. module: account
 #. odoo-python
@@ -1279,11 +1310,13 @@ msgstr ""
 msgid ""
 "A payment tolerance defined as an amount should always be higher than 0"
 msgstr ""
+"Дүнгээр илэрхийлэгдэх төлбөрийн хүлээн зөвшөөрөгдөх зөрүү нь үргэлж 0-ээс их"
+" байх ёстой."
 
 #. module: account
 #: model:ir.model.constraint,message:account.constraint_account_reconcile_model_name_unique
 msgid "A reconciliation model already bears this name."
-msgstr ""
+msgstr "Тулгалтын загварт уг нэрийг өмнө нь ашиглачихсан байна."
 
 #. module: account
 #: model:ir.model.constraint,message:account.constraint_account_report_line_code_uniq
@@ -1312,7 +1345,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
 msgid ""
 "A second payment will be created automatically in the destination journal."
-msgstr ""
+msgstr "Хоёрдахь төлбөрийг журналд автоматаар үүсгэх болно."
 
 #. module: account
 #. odoo-python
@@ -1320,6 +1353,7 @@ msgstr ""
 #, python-format
 msgid "A statement should only contain lines from the same journal."
 msgstr ""
+"Тайлан нь зөвхөн нэг ижил журналын гүйлгээнүүдийг агуулсан байх ёстой."
 
 #. module: account
 #: model:ir.model.constraint,message:account.constraint_account_fiscal_position_tax_tax_src_dest_uniq
@@ -1389,6 +1423,20 @@ msgid ""
 msgstr ""
 "%s данс нь тулгалт хийхэд зориулагдаагүй байна. Та эхлээд дансны тохиргоог "
 "өөрчлөх шаардлагатай."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of payable type, but is used in a sale operation."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_move_line.py:0
+#, python-format
+msgid "Account %s is of receivable type, but is used in a purchase operation."
+msgstr ""
 
 #. module: account
 #: model:ir.model,name:account.model_account_cash_rounding
@@ -1620,13 +1668,13 @@ msgstr "Дансны кодууд эхний 2 орон"
 msgid ""
 "Account for the difference amount after the expense discount has been "
 "granted"
-msgstr ""
+msgstr "Зардлын хөнгөлөлт олгогдсоны дараах зөрүү дүнгийн данс"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_res_config_settings__account_journal_early_pay_discount_gain_account_id
 msgid ""
 "Account for the difference amount after the income discount has been granted"
-msgstr ""
+msgstr "Орлогын хөнгөлөлт олгогдсоны дараах зөрүү дүнгийн данс"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_group_search
@@ -1662,7 +1710,7 @@ msgstr "Татварын данс"
 #. module: account
 #: model:ir.model.fields,help:account.field_account_account__group_id
 msgid "Account prefixes can determine account groups."
-msgstr ""
+msgstr "Дансны угтварууд нь дансны бүлгийг тодорхойлж болно."
 
 #. module: account
 #: model:ir.model,name:account.model_report_account_report_invoice_with_payments
@@ -1746,6 +1794,8 @@ msgid ""
 "Account: Post draft entries with auto_post enabled and accounting date up to"
 " today"
 msgstr ""
+"Санхүү: Өнөөдрийг хүртэлх огноотой бөгөөд автоматаар батлах тохиргоотой "
+"ноорог бичилтүүдийг батлана"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_accountant
@@ -1862,7 +1912,7 @@ msgstr ""
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_accrued_orders_wizard__account_id
 msgid "Accrual Account"
-msgstr ""
+msgstr "Хуримтлагдах данс"
 
 #. module: account
 #. odoo-python
@@ -1879,6 +1929,8 @@ msgid ""
 "Accrual entry created on %(date)s: %(accrual_entry)s.                    And"
 " its reverse entry: %(reverse_entry)s."
 msgstr ""
+"Хуримтлагдсан бичилт %(date)s огноогоор үүссэн: %(accrual_entry)s. Мөн "
+"түүний эсрэг бичилт: %(reverse_entry)s."
 
 #. module: account
 #. odoo-python
@@ -1937,11 +1989,12 @@ msgstr "Худалдан авалтын баримт үүсгэхийг идэв
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Activate to create sale receipt"
-msgstr ""
+msgstr "Борлуулалтын баримт үүсгэхийг идэвхжүүлэх"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_tag__active
 #: model:ir.model.fields,field_description:account.field_account_fiscal_position__active
+#: model:ir.model.fields,field_description:account.field_account_fiscal_position_tax__tax_dest_active
 #: model:ir.model.fields,field_description:account.field_account_incoterms__active
 #: model:ir.model.fields,field_description:account.field_account_journal__active
 #: model:ir.model.fields,field_description:account.field_account_payment_term__active
@@ -2255,7 +2308,7 @@ msgstr "Бүх бичилтүүдийг \"хэш\" хийсэн."
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.account_default_terms_and_conditions
 msgid "All our contractual relations will be governed exclusively by"
-msgstr ""
+msgstr "Манай бүх гэрээний харилцаа зөвхөн дараах зүйлээр зохицуулагдана"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_template__reconcile
@@ -2265,7 +2318,7 @@ msgstr "Нэхэмжлэл болон төлөлтийг хооронд нь х�
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_reconcile_model_template__allow_payment_tolerance
 msgid "Allow Payment Gap"
-msgstr ""
+msgstr "Төлбөрийн зөрүүг зөвшөөрөх"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_product_margin
@@ -2374,13 +2427,13 @@ msgstr "Дүн"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_payment__amount_company_currency_signed
 msgid "Amount Company Currency Signed"
-msgstr ""
+msgstr "Гарын үсэг зурсан компанийн мөнгөн тэмдэгт"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_reconcile_model__match_amount
 #: model:ir.model.fields,field_description:account.field_account_reconcile_model_template__match_amount
 msgid "Amount Condition"
-msgstr ""
+msgstr "Нөхцөлт дүн"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move__amount_residual
@@ -2534,6 +2587,7 @@ msgstr "Шинжилгээний санхүү"
 
 #. module: account
 #: model:ir.ui.menu,name:account.account_analytic_def_account
+#: model_terms:ir.ui.view,arch_db:account.view_account_move_line_filter
 msgid "Analytic Accounts"
 msgstr "Шинжилгээний данс"
 
@@ -2545,12 +2599,12 @@ msgstr "Шинжилгээний өртөг"
 #. module: account
 #: model:ir.model,name:account.model_account_analytic_distribution_model
 msgid "Analytic Distribution Model"
-msgstr ""
+msgstr "Аналитик: Хуваарилалтын модел"
 
 #. module: account
 #: model:ir.ui.menu,name:account.menu_analytic__distribution_model
 msgid "Analytic Distribution Models"
-msgstr ""
+msgstr "Аналитик: Хуваарилалтын загвар"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_line__analytic_distribution_search
@@ -2611,6 +2665,8 @@ msgstr "Аналитик"
 msgid ""
 "Any journal item on a payable account must have a due date and vice versa."
 msgstr ""
+"Төлбөрийн дансны аливаа журналын бичилтэд төлбөрийн хугацаа заавал байх "
+"ёстой, мөн эсрэгээрээ."
 
 #. module: account
 #. odoo-python
@@ -2620,6 +2676,8 @@ msgid ""
 "Any journal item on a receivable account must have a due date and vice "
 "versa."
 msgstr ""
+"Хүлээн авах дансны аливаа журналын бичилтэд төлбөрийн хугацаа заавал байх "
+"ёстой, мөн эсрэгээрээ."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_tag__applicability
@@ -2635,7 +2693,7 @@ msgstr "Хэрэгжүүлэх"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Apply VAT of the EU country to which goods and services are delivered."
-msgstr ""
+msgstr "Бараа, үйлчилгээ хүргэгдсэн Европын Холбооны улсын НӨАТ-ыг хэрэглэнэ."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_fiscal_position__auto_apply
@@ -2709,7 +2767,7 @@ msgstr "Тухайн өдрийн ханшаар"
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_report_expression__date_scope__to_beginning_of_fiscalyear
 msgid "At the beginning of the fiscal year"
-msgstr ""
+msgstr "Мөчлөгийн эхэнд"
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_report_expression__date_scope__to_beginning_of_period
@@ -2912,7 +2970,7 @@ msgstr "Баланс тайлан"
 #: code:addons/account/models/account_reconcile_model.py:0
 #, python-format
 msgid "Balance percentage can't be 0"
-msgstr ""
+msgstr "Үлдэгдэл хувь 0 байж болохгүй"
 
 #. module: account
 #. odoo-python
@@ -3061,6 +3119,9 @@ msgid ""
 "Bank Transactions are posted immediately after import or synchronization. Their counterparty is the bank suspense account.\n"
 "Reconciliation replaces the latter by the definitive account(s)."
 msgstr ""
+"Банкны гүйлгээнүүдийг импортлох эсвэл авто ижилсүүлэлтээр бүртгэгдсэн даруйд"
+" батална. Тэдгээрийн эсрэг талын данс нь банкны түр данс байна. Тулгалт "
+"хийгдсэнээр үүнийг эцсийн данс(ууд)-аар солих болно."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_setup_bank_manual_config__acc_type
@@ -3298,6 +3359,9 @@ msgid ""
 "By default, we always unfold the lines that can be. If this is checked, the "
 "line won't be unfolded by default, and a folding button will be displayed."
 msgstr ""
+"Байнгын тохиргоогоор, бид үргэлж дэлгэж болох мөрүүдийг дэлгэдэг. Хэрэв "
+"үүнийг идэвхжүүлсэн бол мөрүүд нь анхнаасаа дэлгэгдээгүй хэлбэрээр харагдах "
+"бөгөөд эвхэх товч гарч ирнэ."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_fiscal_position__active
@@ -3421,13 +3485,14 @@ msgstr "Цуцлагдсан нэхэмжлэл"
 #, python-format
 msgid "Cannot create a purchase document in a non purchase journal"
 msgstr ""
+"Худалдан авалтын биш журналд худалдан авалтын нэхэмжлэл бүртгэх боломжгүй"
 
 #. module: account
 #. odoo-python
 #: code:addons/account/models/account_move.py:0
 #, python-format
 msgid "Cannot create a sale document in a non sale journal"
-msgstr ""
+msgstr "Борлуулалтын биш журналд борлуулалтын нэхэмжлэл бүртгэх боломжгүй"
 
 #. module: account
 #. odoo-python
@@ -3456,6 +3521,8 @@ msgid ""
 "Cannot generate an unused journal code. Please change the name for journal "
 "%s."
 msgstr ""
+"Шинэ давтагдаагүй журналын код үүсгэх боломжгүй байна. Журналын %s нэрийг "
+"өөрчилнө үү."
 
 #. module: account
 #. odoo-python
@@ -3473,6 +3540,8 @@ msgstr ""
 msgid ""
 "Cannot get aggregation details from a line not using 'aggregation' engine"
 msgstr ""
+"'aggregation' хөдөлгүүрийг ашиглаагүй мөрөөс нэгтгэлийн дэлгэрэнгүй "
+"мэдээллийг авах боломжгүй."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_report_expression__carryover_target
@@ -3650,7 +3719,7 @@ msgstr ""
 #: code:addons/account/models/chart_template.py:0
 #, python-format
 msgid "Cash basis transition account"
-msgstr ""
+msgstr "Мөнгөн суурьт шилжүүлгийн данс"
 
 #. module: account
 #. odoo-python
@@ -3683,6 +3752,9 @@ msgid ""
 "accordance with their internal legislation. Any withholding at source will "
 "be paid by the client to the tax authorities. Under no circumstances can"
 msgstr ""
+"Зарим улс орнууд дотоодын хууль тогтоомжийн дагуу нэхэмжлэхийн дүн дээр эх "
+"үүсвэрээс суутгал хийдэг. Эх үүсвэрээс хийгдэх аливаа суутгалыг үйлчлүүлэгч "
+"татварын албанд төлнө. Ямар ч тохиолдолд..."
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_automatic_entry_wizard__action__change_account
@@ -3799,6 +3871,8 @@ msgid ""
 "Check this box if you don't want to share the same sequence on payments and "
 "bank transactions posted on this journal"
 msgstr ""
+"Энэ хайрцгийг сонгоорой, хэрэв та энэ журнал дээр батлагдсан төлбөр болон "
+"банкны гүйлгээнд ижил дугаарлалт ашиглахыг хүсэхгүй байвал."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_account_tag__tax_negate
@@ -3835,7 +3909,7 @@ msgstr "Чекүүд"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_report_line__children_ids
 msgid "Child Lines"
-msgstr ""
+msgstr "Дэд мөрүүд"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_tax__children_tax_ids
@@ -3863,7 +3937,7 @@ msgstr ""
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_position_form
 msgid "Click"
-msgstr ""
+msgstr "Дар"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.account_terms_conditions_setting_banner
@@ -3939,6 +4013,9 @@ msgid ""
 "Comma-separated list of fields from account.move.line (Journal Item). When "
 "set, this line will generate sublines grouped by those keys."
 msgstr ""
+"Таслалаар тусгаарлагдсан account.move.line (Журналын мөр) талбаруудын "
+"жагсаалт. Хэрэв тохируулсан бол, энэ мөр нь эдгээр түлхүүрүүдээр бүлэглэсэн "
+"дэд мөрүүдийг үүсгэнэ."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_line__commercial_partner_id
@@ -4035,7 +4112,7 @@ msgstr "Баримтын зохиомж"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_line__is_storno
 msgid "Company Storno Accounting"
-msgstr ""
+msgstr "Компани Сөрөг ня-бо бүртгэл"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__has_chart_of_accounts
@@ -4062,12 +4139,12 @@ msgstr "Илгээх горим"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_report_expression__engine
 msgid "Computation Engine"
-msgstr ""
+msgstr "Тооцоолох аргачлал"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_line__compute_all_tax
 msgid "Compute All Tax"
-msgstr ""
+msgstr "Бүх татварын тооцоолол"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_line__compute_all_tax_dirty
@@ -4138,7 +4215,7 @@ msgstr "Холбогдох"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.onboarding_bank_account_step
 msgid "Connect your financial accounts in seconds."
-msgstr ""
+msgstr "Санхүүгийн дансаа хэдхэн секундын дотор холбоорой."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_invoice_send__reply_to_force_new
@@ -4201,7 +4278,7 @@ msgstr "Журналын бичилтийн гэмтсэн бичилтүүд %s
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_move_line__display_type__cogs
 msgid "Cost of Goods Sold"
-msgstr ""
+msgstr "Борлуулсан бүтээгдэхүүний өртөг"
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_account__account_type__expense_direct_cost
@@ -4217,6 +4294,8 @@ msgid ""
 "Could not compute any code for the copy automatically. Please create it "
 "manually."
 msgstr ""
+"Хуулбарыг автоматаар үүсгэх код тооцоолох боломжгүй байна. Гар аргаар "
+"үүсгэнэ үү."
 
 #. module: account
 #. odoo-python
@@ -4224,6 +4303,8 @@ msgstr ""
 #, python-format
 msgid "Could not determine carryover target automatically for expression %s."
 msgstr ""
+"%s илэрхийллийн хувьд шилжүүлэх зорилтот утгыг автоматаар тодорхойлох "
+"боломжгүй байна."
 
 #. module: account
 #. odoo-python
@@ -4241,7 +4322,7 @@ msgstr ""
 #: code:addons/account/static/src/components/bills_upload/bills_upload.js:0
 #, python-format
 msgid "Could not upload files"
-msgstr ""
+msgstr "Файл ачааллаж оруулж чадсангүй"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_reconcile_model_form
@@ -4256,12 +4337,12 @@ msgstr ""
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_reconcile_model_search
 msgid "Counterpart rules"
-msgstr ""
+msgstr "Харьцах дүрэм"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_res_company__multi_vat_foreign_country_ids
 msgid "Countries for which the company has a VAT number"
-msgstr ""
+msgstr "Компанийн НӨАТ-ын дугаар бүртгэлтэй улс орнууд"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_account_tag__country_id
@@ -4300,7 +4381,7 @@ msgstr "Улсын бүлэг"
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_report__availability_condition__country
 msgid "Country Matches"
-msgstr ""
+msgstr "Улсын харгалзаа"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_account_tag__country_id
@@ -4604,6 +4685,7 @@ msgstr "Үүсгэсэн огноо"
 #. odoo-python
 #: code:addons/account/wizard/account_automatic_entry_wizard.py:0
 #: code:addons/account/wizard/accrued_orders.py:0
+#: model:ir.model.fields,field_description:account.field_account_analytic_account__credit
 #: model:ir.model.fields,field_description:account.field_account_move_line__credit
 #, python-format
 msgid "Credit"
@@ -4629,7 +4711,7 @@ msgstr "Кредит хязгаарлалт"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_partner_property_form
 msgid "Credit Limits"
-msgstr ""
+msgstr "Кредит хязгаар"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_reversal__refund_method
@@ -4667,7 +4749,7 @@ msgstr "Буцаалтын валют"
 #. module: account
 #: model:mail.template,name:account.email_template_edi_credit_note
 msgid "Credit Note: Sending"
-msgstr ""
+msgstr "Кредит нот: Илгээж буй"
 
 #. module: account
 #: model:ir.actions.act_window,name:account.action_move_out_refund_type
@@ -4686,7 +4768,7 @@ msgstr "Энэ журналын мөртэй таарах кредит журн�
 #: model:ir.model.fields,help:account.field_res_partner__credit_limit
 #: model:ir.model.fields,help:account.field_res_users__credit_limit
 msgid "Credit limit specific to this partner."
-msgstr ""
+msgstr "Энэ харилцагчид оноосон кредит хязгаарлалт."
 
 #. module: account
 #: model:mail.template,report_name:account.email_template_edi_credit_note
@@ -4716,6 +4798,7 @@ msgstr "Валютууд"
 
 #. module: account
 #: model:ir.model,name:account.model_res_currency
+#: model:ir.model.fields,field_description:account.field_account_account__company_currency_id
 #: model:ir.model.fields,field_description:account.field_account_automatic_entry_wizard__company_currency_id
 #: model:ir.model.fields,field_description:account.field_account_bank_statement__currency_id
 #: model:ir.model.fields,field_description:account.field_account_chart_template__currency_id
@@ -4780,7 +4863,7 @@ msgstr "Дебет журналын мөрний валют."
 #. module: account
 #: model:ir.model.fields,help:account.field_account_move_line__currency_rate
 msgid "Currency rate from company currency to document currency."
-msgstr ""
+msgstr "Компанийн валютаас баримтын валютад хөрвүүлэх ханш."
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_account__account_type__asset_current
@@ -4823,12 +4906,12 @@ msgstr "Захиалагчийн төлбөр"
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_report_column__custom_audit_action_id
 msgid "Custom Audit Action"
-msgstr ""
+msgstr "Захиалгат аудитын үйлдэл"
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_report_expression__engine__custom
 msgid "Custom Python Function"
-msgstr ""
+msgstr "Тусгай Python функц"
 
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_payment__partner_type__customer
@@ -5112,6 +5195,7 @@ msgstr ""
 #. odoo-python
 #: code:addons/account/wizard/account_automatic_entry_wizard.py:0
 #: code:addons/account/wizard/accrued_orders.py:0
+#: model:ir.model.fields,field_description:account.field_account_analytic_account__debit
 #: model:ir.model.fields,field_description:account.field_account_move_line__debit
 #, python-format
 msgid "Debit"
@@ -5428,7 +5512,7 @@ msgstr "Зөрүүгийн данс"
 #: model:ir.model.fields,help:account.field_account_reconcile_model_line__allow_payment_tolerance
 #: model:ir.model.fields,help:account.field_account_reconcile_model_template__allow_payment_tolerance
 msgid "Difference accepted in case of underpayment."
-msgstr ""
+msgstr "Төлбөрийг дутуу төлсөн тохиолдолд зөрүүг хүлээн авна."
 
 #. module: account
 #: model:ir.model,name:account.model_digest_digest
@@ -5438,13 +5522,15 @@ msgstr "Товч"
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Digitization"
-msgstr ""
+msgstr "Дижиталчлал"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid ""
 "Digitize your PDF or scanned documents with OCR and Artificial Intelligence"
 msgstr ""
+"Таны PDF болон сканнердсан баримтуудыг OCR болон Хиймэл Оюун Ухааны "
+"тусламжтайгаар дижитал хэлбэрт оруулна."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_line__direction_sign
@@ -5875,18 +5961,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:account.field_account_payment__duplicated_ref_ids
 msgid "Duplicated Ref"
 msgstr ""
-
-#. module: account
-#. odoo-python
-#: code:addons/account/models/account_move.py:0
-#, python-format
-msgid ""
-"Duplicated vendor reference detected. You probably encoded twice the same "
-"vendor bill/credit note."
-msgstr ""
-"Нийлүүлэгчийн лавлагааны давхцал үүслээ. Та магадгүй нийлүүлэгчийн нэхэмжлэл"
-" эсвэл буцаалтын ижил лавлагааны дугаарыг хоёр удаа ашиглах гэж оролдож "
-"байна."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_res_config_settings__module_account_reports
@@ -6908,6 +6982,8 @@ msgid ""
 "Groupby feature isn't supported by aggregation engine. Please remove the "
 "groupby value on '%s'"
 msgstr ""
+"Бүлэглэх функц нь aggregation engine-д дэмжигдэхгүй байна. '%s' дээрх "
+"бүлэглэх утгыг устгана уу."
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_report__filter_growth_comparison
@@ -7104,6 +7180,8 @@ msgid ""
 "If a payment is still outstanding more than sixty (60) days after the due "
 "payment date,"
 msgstr ""
+"Хэрэв төлбөрийн хугацаа хэтэрснээс хойш жаран (60) хоногоос дээш хугацаанд "
+"төлбөр төлөгдөөгүй бол,"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_account__message_needaction
@@ -7163,6 +7241,8 @@ msgid ""
 "If set, taxes with a higher sequence than this one will be affected by it, "
 "provided they accept it."
 msgstr ""
+"Хэрэв тохируулсан бол энэ татвараас өндөр дугаарлалтай татварууд үүнийг "
+"хүлээн зөвшөөрсөн тохиолдолд түүнд нөлөөлнө."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax__is_base_affected
@@ -7171,6 +7251,8 @@ msgid ""
 "If set, taxes with a lower sequence might affect this one, provided they try"
 " to do it."
 msgstr ""
+"Хэрэв тохируулсан бол доод дугаарлалтай татварууд үүнд нөлөөлөх боломжтой, "
+"хэрэв тэд үүнийг хийхийг оролдвол."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax__analytic
@@ -7195,6 +7277,9 @@ msgid ""
 "If set, this account will belong to Non Trade Receivable/Payable in reports and filters.\n"
 "If not, this account will belong to Trade Receivable/Payable in reports and filters."
 msgstr ""
+"Хэрэв тохируулсан бол энэ данс тайлан болон шүүлтүүрт Худалдааны бус "
+"авлага/өр төлбөрт багтах болно. Хэрэв тохироогүй бол энэ данс тайлан болон "
+"шүүлтүүрт Худалдааны авлага/өр төлбөрт багтах болно."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_tax_group__preceding_subtotal
@@ -7203,6 +7288,10 @@ msgid ""
 "excluding this tax group before displaying it. If not set, the tax group "
 "will be displayed after the 'Untaxed amount' subtotal."
 msgstr ""
+"Хэрэв тохируулсан бол энэ утга нь баримт дээр тухайн татварын бүлгийг "
+"харуулахаас өмнө, татвар ороогүй дүнгийн нийт дүнгийн шошго болгон "
+"ашиглагдана. Хэрэв тохироогүй бол татварын бүлэг нь 'Татваргүй дүн' нийт "
+"дүнгийн дараа харагдана."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_payment_term__active
@@ -7269,6 +7358,9 @@ msgid ""
 "must charge VAT based on the delivery address. This rule applies regardless "
 "of where you are located."
 msgstr ""
+"Хэрэв та Европын холбооны гадаад улсад байгаа харилцагчдад бараа, үйлчилгээ "
+"борлуулж байгаа бол хүргэлтийн хаягаар үндэслэн НӨАТ ногдуулах ёстой. Энэ "
+"дүрэм таны байрлалаас үл хамааран үйлчилнэ."
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.account_unreconcile_view
@@ -7567,6 +7659,8 @@ msgstr "Банк хоорондын шилжүүлгийн данс"
 msgid ""
 "Intermediary account used when moving from a liquidity account to another."
 msgstr ""
+"Эздийн өмчийн дансыг өөр данс руу шилжүүлэх үед ашиглагдах дамжин өнгөрөх "
+"түр данс."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_res_company__transfer_account_id
@@ -7622,18 +7716,24 @@ msgid ""
 "Internal field to shorten expression_ids creation for the account_codes "
 "engine"
 msgstr ""
+"`account_codes` аргачлал бүхий expression_ids бүртгэл үүсгэхийг "
+"хялбарчлилдаг дотоод талбар."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_line__aggregation_formula
 msgid ""
 "Internal field to shorten expression_ids creation for the aggregation engine"
 msgstr ""
+"aggregation engine-д зориулж expression_ids үүсгэх үйлдлийг хялбарчлах "
+"дотоод талбар."
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_line__domain_formula
 msgid ""
 "Internal field to shorten expression_ids creation for the domain engine"
 msgstr ""
+"domain engine-д зориулж expression_ids үүсгэх үйлдлийг хялбарчлах дотоод "
+"талбар"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_bank_statement_line__invoice_incoterm_id
@@ -7662,8 +7762,13 @@ msgstr "Буруу"
 #. odoo-python
 #: code:addons/account/models/partner.py:0
 #, python-format
-msgid "Invalid \"Zip Range\", please configure it properly."
-msgstr "\"Зип-ийн муж\" буруу байна, зөвөөр тохируулна уу."
+msgid ""
+"Invalid \"Zip Range\", You have to configure both \"From\" and \"To\" values"
+" for the zip range and \"To\" should be greater than \"From\"."
+msgstr ""
+"\"ZIP муж\" буруу. ZIP мужад зориулж \"Эхлэл\" болон \"Төгсгөл\" утгыг "
+"хоёуланг нь тохируулах шаардлагатай бөгөөд \"Төгсгөл\" нь \"Эхлэл\"-ээс их "
+"байх ёстой."
 
 #. module: account
 #. odoo-python
@@ -7824,7 +7929,7 @@ msgstr "Нэхэмжлэлийн татвар"
 #: model:ir.model.fields,field_description:account.field_account_move__tax_totals
 #: model:ir.model.fields,field_description:account.field_account_payment__tax_totals
 msgid "Invoice Totals"
-msgstr ""
+msgstr "Нэхэмжлэлийн нийлбэр"
 
 #. module: account
 #. odoo-python
@@ -9438,6 +9543,12 @@ msgid "Never"
 msgstr "Хэзээ ч үгүй"
 
 #. module: account
+#: code:addons/account/models/account_tax.py:0
+#, python-format
+msgid "Nested group of taxes are not allowed."
+msgstr ""
+
+#. module: account
 #: model:ir.model.fields,field_description:account.field_account_setup_bank_manual_config__new_journal_name
 msgid "New Journal Name"
 msgstr "Шинэ журналын нэр"
@@ -9462,16 +9573,6 @@ msgstr "Шинэ утга"
 #: model:ir.model.fields.selection,name:account.selection__account_reconcile_model_template__matching_order__new_first
 msgid "Newest first"
 msgstr "Шинэ нь эхэнд нь байрлах"
-
-#. module: account
-#: model:ir.model.fields,field_description:account.field_account_bank_statement_line__activity_calendar_event_id
-#: model:ir.model.fields,field_description:account.field_account_journal__activity_calendar_event_id
-#: model:ir.model.fields,field_description:account.field_account_move__activity_calendar_event_id
-#: model:ir.model.fields,field_description:account.field_account_payment__activity_calendar_event_id
-#: model:ir.model.fields,field_description:account.field_account_setup_bank_manual_config__activity_calendar_event_id
-#: model:ir.model.fields,field_description:account.field_res_partner_bank__activity_calendar_event_id
-msgid "Next Activity Calendar Event"
-msgstr "Календар дээрх дараагийн Үйл ажиллагаа"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_line__activity_date_deadline
@@ -9934,6 +10035,7 @@ msgstr "Нэхэмжлэл тань бэлэн болмогц БАТЛАХ то�
 #: model_terms:ir.ui.view,arch_db:account.view_partner_property_form
 msgid "One or more Bank Accounts set on this partner are also used by other"
 msgstr ""
+"Уг харилцагчийн зарим банкны дансууд өөр харилцагч дээр бас ашиглагдаж байна"
 
 #. module: account
 #. odoo-python
@@ -10003,13 +10105,6 @@ msgid "Open"
 msgstr "Нээх"
 
 #. module: account
-#. odoo-python
-#: code:addons/account/models/account_move.py:0
-#, python-format
-msgid "Open list"
-msgstr ""
-
-#. module: account
 #: model:ir.model.fields,field_description:account.field_account_account__opening_balance
 msgid "Opening Balance"
 msgstr "Нээлтийн үлдэгдэл"
@@ -10059,8 +10154,7 @@ msgstr "Нээлтийн батлагдсан гүйлгээ"
 
 #. module: account
 #. odoo-python
-#: code:addons/account/models/account_account.py:0
-#: code:addons/account/models/account_account.py:0
+#: code:addons/account/models/company.py:0
 #, python-format
 msgid "Opening balance"
 msgstr "Нээлтийн баланс"
@@ -11840,6 +11934,7 @@ msgstr "Эсрэг ажил гүйлгээ"
 #. module: account
 #: model:ir.model.fields.selection,name:account.selection__account_invoice_report__payment_state__reversed
 #: model:ir.model.fields.selection,name:account.selection__account_move__payment_state__reversed
+#: model_terms:ir.ui.view,arch_db:account.view_account_invoice_filter
 #: model_terms:ir.ui.view,arch_db:account.view_account_move_filter
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
 msgid "Reversed"
@@ -12462,6 +12557,7 @@ msgstr ""
 "боломжтой."
 
 #. module: account
+#: model:ir.model.fields,help:account.field_account_fiscal_position_tax__tax_dest_active
 #: model:ir.model.fields,help:account.field_account_tax__active
 #: model:ir.model.fields,help:account.field_account_tax_template__active
 msgid "Set active to false to hide the tax without removing it."
@@ -13041,6 +13137,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:account.view_move_line_tax_audit_tree
 msgid "Tax"
 msgstr "Татвар"
+
+#. module: account
+#: model_terms:ir.ui.view,arch_db:account.report_invoice_document
+msgid "Tax 15%"
+msgstr ""
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_tax_group__property_advance_tax_payment_account_id
@@ -13746,6 +13847,14 @@ msgid "The company this distribution line belongs to."
 msgstr ""
 
 #. module: account
+#: code:addons/account/models/partner.py:0
+#, python-format
+msgid ""
+"The country of the foreign VAT number could not be detected. Please assign a"
+" country to the fiscal position or set a country group"
+msgstr ""
+
+#. module: account
 #: model:ir.model.fields,help:account.field_account_tax_group__country_id
 msgid "The country for which this tax group is applicable."
 msgstr ""
@@ -14319,6 +14428,15 @@ msgid ""
 msgstr ""
 
 #. module: account
+#. odoo-python
+#: code:addons/account/models/account_payment.py:0
+#, python-format
+msgid ""
+"The selected payment method is not available for this payment, please select"
+" the payment method again."
+msgstr ""
+
+#. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_account_payment_form
 msgid "The selected payment method requires a bank account but none is set on"
 msgstr ""
@@ -14753,6 +14871,14 @@ msgid ""
 msgstr ""
 "Энэ журналд аль хэдийнээ гүйлгээ бүртгэгдсэн тул журналын компанийг солих "
 "боломжгүй."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/account_journal.py:0
+#, python-format
+msgid ""
+"This journal is associated with a payment method. You cannot archive it"
+msgstr ""
 
 #. module: account
 #. odoo-python
@@ -16134,8 +16260,8 @@ msgstr ""
 #: code:addons/account/wizard/account_payment_register.py:0
 #, python-format
 msgid ""
-"You can't register payments for journal items being either all inbound, "
-"either all outbound."
+"You can't register payments for both inbound and outbound moves at the same "
+"time."
 msgstr ""
 
 #. module: account
@@ -16193,6 +16319,14 @@ msgstr ""
 #: code:addons/account/models/partner.py:0
 #, python-format
 msgid ""
+"You cannot create a fiscal position with a country outside of the selected "
+"country group."
+msgstr ""
+
+#. module: account
+#: code:addons/account/models/partner.py:0
+#, python-format
+msgid ""
 "You cannot create a fiscal position with a foreign VAT within your fiscal "
 "country without assigning it a state."
 msgstr ""
@@ -16226,6 +16360,13 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_account.py:0
+#, python-format
+msgid "You cannot create recursive groups."
+msgstr ""
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/account_move_line.py:0
 #, python-format
 msgid ""
@@ -16249,11 +16390,29 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/models/account_account_tag.py:0
+#, python-format
+msgid ""
+"You cannot delete this account tag (%s), it is used on the chart of account "
+"definition."
+msgstr ""
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/account_move.py:0
 #, python-format
 msgid ""
 "You cannot delete this entry, as it has already consumed a sequence number "
 "and is not the last one in the chain. You should probably revert it instead."
+msgstr ""
+
+#. module: account
+#. odoo-python
+#: code:addons/account/models/ir_actions_report.py:0
+#, python-format
+msgid ""
+"You cannot delete this report (%s), it is used by the accounting PDF "
+"generation engine."
 msgstr ""
 
 #. module: account
@@ -16339,12 +16498,12 @@ msgstr ""
 
 #. module: account
 #. odoo-python
-#: code:addons/account/models/account_account.py:0
+#: code:addons/account/models/company.py:0
 #, python-format
 msgid ""
 "You cannot import the \"openning_balance\" if the opening move (%s) is "
-"already posted.                         If you are absolutely sure you want "
-"to modify the opening balance of your accounts, reset the move to draft."
+"already posted.                 If you are absolutely sure you want to "
+"modify the opening balance of your accounts, reset the move to draft."
 msgstr ""
 
 #. module: account
@@ -16517,6 +16676,8 @@ msgid ""
 "You cannot use this account (%s) in this journal, check the section "
 "'Control-Access' under tab 'Advanced Settings' on the related journal."
 msgstr ""
+"Та (%s) дансыг энэ журналд ашиглах боломжгүй, холбоотой журналын 'Өргөтгөсөн"
+" тохиргоо' хавтасны 'Хандалтын хяналт' хэсгийг шалгана уу."
 
 #. module: account
 #. odoo-python

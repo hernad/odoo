@@ -834,12 +834,9 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"        Accounting reports for Turkey\n"
+"        Accounting reports for Türkiye\n"
 "    "
 msgstr ""
-"\n"
-"        터키 회계 보고서\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_uk_reports
@@ -19069,7 +19066,7 @@ msgstr "에콰도르"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec_reports_ats
 msgid "Ecuador - ATS Report"
-msgstr ""
+msgstr "에콰도르 - ATS 보고서"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec
@@ -20067,7 +20064,7 @@ msgstr "페로 섬"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_it_edi_website_sale
 msgid "Features for Italian eCommerce eInvoicing"
-msgstr ""
+msgstr "이탈리아 이커머스 전자 청구서 발행을 위한 기능"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_bank__state
@@ -20749,6 +20746,11 @@ msgstr "프랑스 - 회계"
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_reports
 msgid "France - Accounting Reports"
 msgstr "프랑스 - 회계 보고서"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_fr_invoice_addr
+msgid "France - Adding Mandatory Invoice Mentions (Decree no. 2022-1299)"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_fec
@@ -22935,7 +22937,7 @@ msgstr "%(use)s의 %(expr)s 도메인 형식이 잘못되었습니다."
 #: code:addons/base/models/ir_rule.py:0
 #, python-format
 msgid "Invalid domain: %s"
-msgstr ""
+msgstr "유효하지 않은 도메인: %s"
 
 #. module: base
 #. odoo-python
@@ -23266,7 +23268,7 @@ msgstr "이탈리아 - 전자 청구서 발행 (원천징수)"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_edi_website_sale
 msgid "Italy eCommerce eInvoicing"
-msgstr ""
+msgstr "이탈리아 이커머스 전자 청구서"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_J
@@ -24076,7 +24078,7 @@ msgstr "pos_hr 과 pos_restaurant 사이의 연결 모듈"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_be_pos_sale
 msgid "Link module between pos_sale and l10n_be"
-msgstr ""
+msgstr "pos_sale과 l10n_be 간의 연결 모듈"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale_loyalty
@@ -24118,7 +24120,7 @@ msgstr "리투아니아 - 회계 보고서"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_intrastat
 msgid "Lithuanian Intrastat Declaration"
-msgstr ""
+msgstr "리투아니아 Intrastat 선언"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_saft
@@ -28117,6 +28119,14 @@ msgid "Odoo is unable to merge the generated PDFs."
 msgstr "Odoo는 생성된 PDF를 병합할 수 없습니다."
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
+msgstr "{num_errors} 손상된 파일로 인해 생성된 PDF를 병합할 수 없습니다."
+
+#. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
 msgid ""
 "Odoo will automatically adds some '0' on the left of the 'Next Number' to "
@@ -31814,6 +31824,12 @@ msgid "Scheduled Actions Triggers"
 msgstr "예약된 작업 작동"
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid "Scheduled action disabled"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__user_id
 msgid "Scheduler User"
 msgstr "일정표 사용자"
@@ -33032,7 +33048,7 @@ msgstr "작업계획서용 스프레드시트 현황판"
 #: model:ir.module.module,shortdesc:base.module_l10n_in_reports_gstr_spreadsheet
 #: model:ir.module.module,summary:base.module_l10n_in_reports_gstr_spreadsheet
 msgid "Spreadsheet document for GSTR1 Report"
-msgstr ""
+msgstr "GSTR1 보고서용 스프레드시트 문서"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__sql
@@ -35063,6 +35079,14 @@ msgid "Those modules cannot be uninstalled: %s"
 msgstr "해당 모듈을 삭제할 수 없습니다: %s"
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid ""
+"This scheduled action has been disabled because its interval number is not a"
+" strictly positive value."
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
 msgid "Thousands Separator"
 msgstr "천 단위 구분 기호"
@@ -35437,18 +35461,18 @@ msgstr "튀니지"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "터키"
+msgid "Türkiye"
+msgstr "튀르키예"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
-msgstr "터키 - 회계"
+msgid "Türkiye - Accounting"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
-msgstr "터키 - 회계 보고서"
+msgid "Türkiye - Accounting Reports"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.tm
@@ -36559,6 +36583,12 @@ msgstr "영업제안 실시간 채팅 세션 보기"
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr "문제가 있는 기록 보기"
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "View: %s"
@@ -37414,6 +37444,15 @@ msgstr "%s 레코드를 삭제할 수 없습니다."
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"You cannot delete the admin user because it is utilized in various places "
+"(such as security configurations,...). Instead, archive it."
+msgstr "관리자는 보안 설정 등 다양한 곳에서 사용되므로 삭제할 수 없습니다. 대신 보관함으로 이동할 수 있습니다."
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/res_lang.py:0
 #, python-format
 msgid ""
@@ -37971,7 +38010,7 @@ msgstr "json"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_pos_sale
 msgid "l10n_be_pos_sale"
-msgstr ""
+msgstr "l10n_be_pos_sale"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_stock_ddt

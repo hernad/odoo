@@ -4,16 +4,14 @@ from collections import defaultdict
 from urllib3.util.ssl_ import create_urllib3_context, DEFAULT_CIPHERS
 from urllib3.contrib.pyopenssl import inject_into_urllib3
 from OpenSSL.crypto import load_certificate, load_privatekey, FILETYPE_PEM
-from zeep.transports import Transport
 
 from odoo import fields, models, _
 from odoo.exceptions import UserError
-from odoo.tools import html_escape
+from odoo.tools import html_escape, zeep
 
 import math
 import json
 import requests
-import zeep
 
 
 # Custom patches to perform the WSDL requests.
@@ -279,7 +277,8 @@ class AccountEdiFormat(models.Model):
 
             invoice_node['DescripcionOperacion'] = invoice.invoice_origin[:500] if invoice.invoice_origin else 'manual'
             if invoice.is_sale_document():
-                info['IDFactura']['IDEmisorFactura'] = {'NIF': invoice.company_id.vat[2:]}
+                nif = invoice.company_id.vat[2:] if invoice.company_id.vat.startswith('ES') else invoice.company_id.vat
+                info['IDFactura']['IDEmisorFactura'] = {'NIF': nif}
                 info['IDFactura']['NumSerieFacturaEmisor'] = invoice.name[:60]
                 if not is_simplified:
                     invoice_node['Contraparte'] = {
@@ -287,10 +286,18 @@ class AccountEdiFormat(models.Model):
                         'NombreRazon': com_partner.name[:120],
                     }
                 export_exempts = invoice.invoice_line_ids.tax_ids.filtered(lambda t: t.l10n_es_exempt_reason == 'E2')
-                invoice_node['ClaveRegimenEspecialOTrascendencia'] = '02' if export_exempts else '01'
+                # If an invoice line contains an OSS tax, the invoice is considered as an OSS operation
+                is_oss = self._has_oss_taxes(invoice)
+
+                if is_oss:
+                    invoice_node['ClaveRegimenEspecialOTrascendencia'] = '17'
+                elif export_exempts:
+                    invoice_node['ClaveRegimenEspecialOTrascendencia'] = '02'
+                else:
+                    invoice_node['ClaveRegimenEspecialOTrascendencia'] = '01'
             else:
                 info['IDFactura']['IDEmisorFactura'] = partner_info
-                info['IDFactura']['NumSerieFacturaEmisor'] = invoice.ref[:60]
+                info["IDFactura"]["NumSerieFacturaEmisor"] = (invoice.ref or "")[:60]
                 if not is_simplified:
                     invoice_node['Contraparte'] = {
                         **partner_info,
@@ -463,7 +470,7 @@ class AccountEdiFormat(models.Model):
             'IDVersionSii': '1.1',
             'Titular': {
                 'NombreRazon': company.name[:120],
-                'NIF': company.vat[2:],
+                'NIF': company.vat[2:] if company.vat.startswith('ES') else company.vat,
             },
             'TipoComunicacion': 'A1' if csv_number else 'A0',
         }
@@ -472,8 +479,7 @@ class AccountEdiFormat(models.Model):
         session.cert = company.l10n_es_edi_certificate_id
         session.mount('https://', PatchedHTTPAdapter())
 
-        transport = Transport(operation_timeout=60, timeout=60, session=session)
-        client = zeep.Client(connection_vals['url'], transport=transport)
+        client = zeep.Client(connection_vals['url'], operation_timeout=60, timeout=60, session=session)
 
         if invoices[0].is_sale_document():
             service_name = 'SuministroFactEmitidas'
@@ -543,8 +549,11 @@ class AccountEdiFormat(models.Model):
                         if partner_info.get('NIF') and partner_info['NIF'] == respl_partner_info.NIF:
                             inv = candidate
                             break
-                        if partner_info.get('IDOtro') and all(getattr(respl_partner_info.IDOtro, k) == v
-                                                              for k, v in partner_info['IDOtro'].items()):
+                        if (
+                            partner_info.get('IDOtro')
+                            and respl_partner_info['IDOtro']
+                            and all(respl_partner_info['IDOtro'][k] == v for k, v in partner_info['IDOtro'].items())
+                        ):
                             inv = candidate
                             break
 
@@ -578,6 +587,14 @@ class AccountEdiFormat(models.Model):
                 }
 
         return results
+
+    def _has_oss_taxes(self, invoice):
+        oss_tax_groups = self.env['ir.model.data'].search([
+            ('module', '=', 'l10n_eu_oss'),
+            ('model', '=', 'account.tax.group')])
+        lines = invoice.invoice_line_ids.filtered(lambda line: line.display_type not in ('line_section', 'line_note'))
+        tax_groups = lines.mapped('tax_ids.tax_group_id')
+        return bool(set(tax_groups.ids) & set(oss_tax_groups.mapped('res_id')))
 
     # -------------------------------------------------------------------------
     # EDI OVERRIDDEN METHODS

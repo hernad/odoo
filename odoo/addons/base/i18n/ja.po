@@ -4,14 +4,14 @@
 # 
 # Translators:
 # 江口和志 <sandwhale1010@gmail.com>, 2022
-# Yoshi Tashiro (Quartile) <tashiro@roomsfor.hk>, 2023
 # Tatsuki Kanda, 2023
 # Andy Yiu, 2024
 # Noma Yuki, 2024
 # Martin Trigaux, 2024
-# Junko Augias, 2024
 # Wil Odoo, 2024
 # Ryoko Tsuda <ryoko@quartile.co>, 2024
+# Yoshi Tashiro (Quartile) <tashiro@roomsfor.hk>, 2024
+# Junko Augias, 2024
 # 
 msgid ""
 msgstr ""
@@ -19,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:33+0000\n"
 "PO-Revision-Date: 2022-09-22 05:44+0000\n"
-"Last-Translator: Ryoko Tsuda <ryoko@quartile.co>, 2024\n"
+"Last-Translator: Junko Augias, 2024\n"
 "Language-Team: Japanese (https://app.transifex.com/odoo/teams/41243/ja/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -646,7 +646,7 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"            ケニア・トレモール・デバイスのEDI統合\n"
+"            ケニアTremolデバイスEDI統合\n"
 "        "
 
 #. module: base
@@ -827,12 +827,9 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"        Accounting reports for Turkey\n"
+"        Accounting reports for Türkiye\n"
 "    "
 msgstr ""
-"\n"
-"        トルコ向けの会計レポート\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_uk_reports
@@ -3021,7 +3018,7 @@ msgstr ""
 "\n"
 "会計レポート税務リマインダ\n"
 "===============================\n"
-"このモジュールは、税務報告書が管理者に送信される準備ができた際の\n"
+"このモジュールは、税レポートが管理者に送信される準備ができた際の\n"
 "通知を追加します。\n"
 "    "
 
@@ -8933,7 +8930,7 @@ msgstr ""
 "\n"
 "このモジュールは以下で構成されています:\n"
 " - 一般的なイスラエルの勘定科目表\n"
-" - 税と税務申告書\n"
+" - 税と税レポート\n"
 " - 複数の財務ポジション\n"
 " "
 
@@ -8946,6 +8943,7 @@ msgid ""
 "    - a generic chart of accounts\n"
 "    - SARS VAT Ready Structure"
 msgstr ""
+"\n"
 "ZAでOdooを実行するために必要な最新の基本的な南アフリカのローカリゼーションです:\n"
 "================================================================================\n"
 "-一般的なチャートアカウント\n"
@@ -10716,7 +10714,7 @@ msgid ""
 "\n"
 "https://paymentservices.amazon.com/docs/EN/12.html"
 msgstr ""
-"# Amazon決済サービス\n"
+"# Amazon payment Services\n"
 "\n"
 "## 実装詳細\n"
 "\n"
@@ -10731,7 +10729,7 @@ msgstr ""
 "\n"
 "以下との統合を選択しています:\n"
 "[Redirection](https://paymentservices-reference.payfort.com/docs/api/build/index.html#redirection)\n"
-"APIは、Amazon決済サービスが2022年7月現在に提供している3つのゲートウェイのうち、当社のニーズに最も適したゲートウェイであるためです。\n"
+"APIは、Amazon payment Servicesが2022年7月現在に提供している3つのゲートウェイのうち、当社のニーズに最も適したゲートウェイであるためです。\n"
 "他のゲートウェイの詳細については、タスクの開発メモを参照して下さい。\n"
 "\n"
 "## 詳細をマージ\n"
@@ -14026,7 +14024,7 @@ msgstr "従業員を評価する"
 #. module: base
 #: model:ir.model,name:base.model_ir_asset
 msgid "Asset"
-msgstr "資産"
+msgstr "アセット"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_asset
@@ -14035,7 +14033,7 @@ msgstr "資産"
 #: model_terms:ir.ui.view,arch_db:base.asset_view_search
 #: model_terms:ir.ui.view,arch_db:base.asset_view_tree
 msgid "Assets"
-msgstr "資産"
+msgstr "アセット"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_asset
@@ -17448,7 +17446,7 @@ msgstr "小数精度"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__decimal_point
 msgid "Decimal Separator"
-msgstr "小数区切り"
+msgstr "小数点記号"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_res_currency__decimal_places
@@ -17965,11 +17963,12 @@ msgid ""
 "%(country_code)s: the code of the country"
 msgstr ""
 "この国に属する住所に使用する表示形式。\n"
-"アドレスのすべてのフィールドでpythonスタイルの文字列パターンを使用できます(たとえば、'%(street)s'を使用してフィールド'street'を表示します)\n"
-"%(state_name)s:州の名前\n"
-"%(state_code )s:州のコード\n"
-"%(country_name)s:国の名前\n"
-"%(country_code)s:国のコード"
+"\n"
+"アドレスのすべてのフィールドでpythonスタイルの文字列パターンを使用できます(たとえば、'%(street)s' を使用してフィールド '町名番地' を表示します)\n"
+"%(state_name)s:州/都道府県の名前\n"
+"%(state_code)s:州/都道府県のコード\n"
+"%(country_name)s:国名\n"
+"%(country_code)s:国コード"
 
 #. module: base
 #. odoo-python
@@ -18050,7 +18049,7 @@ msgstr "ドキュメントタイプ:"
 #: model:ir.module.category,name:base.module_category_productivity_documents
 #: model:ir.module.module,shortdesc:base.module_documents
 msgid "Documents"
-msgstr "書類"
+msgstr "ドキュメント"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_account
@@ -18377,7 +18376,7 @@ msgstr "エクアドル"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec_reports_ats
 msgid "Ecuador - ATS Report"
-msgstr ""
+msgstr "エクアドル - ATSレポート"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec
@@ -19368,7 +19367,7 @@ msgstr "フェロー諸島"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_it_edi_website_sale
 msgid "Features for Italian eCommerce eInvoicing"
-msgstr ""
+msgstr "イタリアeコマース請求用機能"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_bank__state
@@ -20054,6 +20053,11 @@ msgid "France - Accounting Reports"
 msgstr "フランス-会計報告"
 
 #. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_fr_invoice_addr
+msgid "France - Adding Mandatory Invoice Mentions (Decree no. 2022-1299)"
+msgstr ""
+
+#. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_fec
 msgid "France - FEC Export"
 msgstr "フランス - FEC輸出"
@@ -20123,7 +20127,7 @@ msgstr "ここから、あなたと連絡先にリンクされている全ての
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_management
 msgid "From quotations to invoices"
-msgstr "見積もりから請求書まで"
+msgstr "見積から請求書まで"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_access_view_search
@@ -22225,7 +22229,7 @@ msgstr "無効なドメインフォーマット%(expr)s  (%(use)s内)"
 #: code:addons/base/models/ir_rule.py:0
 #, python-format
 msgid "Invalid domain: %s"
-msgstr ""
+msgstr "無効なドメイン: %s"
 
 #. module: base
 #. odoo-python
@@ -22550,7 +22554,7 @@ msgstr "イタリア - 電子請求(源泉徴収)"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_edi_website_sale
 msgid "Italy eCommerce eInvoicing"
-msgstr ""
+msgstr "イタリアeコマース電子請求"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_J
@@ -23359,7 +23363,7 @@ msgstr "pos_hrとpos_restaurantの間のリンクモジュール"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_be_pos_sale
 msgid "Link module between pos_sale and l10n_be"
-msgstr ""
+msgstr "pos_sale と l10n_beのブリッジモジュール"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale_loyalty
@@ -23401,7 +23405,7 @@ msgstr "リトアニア - 会計レポート"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_intrastat
 msgid "Lithuanian Intrastat Declaration"
-msgstr ""
+msgstr "リトアニアイントラスタット申告"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_saft
@@ -23704,7 +23708,7 @@ msgstr "保守担当者"
 #: model:ir.module.category,name:base.module_category_manufacturing_maintenance
 #: model:ir.module.module,shortdesc:base.module_maintenance
 msgid "Maintenance"
-msgstr "メンテナンス"
+msgstr "整備"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_maintenance
@@ -25237,21 +25241,21 @@ msgstr "更新不可"
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid "Non-relational field %(field)r in path %(field_path)r in %(use)s)"
-msgstr "無関係のフィールド%(field)r パス%(field_path)r  %(use)s内)"
+msgstr "非リレーショナルフィールド%(field)r パス%(field_path)r  %(use)s内)"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "Non-relational field %r in dependency %r"
-msgstr "非リレーションフィールド %r その依存関係 %r"
+msgstr "非リレーショナルフィールド %r その依存関係 %r"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "Non-relational field name '%s' in related field '%s'"
-msgstr "非リレーションフィールド名 '%s' そのリレーションフィールド '%s'"
+msgstr "非リレーショナルフィールド名 '%s' そのリレーションフィールド '%s'"
 
 #. module: base
 #: model:ir.module.module,description:base.module_test_testing_utilities
@@ -27234,6 +27238,14 @@ msgid "Odoo is unable to merge the generated PDFs."
 msgstr "Odooは生成されたPDFをマージできません。"
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
+msgstr "破損したファイル {num_errors} があるため、Odooは生成されたPDFをマージできません。"
+
+#. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
 msgid ""
 "Odoo will automatically adds some '0' on the left of the 'Next Number' to "
@@ -28332,7 +28344,7 @@ msgstr "支払い-アカウント"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_payment_invoice_online_payment_patch
 msgid "Payment - Account / Invoice Online Payment Patch"
-msgstr ""
+msgstr "支払 - アカウント / 請求書オンライン支払パッチ"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_payment
@@ -30835,12 +30847,12 @@ msgstr "設備/機器の保守管理"
 #. module: base
 #: model:ir.module.module,summary:base.module_industry_fsm_sale
 msgid "Schedule and track onsite operations, invoice time and material"
-msgstr "オンサイトオペレーション、請求書の時間と資料をスケジュールして追跡します"
+msgstr "オンサイトオペレーションをスケジュール、追跡し、タイムアンドマテリアル方式で請求"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_industry_fsm
 msgid "Schedule and track onsite operations, time and material"
-msgstr "オンサイトの運用、時間、および資料のスケジュールと追跡"
+msgstr "オンサイトオペレーション、タイムアンドマテリアルのスケジュールと追跡"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_calendar
@@ -30878,6 +30890,12 @@ msgstr "スケジュールされたアクション"
 #: model:ir.ui.menu,name:base.ir_cron_trigger_menu
 msgid "Scheduled Actions Triggers"
 msgstr "スケジュールされたアクションのトリガー"
+
+#. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid "Scheduled action disabled"
+msgstr "予定されたアクションは無効になりました"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__user_id
@@ -32092,7 +32110,7 @@ msgstr "スプレッドシートダッシュボード タイムシート用"
 #: model:ir.module.module,shortdesc:base.module_l10n_in_reports_gstr_spreadsheet
 #: model:ir.module.module,summary:base.module_l10n_in_reports_gstr_spreadsheet
 msgid "Spreadsheet document for GSTR1 Report"
-msgstr ""
+msgstr "GSTR1レポート用スプレッドシート"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__sql
@@ -34089,6 +34107,14 @@ msgid "Those modules cannot be uninstalled: %s"
 msgstr "これらのモジュールはアンインストールできません:%s"
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid ""
+"This scheduled action has been disabled because its interval number is not a"
+" strictly positive value."
+msgstr "間隔番号が厳密に正の値ではないため、この予定されたアクションは無効になっています。"
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
 msgid "Thousands Separator"
 msgstr "千単位区切り"
@@ -34462,18 +34488,18 @@ msgstr "チュニジア"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "トルコ"
+msgid "Türkiye"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
-msgstr "トルコ - 会計"
+msgid "Türkiye - Accounting"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
-msgstr "トルコ - 会計レポート"
+msgid "Türkiye - Accounting Reports"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.tm
@@ -34878,9 +34904,7 @@ msgstr "インポート中に不明なエラーが発生しました:"
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid "Unknown field \"%(field)s\" in \"group_by\" value in %(attribute)s=%(value)r"
-msgstr ""
-"%(attribute)s=%(value)rの &quot;group_by&quot;値の不明なフィールド "
-"&quot;%(field)s&quot;"
+msgstr "不明なフィールド \"%(field)s\" が \"group_by\" 値、%(attribute)s=%(value)r内にあります"
 
 #. module: base
 #. odoo-python
@@ -35583,6 +35607,12 @@ msgstr "ビュー継承モード"
 #: model:ir.module.module,summary:base.module_website_crm_livechat
 msgid "View livechat sessions for leads"
 msgstr "リードのWebチャットセッションを表示する"
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr "問題のあるレコードを表示"
 
 #. module: base
 #. odoo-python
@@ -36442,6 +36472,15 @@ msgstr "%sレコードを削除することはできません。"
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"You cannot delete the admin user because it is utilized in various places "
+"(such as security configurations,...). Instead, archive it."
+msgstr "管理者ユーザーは様々な場所(セキュリティ設定など)で使用されているため、削除することはできません。代わりにアーカイブして下さい。"
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/res_lang.py:0
 #, python-format
 msgid ""
@@ -36568,7 +36607,7 @@ msgstr ""
 #: model_terms:res.company,sign_terms:base.main_company
 #: model_terms:res.company,sign_terms_html:base.main_company
 msgid "Your conditions..."
-msgstr ""
+msgstr "あなたの諸条件..."
 
 #. module: base
 #. odoo-python
@@ -36996,7 +37035,7 @@ msgstr "Json"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_pos_sale
 msgid "l10n_be_pos_sale"
-msgstr ""
+msgstr "l10n_be_pos_sale"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_stock_ddt

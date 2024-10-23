@@ -17,9 +17,7 @@ try:
     import schedule
 except ImportError:
     schedule = None
-    # For now, it is intended to not be installed on the iot-box as it uses native Unix cron system
-    if platform.system() == 'Windows':
-        _logger.warning('Could not import library schedule')
+    _logger.warning('Could not import library schedule')
 
 try:
     from dbus.mainloop.glib import DBusGMainLoop
@@ -49,7 +47,7 @@ class Manager(Thread):
                 'identifier': helpers.get_mac_address(),
                 'ip': domain,
                 'token': helpers.get_token(),
-                'version': helpers.get_version(),
+                'version': helpers.get_version(detailed_version=True),
             }
             devices_list = {}
             for device in iot_devices:
@@ -86,7 +84,7 @@ class Manager(Thread):
         """
 
         helpers.start_nginx_server()
-        _logger.info("IoT Box Image version: %s", helpers.get_version())
+        _logger.info("IoT Box Image version: %s", helpers.get_version(detailed_version=True))
         if platform.system() == 'Linux' and helpers.get_odoo_server_url():
             helpers.check_git_branch()
             helpers.generate_password()

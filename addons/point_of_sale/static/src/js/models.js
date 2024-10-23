@@ -680,8 +680,8 @@ class PosGlobalState extends PosModel {
 
             if (mapped_included_taxes.length > 0) {
                 if (new_included_taxes.length > 0) {
-                    const price_without_taxes = this.compute_all(mapped_included_taxes, price, 1, this.currency.rounding, true).total_excluded
-                    return this.compute_all(new_included_taxes, price_without_taxes, 1, this.currency.rounding, false).total_included
+                    //If previous tax and new tax where both included in price. The price including tax is the same
+                    return price;
                 }
                 else{
                     return this.compute_all(mapped_included_taxes, price, 1, this.currency.rounding, true).total_excluded;
@@ -1214,10 +1214,15 @@ class PosGlobalState extends PosModel {
             }
 
             if(company.country && company.country.code === "IN"){
+                let total_tax_amount = 0.0;
                 for(const [i, tax_factor] of incl_tax_amounts.percent_taxes){
                     const tax_amount = round_pr(base_amount * tax_factor / (100 + percent_amount), currency_rounding);
+                    total_tax_amount += tax_amount;
                     cached_tax_amounts[i] = tax_amount;
                     fixed_amount += tax_amount;
+                }
+                for(const [i,] of incl_tax_amounts.percent_taxes){
+                    cached_base_amounts[i] = base - total_tax_amount;
                 }
                 percent_amount = 0.0;
             }
@@ -1250,9 +1255,11 @@ class PosGlobalState extends PosModel {
         }
 
         var cached_tax_amounts = {};
+        var cached_base_amounts = {};
+        let is_base_affected = true;
         if (handle_price_include){
             _(taxes.reverse()).each(function(tax){
-                if(tax.include_base_amount){
+                if(tax.include_base_amount && is_base_affected){
                     base = recompute_base(base, incl_tax_amounts);
                     store_included_tax_total = true;
                 }
@@ -1274,6 +1281,7 @@ class PosGlobalState extends PosModel {
                     }
                 }
                 i -= 1;
+                is_base_affected = tax.is_base_affected;
             });
         }
 
@@ -1290,16 +1298,18 @@ class PosGlobalState extends PosModel {
         i = 0;
         var cumulated_tax_included_amount = 0;
         _(taxes.reverse()).each(function(tax){
-            if(tax.price_include || tax.is_base_affected)
+            if(tax.price_include && i in cached_base_amounts)
+                var tax_base_amount = cached_base_amounts[i];
+            else if(tax.price_include || tax.is_base_affected)
                 var tax_base_amount = base;
             else
                 var tax_base_amount = total_excluded;
 
-            if(!skip_checkpoint && tax.price_include && total_included_checkpoints[i] !== undefined){
+            if(tax.price_include && cached_tax_amounts.hasOwnProperty(i)){
+                var tax_amount = cached_tax_amounts[i];
+            }else if(!skip_checkpoint && tax.price_include && total_included_checkpoints[i] !== undefined){
                 var tax_amount = total_included_checkpoints[i] - (base + cumulated_tax_included_amount);
                 cumulated_tax_included_amount = 0;
-            }else if(tax.price_include && cached_tax_amounts.hasOwnProperty(i)){
-                var tax_amount = cached_tax_amounts[i];
             }else
                 var tax_amount = self._compute_all(tax, tax_base_amount, quantity, true);
 
@@ -2839,13 +2849,14 @@ class Order extends PosModel {
     calculate_base_amount(tax_ids_array, lines) {
         // Consider price_include taxes use case
         let has_taxes_included_in_price = tax_ids_array.filter(tax_id =>
-            this.pos.taxes_by_id[tax_id].price_include
+            this.pos.taxes_by_id[tax_id].price_include ||
+            this.pos.taxes_by_id[tax_id].children_tax_ids.length > 0 &&
+            this.pos.taxes_by_id[tax_id].children_tax_ids.every(child_tax => child_tax.price_include)
         ).length;
 
         let base_amount = lines.reduce((sum, line) =>
                 sum +
-                line.get_price_without_tax() +
-                (has_taxes_included_in_price ? line.get_total_taxes_included_in_price() : 0),
+                (has_taxes_included_in_price ? line.get_price_with_tax() : line.get_price_without_tax()),
             0
         );
         return base_amount;

@@ -25,7 +25,6 @@
 # Martin Trigaux, 2022
 # Jolien De Paepe, 2023
 # Amazonian Shop, 2023
-# Arxi, 2023
 # Daniel Reis, 2023
 # NumerSpiral HBG, 2024
 # Carlos Teles, 2024
@@ -35,6 +34,9 @@
 # Wil Odoo, 2024
 # Manuela Silva <mmsrs@sky.com>, 2024
 # Rita Bastos, 2024
+# Arxi, 2024
+# Maitê Dietze, 2024
+# Peter Lawrence Romão <peterromao@yahoo.co.uk>, 2024
 # 
 msgid ""
 msgstr ""
@@ -42,7 +44,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:33+0000\n"
 "PO-Revision-Date: 2022-09-22 05:44+0000\n"
-"Last-Translator: Rita Bastos, 2024\n"
+"Last-Translator: Peter Lawrence Romão <peterromao@yahoo.co.uk>, 2024\n"
 "Language-Team: Portuguese (https://app.transifex.com/odoo/teams/41243/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -561,7 +563,7 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"        Accounting reports for Turkey\n"
+"        Accounting reports for Türkiye\n"
 "    "
 msgstr ""
 
@@ -5378,6 +5380,22 @@ msgid ""
 "* Every Appraisal Form filled by employees, colleague, collaborator, can be viewed in a PDF form.\n"
 "* Meeting Requests are created manually according to employees appraisals.\n"
 msgstr ""
+"\n"
+"Avaliação recorrente de funcionários\n"
+"==============================\n"
+"\n"
+"Com o uso desta funcionalidade pode sustentar o processo motivacional fazendo avaliações periódicas do desempenho dos seus funcionários. A avaliação regular dos recursos humanos pode beneficiar os seus colaboradores, assim como a sua organização.\n"
+"\n"
+"Pode ser atribuído um plano de avaliação a cada funcionário. Estes planos definem a frequência e a forma como gere a sua avaliação pessoal periódica.\n"
+"\n"
+"Principais Características\n"
+"------------\n"
+"* Capacidade para criar avaliações de funcionários.\n"
+"* Uma avaliação pode ser criada pelo chefe de um funcionário ou automaticamente com base no cronograma definido no formulário do empregado.\n"
+"* A avaliação é feita de acordo com um plano no qual vários inquéritos podem ser criados. Cada inquérito pode ser respondido por um nível específico na hierarquia de funcionários. A revisão final e avaliação é feita pelo chefe ou gerente.\n"
+"* Gerente, colega, colaborador e próprio colaborador recebe e-mail para realizar uma avaliação periódica.\n"
+"* Cada Formulário de Avaliação preenchido por funcionários, colegas, colaboradores, pode ser visualizado num formulário PDF.\n"
+"* As Solicitações de Reunião são criadas manualmente de acordo com as avaliações dos funcionários.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_phone_validation
@@ -8969,14 +8987,14 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_res_users_apikeys_description
 msgid "API Key Description"
-msgstr ""
+msgstr "Descrição da Chave da API"
 
 #. module: base
 #. odoo-python
 #: code:addons/base/models/res_users.py:0
 #, python-format
 msgid "API Key Ready"
-msgstr ""
+msgstr "Chave da API Pronta"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_res_users_keys_description
@@ -10452,12 +10470,12 @@ msgstr "Aplicações:"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__arch_db
 msgid "Arch Blob"
-msgstr "Pedaço de Arquitetura"
+msgstr "Objeto de Arquitetura"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_ui_view__arch_fs
 msgid "Arch Filename"
-msgstr "Nome de ficheiro de Arquitetura"
+msgstr "Nome de Ficheiro de Arquitetura"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_reset_view_arch_wizard__arch_to_compare
@@ -10570,7 +10588,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_asset
 msgid "Asset"
-msgstr "Ativo"
+msgstr "Recurso"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_asset
@@ -10579,7 +10597,7 @@ msgstr "Ativo"
 #: model_terms:ir.ui.view,arch_db:base.asset_view_search
 #: model_terms:ir.ui.view,arch_db:base.asset_view_tree
 msgid "Assets"
-msgstr "Ativos"
+msgstr "Recursos"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_asset
@@ -15240,7 +15258,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
 msgid "Enter a description of and purpose for the key."
-msgstr ""
+msgstr "Introduza uma descrição e o propósito para a chave."
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_track_gantt
@@ -16503,6 +16521,11 @@ msgstr "França - Contabilidade"
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_reports
 msgid "France - Accounting Reports"
 msgstr "França - Relatórios Contabilísticos"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_fr_invoice_addr
+msgid "France - Adding Mandatory Invoice Mentions (Decree no. 2022-1299)"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_fec
@@ -17848,7 +17871,7 @@ msgstr "Se nenhum grupo for especificado, a regra é global e aplicada a todos"
 #: model:ir.model.fields,help:base.field_ir_property__res_id
 msgid "If not set, acts as a default value for new resources"
 msgstr ""
-"Se não for definido, atua como um valor predefinido para novos registos"
+"Se não for definido, atua como um valor predefinido para novos recursos"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_act_window_view__multi
@@ -19688,7 +19711,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_step
 msgid "Let's do it"
-msgstr ""
+msgstr "Vamos lá"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_company_step
@@ -20704,7 +20727,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_base_partner_merge_automatic_wizard
 msgid "Merge Partner Wizard"
-msgstr ""
+msgstr "Mesclar assistente de parceiro"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.base_partner_merge_automatic_wizard_form
@@ -20908,7 +20931,7 @@ msgstr "O campo '%s' tem em falta o valor obrigatório (%s)"
 #: code:addons/base/models/ir_ui_view.py:0
 #, python-format
 msgid "Missing view architecture."
-msgstr "Arquitetura de visualização em falta."
+msgstr "Arquitetura da vista em falta."
 
 #. module: base
 #: model:res.partner.title,name:base.res_partner_title_mister
@@ -20995,7 +21018,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_model_constraint_form
 #: model_terms:ir.ui.view,arch_db:base.view_model_constraint_list
 msgid "Model Constraints"
-msgstr "Constrições de Modelo"
+msgstr "Restrições de Modelo"
 
 #. module: base
 #: model:ir.model,name:base.model_ir_model_data
@@ -21375,7 +21398,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
 msgid "Name your key"
-msgstr ""
+msgstr "Denomine a sua chave"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.report_irmodeloverview
@@ -21407,17 +21430,17 @@ msgstr "Nepal"
 #. module: base
 #: model:res.country,name:base.nl
 msgid "Netherlands"
-msgstr "Países Baixos"
+msgstr "Neerlândia"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_nl
 msgid "Netherlands - Accounting"
-msgstr "Holanda - Contabilidade"
+msgstr "Neerlândia- Contabilidade"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_nl_reports
 msgid "Netherlands - Accounting Reports"
-msgstr "Holanda - Relatórios Contabilísticos"
+msgstr "Neerlândia - Relatórios Contabilísticos"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_nl_reports_sbr
@@ -21437,7 +21460,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_users_form_simple_modif
 msgid "New API Key"
-msgstr ""
+msgstr "Nova Chave de API"
 
 #. module: base
 #: model:res.country,name:base.nc
@@ -22884,6 +22907,8 @@ msgstr ""
 #: model_terms:ir.actions.act_window,help:base.action_partner_customer_form
 msgid "Odoo helps you easily track all activities related to a customer."
 msgstr ""
+"O Odoo ajuda você a rastrear facilmente todas as atividades relacionadas a "
+"um cliente."
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_partner_supplier_form
@@ -22910,6 +22935,14 @@ msgstr ""
 #: code:addons/base/models/ir_actions_report.py:0
 #, python-format
 msgid "Odoo is unable to merge the generated PDFs."
+msgstr ""
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
 msgstr ""
 
 #. module: base
@@ -24007,7 +24040,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,name:base.module_category_accounting_payment_providers
 msgid "Payment Providers"
-msgstr ""
+msgstr "Prestadores de Pagamentos"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_payment
@@ -24497,7 +24530,7 @@ msgstr "Modelo de Email do produto"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_product_images
 msgid "Product Images"
-msgstr ""
+msgstr "Imagens do Artigo"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_manufacturing_product_lifecycle_management_(plm)
@@ -25613,7 +25646,7 @@ msgstr "Relatório"
 #. module: base
 #: model:ir.model,name:base.model_ir_actions_report
 msgid "Report Action"
-msgstr ""
+msgstr "Relatar Ação"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_actions_report__report_file
@@ -26033,7 +26066,7 @@ msgstr "SSL/TLS"
 #. module: base
 #: model_terms:res.company,invoice_terms_html:base.main_company
 msgid "STANDARD TERMS AND CONDITIONS OF SALE"
-msgstr ""
+msgstr "TERMOS PADRÃO E CONDIÇÕES DE VENDA"
 
 #. module: base
 #: model:res.country,name:base.bl
@@ -26208,7 +26241,7 @@ msgstr "Vendas"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Sales & Purchase"
-msgstr ""
+msgstr "Vendas e Compras"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_project
@@ -26378,6 +26411,12 @@ msgstr "Ações Agendadas"
 #: model:ir.actions.act_window,name:base.ir_cron_trigger_action
 #: model:ir.ui.menu,name:base.ir_cron_trigger_menu
 msgid "Scheduled Actions Triggers"
+msgstr "Disparadores de Ações Agendadas"
+
+#. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid "Scheduled action disabled"
 msgstr ""
 
 #. module: base
@@ -26508,9 +26547,9 @@ msgid ""
 "                            all these fields in common. (not one of the fields)."
 msgstr ""
 "Selecione a lista de campos usados ​​para procurar\n"
-"                            registros duplicados. Se você selecionar vários campos ,\n"
-"                            Odoo vai propor que você funda apenas aqueles que têm\n"
-"                            todos esses campos em comum. ( não um dos campos ) ."
+"                            registos duplicados. Se selecionar vários campos ,\n"
+"                            o Odoo vai propor que junte apenas aqueles que têm\n"
+"                            todos estes campos em comum. (não um dos campos) ."
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_fields__selectable
@@ -26892,7 +26931,7 @@ msgstr "Definir como A Realizar"
 #. module: base
 #: model:ir.actions.act_window,name:base.action_open_base_onboarding_company
 msgid "Set your company data"
-msgstr ""
+msgstr "Defina os dados da sua empresa"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_company_step
@@ -27302,7 +27341,7 @@ msgstr ""
 #. module: base
 #: model:res.country.group,name:base.south_america
 msgid "South America"
-msgstr ""
+msgstr "América do Sul"
 
 #. module: base
 #: model:res.country,name:base.gs
@@ -27544,7 +27583,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_spreadsheet_dashboard_hr_contract
 msgid "Spreadsheet dashboard for human resources"
-msgstr ""
+msgstr "Painel de folha de cálculo para recursos humanos"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_spreadsheet_dashboard_im_livechat
@@ -28494,6 +28533,10 @@ msgid ""
 "order to be valid, any derogation must be expressly agreed to in advance in "
 "writing."
 msgstr ""
+"O cliente renuncia explicitamente a seus próprios termos e condições "
+"padrões, mesmo que tenham sido elaborados após estes termos e condições "
+"padrões de venda. Para que seja válida, qualquer derrogação deve ser "
+"expressamente acordada por escrito e com antecedência."
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_country_code_uniq
@@ -29526,6 +29569,14 @@ msgid "Those modules cannot be uninstalled: %s"
 msgstr ""
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid ""
+"This scheduled action has been disabled because its interval number is not a"
+" strictly positive value."
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
 msgid "Thousands Separator"
 msgstr "Separador de Milhares"
@@ -29898,17 +29949,17 @@ msgstr "Tunísia"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "Turquia"
+msgid "Türkiye"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
-msgstr "Turquia - Contabilidade"
+msgid "Türkiye - Accounting"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
+msgid "Türkiye - Accounting Reports"
 msgstr ""
 
 #. module: base
@@ -31025,6 +31076,12 @@ msgstr ""
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr ""
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "View: %s"
@@ -31403,7 +31460,7 @@ msgstr "Sahara Ocidental"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_description
 msgid "What's this key for?"
-msgstr ""
+msgstr "Para que serve esta chave?"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_server__sequence
@@ -31610,7 +31667,7 @@ msgstr ""
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_show
 msgid "Write down your key"
-msgstr ""
+msgstr "Tome nota da a sua chave"
 
 #. module: base
 #: model:res.country,name:base.ye
@@ -31854,6 +31911,15 @@ msgstr ""
 #: code:addons/base/models/ir_config_parameter.py:0
 #, python-format
 msgid "You cannot delete the %s record."
+msgstr ""
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"You cannot delete the admin user because it is utilized in various places "
+"(such as security configurations,...). Instead, archive it."
 msgstr ""
 
 #. module: base

@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
+from odoo import Command
 from odoo.tests.common import TransactionCase, Form
-from freezegun import freeze_time
-from datetime import datetime, timedelta
+
 
 class TestSalePurchaseStockFlow(TransactionCase):
 
@@ -85,59 +85,52 @@ class TestSalePurchaseStockFlow(TransactionCase):
         sm.move_line_ids.qty_done = 10
         self.assertEqual(so.order_line.qty_delivered, 10)
 
-    @freeze_time('2024-01-01')
-    def test_reordering_with_visibility_days(self):
+    def test_mto_and_partial_cancel(self):
         """
-        If reordering rules' visibility is set bigger than
-        DAYS_FROM_TODAY_TO_ORDER (plus lead time). Then the
-        order should be included in the calculation of quantity to order.
-
-            ┌─ Today                     ┌── Scheduled Delivery
-            │ (2024-01-01)               │    (2024-02-01)
-            │                            │    aka commitment_date
-            │                            │
-            ▼                            ▼
-          ──────────────────────────────────────────►
-                                                    time
-            ◄────────────────────────────►
-                DAYS_FROM_TODAY_TO_ORDER
-
-                                    ◄────►
-                                    lead_time
+        First, confirm a SO with two lines with the MTO + Buy routes (the products
+        should not be available in stock). Put the quantity of the first SOL to 0
+        then back to max. Then cancel the PO for the first product and decrease back
+        the quantity of the related SOL to 0:
+        - The delivery should be updated
+        - There should not be any return picking
         """
-        N_ORDERED_QTY = 666
-        DAYS_FROM_TODAY_TO_ORDER = 30
-        MONTH_FROM_TODAY = (datetime.today() + timedelta(days=DAYS_FROM_TODAY_TO_ORDER)).strftime('%Y-%m-%d')
-
-        # Setup: Create a product with vendor
-        partner = self.env['res.partner'].create({'name': 'Azure Interior'})
-        seller = self.env['product.supplierinfo'].create({
-                'partner_id': partner.id,
-                'price': 1.0,
-        })
-        product = self.env['product.product'].create({
-            'name': 'Dummy Product',
+        product_1 = self.mto_product
+        vendor_2 = self.env['res.partner'].create({'name': 'Lovely Vendor'})
+        product_2 = self.env['product.product'].create({
+            'name': 'LovelyProduct',
             'type': 'product',
-            'seller_ids': [seller.id],
-        })
-
-        # Setup: Create sale order scheduled in the future
-        so = self.env['sale.order'].create({
-            'partner_id': self.customer.id,
-            'commitment_date': MONTH_FROM_TODAY,
-            'order_line': [(0, 0, {
-                'name': product.name,
-                'product_id': product.id,
-                'price_unit': 1,
-                'product_uom_qty': N_ORDERED_QTY,
+            'route_ids': [Command.set((self.mto_route + self.buy_route).ids)],
+            'seller_ids': [Command.create({
+                'partner_id': vendor_2.id,
             })],
         })
-        so.action_confirm() # so.state: 'draft' -> 'sale'
-
-        # Create Reordering rule and trigger  recalculation
-        orderpoint_form = Form(self.env['stock.warehouse.orderpoint'])
-        orderpoint_form.product_id = product
-        orderpoint_form.visibility_days = DAYS_FROM_TODAY_TO_ORDER
-        orderpoint = orderpoint_form.save()
-
-        self.assertEqual(orderpoint.qty_to_order, N_ORDERED_QTY, f"Order from {DAYS_FROM_TODAY_TO_ORDER} days from today NOT included into the qty_to_order calculation, despite having visibility days set {DAYS_FROM_TODAY_TO_ORDER}!")
+        so = self.env['sale.order'].create({
+            'partner_id': self.customer.id,
+            'order_line': [
+                Command.create({
+                    'name': product_1.name,
+                    'product_id': product_1.id,
+                    'product_uom_qty': 1,
+                    'product_uom': product_1.uom_id.id,
+                    'price_unit': 10,
+                }),
+                Command.create({
+                    'name': product_2.name,
+                    'product_id': product_2.id,
+                    'product_uom_qty': 1,
+                    'product_uom': product_2.uom_id.id,
+                    'price_unit': 20,
+                }),
+            ],
+        })
+        so.action_confirm()
+        delivery = so.picking_ids
+        po_2 = self.env['purchase.order'].search([('partner_id', '=', vendor_2.id)])
+        po_2.button_cancel()
+        line_2 = so.order_line.filtered(lambda sol: sol.product_id == product_2)
+        line_2.product_uom_qty = 0
+        self.assertEqual(delivery, so.picking_ids)
+        self.assertRecordValues(delivery.move_ids, [
+            {'product_id': product_1.id, 'product_uom_qty': 1.0},
+            {'product_id': product_2.id, 'product_uom_qty': 0.0},
+        ])

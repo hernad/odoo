@@ -14,7 +14,6 @@
 # Vojislav Opačić <vojislav.opacic@gmail.com>, 2022
 # Igor Krizanovic <krizanovic.igor@gmail.com>, 2022
 # Milan Tribuson <one.mile.code@gmail.com>, 2022
-# Vladimir Vrgoč, 2023
 # Matija Gudlin, 2023
 # Carlo Štefanac, 2023
 # Ivica Dimjašević <ivica.dimjasevic@storm.hr>, 2024
@@ -26,8 +25,14 @@
 # Tina Milas, 2024
 # Karolina Tonković <karolina.tonkovic@storm.hr>, 2024
 # Martin Trigaux, 2024
-# Bole <bole@dajmi5.com>, 2024
 # Matej Mijoč, 2024
+# etoimene, 2024
+# Kristina Palaš, 2024
+# Vladimir Vrgoč, 2024
+# Gordana Bilas, 2024
+# Luka Carević <luka@uvid.hr>, 2024
+# Servisi RAM d.o.o. <support@servisiram.hr>, 2024
+# Bole <bole@dajmi5.com>, 2024
 # 
 msgid ""
 msgstr ""
@@ -35,7 +40,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:33+0000\n"
 "PO-Revision-Date: 2022-09-22 05:44+0000\n"
-"Last-Translator: Matej Mijoč, 2024\n"
+"Last-Translator: Bole <bole@dajmi5.com>, 2024\n"
 "Language-Team: Croatian (https://app.transifex.com/odoo/teams/41243/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -421,8 +426,8 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-" -Omogućuje postavljanje projekta za Helpdesk tim\n"
-"- Pratite vremenski raspored za zadatak iz ulaznice"
+"- Omogućuje postavljanje projekta za  tim službe za pomoć\n"
+"- Prati vremenski raspored zadataka iz zahtjeva službe za pomoć"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ec_reports_ats
@@ -577,7 +582,7 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"        Accounting reports for Turkey\n"
+"        Accounting reports for Türkiye\n"
 "    "
 msgstr ""
 
@@ -879,6 +884,8 @@ msgid ""
 "        Convert helpdesk tickets to field service tasks.\n"
 "    "
 msgstr ""
+"\n"
+"Pretvori Helpdesk prijave u zadatke terenskih usluga"
 
 #. module: base
 #: model:ir.module.module,description:base.module_product_unspsc
@@ -5821,7 +5828,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Popravak proizvoda preko helpdesk tiketa"
+"Popravak proizvoda preko zahjeva službe za pomoć"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_nl_reports_sbr_icp
@@ -8234,7 +8241,7 @@ msgstr "%s (kopija)"
 #: code:addons/base/models/res_currency.py:0
 #, python-format
 msgid "%s per Unit"
-msgstr ""
+msgstr "%s po jedinici"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_lang_form
@@ -8823,12 +8830,12 @@ msgstr "<strong>Naziv</strong>"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_company_kanban
 msgid "<strong>Phone:</strong>"
-msgstr ""
+msgstr "Telefon:"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_res_company_kanban
 msgid "<strong>Phone</strong>"
-msgstr ""
+msgstr "Telefon"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.identity_check_wizard
@@ -9802,7 +9809,7 @@ msgstr "Dodaj jezike"
 #: model:ir.module.module,summary:base.module_data_merge_helpdesk
 msgid "Add Merge action in contextual menu of helpdesk ticket model."
 msgstr ""
-"Dodaj akciju Spoji u kontekstualni izbornik modela ulaznica za službu za "
+"Dodaj akciju Spoji u kontekstualni izbornik modela zahjeva za službu za "
 "pomoć."
 
 #. module: base
@@ -10330,6 +10337,8 @@ msgid ""
 "All the emails and documents sent to this contact will be translated in this"
 " language."
 msgstr ""
+"Sva e-pošta i dokumentacija poslani ovom kontaktu biti će prevedeni na ovaj "
+"jezik."
 
 #. module: base
 #: model:ir.module.module,description:base.module_account_consolidation
@@ -10532,7 +10541,7 @@ msgstr ""
 #: code:addons/base/models/res_partner.py:0
 #, python-format
 msgid "An email is required for find_or_create to work"
-msgstr ""
+msgstr "Email je obavezan za pronađi_ili_kreiraj da proradi"
 
 #. module: base
 #. odoo-python
@@ -10697,7 +10706,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_appointment
 msgid "Appointments"
-msgstr ""
+msgstr "Sastanci"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_appraisal_skills
@@ -11092,7 +11101,7 @@ msgstr "Automatski popuni podatke partnerove tvrtke"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_automation
 msgid "Automated Action Rules"
-msgstr "Automatska akcijska pravila"
+msgstr "Automatska Pravila Akcija"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_base_automation_hr_contract
@@ -11376,6 +11385,8 @@ msgid ""
 "Banks are the financial institutions at which you and your contacts have "
 "their accounts."
 msgstr ""
+"Banke su financijske institucije u kojima vi i vaši kontakti imate svoje "
+"račune."
 
 #. module: base
 #: model:res.country,name:base.bb
@@ -11395,7 +11406,7 @@ msgstr "Barkod"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Barcode %s"
-msgstr ""
+msgstr "Barkod %s"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_barcodes_gs1_nomenclature
@@ -13225,7 +13236,7 @@ msgstr "Oznaka kontakta"
 #: model:ir.actions.act_window,name:base.action_partner_category_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_category_list
 msgid "Contact Tags"
-msgstr "Oznake kontakata"
+msgstr "Oznake kontakta"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_partner_title_contact
@@ -13502,7 +13513,7 @@ msgstr ""
 #: model:ir.module.module,summary:base.module_industry_fsm_report
 #: model:ir.module.module,summary:base.module_industry_fsm_sale_report
 msgid "Create Reports for Field service workers"
-msgstr "Stvaranje izvješća za servisere na terenu"
+msgstr "Stvaranje izvješća za radnike na terenu"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_res_bank_form
@@ -13537,7 +13548,7 @@ msgstr "Stvori izbornik"
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_country_state
 msgid "Create a State"
-msgstr "Kreiraj pokrajinu"
+msgstr "Kreiraj županiju"
 
 #. module: base
 #: model_terms:ir.actions.act_window,help:base.action_partner_title_contact
@@ -13866,7 +13877,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron_trigger__cron_id
 msgid "Cron"
-msgstr ""
+msgstr "Kron"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.ir_cron_trigger_view_form
@@ -14978,7 +14989,7 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_documents_spreadsheet
 #: model:ir.module.module,summary:base.module_documents_spreadsheet
 msgid "Documents Spreadsheet"
-msgstr ""
+msgstr "Spreadsheet dokumenti"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_uninstall
@@ -16360,7 +16371,7 @@ msgstr "Naziv polja"
 #: model:ir.module.category,name:base.module_category_services_field_service
 #: model:ir.module.module,shortdesc:base.module_industry_fsm
 msgid "Field Service"
-msgstr "Terenski servis"
+msgstr "Terenske usluge"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_fsm_forecast
@@ -16370,7 +16381,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_fsm_sale
 msgid "Field Service - Sale"
-msgstr "Terenski servis - Prodaja"
+msgstr "Terenske usluge - Prodaja"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_fsm_report
@@ -16736,7 +16747,7 @@ msgid ""
 "re-open the wizard several times if needed."
 msgstr ""
 "Zbog sigurnosnih razloga, ne možete spojiti više od 3 kontakta zajedno. "
-"Možete ponovno otvoriti čarobnjaka nekoliko puta ako je potrebno."
+"Možete ponovno otvoriti čarobnjaka nekoliko puta, ako je potrebno."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.identity_check_wizard
@@ -16819,6 +16830,11 @@ msgstr "Francuska - računovodstvo"
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_reports
 msgid "France - Accounting Reports"
 msgstr "Francuska - računovodstvena izvješća"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_fr_invoice_addr
+msgid "France - Adding Mandatory Invoice Mentions (Decree no. 2022-1299)"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_fec
@@ -19379,7 +19395,7 @@ msgstr "Stavke dnevnika povezane s kontaktom"
 #: code:addons/base/models/ir_qweb_fields.py:0
 #, python-format
 msgid "Json"
-msgstr ""
+msgstr "Json"
 
 #. module: base
 #: model:ir.model.fields.selection,name:base.selection__res_company__base_onboarding_company_state__just_done
@@ -20421,7 +20437,7 @@ msgstr ""
 #. module: base
 #: model:ir.model,name:base.model_ir_mail_server
 msgid "Mail Server"
-msgstr ""
+msgstr "Mail Server"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_mail
@@ -23240,6 +23256,14 @@ msgid "Odoo is unable to merge the generated PDFs."
 msgstr ""
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
 msgid ""
 "Odoo will automatically adds some '0' on the left of the 'Next Number' to "
@@ -24234,7 +24258,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_followup
 msgid "Payment Follow-up Management"
-msgstr ""
+msgstr "Upravljanje Praćenja plaćanja"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_payment_adyen
@@ -25457,7 +25481,7 @@ msgstr ""
 #: model:ir.model,name:base.model_ir_qweb
 #: model:ir.model.fields,field_description:base.field_ir_profile__qweb
 msgid "Qweb"
-msgstr ""
+msgstr "Qweb"
 
 #. module: base
 #: model:ir.model,name:base.model_ir_qweb_field
@@ -25869,7 +25893,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_renting
 msgid "Rental"
-msgstr ""
+msgstr "Najam"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_test_rental_product_configurators
@@ -26699,6 +26723,12 @@ msgid "Scheduled Actions Triggers"
 msgstr "Okidači zakazanih akcija"
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid "Scheduled action disabled"
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__user_id
 msgid "Scheduler User"
 msgstr "Korisnik planera"
@@ -27010,7 +27040,7 @@ msgstr ""
 #: model:ir.module.module,description:base.module_helpdesk_sms
 #: model:ir.module.module,summary:base.module_helpdesk_sms
 msgid "Send text messages when ticket stage move"
-msgstr ""
+msgstr "Šalji tekstualne poruke kad se promijeni faza zahtjeva "
 
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_easypost
@@ -27216,7 +27246,7 @@ msgstr "Postavite podatke vaše Tvrtke"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.onboarding_company_step
 msgid "Set your company's data for documents header/footer."
-msgstr ""
+msgstr "Postavite podatke svoje tvrtke za zaglavlje/podnožje dokumenata."
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_act_url__binding_model_id
@@ -27483,7 +27513,7 @@ msgstr "Regularna pošta"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_snailmail_account_followup
 msgid "Snail Mail Follow-Up"
-msgstr ""
+msgstr "Snail mail Praćenje"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_marketing_social
@@ -27957,7 +27987,7 @@ msgstr "Pokreni konfiguraciju"
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_res_bank_form
 msgid "State"
-msgstr "Županija/fed.država"
+msgstr "Status"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country_state__code
@@ -27967,7 +27997,7 @@ msgstr "Šifra države"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country_state__name
 msgid "State Name"
-msgstr "Naziv županije/fed.država"
+msgstr "Naziv županije"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__state_required
@@ -27987,7 +28017,7 @@ msgstr ""
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_country__state_ids
 msgid "States"
-msgstr "Županije/fed.države"
+msgstr "Županije"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_module_update__state
@@ -28236,12 +28266,12 @@ msgstr "Švedska upisala blagajnu"
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.language_install_view_form_lang_switch
 msgid "Switch to"
-msgstr ""
+msgstr "Prebaci na"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.language_install_view_form_lang_switch
 msgid "Switch to language"
-msgstr ""
+msgstr "Prebaci na jezik"
 
 #. module: base
 #: model:res.country,name:base.ch
@@ -28799,7 +28829,7 @@ msgstr ""
 #: model:ir.model.fields,help:base.field_res_partner_category__active
 msgid "The active field allows you to hide the category without removing it."
 msgstr ""
-"Ovo polje vam dozvoljava da sakrijete kategoriju bez njenog uklanjanja."
+"Aktivno polje vam dozvoljava da sakrijete kategoriju bez njenog uklanjanja."
 
 #. module: base
 #. odoo-python
@@ -28830,7 +28860,7 @@ msgstr "Šifra jezika mora biti jedinstvena!"
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_country_state_name_code_uniq
 msgid "The code of the state must be unique by country !"
-msgstr "Šifra države mora biti jedinstvena po državi!"
+msgstr "Šifra županije mora biti jedinstvena po državi!"
 
 #. module: base
 #: model:ir.model.constraint,message:base.constraint_res_partner_bank_unique_number
@@ -29848,6 +29878,14 @@ msgid "Those modules cannot be uninstalled: %s"
 msgstr ""
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid ""
+"This scheduled action has been disabled because its interval number is not a"
+" strictly positive value."
+msgstr ""
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
 msgid "Thousands Separator"
 msgstr "Separator tisućica"
@@ -30222,17 +30260,17 @@ msgstr "Tunis"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "Turska"
+msgid "Türkiye"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
-msgstr "Turska - Računovodstvo"
+msgid "Türkiye - Accounting"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
+msgid "Türkiye - Accounting Reports"
 msgstr ""
 
 #. module: base
@@ -31345,6 +31383,12 @@ msgstr ""
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr ""
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "View: %s"
@@ -32148,7 +32192,7 @@ msgstr "Ne možete deaktivirati korisnika ako ste trenutno prijavljeni kao on."
 #: code:addons/base/models/res_users.py:0
 #, python-format
 msgid "You cannot delete a group linked with a settings field."
-msgstr ""
+msgstr "Ne možete obrisati grupu povezanu sa poljem postavke."
 
 #. module: base
 #. odoo-python
@@ -32178,6 +32222,15 @@ msgstr ""
 #: code:addons/base/models/ir_config_parameter.py:0
 #, python-format
 msgid "You cannot delete the %s record."
+msgstr ""
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"You cannot delete the admin user because it is utilized in various places "
+"(such as security configurations,...). Instead, archive it."
 msgstr ""
 
 #. module: base
@@ -32519,7 +32572,7 @@ msgstr "npr. John Doe"
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_simple_form
 msgid "e.g. Lumber Inc"
-msgstr ""
+msgstr "npr. Lumber d.o.o."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
@@ -32680,6 +32733,8 @@ msgid ""
 "has been successfully installed.\n"
 "                            Users can choose their favorite language in their preferences."
 msgstr ""
+"je uspješno instaliran.\n"
+"                            Korisnici mogu odabrati omiljeni jezik u svojim postavkama."
 
 #. module: base
 #. odoo-python

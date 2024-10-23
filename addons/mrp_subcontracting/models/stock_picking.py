@@ -71,11 +71,15 @@ class StockPicking(models.Model):
             # Create backorder MO for each move lines
             amounts = [move_line.qty_done for move_line in move.move_line_ids]
             len_amounts = len(amounts)
+            # _split_production can set the qty_done, but not split it.
+            # Remove the qty_done potentially set by a previous split to prevent any issue.
+            production.move_line_raw_ids.filtered(lambda sml: sml.state not in ['done', 'cancel']).write({'qty_done': 0})
             productions = production._split_productions({production: amounts}, set_consumed_qty=True)
             for production, move_line in zip(productions, move.move_line_ids):
                 if move_line.lot_id:
                     production.lot_producing_id = move_line.lot_id
                 production.qty_producing = production.product_qty
+                production._set_qty_producing()
             productions[:len_amounts].subcontracting_has_been_recorded = True
 
         for picking in self:
@@ -178,3 +182,20 @@ class StockPicking(models.Model):
             finished_move.write({'move_dest_ids': [(4, move.id, False)]})
 
         all_mo.action_assign()
+
+    @api.onchange('location_id', 'location_dest_id')
+    def _onchange_locations(self):
+        moves = self.move_ids | self.move_ids_without_package
+        moves.filtered(lambda m: m.is_subcontract).update({
+            "location_dest_id": self.location_dest_id,
+        })
+        moves.filtered(lambda m: not m.is_subcontract).update({
+            "location_id": self.location_id,
+            "location_dest_id": self.location_dest_id,
+        })
+        if any(line.reserved_qty or line.qty_done for line in self.move_ids.move_line_ids):
+            return {'warning': {
+                    'title': _("Locations to update"),
+                    'message': _("You might want to update the locations of this transfer's operations"),
+                }
+            }

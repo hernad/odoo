@@ -45,6 +45,13 @@ $o-wblog-loader-size: 50px;
 // Website Blog
 //------------------------------------------------------------------------------
 .website_blog {
+    .o_website_blog_nav_container {
+        // Overrides the value from portal, useless in >=17
+        &::before, &::after {
+            display: none !important;
+        }
+    }
+
     .css_website_mail {
         .o_has_error {
             border-color: red;
@@ -283,6 +290,13 @@ $o-wblog-loader-size: 50px;
             }
             .o_wblog_post_cover_nocard .o_record_cover_container {
                 padding-top: 33%;
+            }
+
+            @include media-breakpoint-down(md) {
+                > .row {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
             }
         }
 

@@ -15,13 +15,15 @@
 # Mohsen Mohammadi <iammohsen.123@gmail.com>, 2023
 # Hamed Mohammadi <hamed@dehongi.com>, 2023
 # Hamid Darabi, 2023
-# Hanna Kheradroosta, 2023
 # Martin Trigaux, 2023
 # Yousef Shadmanesh <y.shadmanesh@gmail.com>, 2023
 # Ali Reza Feizi Derakhshi, 2023
-# fardin mardani, 2023
+# fardin mardani <fmardani0@gmail.com>, 2023
 # Hamid Ahmadimoghaddam, 2023
 # Abbas Ebadian, 2024
+# pfp pfp <pfpour@yahoo.com>, 2024
+# Hanna Kheradroosta, 2024
+# Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2024
 # 
 msgid ""
 msgstr ""
@@ -29,7 +31,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:31+0000\n"
 "PO-Revision-Date: 2022-09-22 05:55+0000\n"
-"Last-Translator: Abbas Ebadian, 2024\n"
+"Last-Translator: Mostafa Barmshory <mostafa.barmshory@gmail.com>, 2024\n"
 "Language-Team: Persian (https://app.transifex.com/odoo/teams/41243/fa/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -106,6 +108,9 @@ msgid ""
 "The quantity done for the product %s doesn't respect the rounding precision defined on the unit of measure %s.\n"
 "Please change the quantity done or the rounding precision of your unit of measure."
 msgstr ""
+"\n"
+"مقدار انجام شده برای محصول %s با دقت گرد کردن تعریف شده برای واحد اندازه‌گیری مطابقت ندارد. %s.\n"
+"لطفاً مقدار انجام شده یا دقت گرد کردن واحد اندازه‌گیری خود را تغییر دهید."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_picking__state
@@ -154,7 +159,7 @@ msgstr ""
 #: code:addons/stock/models/stock_warehouse.py:0
 #, python-format
 msgid "%(name)s (copy)(%(id)s)"
-msgstr ""
+msgstr "%(name)s (کپی)(%(id)s)"
 
 #. module: stock
 #. odoo-python
@@ -178,7 +183,7 @@ msgstr "%s (کپی)"
 #: code:addons/stock/models/stock_move_line.py:0
 #, python-format
 msgid "%s [reverted]"
-msgstr ""
+msgstr "%s [برگشت داده شد]"
 
 #. module: stock
 #. odoo-python
@@ -200,7 +205,7 @@ msgstr ""
 #. module: stock
 #: model:ir.actions.report,print_report_name:stock.action_report_inventory
 msgid "'Count Sheet'"
-msgstr ""
+msgstr "'تعداد برگه'"
 
 #. module: stock
 #: model:ir.actions.report,print_report_name:stock.action_report_delivery
@@ -226,7 +231,7 @@ msgstr "'نوع عملیات - %s' % object.name"
 #. module: stock
 #: model:ir.actions.report,print_report_name:stock.action_report_picking_packages
 msgid "'Packages - %s' % (object.name)"
-msgstr ""
+msgstr "'بسته‌ها - %s' % (object.name)"
 
 #. module: stock
 #: model:ir.actions.report,print_report_name:stock.action_report_picking
@@ -240,7 +245,7 @@ msgstr ""
 #: code:addons/stock/models/stock_lot.py:0
 #, python-format
 msgid "(copy of) %s"
-msgstr ""
+msgstr "(کپی از) %s"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_move__state
@@ -297,7 +302,7 @@ msgstr ", حداکثر:"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.message_body
 msgid "-&gt;"
-msgstr ""
+msgstr "-&gt;"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.exception_on_picking
@@ -326,7 +331,7 @@ msgstr "1 هفته"
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__lot_label_layout__print_format__4x12
 msgid "4 x 12"
-msgstr ""
+msgstr "4 x 12"
 
 #. module: stock
 #. odoo-python
@@ -403,6 +408,39 @@ msgid ""
 "</div>\n"
 "        "
 msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"        سلام <t t-out=\"object.partner_id.name or ''\">براندون فریمن </t>,<br><br>\n"
+"        خوشحالیم که به شما اطلاع دهیم که سفارش شما ارسال شده است.\n"
+"        <t t-if=\"hasattr(object, 'carrier_tracking_ref') and object.carrier_tracking_ref\">\n"
+"            شماره پیگیری شما عبارت است از\n"
+"            <strong>\n"
+"            <t t-if=\"object.carrier_tracking_url\">\n"
+"                <t t-set=\"multiple_carrier_tracking\" t-value=\"object.get_multiple_carrier_tracking()\"></t>\n"
+"                <t t-if=\"multiple_carrier_tracking\">\n"
+"                    <t t-foreach=\"multiple_carrier_tracking\" t-as=\"line\">\n"
+"                        <br><a t-att-href=\"line[1]\" target=\"_blank\" t-out=\"line[0] or ''\"></a>\n"
+"                    </t>\n"
+"                </t>\n"
+"                <t t-else=\"\">\n"
+"                    <a t-attf-href=\"{{ object.carrier_tracking_url }}\" target=\"_blank\" t-out=\"object.carrier_tracking_ref or ''\"></a>.\n"
+"                </t>\n"
+"            </t>\n"
+"            <t t-else=\"\">\n"
+"                <t t-out=\"object.carrier_tracking_ref or ''\"></t>.\n"
+"            </t>\n"
+"            </strong>\n"
+"        </t>\n"
+"        <br><br>\n"
+"        لطفاً سفارش تحویل خود را که به پیوست است برای جزئیات بیشتر بررسی کنید.<br><br>\n"
+"        با تشکر,\n"
+"        <t t-if=\"user.signature\">\n"
+"            <br>\n"
+"            <t t-out=\"user.signature or ''\">--<br>مدیر میچل</t>\n"
+"        </t>\n"
+"    </p>\n"
+"</div>\n"
+"        "
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_scrap_view_kanban
@@ -548,7 +586,7 @@ msgstr "<span>نوع بسته‌بندی: </span>"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_report_delivery_no_package_section_line
 msgid "<span>Products with no package assigned</span>"
-msgstr ""
+msgstr "<span>محصولات بدون بسته‌بندی مشخص شده</span>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
@@ -558,7 +596,7 @@ msgstr "<span>مقدارهای باقیمانده هنوز تحویل نشده �
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_package_type_form
 msgid "<span>×</span>"
-msgstr ""
+msgstr "<span>×</span>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.message_head
@@ -567,11 +605,14 @@ msgid ""
 "                The done move line has been corrected.\n"
 "            </strong>"
 msgstr ""
+"<strong>\n"
+"                خط حرکت انجام شده اصلاح شده است.\n"
+"            </strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_inventory
 msgid "<strong>Available Quantity</strong>"
-msgstr ""
+msgstr "<strong>مقدار موجود</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_inventory
@@ -590,6 +631,8 @@ msgid ""
 "quantity and now, the difference of quantity is not consistent "
 "anymore.</strong>"
 msgstr ""
+"<strong>به دلیل برخی جابه‌جایی‌های موجودی که بین به‌روزرسانی اولیه مقدار شما"
+" و اکنون انجام شده است، تفاوت مقدار دیگر سازگار نیست.</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_picking
@@ -620,7 +663,7 @@ msgstr "<strong>حداقل تعداد:</strong>"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_inventory
 msgid "<strong>On hand Quantity</strong>"
-msgstr ""
+msgstr "<strong>مقدار موجود در دست</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_delivery_document
@@ -636,7 +679,7 @@ msgstr "<strong>سفارش داده شده</strong>"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_package_barcode
 msgid "<strong>Pack Date:</strong>"
-msgstr ""
+msgstr "<strong>تاریخ بسته‌بندی:</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_package_barcode
@@ -699,7 +742,7 @@ msgstr "<strong>به</strong>"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_stock_track_confirmation
 msgid "<strong>Tracked product(s):</strong>"
-msgstr ""
+msgstr "<strong>محصول(های) ردیابی شده:</strong>"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_package_destination_form_view
@@ -726,7 +769,7 @@ msgstr "یک سطر انتقال انجام شده هرگز نباید مقدا�
 #. module: stock
 #: model:ir.model.constraint,message:stock.constraint_stock_warehouse_orderpoint_product_location_check
 msgid "A replenishment rule already exists for this product on this location."
-msgstr ""
+msgstr "یک قانون تأمین مجدد برای این محصول در این مکان از قبل وجود دارد."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_product__detailed_type
@@ -764,6 +807,8 @@ msgid ""
 "Activate this function to get all quantities to replenish at this particular"
 " location"
 msgstr ""
+"این عملکرد را فعال کنید تا تمام مقادیر مورد نیاز برای تأمین مجدد در این مکان"
+" خاص را دریافت کنید."
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_location__active
@@ -926,6 +971,8 @@ msgid ""
 "All our contractual relations will be governed exclusively by United States "
 "law."
 msgstr ""
+"تمام روابط قراردادی ما به طور انحصاری تحت قوانین ایالات متحده آمریکا خواهد "
+"بود.*"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__returned_move_ids
@@ -986,6 +1033,8 @@ msgid ""
 "Another parent/sub replenish location %s exists, if you wish to change it, "
 "uncheck it first"
 msgstr ""
+"مکان تأمین مجدد والد/زیرمجموعه دیگری به نام %s وجود دارد. اگر می‌خواهید آن "
+"را تغییر دهید، ابتدا آن را غیرفعال کنید.."
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_stock_rule_form
@@ -1070,7 +1119,7 @@ msgstr "در اسرع وقت"
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_picking_type__create_backorder__ask
 msgid "Ask"
-msgstr ""
+msgstr "پرسش"
 
 #. module: stock
 #. odoo-javascript
@@ -1249,7 +1298,7 @@ msgstr "اسکنر بارکد"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_product__valid_ean
 msgid "Barcode is valid EAN"
-msgstr ""
+msgstr "بارکد یک EAN معتبر است"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__module_stock_picking_batch
@@ -1266,7 +1315,7 @@ msgstr "قبل از تاریخ برنامه ریزی شده"
 msgid ""
 "Below text serves as a suggestion and doesn’t engage Odoo S.A. "
 "responsibility."
-msgstr ""
+msgstr "متن زیر یک پیشنهاد است و مسئولیتی برای شرکت اودوو ایجاد نمی‌کند. "
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__res_partner__picking_warn__block
@@ -1276,7 +1325,7 @@ msgstr "پیام مسدود کننده"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_quant_package__quant_ids
 msgid "Bulk Content"
-msgstr ""
+msgstr "محتوای عمده"
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__product_template__tracking__lot
@@ -1313,7 +1362,7 @@ msgstr ""
 #. module: stock
 #: model:product.template,name:stock.product_cable_management_box_product_template
 msgid "Cable Management Box"
-msgstr ""
+msgstr "جعبه مدیریت کابل"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.stock_picking_calendar
@@ -1428,6 +1477,12 @@ msgid ""
 "(Chicago) in its entirety and does not include any costs relating to the "
 "legislation of the country in which the client is located."
 msgstr ""
+"برخی از کشورها بر اساس قوانین داخلی خود، مالیات را در منبع بر مبلغ فاکتورها "
+"اعمال می‌کنند. هر گونه مالیات کسر شده در منبع باید توسط مشتری به مقامات "
+"مالیاتی پرداخت شود. تحت هیچ شرایطی شرکت من (شیکاگو) نمی‌تواند در هزینه‌های "
+"مرتبط با قوانین یک کشور دخالت کند. بنابراین، مبلغ فاکتور به طور کامل به شرکت"
+" من (شیکاگو) تعلق دارد و شامل هیچ هزینه‌ای مرتبط با قوانین کشور محل مشتری "
+"نمی‌شود."
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_return_picking__move_dest_exists
@@ -1484,7 +1539,7 @@ msgstr "وجود بسته های مقصد را در سطرهای انتقال ب
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_picking__move_line_exist
 msgid "Check the existence of pack operation on the picking"
-msgstr ""
+msgstr "وجود عملیات بسته‌بندی را در انتخاب بررسی کنید."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_location__return_location
@@ -1515,7 +1570,7 @@ msgstr "انتخاب چیدمان لیبل ها"
 #: code:addons/stock/models/stock_picking.py:0
 #, python-format
 msgid "Choose Type of Labels To Print"
-msgstr ""
+msgstr "نوع برچسب‌هایی که می‌خواهید چاپ کنید را انتخاب کنید."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_quantity_history__inventory_datetime
@@ -1533,7 +1588,7 @@ msgstr "انتخاب مکان مقصد"
 #. module: stock
 #: model:ir.model,name:stock.model_lot_label_layout
 msgid "Choose the sheet layout to print lot labels"
-msgstr ""
+msgstr "چیدمان برگه را برای چاپ برچسب‌های بچه انتخاب کنید."
 
 #. module: stock
 #: model:ir.model,name:stock.model_product_label_layout
@@ -1544,6 +1599,7 @@ msgstr "انتخاب اندازه کاغذ برای چاپ لیبل ها"
 #: model:ir.model,name:stock.model_picking_label_type
 msgid "Choose whether to print product or lot/sn labels"
 msgstr ""
+"انتخاب کنید که آیا برچسب‌های محصول یا برچسب‌های بچه/شماره سریال را چاپ کنید."
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_stock_quantity_history
@@ -1634,7 +1690,7 @@ msgstr "محاسبه هزینه حمل و نقل و ارسال با FedEx"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.res_config_settings_view_form
 msgid "Compute shipping costs and ship with Sendcloud"
-msgstr ""
+msgstr "محاسبه هزینه های حمل و نقل و ارسال توسط Sendcloud"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.res_config_settings_view_form
@@ -1654,7 +1710,7 @@ msgstr "محاسبه هزینه حمل و نقل و ارسال با bpost"
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_move__reservation_date
 msgid "Computes when a move should be reserved"
-msgstr ""
+msgstr "محاسبه می‌کند که چه زمانی یک حرکت باید رزرو شود."
 
 #. module: stock
 #: model:ir.model,name:stock.model_res_config_settings
@@ -1708,6 +1764,8 @@ msgid ""
 "Consider product forecast these many days in the future upon product replenishment, set to 0 for just-in-time.\n"
 "The value depends on the type of the route (Buy or Manufacture)"
 msgstr ""
+"در هنگام تأمین مجدد محصول، پیش‌بینی محصول را برای این تعداد روز در آینده در نظر بگیرید و برای تأمین به‌موقع مقدار آن را روی ۰ تنظیم کنید.\n"
+" این مقدار به نوع مسیر (خرید یا تولید) بستگی دارد."
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__group_stock_tracking_owner
@@ -1761,6 +1819,11 @@ msgid ""
 msgstr ""
 "تبدیل بین واحدهای اندازه گیری تنها در صورتی می تواند اتفاق بیفتد که به یک "
 "دسته تعلق داشته باشند. تبدیل بر اساس نسبت ها انجام خواهد شد."
+
+#. module: stock
+#: model:ir.actions.server,name:stock.stock_quant_stock_move_line_desynchronization
+msgid "Correct inconsistencies for reservation"
+msgstr ""
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_location__posx
@@ -1848,7 +1911,7 @@ msgstr "ایجاد سفارش معوق؟"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_type_form
 msgid "Create New"
-msgstr ""
+msgstr "ایجاد جدید"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move_line__picking_type_use_create_lots
@@ -1864,6 +1927,9 @@ msgid ""
 "                            products later. Do not create a backorder if you will not\n"
 "                            process the remaining products."
 msgstr ""
+"اگر انتظار دارید که محصولات باقی‌مانده را بعداً پردازش کنید،\n"
+" یک سفارش معوقه ایجاد کنید.\n"
+" اگر محصولات باقی‌مانده را پردازش نخواهید کرد، سفارش معوقه ایجاد نکنید."
 
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.stock_picking_type_action
@@ -1893,6 +1959,8 @@ msgstr ""
 #: model_terms:ir.actions.act_window,help:stock.action_product_stock_view
 msgid "Create some storable products to see their stock info in this view."
 msgstr ""
+"چند محصول قابل ذخیره ایجاد کنید تا اطلاعات موجودی آن‌ها را در این نما "
+"ببینید."
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_lot_label_layout__create_uid
@@ -2080,12 +2148,12 @@ msgstr "مکان های مشتری"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_location_form
 msgid "Cyclic Counting"
-msgstr ""
+msgstr "شمارش دوره‌ای"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__module_delivery_dhl
 msgid "DHL Express Connector"
-msgstr ""
+msgstr "کانکتور DHL Express"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_report_stock_quantity__date
@@ -2118,7 +2186,7 @@ msgstr "تاریخ برنامه ریزی شده"
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_replenish__date_planned
 msgid "Date at which the replenishment should take place."
-msgstr ""
+msgstr "تاریخ که تأمین مجدد باید انجام شود."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_picking__date_done
@@ -2249,6 +2317,8 @@ msgid ""
 "Define a minimum stock rule so that Odoo automatically creates requests for "
 "quotations or confirmed manufacturing orders to resupply your stock."
 msgstr ""
+"قانون حداقل موجودی را تعریف کنید تا Odoo به‌طور خودکار درخواست‌های استعلام "
+"قیمت یا سفارش‌های تولید تأییدشده برای تأمین مجدد موجودی شما ایجاد کند."
 
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.action_warehouse_form
@@ -2280,6 +2350,12 @@ msgid ""
 "Closet location: products/lots closest to the target location will be moved out first.\n"
 "FEFO: products/lots with the closest removal date will be moved out first (the availability of this method depends on the \"Expiration Dates\" setting)."
 msgstr ""
+"روش پیش‌فرضی را تعریف می‌کند که برای پیشنهاد مکان دقیق (قفسه) که باید محصولات را از آن برداشت کنید، کدام دسته و ... برای این مکان استفاده شود. این روش می‌تواند در سطح دسته‌بندی محصولات اعمال شود و در صورت عدم تنظیم در اینجا، به مکان‌های والد بازگشت می‌شود.\n"
+"\n"
+"FIFO: محصولاتی که اول در انبار گذاشته شده‌اند، ابتدا خارج می‌شوند.\n"
+"LIFO: محصولاتی که آخرین بار در انبار گذاشته شده‌اند، ابتدا خارج می‌شوند.\n"
+"مکان نزدیک: محصولاتی که به مکان هدف نزدیک‌تر هستند، ابتدا خارج می‌شوند.\n"
+"FEFO: محصولاتی که نزدیک‌ترین تاریخ انقضا را دارند، ابتدا خارج می‌شوند (در دسترس بودن این روش به تنظیمات \"تاریخ انقضا\" بستگی دارد)."
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__delay_alert_date
@@ -2912,6 +2988,13 @@ msgid "First SN"
 msgstr ""
 
 #. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_quant.py:0
+#, python-format
+msgid "Fix discrepancies"
+msgstr ""
+
+#. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_rule__group_propagation_option__fixed
 msgid "Fixed"
 msgstr "ثابت"
@@ -2974,7 +3057,7 @@ msgstr "توضیحات پیش بینی"
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_form
 #: model_terms:ir.ui.view,arch_db:stock.view_warehouse_orderpoint_tree_editable
 msgid "Forecast Report"
-msgstr ""
+msgstr "گزارش پیش بینی"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_product_product__virtual_available
@@ -3958,6 +4041,7 @@ msgid ""
 msgstr ""
 
 #. module: stock
+#. odoo-python
 #: code:addons/stock/models/stock_quant.py:0
 #, python-format
 msgid ""
@@ -4276,7 +4360,7 @@ msgstr "اگر این مسیر بین همه شرکت ها مشترک است، �
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_stock_rule
 msgid "Legend"
-msgstr ""
+msgstr "اسطوره"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_package_type__packaging_length
@@ -4389,6 +4473,13 @@ msgstr "مکان: زمان رسیدن به"
 #, python-format
 msgid "Locations"
 msgstr "مکان‌ها"
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_picking.py:0
+#, python-format
+msgid "Locations to update"
+msgstr ""
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_form
@@ -6489,7 +6580,7 @@ msgstr "تعداد قابل چاپ"
 #: model:ir.model.fields,field_description:stock.field_stock_track_confirmation__quant_ids
 #: model_terms:ir.ui.view,arch_db:stock.quant_search_view
 msgid "Quants"
-msgstr ""
+msgstr "مقدار"
 
 #. module: stock
 #. odoo-python
@@ -7108,7 +7199,7 @@ msgstr ""
 #. module: stock
 #: model_terms:res.company,invoice_terms_html:stock.res_company_1
 msgid "STANDARD TERMS AND CONDITIONS OF SALE"
-msgstr ""
+msgstr "شرایط و ضوابط فروش"
 
 #. module: stock
 #. odoo-javascript
@@ -7264,7 +7355,7 @@ msgstr "ارسال کالا در خروجی و سپس تحویل (2 مرحله)"
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_res_config_settings__module_delivery_sendcloud
 msgid "Sendcloud Connector"
-msgstr ""
+msgstr "کانکتورSendcloud"
 
 #. module: stock
 #: model:mail.template,description:stock.mail_template_data_delivery_confirmation
@@ -7851,7 +7942,7 @@ msgstr "گزارش جایگزینی انبار"
 #. module: stock
 #: model:ir.model,name:stock.model_stock_request_count
 msgid "Stock Request an Inventory Count"
-msgstr ""
+msgstr "درخواست موجودی برای شمارش انبار"
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_rule
@@ -8113,6 +8204,9 @@ msgid ""
 "order to be valid, any derogation must be expressly agreed to in advance in "
 "writing."
 msgstr ""
+"مشتری به وضوح شرایط و ضوابط خود را لغو می‌کند، حتی اگر پس از شرایط و ضوابط "
+"فروش تدوین شده باشند. برای اینکه این لغو کردن معتبر باشد باید از قبل به صورت"
+" مکتوب با آن موافقت شده باشد."
 
 #. module: stock
 #. odoo-python
@@ -8701,7 +8795,7 @@ msgstr "تعداد کل"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_stock_quant_tree_editable
 msgid "Total Reserved"
-msgstr ""
+msgstr "کل ظرفیت رزرو شده"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_product_category__total_route_ids
@@ -9679,6 +9773,14 @@ msgstr ""
 
 #. module: stock
 #. odoo-python
+#: code:addons/stock/models/stock_orderpoint.py:0
+#, python-format
+msgid ""
+"You can not create a snoozed orderpoint that is not manually triggered."
+msgstr ""
+
+#. module: stock
+#. odoo-python
 #: code:addons/stock/models/stock_move_line.py:0
 #, python-format
 msgid ""
@@ -9717,6 +9819,15 @@ msgid "You can only process 1.0 %s of products with unique serial number."
 msgstr ""
 "شما فقط می توانید 1.0 %s از محصولات با شماره سریال منحصر به فرد را پردازش "
 "کنید."
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_orderpoint.py:0
+#, python-format
+msgid ""
+"You can only snooze manual orderpoints. You should rather archive 'auto-"
+"trigger' orderpoints if you do not want them to be triggered."
+msgstr ""
 
 #. module: stock
 #. odoo-python
@@ -9831,6 +9942,24 @@ msgid ""
 msgstr ""
 "شما نمی توانید محتوای یک بسته را بیش از یک بار در یک انتقال منتقل کنید یا "
 "همان بسته را به دو مکان تقسیم کنید."
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You cannot pack products into the same package when they are from both "
+"immediate and planned transfers."
+msgstr ""
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You cannot pack products into the same package when they are from different "
+"transfers with different operation types."
+msgstr ""
 
 #. module: stock
 #. odoo-python
@@ -10086,6 +10215,8 @@ msgid ""
 "Your lunch has been delivered.\n"
 "Enjoy your meal!"
 msgstr ""
+"ناهار شما تحویل داده شده است.\n"
+"از وعده غذایی خود لذت ببرید!"
 
 #. module: stock
 #. odoo-python

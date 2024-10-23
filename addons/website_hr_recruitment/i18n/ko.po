@@ -5,8 +5,8 @@
 # Translators:
 # Martin Trigaux, 2022
 # Heesoo Choi, 2022
-# Wil Odoo, 2023
 # Sarah Park, 2023
+# Wil Odoo, 2024
 # Daye Jeong, 2024
 # 
 msgid ""
@@ -22,6 +22,31 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Language: ko\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: website_hr_recruitment
+#. odoo-python
+#: code:addons/website_hr_recruitment/models/hr_job.py:0
+#, python-format
+msgid ""
+"\n"
+"            <span class=\"text-muted small\">Time to Answer</span>\n"
+"            <h6>2 open days</h6>\n"
+"            <span class=\"text-muted small\">Process</span>\n"
+"            <h6>1 Phone Call</h6>\n"
+"            <h6>1 Onsite Interview</h6>\n"
+"            <span class=\"text-muted small\">Days to get an Offer</span>\n"
+"            <h6>4 Days after Interview</h6>\n"
+"        "
+msgstr ""
+"\n"
+"            <span class=\"text-muted small\">응답 시간</span>\n"
+"            <h6>2 영업일</h6>\n"
+"            <span class=\"text-muted small\">프로세스</span>\n"
+"            <h6>1 전화 면접</h6>\n"
+"            <h6>1 대면 면접</h6>\n"
+"            <span class=\"text-muted small\">채용 제안까지의 일수</span>\n"
+"            <h6>면접 후 4일</h6>\n"
+"        "
 
 #. module: website_hr_recruitment
 #. odoo-python
@@ -611,6 +636,11 @@ msgstr "고객 니즈 파악"
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description
 msgid "Real responsibilities and challenges in a fast evolving company"
 msgstr "빠르게 발전하는 기업의 사회적 책임과 과제"
+
+#. module: website_hr_recruitment
+#: model_terms:ir.ui.view,arch_db:website_hr_recruitment.apply
+msgid "Remote"
+msgstr "재택 근무"
 
 #. module: website_hr_recruitment
 #: model_terms:ir.ui.view,arch_db:website_hr_recruitment.default_website_description

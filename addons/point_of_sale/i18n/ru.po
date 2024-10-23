@@ -3,7 +3,6 @@
 # 	* point_of_sale
 # 
 # Translators:
-# Collex100, 2022
 # Oleg Kuryan <oleg@ventor.tech>, 2022
 # Gennady Marchenko <gennadym@gmail.com>, 2022
 # Максим Дронь <dronmax@gmail.com>, 2022
@@ -19,13 +18,15 @@
 # Андрей Гусев <gaussgss@gmail.com>, 2022
 # Dinar <gabbasov@it-projects.info>, 2022
 # Sergey Vilizhanin, 2022
-# Martin Trigaux, 2023
 # ILMIR <karamov@it-projects.info>, 2023
 # Ivan Kropotkin <yelizariev@itpp.dev>, 2023
 # alenafairy, 2023
 # c4pointer <c4point@gmail.com>, 2023
-# Сергей Шебанин <sergey@shebanin.ru>, 2024
 # Alena Vlasova, 2024
+# Collex100, 2024
+# Смородин Даниил, 2024
+# Сергей Шебанин <sergey@shebanin.ru>, 2024
+# Martin Trigaux, 2024
 # Wil Odoo, 2024
 # 
 msgid ""
@@ -72,7 +73,7 @@ msgstr " ВОЗВРАТ"
 #: code:addons/point_of_sale/static/src/xml/Screens/ProductScreen/NumpadWidget.xml:0
 #, python-format
 msgid "% Disc"
-msgstr ""
+msgstr "Disc.%"
 
 #. module: point_of_sale
 #. odoo-python
@@ -109,6 +110,20 @@ msgstr ""
 #, python-format
 msgid "%s product(s) found for \"%s\"."
 msgstr "для \"%s\" найдено %s товаров."
+
+#. module: point_of_sale
+#. odoo-python
+#: code:addons/point_of_sale/models/pos_session.py:0
+#, python-format
+msgid "%s untaxed"
+msgstr ""
+
+#. module: point_of_sale
+#. odoo-python
+#: code:addons/point_of_sale/models/pos_session.py:0
+#, python-format
+msgid "%s with %s"
+msgstr "%s из %s"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -433,7 +448,7 @@ msgstr "Бухгалтерский учёт"
 #: model:ir.model.fields,help:point_of_sale.field_pos_config__invoice_journal_id
 #: model:ir.model.fields,help:point_of_sale.field_res_config_settings__pos_invoice_journal_id
 msgid "Accounting journal used to create invoices."
-msgstr "Журнал учета, используемый для создания актов."
+msgstr "Журнал учета, используемый для создания счетов."
 
 #. module: point_of_sale
 #: model:ir.model.fields,help:point_of_sale.field_pos_config__journal_id
@@ -1086,7 +1101,7 @@ msgstr "Наличные"
 #: code:addons/point_of_sale/static/src/xml/Popups/CashMovePopup.xml:0
 #, python-format
 msgid "Cash In"
-msgstr "Приход"
+msgstr "Поступления"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -1094,7 +1109,7 @@ msgstr "Приход"
 #: code:addons/point_of_sale/static/src/xml/ChromeWidgets/CashMoveButton.xml:0
 #, python-format
 msgid "Cash In/Out"
-msgstr "Деньги"
+msgstr "Поступления/выплаты"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_session__cash_journal_id
@@ -1111,7 +1126,7 @@ msgstr "Кассовые линии"
 #: code:addons/point_of_sale/static/src/xml/Popups/CashMovePopup.xml:0
 #, python-format
 msgid "Cash Out"
-msgstr "Расход"
+msgstr "Выплаты"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_session_form
@@ -1153,7 +1168,7 @@ msgstr "Денежная разница, возникшая в процессе 
 #: code:addons/point_of_sale/static/src/js/ChromeWidgets/CashMoveButton.js:0
 #, python-format
 msgid "Cash in/out of %s is ignored."
-msgstr "Внесение/Изъятие наличных на %s игнорируется."
+msgstr "Поступления/выплаты для %s игнорируются."
 
 #. module: point_of_sale
 #. odoo-python
@@ -1450,13 +1465,13 @@ msgstr "Конфигурационные настройки"
 #. module: point_of_sale
 #: model:ir.ui.menu,name:point_of_sale.menu_point_config_product
 msgid "Configuration"
-msgstr "Настройки"
+msgstr "Конфигурация"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.pos_config_view_form
 #: model_terms:ir.ui.view,arch_db:point_of_sale.pos_payment_method_view_form
 msgid "Configurations &gt; Settings"
-msgstr "Конфигурации &gt; Настройки"
+msgstr "Конфигурация &gt; Настройки"
 
 #. module: point_of_sale
 #: model_terms:ir.actions.act_window,help:point_of_sale.action_pos_config_kanban
@@ -2906,7 +2921,7 @@ msgstr "Акт"
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config__invoice_journal_id
 #: model:ir.model.fields,field_description:point_of_sale.field_res_config_settings__pos_invoice_journal_id
 msgid "Invoice Journal"
-msgstr "Журнал актов"
+msgstr "Журнал счетов"
 
 #. module: point_of_sale
 #. odoo-python
@@ -2922,7 +2937,7 @@ msgstr "Оплата счета-фактуры за %s (%s) с использо�
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_order_filter
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
 msgid "Invoiced"
-msgstr "Актировано"
+msgstr "Выставлен счет"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
@@ -3601,7 +3616,7 @@ msgstr "Данных пока нет!"
 #: code:addons/point_of_sale/report/pos_invoice.py:0
 #, python-format
 msgid "No link to an invoice for %s."
-msgstr "Отсутствует ссылка на акт для %s."
+msgstr "Отсутствует ссылка на счет для %s."
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -3655,7 +3670,7 @@ msgstr "Нет"
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_report_pos_order_search
 msgid "Not Invoiced"
-msgstr "Без акта"
+msgstr "Без счета"
 
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.view_pos_pos_form
@@ -3811,6 +3826,8 @@ msgstr ""
 #, python-format
 msgid "Only administrators can edit receipt headers and footers"
 msgstr ""
+"Только администраторы могут редактировать заголовки и нижние колонтитулы "
+"квитанций"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config__only_round_cash_method
@@ -4558,7 +4575,7 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/js/custom_hooks.js:0
 #, python-format
 msgid "Please print the invoice from the backend"
-msgstr "Пожалуйста, распечатайте акт из бэкэнда"
+msgstr "Пожалуйста, распечатайте счет из бэкэнда"
 
 #. module: point_of_sale
 #. odoo-python
@@ -4690,7 +4707,7 @@ msgstr "Отчет деталей точки продаж"
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_report_point_of_sale_report_invoice
 msgid "Point of Sale Invoice Report"
-msgstr "Отчет по актам точки продаж"
+msgstr "Отчет по счетам точки продаж"
 
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_config__journal_id
@@ -4946,7 +4963,7 @@ msgstr "Прайс-листы"
 #. module: point_of_sale
 #: model_terms:ir.ui.view,arch_db:point_of_sale.res_config_settings_view_form
 msgid "Pricing"
-msgstr "Установление цены"
+msgstr "Стоимость"
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -5021,7 +5038,7 @@ msgstr ""
 #: model:ir.model,name:point_of_sale.model_procurement_group
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order__procurement_group_id
 msgid "Procurement Group"
-msgstr "Группа поставки"
+msgstr "В рамках закупки"
 
 #. module: point_of_sale
 #: model:ir.model,name:point_of_sale.model_product_template
@@ -5271,6 +5288,8 @@ msgstr "Обновить дисплей"
 
 #. module: point_of_sale
 #. odoo-javascript
+#. odoo-python
+#: code:addons/point_of_sale/models/pos_session.py:0
 #: code:addons/point_of_sale/static/src/js/Screens/TicketScreen/TicketScreen.js:0
 #: code:addons/point_of_sale/static/src/xml/Screens/ProductScreen/ControlButtons/RefundButton.xml:0
 #: code:addons/point_of_sale/static/src/xml/Screens/ProductScreen/ControlButtons/RefundButton.xml:0
@@ -5545,6 +5564,13 @@ msgstr "Подсчет строки продажи"
 #: model:ir.actions.act_window,name:point_of_sale.action_pos_order_line_form
 msgid "Sale line"
 msgstr "Очередь продаж"
+
+#. module: point_of_sale
+#. odoo-python
+#: code:addons/point_of_sale/models/pos_session.py:0
+#, python-format
+msgid "Sales"
+msgstr "Продажи"
 
 #. module: point_of_sale
 #: model:ir.actions.act_window,name:point_of_sale.action_report_pos_details
@@ -6360,10 +6386,9 @@ msgstr ""
 #: code:addons/point_of_sale/static/src/js/Screens/PaymentScreen/PaymentScreen.js:0
 #, python-format
 msgid ""
-"The amount of your payment lines must be rounded to validate the "
-"transaction."
+"The amount of your payment lines must be rounded to validate the transaction.\n"
+"The rounding precision is %s so you should set %s or %s as payment amount instead of %s."
 msgstr ""
-"Для подтверждения транзакции сумма строк платежа должна быть округлена."
 
 #. module: point_of_sale
 #. odoo-javascript
@@ -6456,7 +6481,7 @@ msgid ""
 "The invoice journal must be in the same currency as the Sales Journal or the"
 " company currency if that is not set."
 msgstr ""
-"Журнал акта должен быть в той же валюте, что и журнал продаж или валюта "
+"Журнал счета должен быть в той же валюте, что и журнал продаж или валюта "
 "компании, если она не установлена."
 
 #. module: point_of_sale
@@ -6473,9 +6498,10 @@ msgstr ""
 #, python-format
 msgid ""
 "The maximum difference allowed is %s.\n"
-"\n"
-"                        Please contact your manager to accept the closing difference."
+"Please contact your manager to accept the closing difference."
 msgstr ""
+"Максимально допустимая разница составляет %s.\n"
+"Пожалуйста, свяжитесь с вашим менеджером, чтобы принять разницу в закрытии."
 
 #. module: point_of_sale
 #. odoo-python
@@ -6510,7 +6536,7 @@ msgid ""
 "The order has been synchronized earlier. Please make the invoice from the "
 "backend for the order: "
 msgstr ""
-"Заказ был синхронизирован ранее. Пожалуйста, сделайте акт из бэкэнда для "
+"Заказ был синхронизирован ранее. Пожалуйста, сделайте счет из бэкэнда для "
 "заказа: "
 
 #. module: point_of_sale
@@ -7008,7 +7034,7 @@ msgstr "Продаётся на развес"
 #. module: point_of_sale
 #: model:ir.model.fields,field_description:point_of_sale.field_pos_order__to_invoice
 msgid "To invoice"
-msgstr "Выставить акт"
+msgstr "Выставить счет"
 
 #. module: point_of_sale
 #: model_terms:ir.actions.act_window,help:point_of_sale.action_pos_payment_form
@@ -7444,7 +7470,7 @@ msgid ""
 msgstr ""
 "Каждый раз, когда вы закрываете сессию, одно сообщение создается в следующем"
 " журнале бухгалтерского учета для всех заказов, на которые не выл выставлен "
-"акт. Акты вносятся в бухучет отдельно."
+"счет. Счета вносятся в бухучет отдельно."
 
 #. module: point_of_sale
 #: model:product.template,name:point_of_sale.whiteboard_product_template
@@ -7594,6 +7620,15 @@ msgstr ""
 msgid ""
 "You cannot delete contacts while there are active PoS sessions. Close the "
 "session(s) %s first."
+msgstr ""
+
+#. module: point_of_sale
+#. odoo-python
+#: code:addons/point_of_sale/models/pos_session.py:0
+#, python-format
+msgid ""
+"You do not have permission to open a POS session. Please try opening a "
+"session with a different user"
 msgstr ""
 
 #. module: point_of_sale

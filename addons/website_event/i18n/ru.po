@@ -9,12 +9,12 @@
 # Sergey Vilizhanin, 2022
 # Vladimir Lukianov <lvm.mobile@gmail.com>, 2022
 # Irina Fedulova <istartlin@gmail.com>, 2022
-# Сергей Шебанин <sergey@shebanin.ru>, 2022
 # ILMIR <karamov@it-projects.info>, 2022
 # Ivan Kropotkin <yelizariev@itpp.dev>, 2022
 # Martin Trigaux, 2022
 # Alena Vlasova, 2022
 # alenafairy, 2023
+# Сергей Шебанин <sergey@shebanin.ru>, 2024
 # Wil Odoo, 2024
 # 
 msgid ""
@@ -854,6 +854,11 @@ msgid "OpenWood Collection Online Reveal"
 msgstr "Онлайн-обзор коллекции OpenWood"
 
 #. module: website_event
+#: model_terms:ir.ui.view,arch_db:website_event.event_location
+msgid "Online Events"
+msgstr "События онлайн"
+
+#. module: website_event
 #: model_terms:ir.ui.view,arch_db:website_event.event_description_full
 msgid "Organizer"
 msgstr "Организатор"
@@ -919,7 +924,7 @@ msgstr "№ реф.:"
 #: model_terms:ir.ui.view,arch_db:website_event.registration_template
 #, python-format
 msgid "Register"
-msgstr "Зарегистрировать"
+msgstr "Регистрация"
 
 #. module: website_event
 #: model_terms:ir.ui.view,arch_db:website_event.event_type_view_form

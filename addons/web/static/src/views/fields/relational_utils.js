@@ -215,6 +215,9 @@ export class Many2XAutocomplete extends Component {
             this.props.setInputFloats(true);
         }
     }
+    onCancel() {
+        this.props.setInputFloats(false);
+    }
 
     onSelect(option, params = {}) {
         if (option.action) {
@@ -517,7 +520,7 @@ export class X2ManyFieldDialog extends Component {
 
     discard() {
         if (this.record.isInEdition) {
-            this.record.discard();
+            this.record.discard({ rollback: true });
         }
         this.props.close();
     }

@@ -943,7 +943,7 @@ msgstr "Acción"
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__message_needaction
 msgid "Action Needed"
-msgstr "Acción requerida"
+msgstr "Se requiere una acción"
 
 #. module: calendar
 #: model:ir.model.fields,help:calendar.field_mail_activity_type__category
@@ -951,9 +951,9 @@ msgid ""
 "Actions may trigger specific behavior like opening calendar view or "
 "automatically mark as done when a document is uploaded"
 msgstr ""
-"Las acciones pueden desencadenar acciones específicas como abrir la vista de"
-" calendario o marcar automáticamente un documento como finalizado al momento"
-" de subirlo."
+"Las acciones pueden activar comportamientos específicos, como abrir la vista"
+" de calendario o marcar como la actividad como hecha de forma automática al "
+"subir un documento"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_event__active
@@ -1277,7 +1277,7 @@ msgstr "Fecha"
 #: model:ir.model.fields.selection,name:calendar.selection__calendar_event__month_by__date
 #: model:ir.model.fields.selection,name:calendar.selection__calendar_recurrence__month_by__date
 msgid "Date of month"
-msgstr "Día del mes"
+msgstr "Fecha del mes"
 
 #. module: calendar
 #: model:ir.model.fields,field_description:calendar.field_calendar_recurrence__day

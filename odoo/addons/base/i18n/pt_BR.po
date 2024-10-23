@@ -840,12 +840,9 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"        Accounting reports for Turkey\n"
+"        Accounting reports for Türkiye\n"
 "    "
 msgstr ""
-"\n"
-"        Relatórios de contabilidade para a Turquia\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_uk_reports
@@ -2043,6 +2040,9 @@ msgid ""
 "        ZATCA E-Invoicing, support for PoS\n"
 "    "
 msgstr ""
+"\n"
+"        ZATCA E-Invoicing, support for PoS\n"
+"    "
 
 #. module: base
 #: model:ir.module.module,summary:base.module_purchase_product_matrix
@@ -18927,7 +18927,7 @@ msgstr "Equador"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec_reports_ats
 msgid "Ecuador - ATS Report"
-msgstr ""
+msgstr "Equador - Relatório ATS"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec
@@ -19950,7 +19950,7 @@ msgstr "Ilhas Feroé"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_it_edi_website_sale
 msgid "Features for Italian eCommerce eInvoicing"
-msgstr ""
+msgstr "Recursos para faturamento eletrônico de e-Commerce da Itália"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_bank__state
@@ -20656,6 +20656,12 @@ msgstr "Contabilidade - Francesa"
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_reports
 msgid "France - Accounting Reports"
 msgstr "França - Relatórios de Contabilidade"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_fr_invoice_addr
+msgid "France - Adding Mandatory Invoice Mentions (Decree no. 2022-1299)"
+msgstr ""
+"França - Adição de menções obrigatórias na fatura (Decreto nº 2022-1299)"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_fec
@@ -22910,7 +22916,7 @@ msgstr "Formato de domínio inválido %(expr)s em %(use)s"
 #: code:addons/base/models/ir_rule.py:0
 #, python-format
 msgid "Invalid domain: %s"
-msgstr ""
+msgstr "Domínio inválido: %s"
 
 #. module: base
 #. odoo-python
@@ -23244,7 +23250,7 @@ msgstr "Itália - Faturamento eletrônico (retenção)"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_edi_website_sale
 msgid "Italy eCommerce eInvoicing"
-msgstr ""
+msgstr "Faturamento eletrônico para e-Commerce da Itália eCommerce"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_J
@@ -24059,7 +24065,7 @@ msgstr "Módulo de conexão entre pos_hr e pos_restaurant"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_be_pos_sale
 msgid "Link module between pos_sale and l10n_be"
-msgstr ""
+msgstr "Módulo de vínculo entre pos_sale e l10n_be"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale_loyalty
@@ -24101,7 +24107,7 @@ msgstr "Lituânia - Relatórios de Contabilidade"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_intrastat
 msgid "Lithuanian Intrastat Declaration"
-msgstr ""
+msgstr "Declaração do Intrastat da Lituânia"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_saft
@@ -27945,6 +27951,16 @@ msgid "Odoo is unable to merge the generated PDFs."
 msgstr "O Odoo não consegue mesclar os PDFs gerados."
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
+msgstr ""
+"O Odoo não conseguiu mesclar os PDFs gerados devido a {num_errors} "
+"arquivo(s) corrompido(s)"
+
+#. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
 msgid ""
 "Odoo will automatically adds some '0' on the left of the 'Next Number' to "
@@ -28870,33 +28886,33 @@ msgstr "Contabilidade"
 #: model:ir.model.fields,field_description:base.field_ir_actions_report__paperformat_id
 #: model:ir.ui.menu,name:base.paper_format_menuitem
 msgid "Paper Format"
-msgstr "Formato do Papel"
+msgstr "Formato da folha"
 
 #. module: base
 #: model:ir.model,name:base.model_report_paperformat
 msgid "Paper Format Config"
-msgstr "Paper Format Config"
+msgstr "Configuração do formato da folha"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.paper_format_action
 msgid "Paper Format General Configuration"
-msgstr "Configuração Geral dos Formatos de papel"
+msgstr "Configuração geral de formato da folha"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_company__paperformat_id
 msgid "Paper format"
-msgstr "Formato de papel"
+msgstr "Formato da folha"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.paperformat_view_form
 #: model_terms:ir.ui.view,arch_db:base.paperformat_view_tree
 msgid "Paper format configuration"
-msgstr "Configuração de formato de papel"
+msgstr "Configuração de formato da folha"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_report_paperformat__format
 msgid "Paper size"
-msgstr "Tamanho do papel"
+msgstr "Tamanho da folha"
 
 #. module: base
 #: model:res.country,name:base.pg
@@ -30230,7 +30246,7 @@ msgstr "Porto Rico"
 #: model:ir.module.module,shortdesc:base.module_purchase
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
 msgid "Purchase"
-msgstr "Compra"
+msgstr "Compras"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_purchase_requisition
@@ -31595,7 +31611,7 @@ msgstr "Arábia Saudita - Faturamento eletrônico"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_sa_edi_pos
 msgid "Saudi Arabia - E-invoicing (Simplified)"
-msgstr ""
+msgstr "Saudi Arabia - E-invoicing (Simplified)"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_sa_pos
@@ -31673,6 +31689,12 @@ msgstr "Ações Agendadas"
 #: model:ir.ui.menu,name:base.ir_cron_trigger_menu
 msgid "Scheduled Actions Triggers"
 msgstr "Acionadores de ações agendadas"
+
+#. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid "Scheduled action disabled"
+msgstr "Ação programada desativada"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__user_id
@@ -32911,7 +32933,7 @@ msgstr "Planilhas de dashboard para planilha de horas"
 #: model:ir.module.module,shortdesc:base.module_l10n_in_reports_gstr_spreadsheet
 #: model:ir.module.module,summary:base.module_l10n_in_reports_gstr_spreadsheet
 msgid "Spreadsheet document for GSTR1 Report"
-msgstr ""
+msgstr "Documento de planilha para o relatório GSTR1"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__sql
@@ -35032,6 +35054,16 @@ msgid "Those modules cannot be uninstalled: %s"
 msgstr "Esses módulos não podem ser desinstalados: %s"
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid ""
+"This scheduled action has been disabled because its interval number is not a"
+" strictly positive value."
+msgstr ""
+"Essa ação agendada foi desativada porque seu número de intervalo não é um "
+"valor estritamente positivo."
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
 msgid "Thousands Separator"
 msgstr "Separador de Milhares"
@@ -35410,18 +35442,18 @@ msgstr "Tunísia"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "Turquia"
+msgid "Türkiye"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
-msgstr "Turquia - Contabilidade"
+msgid "Türkiye - Accounting"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
-msgstr "Turquia - Relatórios de Contabilidade"
+msgid "Türkiye - Accounting Reports"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.tm
@@ -36575,6 +36607,12 @@ msgstr "Visualizar sessões de live chat para leads"
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr "Exibir registro(s) problemático(s)"
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "View: %s"
@@ -37163,18 +37201,18 @@ msgstr "Modelo de planilha de trabalho ao planejar uma intervenção"
 #: model:ir.model.fields,field_description:base.field_ir_model_access__perm_write
 #: model_terms:ir.ui.view,arch_db:base.ir_access_view_search
 msgid "Write Access"
-msgstr "Permissão de gravação"
+msgstr "Acesso de edição"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.view_rule_search
 msgid "Write Access Right"
-msgstr "Permissão de Escrita"
+msgstr "Permissão de edição"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_model_constraint__write_date
 #: model:ir.model.fields,field_description:base.field_ir_model_relation__write_date
 msgid "Write Date"
-msgstr "Data de Escrita"
+msgstr "Data de gravação"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_actions_server__code
@@ -37183,8 +37221,9 @@ msgid ""
 "Write Python code that the action will execute. Some variables are available"
 " for use; help about python expression is given in the help tab."
 msgstr ""
-"Write Python code that the action will execute. Some variables are available"
-" for use; help about python expression is given in the help tab."
+"Escreva o código Python que a ação executará. Algumas variáveis estão "
+"disponíveis para uso. Encontre ajuda sobre expressões em Python na aba de "
+"ajuda."
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.form_res_users_key_show
@@ -37470,6 +37509,17 @@ msgstr ""
 #, python-format
 msgid "You cannot delete the %s record."
 msgstr "Você não pode excluir o registro %s."
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"You cannot delete the admin user because it is utilized in various places "
+"(such as security configurations,...). Instead, archive it."
+msgstr ""
+"Não é possível excluir o usuário admin porque ele é utilizado em vários "
+"lugares (como configurações de segurança etc.) Em vez disso, arquive-o."
 
 #. module: base
 #. odoo-python
@@ -38042,7 +38092,7 @@ msgstr "json"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_pos_sale
 msgid "l10n_be_pos_sale"
-msgstr ""
+msgstr "l10n_be_pos_sale"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_stock_ddt

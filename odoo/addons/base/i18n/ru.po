@@ -23,7 +23,6 @@
 # 6da4f49c4b78e697e34b24b2a66289f5, 2024
 # Ꚁemetron <d.v.selitsky@gmail.com>, 2024
 # valmasone, 2024
-# Collex100, 2024
 # Yuriy Ney <k_wizard@mail.ru>, 2024
 # alenafairy, 2024
 # Viktor Pogrebniak <vp@aifil.ru>, 2024
@@ -38,9 +37,11 @@
 # Vasiliy Korobatov <korobatov@gmail.com>, 2024
 # Martin Trigaux, 2024
 # Ivan Kropotkin <yelizariev@itpp.dev>, 2024
-# Wil Odoo, 2024
 # Сергей Шебанин <sergey@shebanin.ru>, 2024
+# Malaz Abuidris <msea@odoo.com>, 2024
+# Collex100, 2024
 # Смородин Даниил, 2024
+# Wil Odoo, 2024
 # 
 msgid ""
 msgstr ""
@@ -48,7 +49,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:33+0000\n"
 "PO-Revision-Date: 2022-09-22 05:44+0000\n"
-"Last-Translator: Смородин Даниил, 2024\n"
+"Last-Translator: Wil Odoo, 2024\n"
 "Language-Team: Russian (https://app.transifex.com/odoo/teams/41243/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -751,7 +752,7 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"        Accounting reports for Turkey\n"
+"        Accounting reports for Türkiye\n"
 "    "
 msgstr ""
 
@@ -2801,7 +2802,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Добавление шаблонов электронной почты к продуктам, отправляемым по подтверждению акта\n"
+"Добавление шаблонов электронной почты к продуктам, отправляемым по подтверждению счета\n"
 "==================================================================\n"
 "\n"
 "С помощью этого модуля свяжите свои продукты с шаблоном, чтобы отправить полную информацию и инструменты своему клиенту.\n"
@@ -2862,8 +2863,8 @@ msgid ""
 "The wizard to launch the report has several options to help you get the data you need.\n"
 msgstr ""
 "\n"
-"Добавляет меню отчётности в товары, которое подсчитывает продажи, закупки, маржи и другие интересные показатели, основанные на актах.\n"
-"=====================================================================================================================================\n"
+"Добавляет меню отчётности в товары, которое подсчитывает продажи, закупки, маржи и другие интересные показатели, основанные на счетах.\n"
+"======================================================================================================================================\n"
 "\n"
 "Мастер для запуска отчёта имеет различные параметры, чтобы помочь вам получить нужные данные.\n"
 
@@ -3137,7 +3138,7 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"Позволяет пользователям отправлять акты по почте =========================================== =========="
+"Позволяет пользователям отправлять счета по почте =========================================== =========="
 
 #. module: base
 #: model:ir.module.module,description:base.module_delivery_iot
@@ -4065,7 +4066,7 @@ msgstr ""
 "Создайте регистрации по заказам на продажу.\n"
 "=============================\n"
 "\n"
-"Этот модуль позволяет автоматизировать и подключить создания регистрации с помощью вашего основного потока продаж и, следовательно, чтобы включить функцию актов для регистраций. Она определяет новый вид услуг сервиса, который предлагает возможность выбрать категорию событий, связанную с ней. Когда вы кода заказа на продажу для этого товара, вы сможете выбрать существующую событие этой категории и когда вы подтвердите свой заказ на продажу, он автоматически создаст регистрацию для этого события.\n"
+"Этот модуль позволяет автоматизировать и подключить создания регистрации с помощью вашего основного потока продаж и, следовательно, чтобы включить функцию счетов для регистраций. Она определяет новый вид услуг сервиса, который предлагает возможность выбрать категорию событий, связанную с ней. Когда вы кода заказа на продажу для этого товара, вы сможете выбрать существующую событие этой категории и когда вы подтвердите свой заказ на продажу, он автоматически создаст регистрацию для этого события.\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_hr
@@ -5383,9 +5384,9 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Выставление актов и платежи\n"
-"====================\n"
-"Конкретная и простая в использовании система выставления актов в Odoo позволяет вам отслеживать ваш бухгалтерский учет, даже если вы не бухгалтер. Он обеспечивает простой способ отслеживания ваших поставщиков и клиентов.\n"
+"Выставление счетов и платежи\n"
+"============================\n"
+"Конкретная и простая в использовании система выставления счетов в Odoo позволяет вам отслеживать ваш бухгалтерский учет, даже если вы не бухгалтер. Он обеспечивает простой способ отслеживания ваших поставщиков и клиентов.\n"
 "\n"
 "Вы можете использовать этот упрощенный учет в случае, если вы работаете с (внешним) бухгалтерским учетом, чтобы хранить свои книги, и вы все еще хотите отслеживать платежи. Этот модуль также предлагает вам простой способ регистрации платежей без необходимости кодирования полных извлечений из счета.\n"
 "    "
@@ -5482,7 +5483,7 @@ msgstr ""
 "\n"
 "Управление затратами\n"
 "=======================\n"
-"Этот модуль позволяет легко добавлять дополнительные затраты на cборки и решать разделение этих затрат между перемещениями запасов, чтобы учесть их при оценке запасов.\n"
+"Этот модуль позволяет легко добавлять накладные расходы на перемещения и определить разделение этих затрат между перемещениями товаров, чтобы учесть их при оценке запасов.\n"
 "    "
 
 #. module: base
@@ -5703,7 +5704,7 @@ msgstr ""
 "* Утверждено его менеджером\n"
 "* Проверка валидатором и создание учетных записей\n"
 "\n"
-"Этот модуль также использует аналитический учет и совместим со актом в модуле табель, чтобы вы могли автоматически повторно выставлять акты своим клиентам, если вы работаете по проекту.\n"
+"Этот модуль также использует аналитический учет и совместим со счетом в модуле табель, чтобы вы могли автоматически повторно выставлять счета своим клиентам, если вы работаете по проекту.\n"
 "    "
 
 #. module: base
@@ -5745,7 +5746,7 @@ msgstr ""
 "Эта программа позволяет управлять вашими целями продаж эффективным и действенным способом, отслеживая все заказы на продажу и историю. Он обрабатывает полный рабочий процесс продаж: * ** Коммерческое предложение ** -&gt; ** Заказ на продажу ** -&gt; ** Счет ** Настройка (только с установленным Управлением составом)\n"
 "------------ ------------------------------------------\n"
 "\n"
-"Если вы также установили Управление складом, вы можете работать с такими настройками: * Доставка: Выбор доставки партией или частично * Выставление счета: выберите способ оплаты счета * Инкотермс: Международные коммерческие сроки с помощью этого модуля можно настроить отчет о заказах на продажу и актах с категориями, подытогами или разрывами страниц. Панель приборов для менеджера по продажам будет включать\n"
+"Если вы также установили Управление складом, вы можете работать с такими настройками: * Доставка: Выбор доставки партией или частично * Выставление счета: выберите способ оплаты счета * Инкотермс: Международные коммерческие сроки с помощью этого модуля можно настроить отчет о заказах на продажу и счетах с категориями, подытогами или разрывами страниц. Панель приборов для менеджера по продажам будет включать\n"
 "------------------------------------------ ------\n"
 "* Мои предложения * Ежемесячный оборот (график)"
 
@@ -5774,7 +5775,7 @@ msgstr ""
 "Настройка\n"
 "-----------\n"
 " * Доставка: Выбор доставки сразу или частично\n"
-" * Актирование: выберите как оплачивать акт\n"
+" * Выставление счета: выберите как выставлять счета\n"
 " * Инкотермс: Международные коммерческие сроки\n"
 
 #. module: base
@@ -7064,7 +7065,7 @@ msgstr ""
 "Этот модуль включает, для учета:\n"
 "- План счетов Сингапура\n"
 "- Поле UEN (Уникальный номер объекта) на компании и партнере\n"
-"- Поле PermitNo и PermitNoDate в акте"
+"- Поле PermitNo и PermitNoDate в счете"
 
 #. module: base
 #: model:ir.module.module,description:base.module_hr_skills
@@ -7288,7 +7289,7 @@ msgstr ""
 "-------------------------------------------------- ----\n"
 "     * Добавить / удалить продукты в репарации\n"
 "     * Воздействие на запасы\n"
-"     * Актирование (продукты и/или услуги)\n"
+"     * Выставление счетов (продукты и/или услуги)\n"
 "     * Концепция гарантии\n"
 "     * Отчет котировок ремонта\n"
 "     * Примечания для техника и для конечного потребителя\n"
@@ -7395,7 +7396,7 @@ msgstr ""
 "\n"
 "Модуль добавляет следующие возможности:\n"
 "\n"
-"    Неизменность: деактивация всех способов отмены или изменения ключевых данных POS-заказов, актов и записей в журнале.\n"
+"    Неизменность: деактивация всех способов отмены или изменения ключевых данных POS-заказов, счетов и записей в журнале.\n"
 "\n"
 "     Безопасность: алгоритм цепочки для проверки неизменяемости\n"
 "\n"
@@ -8403,7 +8404,7 @@ msgstr ""
 "     * Специальные цены для участников\n"
 "\n"
 "Он интегрирован с продажами и бухгалтерским учетом, что позволяет вам автоматически\n"
-"выставить акт и отправить предложения о продлении членства.\n"
+"выставить счет и отправить предложения о продлении членства.\n"
 "   "
 
 #. module: base
@@ -9232,7 +9233,7 @@ msgstr ""
 "Ключевая особенность\n"
 "------------\n"
 "* Оценка запаса (периодическая или автоматическая)\n"
-"* Акт по отгрузке\n"
+"* Счет по отгрузке\n"
 "\n"
 "Отчетная панель / отчеты для управления складом включают в себя:\n"
 "-------------------------------------------------- ----\n"
@@ -10523,7 +10524,7 @@ msgstr "<strong>Телефон</strong>"
 msgid ""
 "<strong>Please enter your password to confirm you own this account</strong>"
 msgstr ""
-"<strong>Пожалуйста, введите свой пароль, чтобы подтвердить что вы владелец "
+"<strong>Пожалуйста, введите свой пароль, чтобы подтвердить, что вы владелец "
 "этого аккаунта</strong>"
 
 #. module: base
@@ -10924,6 +10925,9 @@ msgid ""
 "create his own holidays and manage the requests of the users he's manager "
 "of."
 msgstr ""
+"Пользователь без каких-либо прав на Time Off сможет видеть приложение, "
+"создавать собственные праздники и управлять заявками пользователей, "
+"менеджером которых он является."
 
 #. module: base
 #. odoo-python
@@ -14937,7 +14941,7 @@ msgstr "Настройки: запустите остаточную действ
 #: model:ir.ui.menu,name:base.menu_reporting_config
 #: model_terms:ir.ui.view,arch_db:base.res_config_view_base
 msgid "Configuration"
-msgstr "Настройки"
+msgstr "Конфигурация"
 
 #. module: base
 #: model_terms:ir.ui.view,arch_db:base.res_config_installer
@@ -14949,7 +14953,7 @@ msgstr "Установка конфигураций"
 #: model:ir.model,name:base.model_ir_actions_todo
 #: model:ir.ui.menu,name:base.menu_ir_actions_todo_form
 msgid "Configuration Wizards"
-msgstr "Мастера настройки"
+msgstr "Мастера конфигурации"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_website_event_twitter_wall
@@ -17157,7 +17161,7 @@ msgstr "Эквадор"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec_reports_ats
 msgid "Ecuador - ATS Report"
-msgstr ""
+msgstr "Ecuador - ATS Report"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec
@@ -17474,6 +17478,8 @@ msgstr ""
 msgid ""
 "Enable the user to see and manage the contracts from Employee application."
 msgstr ""
+"Разрешите пользователю просматривать и управлять контрактами из приложения "
+"Employee."
 
 #. module: base
 #: model:res.partner.industry,name:base.res_partner_industry_D
@@ -18154,7 +18160,7 @@ msgstr "Фарерские острова"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_it_edi_website_sale
 msgid "Features for Italian eCommerce eInvoicing"
-msgstr ""
+msgstr "Features for Italian eCommerce eInvoicing"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_bank__state
@@ -18394,7 +18400,7 @@ msgstr "Имя поля"
 #: model:ir.module.category,name:base.module_category_services_field_service
 #: model:ir.module.module,shortdesc:base.module_industry_fsm
 msgid "Field Service"
-msgstr "Выездные сотрудники"
+msgstr "Сервисная служба"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_industry_fsm_forecast
@@ -18856,6 +18862,11 @@ msgstr "Франция - Учет"
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_reports
 msgid "France - Accounting Reports"
 msgstr "Франция - бухгалтерская отчетность"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_fr_invoice_addr
+msgid "France - Adding Mandatory Invoice Mentions (Decree no. 2022-1299)"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_fec
@@ -19740,7 +19751,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,description:base.module_category_sales_commissions
 msgid "Helps you handle commissions."
-msgstr ""
+msgstr "Помогает работать с комиссионными."
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_accounting_accounting
@@ -19749,12 +19760,12 @@ msgid ""
 "suggest you to install only the Invoicing."
 msgstr ""
 "Помогает вам вести бухгалтерский учёт - если вы не бухгалтер, мы рекомендуем"
-" вам установить только модуль актирования."
+" вам установить только модуль Выставление счетов."
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_sales_sales
 msgid "Helps you handle your quotations, sale orders and invoicing."
-msgstr "Помогает вам обрабатывать ваши предложения, заказы продаж и акты."
+msgstr "Помогает вам обрабатывать ваши предложения, заказы продаж и счета."
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_services_timesheets
@@ -19800,6 +19811,8 @@ msgid ""
 "Helps you manage your mass mailing to design\n"
 "    professional emails and reuse templates."
 msgstr ""
+"Помогает управлять массовой рассылкой, разрабатывать\n"
+"    профессиональных писем и повторного использования шаблонов."
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_services_project
@@ -21093,7 +21106,7 @@ msgstr ""
 #: code:addons/base/models/ir_rule.py:0
 #, python-format
 msgid "Invalid domain: %s"
-msgstr ""
+msgstr "Неверный домен: %s"
 
 #. module: base
 #. odoo-python
@@ -21425,7 +21438,7 @@ msgstr "Италия - Электронное выставление счето�
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_edi_website_sale
 msgid "Italy eCommerce eInvoicing"
-msgstr ""
+msgstr "Italy eCommerce eInvoicing"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_J
@@ -21643,7 +21656,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_stock_landed_costs
 msgid "Landed Costs"
-msgstr "Дополнительные издержки"
+msgstr "Накладные расходы"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_landed_costs
@@ -22237,7 +22250,7 @@ msgstr "Модуль связи между pos_hr и pos_restaurant"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_be_pos_sale
 msgid "Link module between pos_sale and l10n_be"
-msgstr ""
+msgstr "Модуль связи между pos_sale и l10n_be"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale_loyalty
@@ -22279,7 +22292,7 @@ msgstr "Литва - Бухгалтерские отчеты"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_intrastat
 msgid "Lithuanian Intrastat Declaration"
-msgstr ""
+msgstr "Lithuanian Intrastat Declaration"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_saft
@@ -25617,6 +25630,14 @@ msgstr ""
 #, python-format
 msgid "Odoo is unable to merge the generated PDFs."
 msgstr "Odoo не может объединить созданные PDF-файлы."
+
+#. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
+msgstr ""
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
@@ -29231,6 +29252,12 @@ msgid "Scheduled Actions Triggers"
 msgstr "Триггеры запланированных действий"
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid "Scheduled action disabled"
+msgstr "Запланированное действие отключено"
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__user_id
 msgid "Scheduler User"
 msgstr "планируемый пользователь"
@@ -30466,7 +30493,7 @@ msgstr ""
 #: model:ir.module.module,shortdesc:base.module_l10n_in_reports_gstr_spreadsheet
 #: model:ir.module.module,summary:base.module_l10n_in_reports_gstr_spreadsheet
 msgid "Spreadsheet document for GSTR1 Report"
-msgstr ""
+msgstr "Документ электронной таблицы для отчета GSTR1"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__sql
@@ -32564,6 +32591,16 @@ msgid "Those modules cannot be uninstalled: %s"
 msgstr "Эти модули не могут быть удалены: %s"
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid ""
+"This scheduled action has been disabled because its interval number is not a"
+" strictly positive value."
+msgstr ""
+"Это запланированное действие было отключено, поскольку номер интервала не "
+"является строго положительным значением."
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
 msgid "Thousands Separator"
 msgstr "Разделитель тысяч"
@@ -32941,18 +32978,18 @@ msgstr "Тунис"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "Турция"
+msgid "Türkiye"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
-msgstr "Турция - бухгалтерия"
+msgid "Türkiye - Accounting"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
-msgstr "Турция - Бухгалтерские отчеты"
+msgid "Türkiye - Accounting Reports"
+msgstr ""
 
 #. module: base
 #: model:res.country,name:base.tm
@@ -34096,6 +34133,12 @@ msgstr "Просмотр сеансов livechat для ведущих"
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr ""
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "View: %s"
@@ -34976,6 +35019,15 @@ msgstr "Удалить запись %s невозможно."
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"You cannot delete the admin user because it is utilized in various places "
+"(such as security configurations,...). Instead, archive it."
+msgstr ""
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/res_lang.py:0
 #, python-format
 msgid ""
@@ -35107,7 +35159,7 @@ msgstr ""
 #: model_terms:res.company,sign_terms:base.main_company
 #: model_terms:res.company,sign_terms_html:base.main_company
 msgid "Your conditions..."
-msgstr ""
+msgstr "Ваши условия..."
 
 #. module: base
 #. odoo-python
@@ -35539,7 +35591,7 @@ msgstr "json"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_pos_sale
 msgid "l10n_be_pos_sale"
-msgstr ""
+msgstr "l10n_be_pos_sale"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_stock_ddt

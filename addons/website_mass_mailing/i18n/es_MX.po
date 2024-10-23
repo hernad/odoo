@@ -3,9 +3,8 @@
 # 	* website_mass_mailing
 # 
 # Translators:
+# Martin Trigaux, 2022
 # Lucia Pacheco, 2022
-# Martin Trigaux, 2023
-# Aimée Mendoza Sánchez, 2023
 # Fernanda Alvarez, 2024
 # 
 msgid ""
@@ -165,23 +164,23 @@ msgstr "Formulario de suscripción"
 #: code:addons/website_mass_mailing/controllers/website_form.py:0
 #, python-format
 msgid "Mailing List(s) not found!"
-msgstr "¡Lista(s) de correo no encontrada(s)!"
+msgstr "No se encontraron las listas de correo"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options_common
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.snippets
 msgid "Newsletter"
-msgstr "Boletín de noticias"
+msgstr "Boletín informativo"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.snippets
 msgid "Newsletter Block"
-msgstr "Bloqueador de boletín de noticias"
+msgstr "Bloque de boletín"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.snippets
 msgid "Newsletter Popup"
-msgstr "Ventana emergente de boletín de noticias"
+msgstr "Ventana emergente de boletín informativo"
 
 #. module: website_mass_mailing
 #. odoo-javascript
@@ -191,8 +190,8 @@ msgid ""
 "No mailing list found, do you want to create a new one? This will save all "
 "your changes, are you sure you want to proceed?"
 msgstr ""
-"No se ha encontrado ninguna lista de correo, ¿desea crear una nueva? Esto "
-"guardará todos sus cambios, ¿está seguro de que desea continuar?"
+"No se encontró ninguna lista de correo, ¿desea crear una? Esto guardará "
+"todos sus cambios, ¿está seguro de que desea continuar?"
 
 #. module: website_mass_mailing
 #: model_terms:ir.ui.view,arch_db:website_mass_mailing.newsletter_subscribe_options_common

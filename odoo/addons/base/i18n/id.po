@@ -9,8 +9,8 @@
 # Ryanto The <ry.the77@gmail.com>, 2023
 # Edi Santoso <repopamor@gmail.com>, 2023
 # Martin Trigaux, 2024
-# Abe Manyo, 2024
 # Wil Odoo, 2024
+# Abe Manyo, 2024
 # 
 msgid ""
 msgstr ""
@@ -18,7 +18,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-06 13:33+0000\n"
 "PO-Revision-Date: 2022-09-22 05:44+0000\n"
-"Last-Translator: Wil Odoo, 2024\n"
+"Last-Translator: Abe Manyo, 2024\n"
 "Language-Team: Indonesian (https://app.transifex.com/odoo/teams/41243/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -839,12 +839,9 @@ msgstr ""
 #: model:ir.module.module,description:base.module_l10n_tr_reports
 msgid ""
 "\n"
-"        Accounting reports for Turkey\n"
+"        Accounting reports for Türkiye\n"
 "    "
 msgstr ""
-"\n"
-"        Laporan Akuntansi untuk Turkey\n"
-"    "
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_uk_reports
@@ -11304,7 +11301,7 @@ msgid ""
 "\n"
 "    Supported documents are SO, PO.\n"
 msgstr ""
-"Modul untuk sinkronisasi Dokumen pada lebih dari satu perusahaan. Contohnya, ini memungkinkan Anda untuk membuat Sales Order secara otoamtis saat Purchase Order divalidasi dengan perusahaan lain di sistem sebagai vendor, dan juga sebaliknya.\n"
+"Modul untuk sinkronisasi Dokumen pada lebih dari satu perusahaan. Contohnya, ini memungkinkan Anda untuk membuat Sales Order secara otomatis saat Purchase Order divalidasi dengan perusahaan lain di sistem sebagai vendor, dan juga sebaliknya.\n"
 "\n"
 "    Dokumen yang bisa disinkronisasi adalah SO, PO.\n"
 
@@ -11315,7 +11312,7 @@ msgid ""
 "\n"
 "    Supported documents are invoices/credit notes.\n"
 msgstr ""
-"Modul untuk sinkronisasi Dokumen pada lebih dari satu perusahaan. Contohnya, ini memungkinkan Anda untuk membuat Sales Order secara otoamtis saat Purchase Order divalidasi dengan perusahaan lain di sistem sebagai vendor, dan juga sebaliknya.\n"
+"Modul untuk sinkronisasi Dokumen pada lebih dari satu perusahaan. Contohnya, ini memungkinkan Anda untuk membuat Sales Order secara otomatis saat Purchase Order divalidasi dengan perusahaan lain di sistem sebagai vendor, dan juga sebaliknya.\n"
 "\n"
 "    Dokumen yang bisa disinkronisasi adalah faktur/nota kredit.\n"
 
@@ -15036,7 +15033,7 @@ msgstr "Wisaya Penggabungan Otomatis"
 #. module: base
 #: model:ir.model,name:base.model_ir_autovacuum
 msgid "Automatic Vacuum"
-msgstr "Vacuum Otomati"
+msgstr "Vacuum Otomatis"
 
 #. module: base
 #. odoo-python
@@ -18118,7 +18115,7 @@ msgstr "Dash"
 #: model:ir.ui.menu,name:base.menu_board_root
 #: model:ir.ui.menu,name:base.menu_reporting_dashboard
 msgid "Dashboards"
-msgstr "Dasbor"
+msgstr "Dashboard"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_productivity_data_cleaning
@@ -19249,7 +19246,7 @@ msgstr "Ekuador"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec_reports_ats
 msgid "Ecuador - ATS Report"
-msgstr ""
+msgstr "Ecuador - ATS Report"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_ec
@@ -20260,7 +20257,7 @@ msgstr "Faroe Islands"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_it_edi_website_sale
 msgid "Features for Italian eCommerce eInvoicing"
-msgstr ""
+msgstr "Features for Italian eCommerce eInvoicing"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_bank__state
@@ -20960,6 +20957,11 @@ msgstr "France - Accounting"
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_reports
 msgid "France - Accounting Reports"
 msgstr "France - Accounting Reports"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_l10n_fr_invoice_addr
+msgid "France - Adding Mandatory Invoice Mentions (Decree no. 2022-1299)"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_fr_fec
@@ -21846,7 +21848,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.category,description:base.module_category_sales_commissions
 msgid "Helps you handle commissions."
-msgstr ""
+msgstr "Membantu Anda menangani komisi."
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_accounting_accounting
@@ -21931,6 +21933,7 @@ msgstr ""
 #: model:ir.module.category,description:base.module_category_manufacturing_quality
 msgid "Helps you manage your quality alerts and quality checks."
 msgstr ""
+"Membantu Anda menangani peringatan peringatan Anda dan pemeriksaan kualitas."
 
 #. module: base
 #: model:ir.module.category,description:base.module_category_marketing_surveys
@@ -22089,7 +22092,7 @@ msgstr "Human Readable"
 #: model:ir.module.category,name:base.module_category_human_resources
 #: model_terms:ir.ui.view,arch_db:base.user_groups_view
 msgid "Human Resources"
-msgstr "Personalia"
+msgstr "Sumber Daya Manusia"
 
 #. module: base
 #: model:res.country,name:base.hu
@@ -23212,7 +23215,7 @@ msgstr "Format domain %(expr)s tidak valid di %(use)s"
 #: code:addons/base/models/ir_rule.py:0
 #, python-format
 msgid "Invalid domain: %s"
-msgstr ""
+msgstr "Domain tidak valid: %s"
 
 #. module: base
 #. odoo-python
@@ -23544,7 +23547,7 @@ msgstr "Italy - E-invoicing (Withholding)"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_edi_website_sale
 msgid "Italy eCommerce eInvoicing"
-msgstr ""
+msgstr "Italy eCommerce eInvoicing"
 
 #. module: base
 #: model:res.partner.industry,full_name:base.res_partner_industry_J
@@ -24356,7 +24359,7 @@ msgstr "Modul link antara pos_hr dan pos_restaurant"
 #. module: base
 #: model:ir.module.module,summary:base.module_l10n_be_pos_sale
 msgid "Link module between pos_sale and l10n_be"
-msgstr ""
+msgstr "Link module di antara pos_sale dan l10n_be"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_pos_sale_loyalty
@@ -24398,7 +24401,7 @@ msgstr "Lithuania - Accounting Reports"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_intrastat
 msgid "Lithuanian Intrastat Declaration"
-msgstr ""
+msgstr "Lithuanian Intrastat Declaration"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_lt_saft
@@ -28538,6 +28541,15 @@ msgid "Odoo is unable to merge the generated PDFs."
 msgstr "Odoo tidak dapat menggabungkan PDF yang dibuat."
 
 #. module: base
+#. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid ""
+"Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
+" file(s)"
+msgstr ""
+"Odoo tidak dapat merge PDf yang dibuat karena {num_errors} file yang korup"
+
+#. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
 msgid ""
 "Odoo will automatically adds some '0' on the left of the 'Next Number' to "
@@ -32275,6 +32287,12 @@ msgid "Scheduled Actions Triggers"
 msgstr "Pemicu Action yang Dijadwalkan"
 
 #. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid "Scheduled action disabled"
+msgstr "Action yang dijadwalkan dibatalkan"
+
+#. module: base
 #: model:ir.model.fields,field_description:base.field_ir_cron__user_id
 msgid "Scheduler User"
 msgstr "User yang Menjadwal"
@@ -33401,7 +33419,7 @@ msgstr "Dokumen Spreadsheet"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_spreadsheet_dashboard
 msgid "Spreadsheet dashboard"
-msgstr "Dashboard spreadshee"
+msgstr "Dashboard spreadsheet"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_spreadsheet_dashboard_edition
@@ -33502,7 +33520,7 @@ msgstr "Dashboard spreadsheet untuk time sheet"
 #: model:ir.module.module,shortdesc:base.module_l10n_in_reports_gstr_spreadsheet
 #: model:ir.module.module,summary:base.module_l10n_in_reports_gstr_spreadsheet
 msgid "Spreadsheet document for GSTR1 Report"
-msgstr ""
+msgstr "Dokumen spreadsheet untuk Laporan GSTR1"
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_ir_profile__sql
@@ -35315,7 +35333,7 @@ msgid ""
 "This module allows ecommerce users to choose to deliver to Pick-Up points "
 "for the FEDEX connector."
 msgstr ""
-"Modul ini memungkina user ecommerce untuk memilih untuk mengirim ke titik "
+"Modul ini memungkinkan user ecommerce untuk memilih untuk mengirim ke titik "
 "Pick-Up untuk konektor FEDEX."
 
 #. module: base
@@ -35597,6 +35615,16 @@ msgstr ""
 #, python-format
 msgid "Those modules cannot be uninstalled: %s"
 msgstr "Modul-modul berikut tidak dapat di-uninstal: %s"
+
+#. module: base
+#: code:addons/base/models/ir_cron.py:0
+#, python-format
+msgid ""
+"This scheduled action has been disabled because its interval number is not a"
+" strictly positive value."
+msgstr ""
+"Action yang dijadwalkan telah dinonaktifkan karena angka intervalnya bukan "
+"merupakan bilangan positif."
 
 #. module: base
 #: model:ir.model.fields,field_description:base.field_res_lang__thousands_sep
@@ -35975,18 +36003,18 @@ msgstr "Tunisia"
 
 #. module: base
 #: model:res.country,name:base.tr
-msgid "Turkey"
-msgstr "Turkey"
+msgid "Türkiye"
+msgstr "Türkiye"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr
-msgid "Turkey - Accounting"
-msgstr "Turki - Akuntansi"
+msgid "Türkiye - Accounting"
+msgstr "Türkiye - Accounting"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_tr_reports
-msgid "Turkey - Accounting Reports"
-msgstr "Turkey - Accounting Reports"
+msgid "Türkiye - Accounting Reports"
+msgstr "Türkiye - Accounting Reports"
 
 #. module: base
 #: model:res.country,name:base.tm
@@ -37134,6 +37162,12 @@ msgstr "Lihat sesi livechat untuk lead"
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/ir_actions_report.py:0
+msgid "View Problematic Record(s)"
+msgstr "Lihat Record yang Bermasalah"
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/ir_model.py:0
 #, python-format
 msgid "View: %s"
@@ -38029,6 +38063,17 @@ msgstr "Anda tidak dapat menghapus record %s."
 
 #. module: base
 #. odoo-python
+#: code:addons/base/models/res_users.py:0
+#, python-format
+msgid ""
+"You cannot delete the admin user because it is utilized in various places "
+"(such as security configurations,...). Instead, archive it."
+msgstr ""
+"Anda tidak dapat menghapus user admin karena digunakan di beragam tempat "
+"(seperti konfigurasi keamanan,...). Anda dapat mengarsipkannya."
+
+#. module: base
+#. odoo-python
 #: code:addons/base/models/res_lang.py:0
 #, python-format
 msgid ""
@@ -38059,6 +38104,8 @@ msgid ""
 "You cannot reduce the number of decimal places of a currency already used on"
 " an accounting entry."
 msgstr ""
+"Anda tidak dapat mengurangi jumlah tempat desimal mata uang yang sudah "
+"digunakan pada entri akuntansi."
 
 #. module: base
 #. odoo-python
@@ -38165,7 +38212,7 @@ msgstr ""
 #: model_terms:res.company,sign_terms:base.main_company
 #: model_terms:res.company,sign_terms_html:base.main_company
 msgid "Your conditions..."
-msgstr ""
+msgstr "Kondisi-kondisi Anda..."
 
 #. module: base
 #. odoo-python
@@ -38595,7 +38642,7 @@ msgstr "json"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_be_pos_sale
 msgid "l10n_be_pos_sale"
-msgstr ""
+msgstr "l10n_be_pos_sale"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_it_stock_ddt

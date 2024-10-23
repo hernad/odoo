@@ -118,6 +118,8 @@ class Attendee(models.Model):
                     attachment_values += [
                         (0, 0, {'name': 'invitation.ics',
                                 'mimetype': 'text/calendar',
+                                'res_id': event_id,
+                                'res_model': 'calendar.event',
                                 'datas': base64.b64encode(ics_file)})
                     ]
                 body = mail_template._render_field(
@@ -138,7 +140,6 @@ class Attendee(models.Model):
                     email_layout_xmlid='mail.mail_notification_light',
                     attachment_ids=attachment_values,
                     force_send=force_send,
-                    message_type='auto_comment',
                 )
 
     def _should_notify_attendee(self):

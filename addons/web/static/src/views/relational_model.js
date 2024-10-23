@@ -1571,6 +1571,7 @@ class DynamicList extends DataPoint {
     exportState() {
         return {
             limit: this.limit,
+            offset: this.offset,
             initialLimit: this.initialLimit,
             orderBy: this.orderBy,
             initialOrderBy: this.initialOrderBy,
@@ -1971,7 +1972,6 @@ export class DynamicRecordList extends DynamicList {
     exportState() {
         return {
             ...super.exportState(),
-            offset: this.offset,
             countLimit: this.countLimit,
         };
     }
@@ -2110,6 +2110,10 @@ export class DynamicRecordList extends DynamicList {
         } else {
             this.hasLimitedCount = false;
             this.count = length;
+        }
+
+        if (this.isDomainSelected) {
+            records.forEach((r) => r.selected = true);
         }
 
         return records;
@@ -2704,6 +2708,7 @@ export class Group extends DataPoint {
             displayName: this.displayName,
             groupDomain: this.groupDomain,
             listState: this.list.exportState(),
+            range: this.range,
         };
     }
 

@@ -4,6 +4,7 @@ odoo.define('web_editor.field_html_tests', function (require) {
 var ajax = require('web.ajax');
 var FormController = require('web.FormController');
 var FormView = require('web.FormView');
+const ListView = require('web.ListView');
 var testUtils = require('web.test_utils');
 var weTestUtils = require('web_editor.test_utils');
 var core = require('web.core');
@@ -292,7 +293,7 @@ QUnit.module('web_editor', {}, function () {
                 "should close the color picker");
 
             assert.strictEqual($field.find('.note-editable').html(),
-                '<p>t<font style="background-color: rgb(0, 255, 255);">oto toto </font>toto</p><p>tata</p>',
+                '<p>t<font style="background-color: rgba(0, 255, 255, 0.6);">oto toto </font>toto</p><p>tata</p>',
                 "should have rendered the field correctly in edit");
 
             var fontElement = $field.find('.note-editable font')[0];
@@ -315,7 +316,7 @@ QUnit.module('web_editor', {}, function () {
             await testUtils.dom.click($('#toolbar .note-back-color-preview [style="background-color: var(--we-cp-o-color-3);"]'));
 
             assert.strictEqual($field.find('.note-editable').html(),
-                '<p>t<font style="background-color: rgb(0, 255, 255);">oto t</font><font class="bg-o-color-3">oto to</font>to</p><p>tata</p>',
+                '<p>t<font style="background-color: rgba(0, 255, 255, 0.6);">oto t</font><font class="bg-o-color-3">oto to</font>to</p><p>tata</p>',
                 "should have rendered the field correctly in edit");
 
             // Make sure the reset button works too
@@ -325,7 +326,7 @@ QUnit.module('web_editor', {}, function () {
             // TODO right now the behavior is to force "inherit" as background
             // but it should remove the useless font element when possible.
             assert.strictEqual($field.find('.note-editable').html(),
-                '<p>t<font style="background-color: rgb(0, 255, 255);">oto t</font>oto toto</p><p>tata</p>',
+                '<p>t<font style="background-color: rgba(0, 255, 255, 0.6);">oto t</font>oto toto</p><p>tata</p>',
                 "should have properly reset the background color");
 
             // Select the whole paragraph.
@@ -351,6 +352,54 @@ QUnit.module('web_editor', {}, function () {
             form.destroy();
         });
 
+        QUnit.test('Close dropdown on colorpicker hide', async function (assert) {
+            assert.expect(4);
+
+            var form = await testUtils.createView({
+                View: FormView,
+                model: 'note.note',
+                data: this.data,
+                arch: '<form>' +
+                    '<field name="body" widget="html" style="height: 100px"/>' +
+                    '</form>',
+                res_id: 1,
+            });
+
+            await testUtils.form.clickEdit(form);
+            await new Promise(resolve => setTimeout(resolve, 50));
+            var $field = form.$('.oe_form_field[name="body"]');
+
+            // select the text
+            var pText = $field.find('.note-editable p').first().contents()[0];
+            Wysiwyg.setRange(pText, 1, pText, 10);
+            // text is selected
+
+            var range = Wysiwyg.getRange();
+
+            assert.strictEqual(range.sc, pText,
+                "should select the text");
+
+            async function openColorpicker(selector) {
+                const $colorpicker = $(selector);
+                const openingProm = new Promise(resolve => {
+                    $colorpicker.one('shown.bs.dropdown', () => resolve());
+                });
+                await testUtils.dom.click($colorpicker.find('.dropdown-toggle:first'));
+                return openingProm;
+            }
+
+            await new Promise(resolve => setTimeout(resolve, 50));
+
+            await openColorpicker('#toolbar .note-back-color-preview');
+            assert.ok($('.note-back-color-preview .dropdown-menu').hasClass('show'),
+                "should display the color picker");
+
+            Wysiwyg.setRange(pText, 1, pText, 1);
+            await new Promise(resolve => setTimeout(resolve, 50));
+            assert.ok(document.querySelector('#toolbar').style.visibility === 'hidden', "toolbar should be hidden");
+            assert.containsNone($, ".dropdown-menu.show", "all dropdowns should be closed");
+            form.destroy();
+        });
 
         QUnit.test('media dialog: image', async function (assert) {
             assert.expect(1);
@@ -505,8 +554,8 @@ QUnit.module('web_editor', {}, function () {
                 }
             });
 
-            let pText = $field.find('.note-editable p').first().contents()[0];
-            Wysiwyg.setRange(pText.firstChild, 0, pText.firstChild, pText.firstChild.length);
+            let pText = $field.find('.note-editable p a')[0];
+            Wysiwyg.setRange(pText.firstChild, 0, pText.lastChild, pText.lastChild.length);
             await testUtils.dom.triggerEvent($('#toolbar #create-link'), 'click');
             // load static xml file (dialog, link dialog)
             await defLinkDialog;
@@ -554,8 +603,8 @@ QUnit.module('web_editor', {}, function () {
                 }
             });
 
-            let pText = $field.find('.note-editable p').first().contents()[0];
-            Wysiwyg.setRange(pText.firstChild, 0, pText.firstChild, pText.firstChild.length);
+            let pText = $field.find('.note-editable p a')[0];
+            Wysiwyg.setRange(pText.firstChild, 0, pText.lastChild, pText.lastChild.length);
             await testUtils.dom.triggerEvent($('#toolbar #create-link'), 'click');
             // load static xml file (dialog, link dialog)
             await defLinkDialog;
@@ -604,17 +653,18 @@ QUnit.module('web_editor', {}, function () {
                 }
             });
 
-            let pText = $field.find('.note-editable p').first().contents()[0];
-            Wysiwyg.setRange(pText.firstChild, 0, pText.firstChild, pText.firstChild.length);
+
+            let pText = $field.find('.note-editable p a')[0];
+            Wysiwyg.setRange(pText.firstChild, 0, pText.lastChild, pText.lastChild.length);
             await testUtils.dom.triggerEvent($('#toolbar #create-link'), 'click');
             // load static xml file (dialog, link dialog)
             await defLinkDialog;
             $('.modal .tab-content .tab-pane').removeClass('fade'); // to be sync in test
             const $labelInputField = $('input#o_link_dialog_label_input');
             const $linkPreview = $('a#link-preview');
-            assert.strictEqual($labelInputField.val(), 'This website',
+            assert.strictEqual($labelInputField.val().replaceAll('\ufeff', ''), 'This website',
                 "The label input field should match the link's content");
-            assert.strictEqual($linkPreview.text().replace(/\u200B/g, ''), 'This website',
+            assert.strictEqual($linkPreview.text().replaceAll('\ufeff', ''), 'This website',
                 "Link label in preview should match label input field");
             await testUtils.fields.editAndTrigger($labelInputField, "New label", ['input']);
             await testUtils.nextTick();
@@ -937,7 +987,7 @@ QUnit.module('web_editor', {}, function () {
             const clipboardData = new DataTransfer();
             clipboardData.setData('text/plain', 'https://www.youtube.com/watch?v=qxb74CMR748');
             p.dispatchEvent(new ClipboardEvent('paste', { clipboardData, bubbles: true }));
-            assert.strictEqual(p.outerHTML, '<p>https://www.youtube.com/watch?v=qxb74CMR748<br></p>',
+            assert.strictEqual(p.outerHTML, '<p>https://www.youtube.com/watch?v=qxb74CMR748</p>',
                 "The URL should be inserted as text");
             assert.isVisible($('.oe-powerbox-wrapper:contains("Embed Youtube Video")'),
                 "The powerbox should be opened");
@@ -953,6 +1003,40 @@ QUnit.module('web_editor', {}, function () {
             );
 
             form.destroy();
+        });
+
+        QUnit.test("use the toolbar in a list view", async function (assert) {
+            const expectedValue = `<p>t<span style="font-size: 9px;">oto toto </span>toto</p><p>tata</p>`;
+            const list = await testUtils.createView({
+                View: ListView,
+                model: 'note.note',
+                data: this.data,
+                arch: `<tree editable="top">
+                    <field name="body" widget="html"/>
+                </tree>`,
+                mockRPC: function (route, args) {
+                    if (args.method === "write") {
+                        assert.step("write");
+                        assert.strictEqual(args.args[1].body, expectedValue, "should save the content");
+                    }
+                    return this._super.apply(this, arguments);
+                },
+            });
+            await testUtils.dom.click(".o_data_row:first [name=body]");
+            await legacyExtraNextTick();
+            await new Promise(resolve => setTimeout(resolve, 50));
+            const $field = $('.oe_form_field[name="body"]');
+            const pText = $field.find('.note-editable p').first().contents()[0];
+            Wysiwyg.setRange(pText, 1, pText, 10);
+            await testUtils.dom.click("#font-size button");
+            await testUtils.dom.click("#font-size a[data-arg1=9px]");
+            await testUtils.dom.click(".o_list_button_save");
+            assert.strictEqual(
+                $(".o_data_row:first [name=body] .o_readonly").html(),
+                expectedValue,
+            );
+            assert.verifySteps(["write"]);
+            list.destroy();
         });
 
         QUnit.module('cssReadonly');

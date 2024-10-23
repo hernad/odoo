@@ -262,6 +262,11 @@ class AccountTax(models.Model):
                 for child in tax.children_tax_ids
             ):
                 raise ValidationError(_('The application scope of taxes in a group must be either the same as the group or left empty.'))
+            if any(
+                child.amount_type == 'group'
+                for child in tax.children_tax_ids
+            ):
+                raise ValidationError(_('Nested group of taxes are not allowed.'))
 
     @api.constrains('company_id')
     def _check_company_consistency(self):
@@ -521,17 +526,21 @@ class AccountTax(models.Model):
             """ Recompute the new base amount based on included fixed/percent amounts and the current base amount. """
             fixed_amount = incl_tax_amounts['fixed_amount']
             division_amount = sum(tax_factor for _i, tax_factor in incl_tax_amounts['division_taxes'])
-            percent_amount = sum(tax_factor for _i, tax_factor in incl_tax_amounts['percent_taxes'])
+            percent_amount = sum(tax_amount * sum_repartition_factor for _i, tax_amount, sum_repartition_factor in incl_tax_amounts['percent_taxes'])
 
             if company.country_code == 'IN':
                 # For the indian case, when facing two percent price-included taxes having the same percentage,
                 # both need to produce the same tax amounts. To do that, the tax amount of those taxes are computed
                 # directly during the first traveling in reversed order.
-                total_percentage = sum(tax_factor for _i, tax_factor in incl_tax_amounts['percent_taxes'])
-                for i, tax_factor in incl_tax_amounts['percent_taxes']:
-                    tax_amount = float_round(base * tax_factor / (100 + total_percentage), precision_rounding=prec)
-                    cached_tax_amounts[i] = tax_amount
-                    fixed_amount += tax_amount
+                total_tax_amount = 0.0
+                for i, tax_amount, sum_repartition_factor in incl_tax_amounts['percent_taxes']:
+                    gross_tax_amount = float_round(base * tax_amount / (100 + percent_amount), precision_rounding=prec)
+                    factored_tax_amount = float_round(gross_tax_amount * sum_repartition_factor, precision_rounding=prec)
+                    total_tax_amount += factored_tax_amount
+                    cached_tax_amounts[i] = gross_tax_amount
+                    fixed_amount += factored_tax_amount
+                for i, _tax_amount, _sum_repartition_factor in incl_tax_amounts['percent_taxes']:
+                    cached_base_amounts[i] = base - total_tax_amount
                 percent_amount = 0.0
 
             incl_tax_amounts.update({
@@ -592,7 +601,9 @@ class AccountTax(models.Model):
             'fixed_amount': 0.0,
         }
         # Store the tax amounts we compute while searching for the total_excluded
+        cached_base_amounts = {}
         cached_tax_amounts = {}
+        is_base_affected = True
         if handle_price_include:
             for tax in reversed(taxes):
                 tax_repartition_lines = (
@@ -602,19 +613,20 @@ class AccountTax(models.Model):
                 ).filtered(lambda x: x.repartition_type == "tax")
                 sum_repartition_factor = sum(tax_repartition_lines.mapped("factor"))
 
-                if tax.include_base_amount:
+                if tax.include_base_amount and is_base_affected:
                     base = recompute_base(base, incl_tax_amounts)
                     store_included_tax_total = True
                 if self._context.get('force_price_include', tax.price_include):
                     if tax.amount_type == 'percent':
-                        incl_tax_amounts['percent_taxes'].append((i, tax.amount * sum_repartition_factor))
+                        incl_tax_amounts['percent_taxes'].append((i, tax.amount, sum_repartition_factor))
                     elif tax.amount_type == 'division':
                         incl_tax_amounts['division_taxes'].append((i, tax.amount * sum_repartition_factor))
                     elif tax.amount_type == 'fixed':
                         incl_tax_amounts['fixed_amount'] = abs(quantity) * tax.amount * sum_repartition_factor * abs(fixed_multiplicator)
                     else:
                         # tax.amount_type == other (python)
-                        tax_amount = tax._compute_amount(base, sign * price_unit, quantity, product, partner, fixed_multiplicator) * sum_repartition_factor
+                        tax_amount = tax._compute_amount(base, sign * price_unit, quantity, product, partner, fixed_multiplicator)
+                        tax_amount = float_round(tax_amount, precision_rounding=prec)
                         incl_tax_amounts['fixed_amount'] += tax_amount
                         # Avoid unecessary re-computation
                         cached_tax_amounts[i] = tax_amount
@@ -627,6 +639,7 @@ class AccountTax(models.Model):
                         total_included_checkpoints[i] = base
                         store_included_tax_total = False
                 i -= 1
+                is_base_affected = tax.is_base_affected
 
         total_excluded = recompute_base(base, incl_tax_amounts)
         if self._context.get('round_base', True):
@@ -651,7 +664,9 @@ class AccountTax(models.Model):
         for tax in taxes:
             price_include = self._context.get('force_price_include', tax.price_include)
 
-            if price_include or tax.is_base_affected:
+            if price_include and i in cached_base_amounts:
+                tax_base_amount = cached_base_amounts[i]
+            elif price_include or tax.is_base_affected:
                 tax_base_amount = base
             else:
                 tax_base_amount = total_excluded
@@ -660,12 +675,12 @@ class AccountTax(models.Model):
             sum_repartition_factor = sum(tax_repartition_lines.mapped('factor'))
 
             #compute the tax_amount
-            if not skip_checkpoint and price_include and total_included_checkpoints.get(i) is not None and sum_repartition_factor != 0:
+            if price_include and i in cached_tax_amounts:
+                tax_amount = cached_tax_amounts[i]
+            elif not skip_checkpoint and price_include and total_included_checkpoints.get(i) is not None and sum_repartition_factor != 0:
                 # We know the total to reach for that tax, so we make a substraction to avoid any rounding issues
                 tax_amount = total_included_checkpoints[i] - (base + cumulated_tax_included_amount)
                 cumulated_tax_included_amount = 0
-            elif price_include and i in cached_tax_amounts:
-                tax_amount = cached_tax_amounts[i]
             else:
                 tax_amount = tax.with_context(force_price_include=False)._compute_amount(
                     tax_base_amount, sign * price_unit, quantity, product, partner, fixed_multiplicator)
@@ -1148,7 +1163,7 @@ class AccountTax(models.Model):
         for grouping_key, tax_values in global_tax_details['tax_details'].items():
             if tax_values['currency_id']:
                 currency = self.env['res.currency'].browse(tax_values['currency_id'])
-                tax_amount = currency.round(tax_values['tax_amount'])
+                tax_amount = currency.round(tax_values['tax_amount_currency'])
                 res['totals'][currency]['amount_tax'] += tax_amount
 
             if grouping_key in existing_tax_line_map:
@@ -1228,6 +1243,7 @@ class AccountTax(models.Model):
                 'tax_group': tax_detail['tax_group'],
                 'base_amount': tax_detail['base_amount_currency'],
                 'tax_amount': tax_detail['tax_amount_currency'],
+                'hide_base_amount': all(x['tax_repartition_line'].tax_id.amount_type == 'fixed' for x in tax_detail['group_tax_details']),
             }
 
             # Handle a manual edition of tax lines.
@@ -1266,6 +1282,7 @@ class AccountTax(models.Model):
                 'tax_group_base_amount': tax_group_vals['base_amount'],
                 'formatted_tax_group_amount': formatLang(self.env, tax_group_vals['tax_amount'], currency_obj=currency),
                 'formatted_tax_group_base_amount': formatLang(self.env, tax_group_vals['base_amount'], currency_obj=currency),
+                'hide_base_amount': tax_group_vals['hide_base_amount'],
             })
 
         # ==== Build the final result ====

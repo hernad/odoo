@@ -1336,7 +1336,7 @@ msgstr "Por Lotes"
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__product_template__tracking__serial
 msgid "By Unique Serial Number"
-msgstr "Por Número de Série Único"
+msgstr "Por número de série exclusivo"
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_move__procure_method
@@ -1347,12 +1347,11 @@ msgid ""
 "current stock) to gather products. If we want to chain moves and have this "
 "one to wait for the previous, this second option should be chosen."
 msgstr ""
-"Por padrão, o sistema terá de o estoque no local de origem e passivamente "
-"esperar por disponibilidade. A outra possibilidade permite-lhe criar "
-"directamente um contrato sobre o local de origem (e, portanto, ignorar o seu"
-" estoque atual) para reunir produtos. Se quisermos movimentos de cadeia e "
-"ter um presente para esperar o anterior, esta segunda opção deve ser "
-"escolhido."
+"Por padrão, o sistema irá retirar do estoque no local de origem e aguardar "
+"passivamente a disponibilidade. A outra possibilidade permite que você crie "
+"diretamente uma compra no local de origem (e, portanto, ignorar seu estoque "
+"atual) para coletar produtos. Se quiser vincular movimentações e fazer com "
+"que uma espere pela anterior, a segunda opção deve ser escolhida."
 
 #. module: stock
 #: model:ir.model.fields,help:stock.field_stock_location__active
@@ -1822,6 +1821,11 @@ msgid ""
 msgstr ""
 "Conversão entre unidades de medida só pode ocorrer se eles pertencem à mesma"
 " categoria. A conversão será feita com base nas proporções."
+
+#. module: stock
+#: model:ir.actions.server,name:stock.stock_quant_stock_move_line_desynchronization
+msgid "Correct inconsistencies for reservation"
+msgstr ""
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_location__posx
@@ -2462,14 +2466,14 @@ msgstr ""
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_lot__delivery_count
 msgid "Delivery order count"
-msgstr "Contagem de ordens de entrega"
+msgstr "Total de pedidos de entrega"
 
 #. module: stock
 #. odoo-python
 #: code:addons/stock/models/stock_lot.py:0
 #, python-format
 msgid "Delivery orders of %s"
-msgstr "Ordens de entrega de %s"
+msgstr "Pedidos de entrega de %s"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__product_uom_qty
@@ -2991,6 +2995,13 @@ msgstr "Filtros"
 #: model:ir.model.fields,field_description:stock.field_stock_move__next_serial
 msgid "First SN"
 msgstr "Primeiro NS"
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_quant.py:0
+#, python-format
+msgid "Fix discrepancies"
+msgstr ""
 
 #. module: stock
 #: model:ir.model.fields.selection,name:stock.selection__stock_rule__group_propagation_option__fixed
@@ -4069,6 +4080,7 @@ msgid ""
 msgstr ""
 
 #. module: stock
+#. odoo-python
 #: code:addons/stock/models/stock_quant.py:0
 #, python-format
 msgid ""
@@ -4507,6 +4519,13 @@ msgid "Locations"
 msgstr "Locais"
 
 #. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_picking.py:0
+#, python-format
+msgid "Locations to update"
+msgstr "Locais a atualizar"
+
+#. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.view_picking_form
 msgid "Lock"
 msgstr "Trancar"
@@ -4626,7 +4645,7 @@ msgstr ""
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_warehouse__mto_pull_id
 msgid "MTO rule"
-msgstr "Regra de MTO"
+msgstr "Regra de PSE"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_lot__message_main_attachment_id
@@ -6030,7 +6049,7 @@ msgstr "Operações de processo em transferências de ondas"
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.res_config_settings_view_form
 msgid "Process transfers in batch per worker"
-msgstr "Processar transferências em lote por trabalhador"
+msgstr "Processar transferências em lote por prestador de serviços"
 
 #. module: stock
 #: model:ir.model,name:stock.model_procurement_group
@@ -6391,7 +6410,7 @@ msgstr ""
 #. module: stock
 #: model:ir.model,name:stock.model_stock_putaway_rule
 msgid "Putaway Rule"
-msgstr "Regra de Armazenamento"
+msgstr "Regra de entrada em depósito"
 
 #. module: stock
 #. odoo-python
@@ -6412,7 +6431,7 @@ msgstr "Regra de Armazenamento"
 #: model_terms:ir.ui.view,arch_db:stock.view_putaway_search
 #, python-format
 msgid "Putaway Rules"
-msgstr "Regras de Armazenamento"
+msgstr "Regras de entrada em depósito"
 
 #. module: stock
 #: model_terms:ir.ui.view,arch_db:stock.report_stock_rule
@@ -6422,7 +6441,7 @@ msgstr "Jogue fora:"
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_putaway_tree
 msgid "Putaways Rules"
-msgstr "Regras de Armazenamentos"
+msgstr "Regras de entrada em depósito"
 
 #. module: stock
 #: model:ir.model.constraint,message:stock.constraint_stock_warehouse_orderpoint_qty_multiple_check
@@ -7337,7 +7356,7 @@ msgstr "Ordens de Sucata"
 #. module: stock
 #: model_terms:ir.actions.act_window,help:stock.action_stock_scrap
 msgid "Scrap products"
-msgstr "Produtos de sucata"
+msgstr "Sucatear produtos"
 
 #. module: stock
 #: model:ir.model.fields,field_description:stock.field_stock_move__scrapped
@@ -9913,6 +9932,16 @@ msgstr "Não é possível alterar o tipo de um produto que já foi usado."
 
 #. module: stock
 #. odoo-python
+#: code:addons/stock/models/stock_orderpoint.py:0
+#, python-format
+msgid ""
+"You can not create a snoozed orderpoint that is not manually triggered."
+msgstr ""
+"Não é possível criar um ponto de pedido em espera que não seja acionado "
+"manualmente."
+
+#. module: stock
+#. odoo-python
 #: code:addons/stock/models/stock_move_line.py:0
 #, python-format
 msgid ""
@@ -9950,6 +9979,17 @@ msgstr "Só é possível inserir quantidades positivas."
 msgid "You can only process 1.0 %s of products with unique serial number."
 msgstr ""
 "Você só pode processar 1,0 %s de produtos com número de série exclusivo."
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_orderpoint.py:0
+#, python-format
+msgid ""
+"You can only snooze manual orderpoints. You should rather archive 'auto-"
+"trigger' orderpoints if you do not want them to be triggered."
+msgstr ""
+"Você só pode adiar pontos de pedidos manuais. Você deve arquivar os pontos "
+"de pedido de \"acionamento automático\" se não quiser que sejam acionados."
 
 #. module: stock
 #. odoo-python
@@ -10068,6 +10108,26 @@ msgid ""
 msgstr ""
 "Você não pode mover o mesmo conteúdo do pacote mais de uma vez na mesma "
 "transferência ou dividir o mesmo pacote em dois locais."
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You cannot pack products into the same package when they are from both "
+"immediate and planned transfers."
+msgstr ""
+
+#. module: stock
+#. odoo-python
+#: code:addons/stock/models/stock_picking.py:0
+#, python-format
+msgid ""
+"You cannot pack products into the same package when they are from different "
+"transfers with different operation types."
+msgstr ""
+"Não é possível embalar produtos no mesmo pacote quando eles são de "
+"transferências diferentes com tipos de operação diferentes."
 
 #. module: stock
 #. odoo-python
